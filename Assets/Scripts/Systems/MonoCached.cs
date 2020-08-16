@@ -9,14 +9,14 @@ public class MonoCached : MonoBehaviour
     [HideInInspector]
     public Transform _transform;
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
         customUpdates.Add(this);
         customFixedUpdates.Add(this);
         //customLateUpdates.Add(this);
     }
 
-    private void OnDisable()
+    public virtual void OnDisable()
     {
         customUpdates.Remove(this);
         customFixedUpdates.Remove(this);

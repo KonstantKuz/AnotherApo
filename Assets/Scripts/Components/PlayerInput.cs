@@ -1,12 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoCached
 {
-    public bl_Joystick Move;
-    public TouchControlsKit.TCKTouchpad Look;
-
     public float VerticalSensiv;
     public float HorizontalSensiv;
 
@@ -23,7 +21,8 @@ public class PlayerInput : MonoCached
     public static bool Aiming;
     public static bool Firing;
     public static bool Crouching;
-
+    public static bool Melee;
+    public static Action SwordAttack;
 
     private string VerticalName = "Vertical";
     private string HorizontalName = "Horizontal";
@@ -32,11 +31,6 @@ public class PlayerInput : MonoCached
 
     public override void CustomUpdate()
     {
-        Vertical = Move.Vertical * VerticalSensiv;
-        Horizontal = Move.Horizontal * HorizontalSensiv;
-        MouseX = Mathf.Lerp(MouseX, Look.axisX.value * MouseXSensiv, Time.deltaTime * MouseXSmooth);
-        MouseY = Mathf.Lerp(MouseY, /*MouseY + */Look.axisY.value * MouseYSensiv, Time.deltaTime * MouseYSmooth);
-#if UNITY_EDITOR
         Vertical = Input.GetAxis(VerticalName);
         Horizontal = Input.GetAxis(HorizontalName);
         MouseX = Mathf.Lerp(MouseX, Input.GetAxis(MouseXName) * MouseXSensiv, Time.deltaTime * MouseXSmooth);
@@ -48,15 +42,37 @@ public class PlayerInput : MonoCached
             Aim();
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            Firing = true;
+        }
+        else
+        {
+            Firing = false;
+        }
+
+        if (Input.GetMouseButtonDown(0) && Melee)
+        {
+            SwordAttack();
+        }
+        
         if (Input.GetKeyDown(KeyCode.C))
         {
             Crouch();
         }
-#endif
 
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SwitchAttackType();
+        }
+        
         MouseX = Mathf.Clamp(MouseX, -1, 1);
         MouseY = Mathf.Clamp(MouseY, -0.3f, 0.7f);
+    }
+
+    private void SwitchAttackType()
+    {
+        Melee = !Melee;
     }
 
     public void Aim()
@@ -67,10 +83,5 @@ public class PlayerInput : MonoCached
     public void Crouch()
     {
         Crouching = !Crouching;
-    }
-
-    public void Fire()
-    {
-        Firing = !Firing;
     }
 }

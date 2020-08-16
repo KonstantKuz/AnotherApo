@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AnimatorHashes : MonoBehaviour
 {
+    public static int MeleeHash;
+    public static int SwordAttackHash;
     public static int AimingHash;
     public static int CrouchingHash;
     public static int SprintHash;
@@ -17,6 +19,8 @@ public class AnimatorHashes : MonoBehaviour
 
     private void Awake()
     {
+        MeleeHash = Animator.StringToHash("Melee");
+        SwordAttackHash = Animator.StringToHash("SwordAttack");
         AimingHash = Animator.StringToHash("Aiming");
         CrouchingHash = Animator.StringToHash("Crouching");
         SprintHash = Animator.StringToHash("Sprint");

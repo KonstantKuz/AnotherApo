@@ -30,7 +30,13 @@ public class PlayerController : MonoCached
     private Animator animator;
     private AimingOverrider hands;
 
-    void Start()
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        PlayerInput.SwordAttack += SwordAttack;
+    }
+
+    private void Start()
     {
         _transform = transform;
 
@@ -92,6 +98,7 @@ public class PlayerController : MonoCached
 
     public void HandleInputs()
     {
+        animator.SetBool(AnimatorHashes.MeleeHash, PlayerInput.Melee);
         animator.SetBool(AnimatorHashes.AimingHash, PlayerInput.Aiming);
         animator.SetBool(AnimatorHashes.CrouchingHash, PlayerInput.Crouching);
         animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
@@ -114,6 +121,11 @@ public class PlayerController : MonoCached
         {
             CoverTransforms();
         }
+    }
+
+    private void SwordAttack()
+    {
+        animator.SetTrigger(AnimatorHashes.SwordAttackHash);
     }
 
     public void CoverTransforms()

@@ -48,6 +48,9 @@ public class AimingOverrider : MonoCached
 
     private void OnAnimatorIK(int layerIndex)
     {
+        if (characterAnimator.GetBool(AnimatorHashes.MeleeHash))
+            return;
+        
         if (characterAnimator.GetBool(AnimatorHashes.AimingHash))
         {
             SetWeight(1f);
@@ -64,16 +67,7 @@ public class AimingOverrider : MonoCached
         SetLerpedIK();
     }
 
-    public void SetLerpedIK()
-    {
-        characterAnimator.SetIKPosition(AvatarIKGoal.LeftHand, hadnsIKOverrides.lHandLerpedPos);
-        characterAnimator.SetIKPosition(AvatarIKGoal.RightHand, hadnsIKOverrides.rHandLerpedPos);
-
-        characterAnimator.SetIKRotation(AvatarIKGoal.LeftHand, hadnsIKOverrides.lHandLerpedRot);
-        characterAnimator.SetIKRotation(AvatarIKGoal.RightHand, hadnsIKOverrides.rHandLerpedRot);
-    }
-
-    public void CalculateLerpedIKs(Transform targetR, Transform targetL)
+    private void CalculateLerpedIKs(Transform targetR, Transform targetL)
     {
         deltaTime = Time.deltaTime * 20f;
 
@@ -84,7 +78,16 @@ public class AimingOverrider : MonoCached
         hadnsIKOverrides.lHandLerpedRot = Quaternion.Lerp(hadnsIKOverrides.lHandLerpedRot, targetL.rotation, deltaTime);
     }
 
-    public void SetWeight(float weight)
+    private void SetLerpedIK()
+    {
+        characterAnimator.SetIKPosition(AvatarIKGoal.LeftHand, hadnsIKOverrides.lHandLerpedPos);
+        characterAnimator.SetIKPosition(AvatarIKGoal.RightHand, hadnsIKOverrides.rHandLerpedPos);
+
+        characterAnimator.SetIKRotation(AvatarIKGoal.LeftHand, hadnsIKOverrides.lHandLerpedRot);
+        characterAnimator.SetIKRotation(AvatarIKGoal.RightHand, hadnsIKOverrides.rHandLerpedRot);
+    }
+
+    private void SetWeight(float weight)
     {
         characterAnimator.SetIKPositionWeight(AvatarIKGoal.LeftHand, weight);
         characterAnimator.SetIKPositionWeight(AvatarIKGoal.RightHand, weight);
