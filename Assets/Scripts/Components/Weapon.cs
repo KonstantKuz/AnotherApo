@@ -12,11 +12,6 @@ public class Weapon : MonoCached
     private Ray ray;
     private RaycastHit hit;
 
-    private void Start()
-    {
-        _transform = transform;
-    }
-
     public void Fire()
     {
         if (Time.time > lastShotTime)

@@ -54,7 +54,7 @@ public class AttackState : State<EnemyController>
             }
 
 
-            if ((_owner._transform.position - _owner.currentPath.vectorPath[_owner.currentPathPointIndex]).magnitude < 1f)
+            if ((_owner.transform.position - _owner.currentPath.vectorPath[_owner.currentPathPointIndex]).magnitude < 1f)
             {
                 _owner.currentPath.vectorPath.Remove(_owner.currentPath.vectorPath[_owner.currentPathPointIndex]);
             }
@@ -65,7 +65,7 @@ public class AttackState : State<EnemyController>
 
             AttackTargeting(_owner);
            
-            float angleBtwn_FWD_NextPathPoint = Vector3.SignedAngle(_owner._transform.forward, _owner.currentPath.vectorPath[_owner.currentPathPointIndex] - _owner._transform.position, _owner.transform.up);
+            float angleBtwn_FWD_NextPathPoint = Vector3.SignedAngle(_owner.transform.forward, _owner.currentPath.vectorPath[_owner.currentPathPointIndex] - _owner.transform.position, _owner.transform.up);
 
             if (angleBtwn_FWD_NextPathPoint > 0)
             {
@@ -104,7 +104,7 @@ public class AttackState : State<EnemyController>
     public void AttackTargeting(EnemyController _owner)
     {
         _owner.TargetingCalculations(_owner.attackTarget.position);
-        _owner._transform.rotation = Quaternion.Lerp(_owner._transform.rotation, Quaternion.LookRotation(_owner.targetDirection_XZprojection, _owner._transform.up), Time.deltaTime * 2f);
+        _owner.transform.rotation = Quaternion.Lerp(_owner.transform.rotation, Quaternion.LookRotation(_owner.targetDirection_XZprojection, _owner.transform.up), Time.deltaTime * 2f);
 
     }
     public void Wait(EnemyController _owner)
@@ -125,7 +125,7 @@ public class AttackState : State<EnemyController>
         {
             Debug.Log("Node added" + (Vector3)nodesdata[i].position);
         }
-        Vector3 nearestCover = (Vector3)coverPointsGraph.GetNearest(_owner._transform.position).node.position;
+        Vector3 nearestCover = (Vector3)coverPointsGraph.GetNearest(_owner.transform.position).node.position;
         nearestCover.y = 0;
 
         _owner.UpdatePath(nearestCover);

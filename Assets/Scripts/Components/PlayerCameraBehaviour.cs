@@ -11,10 +11,6 @@ public class PlayerCameraBehaviour : MonoCached
     public float positionDelta;
     private Vector3 newPosition;
     private RaycastHit hit;
-    private void Awake()
-    {
-        _transform = transform;
-    }
 
     public override void CustomFixedUpdate()
     {
@@ -29,7 +25,7 @@ public class PlayerCameraBehaviour : MonoCached
         Debug.DrawLine(heightTarget.position, newPosition, Color.red);
         if (Physics.Linecast(heightTarget.position, newPosition, out hit))
         {
-            newPosition = hit.point + _transform.forward/2;
+            newPosition = hit.point + transform.forward/2;
             //newPosition = hit.point + ( yPositionTarget.position - _transform.position)*hit.distance;
         }
         //if (Physics.Linecast(positionTarget.position, yPositionTarget.position, out hit))
@@ -37,8 +33,8 @@ public class PlayerCameraBehaviour : MonoCached
         //    newPosition = hit.point;
         //    //newPosition = hit.point + (yPositionTarget.position - _transform.position) * hit.distance;
         //}
-        _transform.rotation = Quaternion.Lerp(_transform.rotation, Quaternion.LookRotation(lookAtPivot.position - _transform.position), Time.deltaTime * lookAtDelta);
-        _transform.position = Vector3.Lerp(_transform.position, newPosition, Time.deltaTime * positionDelta);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookAtPivot.position - transform.position), Time.deltaTime * lookAtDelta);
+        transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * positionDelta);
     }
     
     public static void FieldOfView(float fieldOfView)

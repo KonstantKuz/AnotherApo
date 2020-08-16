@@ -12,13 +12,12 @@ public class CrossHairCaster : MonoCached
     {
         ray = new Ray();
         hit = new RaycastHit();
-        _transform = transform;
     }
 
     public override void CustomUpdate()
     {
-        ray.origin = _transform.position;
-        ray.direction = _transform.forward;
+        ray.origin = transform.position;
+        ray.direction = transform.forward;
 
         if(Physics.Raycast(ray, out hit, 15f))
         {

@@ -22,7 +22,8 @@ public class PlayerInput : MonoCached
     public static bool Firing;
     public static bool Crouching;
     public static bool Melee;
-    public static Action SwordAttack;
+    public static Action OnSwordAttacked;
+    public static Action OnWeaponSwitched;
 
     private string VerticalName = "Vertical";
     private string HorizontalName = "Horizontal";
@@ -53,7 +54,7 @@ public class PlayerInput : MonoCached
 
         if (Input.GetMouseButtonDown(0) && Melee)
         {
-            SwordAttack();
+            OnSwordAttacked();
         }
         
         if (Input.GetKeyDown(KeyCode.C))
@@ -63,16 +64,17 @@ public class PlayerInput : MonoCached
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            SwitchAttackType();
+            SwitchWeapon();
         }
         
         MouseX = Mathf.Clamp(MouseX, -1, 1);
         MouseY = Mathf.Clamp(MouseY, -0.3f, 0.7f);
     }
 
-    private void SwitchAttackType()
+    private void SwitchWeapon()
     {
         Melee = !Melee;
+        OnWeaponSwitched();
     }
 
     public void Aim()

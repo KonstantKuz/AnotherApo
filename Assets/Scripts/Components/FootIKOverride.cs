@@ -35,9 +35,7 @@ public class FootIKOverride : MonoCached
 
         newRFRot = rightFoot.rotation;
         newLFRot = leftFoot.rotation;
-
-        _transform = transform;
-
+        
         rfstart = rightFoot.position;
         lfstart = leftFoot.position;
     }

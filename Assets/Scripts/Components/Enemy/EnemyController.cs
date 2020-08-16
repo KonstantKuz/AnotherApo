@@ -39,7 +39,6 @@ public class EnemyController : MonoCached
 
     void Start()
     {
-        _transform = transform;
         SetUpStateMachine();
 
         SetUpAnimtor();
@@ -66,7 +65,7 @@ public class EnemyController : MonoCached
     {
         hands = GetComponentInChildren<AimingOverrider>();
         hands.overridedChest.target = attackTarget;
-        hands.overridedChest.weapon = weapon._transform;
+        hands.overridedChest.weapon = weapon.transform;
         hands.characterAnimator = animator;
     }
 
@@ -98,7 +97,7 @@ public class EnemyController : MonoCached
     {
         //animator.SetFloat(AnimatorHashes.Mouse_YHash, angleBtwn_targetDirZY_FWD / 50f);
 
-        if ((attackTarget.position - weapon._transform.position).magnitude > 2f)
+        if ((attackTarget.position - weapon.transform.position).magnitude > 2f)
         {
             animator.SetLookAtWeight(0.5f, 1f, 1f);
             animator.SetLookAtPosition(attackTarget.position);
@@ -109,7 +108,7 @@ public class EnemyController : MonoCached
     {
         currentPathTargetPosition = currentPathTarget;
         currentPathPointIndex = 0;
-        currentPath = ABPath.Construct(_transform.position, currentPathTargetPosition);
+        currentPath = ABPath.Construct(transform.position, currentPathTargetPosition);
         AstarPath.StartPath(currentPath);
     }
 

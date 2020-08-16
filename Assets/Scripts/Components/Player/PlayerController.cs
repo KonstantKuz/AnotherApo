@@ -22,6 +22,7 @@ public class BodyData
 public class PlayerController : MonoCached
 {
     public Weapon weapon;
+    public GameObject sword;
 
     public BodyData bodyData;
 
@@ -33,13 +34,18 @@ public class PlayerController : MonoCached
     public override void OnEnable()
     {
         base.OnEnable();
-        PlayerInput.SwordAttack += SwordAttack;
+        PlayerInput.OnSwordAttacked += SwordAttack;
+        PlayerInput.OnWeaponSwitched += SwitchWeapon;
+    }
+
+    private void SwitchWeapon()
+    {
+        weapon.gameObject.SetActive(!PlayerInput.Melee);
+        sword.SetActive(PlayerInput.Melee);
     }
 
     private void Start()
     {
-        _transform = transform;
-
         SetUpAnimtor();
         SetUpHands();
     }
@@ -54,7 +60,7 @@ public class PlayerController : MonoCached
     {
         hands = GetComponent<AimingOverrider>();
         hands.overridedChest.target = bodyData.mainCrossHair;
-        hands.overridedChest.weapon = weapon._transform;
+        hands.overridedChest.weapon = weapon.transform;
         hands.characterAnimator = animator;
     }
 
@@ -105,7 +111,7 @@ public class PlayerController : MonoCached
         animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
         animator.SetFloat(AnimatorHashes.Mouse_YHash, PlayerInput.MouseY);
 
-        _transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, transform.up);
+        transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, transform.up);
 
         bodyData.bodyAimPivotPosition.y += PlayerInput.MouseY;
         bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y, -0.7f, 3.5f);
@@ -167,7 +173,7 @@ public class PlayerController : MonoCached
                 }
             }
 
-            _transform.rotation = Quaternion.Slerp(_transform.rotation, Quaternion.LookRotation(-coverSens.currentCover.forward), Time.deltaTime * 2f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(-coverSens.currentCover.forward), Time.deltaTime * 2f);
 
             //_transform.rotation = Quaternion.Slerp(_transform.rotation, Quaternion.LookRotation(coverSens.coverHelper.forward/2f), Time.deltaTime * 3f);
         }
@@ -181,7 +187,7 @@ public class PlayerController : MonoCached
     {
         PlayerCameraBehaviour.FieldOfView(35f);
 
-        if ((bodyData.mainCrossHair.position - weapon._transform.position).magnitude > 2f)
+        if ((bodyData.mainCrossHair.position - weapon.transform.position).magnitude > 2f)
         {
             animator.SetLookAtWeight(0.5f, 1f, 1f);
             animator.SetLookAtPosition(bodyData.mainCrossHair.position);

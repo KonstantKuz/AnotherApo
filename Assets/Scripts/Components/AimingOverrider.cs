@@ -23,7 +23,7 @@ public class HandIKOverride
 [System.Serializable]
 public class ChestOverride
 {
-    public Transform overridedChestTransform;
+    public Transform chestTransform;
     public Transform weapon;
     public Transform target;
     [HideInInspector]
@@ -48,10 +48,10 @@ public class AimingOverrider : MonoCached
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if (characterAnimator.GetBool(AnimatorHashes.MeleeHash))
+        if (PlayerInput.Melee)
             return;
         
-        if (characterAnimator.GetBool(AnimatorHashes.AimingHash))
+        if (PlayerInput.Aiming)
         {
             SetWeight(1f);
 
@@ -66,7 +66,7 @@ public class AimingOverrider : MonoCached
 
         SetLerpedIK();
     }
-
+    
     private void CalculateLerpedIKs(Transform targetR, Transform targetL)
     {
         deltaTime = Time.deltaTime * 20f;
@@ -97,22 +97,15 @@ public class AimingOverrider : MonoCached
 
     public override void CustomUpdate()
     {
-        if (characterAnimator.GetBool(AnimatorHashes.AimingHash))
+        if (!PlayerInput.Melee && !PlayerInput.Aiming)
+            return;
+        
+        overridedChest.chestTransform.position = overridedChest.rightUpperArm.position;
+        if ((overridedChest.target.position - overridedChest.weapon.position).magnitude > 2f)
         {
-            if (deltaTime < 15f)
-                deltaTime += Time.deltaTime/*Mathf.Lerp(deltaTime, Time.deltaTime * 15f, Time.deltaTime)*/;
-
-            overridedChest.overridedChestTransform.position = overridedChest.rightUpperArm.position;
-            if ((overridedChest.target.position - overridedChest.weapon.position).magnitude > 2f)
-            {
-                overridedChest.overridedChestTransform.rotation = Quaternion.Lerp(overridedChest.overridedChestTransform.rotation, Quaternion.LookRotation(overridedChest.target.position - overridedChest.overridedChestTransform.position), deltaTime);
-                Vector3 ZYDir = Vector3.ProjectOnPlane(overridedChest.target.position - overridedChest.overridedChestTransform.position, overridedChest.overridedChestTransform.right);
-                overridedChest.weapon.rotation = Quaternion.Slerp(overridedChest.weapon.rotation, Quaternion.LookRotation(ZYDir), deltaTime);
-            }
-        }
-        else
-        {
-            deltaTime = 0f;
+            overridedChest.chestTransform.rotation = Quaternion.Lerp(overridedChest.chestTransform.rotation, Quaternion.LookRotation(overridedChest.target.position - overridedChest.chestTransform.position), deltaTime);
+            Vector3 ZYDir = Vector3.ProjectOnPlane(overridedChest.target.position - overridedChest.chestTransform.position, overridedChest.chestTransform.right);
+            overridedChest.weapon.rotation = Quaternion.Slerp(overridedChest.weapon.rotation, Quaternion.LookRotation(ZYDir), 15f);
         }
     }
 }

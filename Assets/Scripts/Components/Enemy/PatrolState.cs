@@ -54,14 +54,14 @@ public class PatrolState : State<EnemyController>
             }
             
 
-            if ((_owner._transform.position - _owner.currentPath.vectorPath[_owner.currentPathPointIndex]).magnitude < 1f)
+            if ((_owner.transform.position - _owner.currentPath.vectorPath[_owner.currentPathPointIndex]).magnitude < 1f)
             {
                 _owner.currentPath.vectorPath.Remove(_owner.currentPath.vectorPath[_owner.currentPathPointIndex]);
             }
             
             _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), 1f, Time.deltaTime * 5f));
             _owner.TargetingCalculations(_owner.currentPath.vectorPath[_owner.currentPathPointIndex]);
-            _owner._transform.rotation = Quaternion.Lerp(_owner._transform.rotation, Quaternion.LookRotation(_owner.targetDirection_XZprojection/*, _owner._transform.up*/), Time.deltaTime * 2f);
+            _owner.transform.rotation = Quaternion.Lerp(_owner.transform.rotation, Quaternion.LookRotation(_owner.targetDirection_XZprojection/*, _owner._transform.up*/), Time.deltaTime * 2f);
         }
         else
         {
@@ -83,14 +83,14 @@ public class PatrolState : State<EnemyController>
 
     public void LookAndHear(EnemyController _owner)
     {
-        if(Physics.CheckSphere(_owner._transform.position, 5f, 1<<9))
+        if(Physics.CheckSphere(_owner.transform.position, 5f, 1<<9))
         {
-            Collider[] cols = Physics.OverlapSphere(_owner._transform.position, 6f, 1 << 9);
+            Collider[] cols = Physics.OverlapSphere(_owner.transform.position, 6f, 1 << 9);
             for (int i = 0; i < cols.Length; i++)
             {
                 _owner.TargetingCalculations(cols[i].transform.position);
-                float horizontalAngle = Vector3.Angle(_owner._transform.forward, _owner.targetDirection_XZprojection);
-                float verticalAngle = Vector3.Angle(_owner._transform.forward, _owner.targetDirection_ZYprojection);
+                float horizontalAngle = Vector3.Angle(_owner.transform.forward, _owner.targetDirection_XZprojection);
+                float verticalAngle = Vector3.Angle(_owner.transform.forward, _owner.targetDirection_ZYprojection);
                 if(horizontalAngle < 70 || verticalAngle < 20)
                 {
                     _owner.stateMachine.ChangeState(AttackState.Instance);
