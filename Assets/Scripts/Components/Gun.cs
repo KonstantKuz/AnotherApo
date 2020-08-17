@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoCached
+public class Gun : MonoCached
 {
     public Transform barrel;
     public float rateoffire;

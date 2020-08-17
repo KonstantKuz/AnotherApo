@@ -5,23 +5,63 @@ using UnityEngine;
 
 public class PlayerInput : MonoCached
 {
-    public float VerticalSensiv;
-    public float HorizontalSensiv;
+    [SerializeField] private float VerticalSensiv;
+    [SerializeField] private float HorizontalSensiv;
 
-    public float MouseXSmooth;
-    public float MouseYSmooth;
+    [SerializeField] private float MouseXSmooth;
+    [SerializeField] private float MouseYSmooth;
 
-    public float MouseXSensiv;
-    public float MouseYSensiv;
+    [SerializeField] private float MouseXSensiv;
+    [SerializeField] private float MouseYSensiv;
 
-    public static float Vertical;
-    public static float Horizontal;
-    public static float MouseX;
-    public static float MouseY;
-    public static bool Aiming;
-    public static bool Firing;
-    public static bool Crouching;
-    public static bool Melee;
+    private static float vertical;
+    public static float Vertical
+    {
+        get { return vertical; }
+    }
+
+    private static float horizontal;
+    public static float Horizontal
+    {
+        get { return horizontal; }
+    }
+
+    private static float mouseX;
+    public static float MouseX
+    {
+        get { return mouseX; }
+    }
+
+    private static float mouseY;
+    public static float MouseY
+    {
+        get { return mouseY; }
+    }
+
+    private static bool aiming;
+    public static bool Aiming
+    {
+        get { return aiming; }
+    }
+
+    private static bool firing;
+    public static bool Firing
+    {
+        get { return firing; }
+    }
+
+    private static bool crouching;
+    public static bool Crouching
+    {
+        get { return crouching; }
+    }
+
+    private static bool melee;
+    public static bool Melee
+    {
+        get { return melee; }
+    }
+
     public static Action OnSwordAttacked;
     public static Action OnWeaponSwitched;
 
@@ -32,10 +72,10 @@ public class PlayerInput : MonoCached
 
     public override void CustomUpdate()
     {
-        Vertical = Input.GetAxis(VerticalName);
-        Horizontal = Input.GetAxis(HorizontalName);
-        MouseX = Mathf.Lerp(MouseX, Input.GetAxis(MouseXName) * MouseXSensiv, Time.deltaTime * MouseXSmooth);
-        MouseY = Mathf.Lerp(MouseY, Input.GetAxis(MouseYName) * MouseYSensiv, Time.deltaTime * MouseYSmooth);
+        vertical = Input.GetAxis(VerticalName);
+        horizontal = Input.GetAxis(HorizontalName);
+        mouseX = Mathf.Lerp(mouseX, Input.GetAxis(MouseXName) * MouseXSensiv, Time.deltaTime * MouseXSmooth);
+        mouseY = Mathf.Lerp(mouseY, Input.GetAxis(MouseYName) * MouseYSensiv, Time.deltaTime * MouseYSmooth);
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -45,14 +85,14 @@ public class PlayerInput : MonoCached
 
         if (Input.GetMouseButton(0))
         {
-            Firing = true;
+            firing = true;
         }
         else
         {
-            Firing = false;
+            firing = false;
         }
 
-        if (Input.GetMouseButtonDown(0) && Melee)
+        if (Input.GetMouseButtonDown(0) && melee)
         {
             OnSwordAttacked();
         }
@@ -67,23 +107,23 @@ public class PlayerInput : MonoCached
             SwitchWeapon();
         }
         
-        MouseX = Mathf.Clamp(MouseX, -1, 1);
-        MouseY = Mathf.Clamp(MouseY, -0.3f, 0.7f);
+        mouseX = Mathf.Clamp(mouseX, -1, 1);
+        mouseY = Mathf.Clamp(mouseY, -0.3f, 0.7f);
     }
 
     private void SwitchWeapon()
     {
-        Melee = !Melee;
+        melee = !melee;
         OnWeaponSwitched();
     }
 
     public void Aim()
     {
-        Aiming = !Aiming;
+        aiming = !aiming;
     }
 
     public void Crouch()
     {
-        Crouching = !Crouching;
+        crouching = !crouching;
     }
 }

@@ -250,6 +250,7 @@
               <e p="PatrolState.cs" t="Include" />
             </e>
             <e p="FootIKOverride.cs" t="Include" />
+            <e p="Gun.cs" t="Include" />
             <e p="MeleeWeaponTrail.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="PlayerController.cs" t="Include" />
@@ -258,7 +259,6 @@
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerState.cs" t="Include" />
             <e p="TargetPoints.cs" t="Include" />
-            <e p="Weapon.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
             <e p="AnimatorHashes.cs" t="Include" />

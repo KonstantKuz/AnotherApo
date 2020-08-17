@@ -48,10 +48,10 @@ public class AimingOverrider : MonoCached
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if (PlayerInput.Melee)
+        if (IsMelee())
             return;
         
-        if (PlayerInput.Aiming)
+        if (IsAiming())
         {
             SetWeight(1f);
 
@@ -97,7 +97,7 @@ public class AimingOverrider : MonoCached
 
     public override void CustomUpdate()
     {
-        if (!PlayerInput.Melee && !PlayerInput.Aiming)
+        if (IsMelee() || !IsAiming())
             return;
         
         overridedChest.chestTransform.position = overridedChest.rightUpperArm.position;
@@ -105,7 +105,17 @@ public class AimingOverrider : MonoCached
         {
             overridedChest.chestTransform.rotation = Quaternion.Lerp(overridedChest.chestTransform.rotation, Quaternion.LookRotation(overridedChest.target.position - overridedChest.chestTransform.position), deltaTime);
             Vector3 ZYDir = Vector3.ProjectOnPlane(overridedChest.target.position - overridedChest.chestTransform.position, overridedChest.chestTransform.right);
-            overridedChest.weapon.rotation = Quaternion.Slerp(overridedChest.weapon.rotation, Quaternion.LookRotation(ZYDir), 15f);
+            overridedChest.weapon.rotation = Quaternion.Slerp(overridedChest.weapon.rotation, Quaternion.LookRotation(ZYDir), deltaTime);
         }
+    }
+
+    private bool IsMelee()
+    {
+        return characterAnimator.GetBool(AnimatorHashes.MeleeHash);
+    }
+
+    private bool IsAiming()
+    {
+        return characterAnimator.GetBool(AnimatorHashes.AimingHash);
     }
 }

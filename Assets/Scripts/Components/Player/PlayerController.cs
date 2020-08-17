@@ -18,39 +18,87 @@ public class BodyData
     public float movingDamp, movingDeltaTime;
 }
 
+[System.Serializable]
+public class WeaponHolder
+{
+    public Gun gun;
+    public GameObject sword;
+    public Transform gunPlace_In;
+    public Transform gunPlace_Out;
+    public Transform swordPlace_In;
+    public Transform swordPlace_Out;
+    
+
+    public void SwitchWeapons()
+    {
+        if (PlayerInput.Melee)
+        {
+            SetGunOut();
+            SetSwordIn();
+        }
+        else
+        {
+            SetSwordOut();
+            SetGunIn();
+        }
+    }
+
+    private void SetGunIn()
+    {
+        gun.transform.parent = gunPlace_In.parent;
+        gun.transform.localPosition = gunPlace_In.localPosition;
+        gun.transform.localRotation = gunPlace_In.localRotation;
+    }
+
+    private void SetGunOut()
+    {
+        gun.transform.parent = gunPlace_Out.parent;
+        gun.transform.localPosition = gunPlace_Out.localPosition;
+        gun.transform.localRotation = gunPlace_Out.localRotation;
+    }
+
+    private void SetSwordIn()
+    {
+        sword.transform.parent = swordPlace_In.parent;
+        sword.transform.localPosition = swordPlace_In.localPosition;
+        sword.transform.localRotation = swordPlace_In.localRotation;
+    }
+
+    private void SetSwordOut()
+    {
+        sword.transform.parent = swordPlace_Out.parent;
+        sword.transform.localPosition = swordPlace_Out.localPosition;
+        sword.transform.localRotation = swordPlace_Out.localRotation;
+    }
+}
+
+
 
 public class PlayerController : MonoCached
 {
-    public Weapon weapon;
-    public GameObject sword;
+    [SerializeField] private WeaponHolder weaponHolder;
 
     public BodyData bodyData;
 
     public CoverSensorsData coverSens;
 
     private Animator animator;
-    private AimingOverrider hands;
+    private AimingOverrider aimingHands;
 
     public override void OnEnable()
     {
         base.OnEnable();
         PlayerInput.OnSwordAttacked += SwordAttack;
-        PlayerInput.OnWeaponSwitched += SwitchWeapon;
-    }
-
-    private void SwitchWeapon()
-    {
-        weapon.gameObject.SetActive(!PlayerInput.Melee);
-        sword.SetActive(PlayerInput.Melee);
+        PlayerInput.OnWeaponSwitched += weaponHolder.SwitchWeapons;
     }
 
     private void Start()
     {
-        SetUpAnimtor();
+        SetUpAnimator();
         SetUpHands();
     }
 
-    public void SetUpAnimtor()
+    public void SetUpAnimator()
     {
         animator = GetComponent<Animator>();
         animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
@@ -58,10 +106,10 @@ public class PlayerController : MonoCached
 
     public void SetUpHands()
     {
-        hands = GetComponent<AimingOverrider>();
-        hands.overridedChest.target = bodyData.mainCrossHair;
-        hands.overridedChest.weapon = weapon.transform;
-        hands.characterAnimator = animator;
+        aimingHands = GetComponent<AimingOverrider>();
+        aimingHands.overridedChest.target = bodyData.mainCrossHair;
+        aimingHands.overridedChest.weapon = weaponHolder.gun.transform;
+        aimingHands.characterAnimator = animator;
     }
 
     private void OnTriggerStay(Collider other)
@@ -187,7 +235,7 @@ public class PlayerController : MonoCached
     {
         PlayerCameraBehaviour.FieldOfView(35f);
 
-        if ((bodyData.mainCrossHair.position - weapon.transform.position).magnitude > 2f)
+        if ((bodyData.mainCrossHair.position - weaponHolder.gun.transform.position).magnitude > 2f)
         {
             animator.SetLookAtWeight(0.5f, 1f, 1f);
             animator.SetLookAtPosition(bodyData.mainCrossHair.position);
@@ -203,6 +251,6 @@ public class PlayerController : MonoCached
 
     public void Fire()
     {
-        weapon.Fire();
+        weaponHolder.gun.Fire();
     }
 }

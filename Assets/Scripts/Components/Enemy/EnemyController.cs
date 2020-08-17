@@ -9,7 +9,7 @@ public class EnemyController : MonoCached
 {
     public Transform[] patrolPoints;
     public Transform attackTarget;
-    public Weapon weapon;
+    public Gun gun;
 
     [HideInInspector]
     public Animator animator;
@@ -65,7 +65,7 @@ public class EnemyController : MonoCached
     {
         hands = GetComponentInChildren<AimingOverrider>();
         hands.overridedChest.target = attackTarget;
-        hands.overridedChest.weapon = weapon.transform;
+        hands.overridedChest.weapon = gun.transform;
         hands.characterAnimator = animator;
     }
 
@@ -97,7 +97,7 @@ public class EnemyController : MonoCached
     {
         //animator.SetFloat(AnimatorHashes.Mouse_YHash, angleBtwn_targetDirZY_FWD / 50f);
 
-        if ((attackTarget.position - weapon.transform.position).magnitude > 2f)
+        if ((attackTarget.position - gun.transform.position).magnitude > 2f)
         {
             animator.SetLookAtWeight(0.5f, 1f, 1f);
             animator.SetLookAtPosition(attackTarget.position);
