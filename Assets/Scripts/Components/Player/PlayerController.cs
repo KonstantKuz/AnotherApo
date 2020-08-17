@@ -77,23 +77,26 @@ public class WeaponHolder
 public class PlayerController : MonoCached
 {
     [SerializeField] private WeaponHolder weaponHolder;
-
+    [SerializeField] private float jumpForce;
     public BodyData bodyData;
 
     public CoverSensorsData coverSens;
 
     private Animator animator;
+    private Rigidbody rigidbody;
     private AimingOverrider aimingHands;
 
     public override void OnEnable()
     {
         base.OnEnable();
+        PlayerInput.OnJumped += Jump;
         PlayerInput.OnSwordAttacked += SwordAttack;
         PlayerInput.OnWeaponSwitched += weaponHolder.SwitchWeapons;
     }
 
     private void Start()
     {
+        rigidbody = GetComponent<Rigidbody>();
         SetUpAnimator();
         SetUpHands();
     }
@@ -147,24 +150,9 @@ public class PlayerController : MonoCached
 
     public override void CustomFixedUpdate()
     {
-        HandleInputs();
-    }
-
-    public void HandleInputs()
-    {
-        animator.SetBool(AnimatorHashes.MeleeHash, PlayerInput.Melee);
-        animator.SetBool(AnimatorHashes.AimingHash, PlayerInput.Aiming);
-        animator.SetBool(AnimatorHashes.CrouchingHash, PlayerInput.Crouching);
-        animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
-        animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
-        animator.SetFloat(AnimatorHashes.Mouse_YHash, PlayerInput.MouseY);
-
-        transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, transform.up);
-
-        bodyData.bodyAimPivotPosition.y += PlayerInput.MouseY;
-        bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y, -0.7f, 3.5f);
-        bodyData.bodyAimPivotPosition.z = 5f;
-        bodyData.bodyAimPivot.localPosition = bodyData.bodyAimPivotPosition;
+        SetInputsToAnimator();
+        Rotate();
+        UpdateBodyAimPivot();
 
         if(PlayerInput.Firing)
         {
@@ -177,9 +165,47 @@ public class PlayerController : MonoCached
         }
     }
 
+    private void SetInputsToAnimator()
+    {
+        animator.SetBool(AnimatorHashes.MeleeHash, PlayerInput.Melee);
+        animator.SetBool(AnimatorHashes.AimingHash, PlayerInput.Aiming);
+        animator.SetBool(AnimatorHashes.CrouchingHash, PlayerInput.Crouching);
+        animator.SetBool(AnimatorHashes.ShiftingHash, PlayerInput.Shifting);
+        animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
+        animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
+        animator.SetFloat(AnimatorHashes.Mouse_YHash, PlayerInput.MouseY); 
+    }
+
+    private void Jump()
+    {
+        animator.applyRootMotion = false;
+        animator.SetTrigger(AnimatorHashes.Jumphash);
+        rigidbody.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+
+        StartCoroutine(delayedRootMotionEnable());
+        IEnumerator delayedRootMotionEnable()
+        {
+            yield return new WaitForSeconds(1f);
+            animator.applyRootMotion = true;
+        }
+    }
+    
     private void SwordAttack()
     {
         animator.SetTrigger(AnimatorHashes.SwordAttackHash);
+    }
+
+    private void Rotate()
+    {
+        transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, transform.up);
+    }
+
+    private void UpdateBodyAimPivot()
+    {
+        bodyData.bodyAimPivotPosition.y += PlayerInput.MouseY;
+        bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y, -0.7f, 3.5f);
+        bodyData.bodyAimPivotPosition.z = 5f;
+        bodyData.bodyAimPivot.localPosition = bodyData.bodyAimPivotPosition;
     }
 
     public void CoverTransforms()
@@ -222,12 +248,6 @@ public class PlayerController : MonoCached
             }
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(-coverSens.currentCover.forward), Time.deltaTime * 2f);
-
-            //_transform.rotation = Quaternion.Slerp(_transform.rotation, Quaternion.LookRotation(coverSens.coverHelper.forward/2f), Time.deltaTime * 3f);
-        }
-        else
-        {
-
         }
     }
 

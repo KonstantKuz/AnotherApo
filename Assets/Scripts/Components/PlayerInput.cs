@@ -56,6 +56,12 @@ public class PlayerInput : MonoCached
         get { return crouching; }
     }
 
+    private static bool shifting;
+    public static bool Shifting
+    {
+        get { return shifting; }
+    }
+
     private static bool melee;
     public static bool Melee
     {
@@ -64,6 +70,7 @@ public class PlayerInput : MonoCached
 
     public static Action OnSwordAttacked;
     public static Action OnWeaponSwitched;
+    public static Action OnJumped;
 
     private string VerticalName = "Vertical";
     private string HorizontalName = "Horizontal";
@@ -76,7 +83,9 @@ public class PlayerInput : MonoCached
         horizontal = Input.GetAxis(HorizontalName);
         mouseX = Mathf.Lerp(mouseX, Input.GetAxis(MouseXName) * MouseXSensiv, Time.deltaTime * MouseXSmooth);
         mouseY = Mathf.Lerp(mouseY, Input.GetAxis(MouseYName) * MouseYSensiv, Time.deltaTime * MouseYSmooth);
-
+        mouseX = Mathf.Clamp(mouseX, -1, 1);
+        mouseY = Mathf.Clamp(mouseY, -0.3f, 0.7f);
+        
         if (Input.GetMouseButtonDown(1))
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -106,9 +115,16 @@ public class PlayerInput : MonoCached
         {
             SwitchWeapon();
         }
-        
-        mouseX = Mathf.Clamp(mouseX, -1, 1);
-        mouseY = Mathf.Clamp(mouseY, -0.3f, 0.7f);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Shift();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnJumped();
+        }
     }
 
     private void SwitchWeapon()
@@ -125,5 +141,10 @@ public class PlayerInput : MonoCached
     public void Crouch()
     {
         crouching = !crouching;
+    }
+
+    private void Shift()
+    {
+        shifting = !shifting;
     }
 }

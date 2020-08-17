@@ -8,7 +8,8 @@ public class AnimatorHashes : MonoBehaviour
     public static int SwordAttackHash;
     public static int AimingHash;
     public static int CrouchingHash;
-    public static int SprintHash;
+    public static int ShiftingHash;
+    public static int Jumphash;
     public static int CoverHash;
     public static int CoverSideHash;
     public static int VerticalHash;
@@ -23,7 +24,8 @@ public class AnimatorHashes : MonoBehaviour
         SwordAttackHash = Animator.StringToHash("SwordAttack");
         AimingHash = Animator.StringToHash("Aiming");
         CrouchingHash = Animator.StringToHash("Crouching");
-        SprintHash = Animator.StringToHash("Sprint");
+        ShiftingHash = Animator.StringToHash("Shifting");
+        Jumphash = Animator.StringToHash("Jump");
         CoverHash = Animator.StringToHash("Cover");
         CoverSideHash = Animator.StringToHash("Cover_Side");
         VerticalHash = Animator.StringToHash("Vertical_Move");
