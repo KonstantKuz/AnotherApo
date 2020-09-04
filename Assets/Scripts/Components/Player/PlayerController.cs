@@ -8,14 +8,16 @@ public class CoverSensorsData
     public Transform currentCover { get; set; }
     public Transform leftSensor, rightSensor, coverHelper;
 }
+
 [System.Serializable]
 public class BodyData
 {
     public Transform bodyAimPivot, mainCrossHair;
-
+    public float movingDamp, movingDeltaTime;
+    public float jumpForce;
+    public float distanceToGround;
     [HideInInspector]
     public Vector3 bodyAimPivotPosition;
-    public float movingDamp, movingDeltaTime;
 }
 
 [System.Serializable]
@@ -72,19 +74,21 @@ public class WeaponHolder
     }
 }
 
-
-
 public class PlayerController : MonoCached
 {
     [SerializeField] private WeaponHolder weaponHolder;
-    [SerializeField] private float jumpForce;
-    public BodyData bodyData;
-
-    public CoverSensorsData coverSens;
-
-    private Animator animator;
-    private Rigidbody rigidbody;
-    private AimingOverrider aimingHands;
+    [SerializeField] private BodyData bodyData;
+    [SerializeField] private CoverSensorsData coverSens;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private CapsuleCollider collider;
+    [SerializeField] private AimingOverrider aimingHands;
+    
+    private static bool isGrounded;
+    public static bool IsGrounded
+    {
+        get { return isGrounded; }
+    }
 
     public override void OnEnable()
     {
@@ -96,20 +100,17 @@ public class PlayerController : MonoCached
 
     private void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
         SetUpAnimator();
         SetUpHands();
     }
 
     public void SetUpAnimator()
     {
-        animator = GetComponent<Animator>();
         animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
     }
 
     public void SetUpHands()
     {
-        aimingHands = GetComponent<AimingOverrider>();
         aimingHands.overridedChest.target = bodyData.mainCrossHair;
         aimingHands.overridedChest.weapon = weaponHolder.gun.transform;
         aimingHands.characterAnimator = animator;
@@ -150,6 +151,7 @@ public class PlayerController : MonoCached
 
     public override void CustomFixedUpdate()
     {
+        CheckIsGrounded();
         SetInputsToAnimator();
         Rotate();
         UpdateBodyAimPivot();
@@ -162,6 +164,18 @@ public class PlayerController : MonoCached
         if(animator.GetBool(AnimatorHashes.CoverHash))
         {
             CoverTransforms();
+        }
+    }
+    
+    private void CheckIsGrounded()
+    {
+        if (Physics.Raycast(transform.up, -transform.up, bodyData.distanceToGround))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
 
@@ -178,10 +192,15 @@ public class PlayerController : MonoCached
 
     private void Jump()
     {
-        animator.applyRootMotion = false;
+        HandleRootMotionOnJump();
+        HandleColliderBoundsOnJump();
         animator.SetTrigger(AnimatorHashes.Jumphash);
-        rigidbody.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+        rigidbody.AddForce((transform.up + transform.forward) * bodyData.jumpForce, ForceMode.VelocityChange);
+    }
 
+    private void HandleRootMotionOnJump()
+    {
+        animator.applyRootMotion = false;
         StartCoroutine(delayedRootMotionEnable());
         IEnumerator delayedRootMotionEnable()
         {
@@ -189,7 +208,21 @@ public class PlayerController : MonoCached
             animator.applyRootMotion = true;
         }
     }
-    
+
+    private void HandleColliderBoundsOnJump()
+    {
+        collider.height = 0.2f;
+        collider.center = Vector3.up*3;
+        StartCoroutine(delayedColliderReset());
+        IEnumerator delayedColliderReset()
+        {
+            yield return new WaitForSeconds(1f);
+            
+            collider.height = 1.6f;
+            collider.center = Vector3.up;
+        }
+    }
+
     private void SwordAttack()
     {
         animator.SetTrigger(AnimatorHashes.SwordAttackHash);
