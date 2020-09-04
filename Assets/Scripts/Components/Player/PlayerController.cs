@@ -1,78 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-[System.Serializable]
-public class CoverSensorsData
-{
-    public Transform currentCover { get; set; }
-    public Transform leftSensor, rightSensor, coverHelper;
-}
-
-[System.Serializable]
-public class BodyData
-{
-    public Transform bodyAimPivot, mainCrossHair;
-    public float movingDamp, movingDeltaTime;
-    public float jumpForce;
-    public float distanceToGround;
-    [HideInInspector]
-    public Vector3 bodyAimPivotPosition;
-}
-
-[System.Serializable]
-public class WeaponHolder
-{
-    public Gun gun;
-    public GameObject sword;
-    public Transform gunPlace_In;
-    public Transform gunPlace_Out;
-    public Transform swordPlace_In;
-    public Transform swordPlace_Out;
-    
-
-    public void SwitchWeapons()
-    {
-        if (PlayerInput.Melee)
-        {
-            SetGunOut();
-            SetSwordIn();
-        }
-        else
-        {
-            SetSwordOut();
-            SetGunIn();
-        }
-    }
-
-    private void SetGunIn()
-    {
-        gun.transform.parent = gunPlace_In.parent;
-        gun.transform.localPosition = gunPlace_In.localPosition;
-        gun.transform.localRotation = gunPlace_In.localRotation;
-    }
-
-    private void SetGunOut()
-    {
-        gun.transform.parent = gunPlace_Out.parent;
-        gun.transform.localPosition = gunPlace_Out.localPosition;
-        gun.transform.localRotation = gunPlace_Out.localRotation;
-    }
-
-    private void SetSwordIn()
-    {
-        sword.transform.parent = swordPlace_In.parent;
-        sword.transform.localPosition = swordPlace_In.localPosition;
-        sword.transform.localRotation = swordPlace_In.localRotation;
-    }
-
-    private void SetSwordOut()
-    {
-        sword.transform.parent = swordPlace_Out.parent;
-        sword.transform.localPosition = swordPlace_Out.localPosition;
-        sword.transform.localRotation = swordPlace_Out.localRotation;
-    }
-}
+using UnityEngine.Networking;
 
 public class PlayerController : MonoCached
 {
@@ -93,7 +22,7 @@ public class PlayerController : MonoCached
     public override void OnEnable()
     {
         base.OnEnable();
-        PlayerInput.OnJumped += Jump;
+        PlayerInput.OnJumped += TryJump;
         PlayerInput.OnSwordAttacked += SwordAttack;
         PlayerInput.OnWeaponSwitched += weaponHolder.SwitchWeapons;
     }
@@ -169,12 +98,16 @@ public class PlayerController : MonoCached
     
     private void CheckIsGrounded()
     {
-        if (Physics.Raycast(transform.up, -transform.up, bodyData.distanceToGround))
+        Vector3 rayStart = animator.bodyPosition;
+        
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, bodyData.distanceToGround, LayerMasks.interactionLayer))
         {
+            Debug.DrawLine(rayStart, hit.point, Color.green);
             isGrounded = true;
         }
         else
         {
+            Debug.DrawLine(rayStart, rayStart + Vector3.down * bodyData.distanceToGround, Color.red);
             isGrounded = false;
         }
     }
@@ -190,12 +123,16 @@ public class PlayerController : MonoCached
         animator.SetFloat(AnimatorHashes.Mouse_YHash, PlayerInput.MouseY); 
     }
 
-    private void Jump()
+    private void TryJump()
     {
+        if (!IsGrounded)
+            return;
+        
         HandleRootMotionOnJump();
-        HandleColliderBoundsOnJump();
-        animator.SetTrigger(AnimatorHashes.Jumphash);
-        rigidbody.AddForce((transform.up + transform.forward) * bodyData.jumpForce, ForceMode.VelocityChange);
+        animator.SetTrigger(AnimatorHashes.JumpHash);
+        AddJumpForce();
+        //ControlInAir();
+        CheckForLanding();
     }
 
     private void HandleRootMotionOnJump()
@@ -204,22 +141,50 @@ public class PlayerController : MonoCached
         StartCoroutine(delayedRootMotionEnable());
         IEnumerator delayedRootMotionEnable()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
+            while (!IsGrounded)
+            {
+                yield return new WaitForEndOfFrame();
+            }
             animator.applyRootMotion = true;
         }
     }
 
-    private void HandleColliderBoundsOnJump()
+    private void AddJumpForce()
     {
-        collider.height = 0.2f;
-        collider.center = Vector3.up*3;
-        StartCoroutine(delayedColliderReset());
-        IEnumerator delayedColliderReset()
+        Vector3 jumpDirection = transform.forward * PlayerInput.Vertical + transform.right * PlayerInput.Horizontal;
+        rigidbody.AddForce(transform.up * bodyData.verticalJumpForce + jumpDirection * bodyData.horizontalJumpForce,
+                           ForceMode.VelocityChange);
+    }
+
+    // private void ControlInAir()
+    // {
+    //     StartCoroutine(controlInAir());
+    //     IEnumerator controlInAir()
+    //     {
+    //         yield return new WaitForSeconds(0.5f);
+    //         while (!IsGrounded)
+    //         {
+    //             Vector3 airDirection = transform.forward * PlayerInput.Vertical + transform.right * PlayerInput.Horizontal;
+    //             rigidbody.AddForce(airDirection * bodyData.horizontalJumpForce/2,
+    //                                ForceMode.VelocityChange);
+    //             yield return new WaitForEndOfFrame();
+    //         }
+    //     }
+    // }
+
+    private void CheckForLanding()
+    {
+        StartCoroutine(jumpHandle());
+
+        IEnumerator jumpHandle()
         {
-            yield return new WaitForSeconds(1f);
-            
-            collider.height = 1.6f;
-            collider.center = Vector3.up;
+            yield return new WaitForSeconds(0.5f);
+            while (!IsGrounded)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+            animator.SetTrigger(AnimatorHashes.LandingHash);
         }
     }
 
@@ -306,4 +271,11 @@ public class PlayerController : MonoCached
     {
         weaponHolder.gun.Fire();
     }
+
+    // private void OnDrawGizmos()
+    // {
+    //     Debug.DrawLine(aimingHands.overridedChest.chestTransform.position + aimingHands.overridedChest.chestTransform.up,
+    //                    (aimingHands.overridedChest.chestTransform.position - aimingHands.overridedChest.chestTransform.up * bodyData.distanceToGround),
+    //                    Color.green);
+    // }
 }

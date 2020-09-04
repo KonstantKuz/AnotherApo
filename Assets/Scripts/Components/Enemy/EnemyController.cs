@@ -118,7 +118,7 @@ public class EnemyController : MonoCached
         {
             for (int i = 0; i < currentPath.vectorPath.Count -1; i++)
             {
-                    Debug.DrawLine(currentPath.vectorPath[i], currentPath.vectorPath[i + 1], Color.green);
+                Debug.DrawLine(currentPath.vectorPath[i], currentPath.vectorPath[i + 1], Color.green);
             }
         }
     }

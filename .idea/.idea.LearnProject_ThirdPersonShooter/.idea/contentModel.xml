@@ -234,8 +234,29 @@
               <e p="UnityReferenceHelper.cs" t="Include" />
             </e>
           </e>
+          <e p="krovosos" t="Include">
+            <e p="smd" t="Include">
+              <e p="Текстуры.txt" t="Include" />
+            </e>
+          </e>
           <e p="RifleAnimsetPro" t="Include">
             <e p="Readme.txt" t="Include" />
+          </e>
+          <e p="XWeaponTrail" t="Include">
+            <e p="Editor" t="Include">
+              <e p="XWeaponTrailEditor.cs" t="Include" />
+            </e>
+            <e p="Readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Spline.cs" t="Include" />
+              <e p="SplineControlPoint.cs" t="Include" />
+              <e p="VertexPool.cs" t="Include" />
+              <e p="XWeaponTrail.cs" t="Include" />
+              <e p="XWeaponTrailDemo.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="xft_displacement_screen.shader" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -253,7 +274,10 @@
             <e p="Gun.cs" t="Include" />
             <e p="MeleeWeaponTrail.cs" t="Include" />
             <e p="Player" t="Include">
+              <e p="BodyData.cs" t="Include" />
+              <e p="CoverSensorsData.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
+              <e p="WeaponHolder.cs" t="Include" />
             </e>
             <e p="PlayerCameraBehaviour.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
