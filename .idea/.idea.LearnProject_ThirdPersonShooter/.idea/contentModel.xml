@@ -234,9 +234,103 @@
               <e p="UnityReferenceHelper.cs" t="Include" />
             </e>
           </e>
+          <e p="Dynamic Sword Animset" t="Include">
+            <e p="Readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Animation_view.cs" t="Include" />
+              <e p="Blue_CameraControll.cs" t="Include" />
+            </e>
+          </e>
           <e p="krovosos" t="Include">
             <e p="smd" t="Include">
               <e p="Текстуры.txt" t="Include" />
+            </e>
+          </e>
+          <e p="MuzzleFlash" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ImageEffects" t="Include">
+                <e p="BloomEditor.cs" t="Include" />
+              </e>
+              <e p="Water (Pro Only)" t="Include">
+                <e p="Water4" t="Include">
+                  <e p="GerstnerDisplaceEditor.cs" t="Include" />
+                  <e p="PlanarReflectionEditor.cs" t="Include" />
+                  <e p="SpecularLightingEditor.cs" t="Include" />
+                  <e p="WaterBaseEditor.cs" t="Include" />
+                  <e p="WaterEditorUtility.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="FPS Pack" t="Include">
+              <e p="Readme.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Demo" t="Include">
+                  <e p="FPSDemoGUI.cs" t="Include" />
+                  <e p="FPSDemoReactivator.cs" t="Include" />
+                  <e p="FPSFireManager.cs" t="Include" />
+                  <e p="MouseLock.cs" t="Include" />
+                </e>
+                <e p="FPSLightCurves.cs" t="Include" />
+                <e p="FPSParticleSystemScaler.cs" t="Include" />
+                <e p="FPSRandomRotateAngle.cs" t="Include" />
+                <e p="FPSShaderColorGradient.cs" t="Include" />
+                <e p="FPSShaderFloatCurves.cs" t="Include" />
+                <e p="MaterialType.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="FPSDistortionParticles.shader" t="Include" />
+                <e p="FPSGlass.shader" t="Include" />
+                <e p="FPSGlowAdditive.shader" t="Include" />
+                <e p="FPSLazer.shader" t="Include" />
+                <e p="FPSParticleBlendDirLight.shader" t="Include" />
+                <e p="FPSProjectorBlended.shader" t="Include" />
+                <e p="FPSWaterParticles.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Standard Assets" t="Include">
+              <e p="Character Controllers" t="Include">
+                <e p="Sources" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="MouseLook.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Effects" t="Include">
+                <e p="ImageEffects" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Bloom.cs" t="Include" />
+                    <e p="PostEffectsBase.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="_BloomAndFlares" t="Include">
+                      <e p="BlendForBloom.shader" t="Include" />
+                      <e p="BlurAndFlares.shader" t="Include" />
+                      <e p="BrightPassFilter2.shader" t="Include" />
+                      <e p="LensFlareCreate.shader" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Water (Pro Only)" t="Include">
+                <e p="Water4" t="Include">
+                  <e p="Sources" t="Include">
+                    <e p="Scripts" t="Include">
+                      <e p="Displace.cs" t="Include" />
+                      <e p="GerstnerDisplace.cs" t="Include" />
+                      <e p="MeshContainer.cs" t="Include" />
+                      <e p="PlanarReflection.cs" t="Include" />
+                      <e p="SpecularLighting.cs" t="Include" />
+                      <e p="WaterBase.cs" t="Include" />
+                      <e p="WaterTile.cs" t="Include" />
+                    </e>
+                    <e p="Shaders" t="Include">
+                      <e p="FX-SimpleWater4.shader" t="Include" />
+                      <e p="FX-Water4.shader" t="Include" />
+                      <e p="WaterInclude.cginc" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
             </e>
           </e>
           <e p="RifleAnimsetPro" t="Include">
@@ -298,6 +392,37 @@
             <e p="Singleton.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
             <e p="UpdateManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Templates" t="Include">
+          <e p="ObjectPooler" t="Include">
+            <e p="Core" t="Include">
+              <e p="ObjectPooler.cs" t="Include" />
+              <e p="Pool.cs" t="Include" />
+              <e p="PoolGroup.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="ObjectPoolerEditor.cs" t="Include" />
+              <e p="PoolEditor.cs" t="Include" />
+              <e p="PoolGroupEditor.cs" t="Include" />
+            </e>
+            <e p="Example" t="Include">
+              <e p="Spawner.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ReorderableListExtensions" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ReorderableDrawer.cs" t="Include" />
+              <e p="ReorderableDrawerTemplate.cs" t="Include" />
+              <e p="ReorderableListCreator.cs" t="Include" />
+              <e p="ReorderableListTools.cs" t="Include" />
+            </e>
+            <e p="Example" t="Include">
+              <e p="Editor" t="Include">
+                <e p="SomeClassEditor.cs" t="Include" />
+              </e>
+              <e p="SomeClass.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>

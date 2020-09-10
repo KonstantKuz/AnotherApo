@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -10,8 +11,6 @@ public class PlayerController : MonoCached
     [SerializeField] private CoverSensorsData coverSens;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rigidbody;
-    [SerializeField] private CapsuleCollider collider;
-    [SerializeField] private AimingOverrider aimingHands;
     
     private static bool isGrounded;
     public static bool IsGrounded
@@ -30,19 +29,11 @@ public class PlayerController : MonoCached
     private void Start()
     {
         SetUpAnimator();
-        SetUpHands();
     }
 
     public void SetUpAnimator()
     {
         animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
-    }
-
-    public void SetUpHands()
-    {
-        aimingHands.overridedChest.target = bodyData.mainCrossHair;
-        aimingHands.overridedChest.weapon = weaponHolder.gun.transform;
-        aimingHands.characterAnimator = animator;
     }
 
     private void OnTriggerStay(Collider other)
@@ -85,9 +76,9 @@ public class PlayerController : MonoCached
         Rotate();
         UpdateBodyAimPivot();
 
-        if(PlayerInput.Firing)
+        if(!PlayerInput.Melee && PlayerInput.Aiming && PlayerInput.Firing)
         {
-            Fire();
+            weaponHolder.gun.Fire();
         }
 
         if(animator.GetBool(AnimatorHashes.CoverHash))
@@ -123,70 +114,51 @@ public class PlayerController : MonoCached
         animator.SetFloat(AnimatorHashes.Mouse_YHash, PlayerInput.MouseY); 
     }
 
+    private Vector3 lastVelocity;
+    
     private void TryJump()
     {
         if (!IsGrounded)
             return;
+
+        lastVelocity = rigidbody.velocity;
         
-        HandleRootMotionOnJump();
-        animator.SetTrigger(AnimatorHashes.JumpHash);
-        AddJumpForce();
-        //ControlInAir();
-        CheckForLanding();
-    }
-
-    private void HandleRootMotionOnJump()
-    {
         animator.applyRootMotion = false;
-        StartCoroutine(delayedRootMotionEnable());
-        IEnumerator delayedRootMotionEnable()
+        animator.SetTrigger(AnimatorHashes.JumpHash);
+
+        SetJumpVelocity();
+        
+        DoActionOnLanding(delegate { animator.applyRootMotion = true; });
+        DoActionOnLanding(delegate { animator.SetTrigger(AnimatorHashes.LandingHash); });
+    }
+
+    private void SetJumpVelocity()
+    {
+        Vector3 jumpVelocity = lastVelocity;
+        lastVelocity.x += PlayerInput.Horizontal;
+        lastVelocity.z += PlayerInput.Vertical;
+        jumpVelocity.y = bodyData.verticalJumpForce;
+        rigidbody.velocity = jumpVelocity;
+    }
+
+    private void DoActionOnLanding(Action onLanding)
+    {
+        StartCoroutine(waitForLanding());
+
+        IEnumerator waitForLanding()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return null;
+            yield return null;
+            yield return null;
             while (!IsGrounded)
             {
-                yield return new WaitForEndOfFrame();
+                yield return null;
             }
-            animator.applyRootMotion = true;
+            
+            onLanding.Invoke();
         }
     }
 
-    private void AddJumpForce()
-    {
-        Vector3 jumpDirection = transform.forward * PlayerInput.Vertical + transform.right * PlayerInput.Horizontal;
-        rigidbody.AddForce(transform.up * bodyData.verticalJumpForce + jumpDirection * bodyData.horizontalJumpForce,
-                           ForceMode.VelocityChange);
-    }
-
-    // private void ControlInAir()
-    // {
-    //     StartCoroutine(controlInAir());
-    //     IEnumerator controlInAir()
-    //     {
-    //         yield return new WaitForSeconds(0.5f);
-    //         while (!IsGrounded)
-    //         {
-    //             Vector3 airDirection = transform.forward * PlayerInput.Vertical + transform.right * PlayerInput.Horizontal;
-    //             rigidbody.AddForce(airDirection * bodyData.horizontalJumpForce/2,
-    //                                ForceMode.VelocityChange);
-    //             yield return new WaitForEndOfFrame();
-    //         }
-    //     }
-    // }
-
-    private void CheckForLanding()
-    {
-        StartCoroutine(jumpHandle());
-
-        IEnumerator jumpHandle()
-        {
-            yield return new WaitForSeconds(0.5f);
-            while (!IsGrounded)
-            {
-                yield return new WaitForEndOfFrame();
-            }
-            animator.SetTrigger(AnimatorHashes.LandingHash);
-        }
-    }
 
     private void SwordAttack()
     {
@@ -266,16 +238,4 @@ public class PlayerController : MonoCached
         animator.SetLookAtWeight(1, 0.4f, 0.4f);
         animator.SetLookAtPosition(bodyData.bodyAimPivot.position);
     }
-
-    public void Fire()
-    {
-        weaponHolder.gun.Fire();
-    }
-
-    // private void OnDrawGizmos()
-    // {
-    //     Debug.DrawLine(aimingHands.overridedChest.chestTransform.position + aimingHands.overridedChest.chestTransform.up,
-    //                    (aimingHands.overridedChest.chestTransform.position - aimingHands.overridedChest.chestTransform.up * bodyData.distanceToGround),
-    //                    Color.green);
-    // }
 }

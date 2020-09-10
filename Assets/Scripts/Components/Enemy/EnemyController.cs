@@ -11,10 +11,8 @@ public class EnemyController : MonoCached
     public Transform attackTarget;
     public Gun gun;
 
-    [HideInInspector]
     public Animator animator;
-    [HideInInspector]
-    public AimingOverrider hands;
+    [SerializeField] private AimingOverrider hands;
 
     public StateMachine<EnemyController> stateMachine;
 
@@ -40,33 +38,12 @@ public class EnemyController : MonoCached
     void Start()
     {
         SetUpStateMachine();
-
-        SetUpAnimtor();
-        SetUpHands();
     }
 
     public void SetUpStateMachine()
     {
         stateMachine = new StateMachine<EnemyController>(this);
         stateMachine.ChangeState(PatrolState.Instance);
-    }
-
-    public void SetUpPathfinding()
-    {
-        
-    }
-    
-    public void SetUpAnimtor()
-    {
-        animator = GetComponent<Animator>();
-    }
-
-    public void SetUpHands()
-    {
-        hands = GetComponentInChildren<AimingOverrider>();
-        hands.overridedChest.target = attackTarget;
-        hands.overridedChest.weapon = gun.transform;
-        hands.characterAnimator = animator;
     }
 
     private void OnAnimatorIK(int layerIndex)

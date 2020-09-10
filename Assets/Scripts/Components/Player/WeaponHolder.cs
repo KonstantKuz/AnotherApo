@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class WeaponHolder
+public class WeaponHolder : MonoBehaviour
 {
     public Gun gun;
     public GameObject sword;

@@ -21,29 +21,26 @@ public class HandIKOverride
     public Quaternion lHandLerpedRot;
 }
 [System.Serializable]
-public class ChestOverride
+public class SpineOverride
 {
-    public Transform chestTransform;
-    public Transform weapon;
-    public Transform target;
+    public Transform spineTransform;
     [HideInInspector]
     public Transform rightUpperArm;
 }
 
 public class AimingOverrider : MonoCached
 {
-    [HideInInspector]
-    public Animator characterAnimator;
-
-    public HandIKOverride hadnsIKOverrides;
-    public ChestOverride overridedChest;
+    [SerializeField] private Animator characterAnimator;
+    [SerializeField] private HandIKOverride hadnsIKOverrider;
+    [SerializeField] private SpineOverride spineOverrider;
+    [SerializeField] private WeaponHolder weaponHolder;
+    [SerializeField] private Transform target;
 
     private float deltaTime;
-    void Start()
+    
+    private void Start()
     {
-        characterAnimator = GetComponent<Animator>();
-
-        overridedChest.rightUpperArm = characterAnimator.GetBoneTransform(HumanBodyBones.RightUpperArm);
+        spineOverrider.rightUpperArm = characterAnimator.GetBoneTransform(HumanBodyBones.RightUpperArm);
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -55,13 +52,13 @@ public class AimingOverrider : MonoCached
         {
             SetWeight(1f);
 
-            CalculateLerpedIKs(hadnsIKOverrides.rHandAiming, hadnsIKOverrides.lHandAiming);
+            CalculateLerpedIKs(hadnsIKOverrider.rHandAiming, hadnsIKOverrider.lHandAiming);
         }
         else
         {
             SetWeight(0.75f);
 
-            CalculateLerpedIKs(hadnsIKOverrides.rHandSimple, hadnsIKOverrides.lHandSimple);
+            CalculateLerpedIKs(hadnsIKOverrider.rHandSimple, hadnsIKOverrider.lHandSimple);
         }
 
         SetLerpedIK();
@@ -71,20 +68,20 @@ public class AimingOverrider : MonoCached
     {
         deltaTime = Time.deltaTime * 20f;
 
-        hadnsIKOverrides.rHandLerpedPos = Vector3.Lerp(hadnsIKOverrides.rHandLerpedPos, targetR.position, deltaTime);
-        hadnsIKOverrides.lHandLerpedPos = Vector3.Lerp(hadnsIKOverrides.lHandLerpedPos, targetL.position, deltaTime);
+        hadnsIKOverrider.rHandLerpedPos = Vector3.Lerp(hadnsIKOverrider.rHandLerpedPos, targetR.position, deltaTime);
+        hadnsIKOverrider.lHandLerpedPos = Vector3.Lerp(hadnsIKOverrider.lHandLerpedPos, targetL.position, deltaTime);
 
-        hadnsIKOverrides.rHandLerpedRot = Quaternion.Lerp(hadnsIKOverrides.rHandLerpedRot, targetR.rotation, deltaTime);
-        hadnsIKOverrides.lHandLerpedRot = Quaternion.Lerp(hadnsIKOverrides.lHandLerpedRot, targetL.rotation, deltaTime);
+        hadnsIKOverrider.rHandLerpedRot = Quaternion.Lerp(hadnsIKOverrider.rHandLerpedRot, targetR.rotation, deltaTime);
+        hadnsIKOverrider.lHandLerpedRot = Quaternion.Lerp(hadnsIKOverrider.lHandLerpedRot, targetL.rotation, deltaTime);
     }
 
     private void SetLerpedIK()
     {
-        characterAnimator.SetIKPosition(AvatarIKGoal.LeftHand, hadnsIKOverrides.lHandLerpedPos);
-        characterAnimator.SetIKPosition(AvatarIKGoal.RightHand, hadnsIKOverrides.rHandLerpedPos);
+        characterAnimator.SetIKPosition(AvatarIKGoal.LeftHand, hadnsIKOverrider.lHandLerpedPos);
+        characterAnimator.SetIKPosition(AvatarIKGoal.RightHand, hadnsIKOverrider.rHandLerpedPos);
 
-        characterAnimator.SetIKRotation(AvatarIKGoal.LeftHand, hadnsIKOverrides.lHandLerpedRot);
-        characterAnimator.SetIKRotation(AvatarIKGoal.RightHand, hadnsIKOverrides.rHandLerpedRot);
+        characterAnimator.SetIKRotation(AvatarIKGoal.LeftHand, hadnsIKOverrider.lHandLerpedRot);
+        characterAnimator.SetIKRotation(AvatarIKGoal.RightHand, hadnsIKOverrider.rHandLerpedRot);
     }
 
     private void SetWeight(float weight)
@@ -100,12 +97,48 @@ public class AimingOverrider : MonoCached
         if (IsMelee() || !IsAiming())
             return;
         
-        overridedChest.chestTransform.position = overridedChest.rightUpperArm.position;
-        if ((overridedChest.target.position - overridedChest.weapon.position).magnitude > 2f)
+        SetSpinePositionAsRightUpperArm();
+        if (TargetIsAhead())
         {
-            overridedChest.chestTransform.rotation = Quaternion.Lerp(overridedChest.chestTransform.rotation, Quaternion.LookRotation(overridedChest.target.position - overridedChest.chestTransform.position), deltaTime);
-            Vector3 ZYDir = Vector3.ProjectOnPlane(overridedChest.target.position - overridedChest.chestTransform.position, overridedChest.chestTransform.right);
-            overridedChest.weapon.rotation = Quaternion.Slerp(overridedChest.weapon.rotation, Quaternion.LookRotation(ZYDir), deltaTime);
+            RotateSpineTowardsTarget();
+
+            RotateGunTowardsTarget();
+        }
+    }
+
+    private void RotateSpineTowardsTarget()
+    {
+        Quaternion spineLookRotation = Quaternion.LookRotation(target.position - spineOverrider.spineTransform.position);
+        spineOverrider.spineTransform.rotation =
+            Quaternion.Lerp(spineOverrider.spineTransform.rotation, spineLookRotation, deltaTime);
+    }
+
+    private void RotateGunTowardsTarget()
+    {
+        Quaternion gunLookRotation =
+            Quaternion.LookRotation(target.position -
+                                    weaponHolder.gun.transform.position); //Quaternion.LookRotation(projectedDirection_ZY);
+        weaponHolder.gun.transform.rotation =
+            Quaternion.Lerp(weaponHolder.gun.transform.rotation, gunLookRotation, deltaTime);
+    }
+
+    private void SetSpinePositionAsRightUpperArm()
+    {
+        spineOverrider.spineTransform.position = spineOverrider.rightUpperArm.position;
+    }
+
+    private bool TargetIsAhead()
+    {
+        Vector3 direction = target.position - weaponHolder.gun.transform.position;
+        float distanceToTarget = direction.magnitude;
+
+        if (distanceToTarget > 2f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

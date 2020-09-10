@@ -1,12 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CrossHairCaster : MonoCached
 {
-    public Transform crossHair;
+    [SerializeField] private float maxDistance = 15f;
+    [SerializeField] private Transform crossHair;
     private Ray ray;
     private RaycastHit hit;
+
+    public RaycastHit Hit
+    {
+        get { return hit; }
+    }
+
+    public Action<Vector3> OnCrossHairUpdated;
 
     private void Awake()
     {
@@ -19,13 +28,15 @@ public class CrossHairCaster : MonoCached
         ray.origin = transform.position;
         ray.direction = transform.forward;
 
-        if(Physics.Raycast(ray, out hit, 15f))
+        if(Physics.Raycast(ray, out hit, maxDistance))
         {
             crossHair.position = hit.point;
         }
         else
         {
-            crossHair.position = ray.GetPoint(15f);
+            crossHair.position = ray.GetPoint(maxDistance);
         }
+
+        OnCrossHairUpdated?.Invoke(crossHair.position);
     }
 }
