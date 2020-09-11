@@ -6,15 +6,14 @@ public class PlayerCameraBehaviour : MonoCached
 {
     [SerializeField] private Transform lookAtPoint;
     [SerializeField] private Transform positionTarget;
+    [SerializeField] private Transform player;
     
-    public float lookAtDelta;
-    public float positionDelta;
-    private float YRotation;
-    private float XRotation;
+    //[SerializeField] private float lookAtDelta;
+    //[SerializeField] private float positionDelta;
+    
     private Vector3 currentPosition;
-    private RaycastHit hit;
 
-    public override void CustomFixedUpdate()
+    public override void CustomUpdate()
     {
         HandleTransforms();
     }
@@ -22,29 +21,31 @@ public class PlayerCameraBehaviour : MonoCached
     public void HandleTransforms()
     {
         CalculateCurrentPosition();
-
         SetCurrentRotation();
         SetCurrentPosition();
     }
 
     private void CalculateCurrentPosition()
     {
-        YRotation += PlayerInput.MouseY;
-        YRotation = Mathf.Clamp(YRotation, -8, 5);
-        // currentPosition = Quaternion.AngleAxis(YRotation, positionTarget.right) * positionTarget.position;
         currentPosition = positionTarget.position;
         currentPosition.y -= lookAtPoint.localPosition.y/2;
+        if (Physics.Linecast(currentPosition, player.position, out RaycastHit hit))
+        {
+            currentPosition = hit.point + transform.forward;
+        }
     }
 
     private void SetCurrentPosition()
     {
-        transform.position = Vector3.Lerp(transform.position, currentPosition, Time.deltaTime * positionDelta);
+        transform.position = currentPosition;
+        //transform.position = Vector3.Lerp(transform.position, currentPosition, Time.deltaTime * positionDelta);
     }
 
     private void SetCurrentRotation()
     {
         Quaternion lookRotation = Quaternion.LookRotation(lookAtPoint.position - transform.position);
-        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * lookAtDelta);
+        transform.rotation = lookRotation;
+        // transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * lookAtDelta);
     }
 
     public static void FieldOfView(float fieldOfView)

@@ -129,10 +129,14 @@ public class AimingOverrider : MonoCached
 
     private bool TargetIsAhead()
     {
-        Vector3 direction = target.position - weaponHolder.gun.transform.position;
-        float distanceToTarget = direction.magnitude;
+        Vector3 targetDirection = target.position - weaponHolder.gun.transform.position;
+        // Debug.Log($"Angle btw animator & target == {SignBtnw(targetDirection, characterAnimator.transform.forward, characterAnimator.transform.up)}");
 
-        if (distanceToTarget > 2f)
+        float distanceToTarget = targetDirection.magnitude;
+        // float direction = SignBtnw(targetDirection, characterAnimator.transform.forward,
+        //                            characterAnimator.transform.up);
+        
+        if (distanceToTarget > 1f)
         {
             return true;
         }
@@ -150,5 +154,14 @@ public class AimingOverrider : MonoCached
     private bool IsAiming()
     {
         return characterAnimator.GetBool(AnimatorHashes.AimingHash);
+    }
+    
+    public static float SignBtnw(Vector3 from, Vector3 to, Vector3 axis)
+    {
+        float cross_x = from.y * to.z - from.z * to.y;
+        float cross_y = from.z * to.x - from.x * to.z;
+        float cross_z = from.x * to.y - from.y * to.x;
+        float sign = Mathf.Sign(axis.x * cross_x + axis.y * cross_y + axis.z * cross_z);
+        return sign;
     }
 }

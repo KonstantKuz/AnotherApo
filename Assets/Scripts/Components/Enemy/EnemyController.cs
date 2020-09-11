@@ -20,10 +20,7 @@ public class EnemyController : MonoCached
     public Vector3 targetDirection, targetDirection_XZprojection, targetDirection_ZYprojection;
     [HideInInspector]
     public float angleBtwn_targetDirZY_FWD, angleBtwn_targetDirXZ_FWD;
-
     
-    [Header("Navigation")]
-    public AstarPath coverPoints;
     [HideInInspector]
     public float pathUpdTimer;
     [HideInInspector]
@@ -43,7 +40,7 @@ public class EnemyController : MonoCached
     public void SetUpStateMachine()
     {
         stateMachine = new StateMachine<EnemyController>(this);
-        stateMachine.ChangeState(PatrolState.Instance);
+        stateMachine.ChangeState(AggressiveState.Instance);
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -56,6 +53,7 @@ public class EnemyController : MonoCached
     
     public override void CustomUpdate()
     {
+        gun.Fire();
         stateMachine.UpdateMachine();
     }
 

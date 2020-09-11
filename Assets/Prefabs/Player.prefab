@@ -146,13 +146,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7390502648675597632}
-  m_LocalRotation: {x: 0.18159382, y: -0.0640396, z: 0.011851849, w: 0.9812147}
-  m_LocalPosition: {x: 2.4299984, y: 2.89, z: -4.5999985}
+  m_LocalRotation: {x: 0.14982508, y: -0.046963505, z: 0.0071248803, w: 0.9875708}
+  m_LocalPosition: {x: 1.3899994, y: 2.45, z: -2.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7385930542455171290}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 20.970001, y: -7.4680004, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.253, y: -5.445, z: 0}
 --- !u!1 &7390502648912289066
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7390502649217905262
 Transform:
   m_ObjectHideFlags: 0
@@ -2434,7 +2434,7 @@ GameObject:
   - component: {fileID: 7392179376313721632}
   - component: {fileID: 7392179376313721634}
   - component: {fileID: 7392179376313721633}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2482,8 +2482,8 @@ MonoBehaviour:
     movingDamp: 0.025
     movingDeltaTime: 0.5
     verticalJumpForce: 6
-    horizontalJumpForce: 6
     distanceToGround: 1
+    bodyAimPivotVerticalClamp: {x: -0.5, y: 3.5}
     bodyAimPivotPosition: {x: 0, y: 0, z: 0}
   coverSens:
     leftSensor: {fileID: 7390502649738107980}

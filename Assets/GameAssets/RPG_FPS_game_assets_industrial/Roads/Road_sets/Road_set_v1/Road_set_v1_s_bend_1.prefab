@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010721903726}
-  - component: {fileID: -2788395518268718689}
   m_Layer: 0
   m_Name: Road_set_v1_s_bend_1
   m_TagString: Untagged
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &-2788395518268718689
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000010473526090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000012157107748
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +43,7 @@ GameObject:
   - component: {fileID: 4000013488127554}
   - component: {fileID: 33000010761016650}
   - component: {fileID: 23000013738059912}
-  - component: {fileID: 64000012806440694}
+  - component: {fileID: 1940458795913129425}
   m_Layer: 0
   m_Name: Road_set_v1_s_bend_1
   m_TagString: Untagged
@@ -101,6 +87,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -112,6 +99,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -124,8 +112,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64000012806440694
-MeshCollider:
+--- !u!65 &1940458795913129425
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,10 +122,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300122, guid: c7f7a9ec09a97d144963b6dd16448dc3, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 10.000006, y: 0.18363953, z: 10.000002}
+  m_Center: {x: -0.00000023841858, y: 0, z: 0.00000023841858}
 --- !u!1 &1000012379229482
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +136,6 @@ GameObject:
   - component: {fileID: 4000011276936740}
   - component: {fileID: 33000011138873016}
   - component: {fileID: 23000011520281732}
-  - component: {fileID: 64000011125478918}
   m_Layer: 0
   m_Name: Road_set_v1_s_bend_1f
   m_TagString: Untagged
@@ -193,6 +179,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -204,6 +191,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -216,17 +204,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64000011125478918
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012379229482}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300124, guid: c7f7a9ec09a97d144963b6dd16448dc3, type: 3}

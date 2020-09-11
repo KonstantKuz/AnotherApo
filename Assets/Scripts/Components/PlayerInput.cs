@@ -89,7 +89,7 @@ public class PlayerInput : MonoCached
         if (Input.GetMouseButtonDown(1))
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Aim();
+            SwitchAiming();
         }
 
         if (Input.GetMouseButton(0))
@@ -108,11 +108,13 @@ public class PlayerInput : MonoCached
         
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Crouch();
+            SwitchCrouching();
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
+            if(aiming)
+                SwitchAiming();
             SwitchWeapon();
         }
 
@@ -133,12 +135,12 @@ public class PlayerInput : MonoCached
         OnWeaponSwitched();
     }
 
-    public void Aim()
+    private void SwitchAiming()
     {
         aiming = !aiming;
     }
 
-    public void Crouch()
+    private void SwitchCrouching()
     {
         crouching = !crouching;
     }

@@ -59,7 +59,7 @@ public class PlayerController : MonoCached
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if(PlayerInput.Aiming)
+        if(!PlayerInput.Melee && PlayerInput.Aiming)
         {
             AimingTransforms();
         }
@@ -69,7 +69,7 @@ public class PlayerController : MonoCached
         }
     }
 
-    public override void CustomFixedUpdate()
+    public override void CustomUpdate()
     {
         CheckIsGrounded();
         SetInputsToAnimator();
@@ -173,7 +173,9 @@ public class PlayerController : MonoCached
     private void UpdateBodyAimPivot()
     {
         bodyData.bodyAimPivotPosition.y += PlayerInput.MouseY;
-        bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y, -0.7f, 3.5f);
+        bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y,
+                                                      bodyData.bodyAimPivotVerticalClamp.x, 
+                                                      bodyData.bodyAimPivotVerticalClamp.y);
         bodyData.bodyAimPivotPosition.z = 5f;
         bodyData.bodyAimPivot.localPosition = bodyData.bodyAimPivotPosition;
     }
