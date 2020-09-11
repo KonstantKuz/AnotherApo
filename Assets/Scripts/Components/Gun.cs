@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoCached
 {
+    [SerializeField] private bool trail;
     [SerializeField] private GameObject muzzleFlash;
     [SerializeField] private CrossHairCaster crossHairCaster;
     [SerializeField] private LineRenderer lazer;
@@ -35,7 +36,10 @@ public class Gun : MonoCached
         {
             lastShotTime = Time.time + rateoffire;
             PlayMuzzleFlash();
-            //Spawn(barrel.position + Random.Range(positionJitter.x, positionJitter.y) * barrel.forward, barrel.rotation);
+            if (trail)
+            {
+                ObjectPooler.Instance.SpawnObject("Trail", barrel.position, barrel.rotation);
+            }
         }
     }
 

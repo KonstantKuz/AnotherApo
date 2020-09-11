@@ -6,7 +6,7 @@ public class PlayerCameraBehaviour : MonoCached
 {
     [SerializeField] private Transform lookAtPoint;
     [SerializeField] private Transform positionTarget;
-    [SerializeField] private Transform player;
+    [SerializeField] private Transform pointForCheckIntersection;
     
     //[SerializeField] private float lookAtDelta;
     //[SerializeField] private float positionDelta;
@@ -29,7 +29,7 @@ public class PlayerCameraBehaviour : MonoCached
     {
         currentPosition = positionTarget.position;
         currentPosition.y -= lookAtPoint.localPosition.y/2;
-        if (Physics.Linecast(currentPosition, player.position, out RaycastHit hit))
+        if (Physics.Linecast(currentPosition, pointForCheckIntersection.position, out RaycastHit hit))
         {
             currentPosition = hit.point + transform.forward;
         }
