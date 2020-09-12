@@ -362,7 +362,6 @@
             <e p="CrossHairCaster.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="AggressiveState.cs" t="Include" />
-              <e p="AttackState.cs" t="Include" />
               <e p="EnemyController.cs" t="Include" />
               <e p="PatrolState.cs" t="Include" />
             </e>

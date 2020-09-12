@@ -112,12 +112,19 @@ public class AggressiveState : State<EnemyController>
     private void GoToPlayer(EnemyController owner)
     {
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
-        Vector3 pointToGo = playerController.transform.position + playerController.transform.right * 5f;
+        Vector3 side = playerController.transform.right * RandomSign();
+        Vector3 pointToGo = playerController.transform.position + side * Random.Range(5,8);
         
         var coverPointsGraph = AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == "General");
         Vector3 resultNode = (Vector3)coverPointsGraph.GetNearest(pointToGo).node.position;
         resultNode.y = 0;
 
         owner.UpdatePath(resultNode);
+    }
+
+    public int RandomSign()
+    {
+        return Random.Range(0, 2) * 2 - 1;
+        return Random.value > 0.5f ? 1 : -1;
     }
 }
