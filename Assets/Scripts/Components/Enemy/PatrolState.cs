@@ -25,80 +25,62 @@ public class PatrolState : State<EnemyController>
             return _instance;
         }
     }
-    public override void EnterState(EnemyController _owner)
+    public override void EnterState(EnemyController owner)
     {
-        _owner.UpdatePath(_owner.patrolPoints[Random.Range(0, _owner.patrolPoints.Length)].position);
-        _owner.pathUpdPeriod = 30;
-        Debug.Log(_owner.currentPath.vectorPath.Count);
+        owner.UpdatePath(owner.patrolPoints[Random.Range(0, owner.patrolPoints.Length)].position);
+        owner.pathUpdPeriod = 30;
     }
 
-    public override void ExitState(EnemyController _owner)
+    public override void ExitState(EnemyController owner)
     {
 
     }
 
-    public override void UpdateState(EnemyController _owner)
+    public override void UpdateState(EnemyController owner)
     {
-        MoveToNextPoint(_owner);
-        LookAndHear(_owner);
+        MoveToNextPoint(owner);
+        LookAndHear(owner);
     }
 
-    public void MoveToNextPoint(EnemyController _owner)
+    public void MoveToNextPoint(EnemyController owner)
     {
-        if(!ReferenceEquals(_owner.currentPath, null) && _owner.currentPath.vectorPath.Count>0)
+        owner.CleanPassedNodes();
+
+        if (!owner.HasPath() || owner.PathFullyPassed())
         {
-            if ((_owner.currentPath.vectorPath[_owner.currentPathPointIndex] - _owner.currentPathTargetPosition).magnitude < 1f)
-            {
-                Wait(_owner);
-                return;
-            }
-            
-
-            if ((_owner.transform.position - _owner.currentPath.vectorPath[_owner.currentPathPointIndex]).magnitude < 1f)
-            {
-                _owner.currentPath.vectorPath.Remove(_owner.currentPath.vectorPath[_owner.currentPathPointIndex]);
-            }
-            
-            _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), 1f, Time.deltaTime * 5f));
-            _owner.TargetingCalculations(_owner.currentPath.vectorPath[_owner.currentPathPointIndex]);
-            _owner.transform.rotation = Quaternion.Lerp(_owner.transform.rotation, Quaternion.LookRotation(_owner.targetDirection_XZprojection/*, _owner._transform.up*/), Time.deltaTime * 2f);
+            Wait(owner);
+            return;
         }
-        else
+        owner.Move(1, 0);
+        owner.RotateTowards(owner.currentPath.vectorPath[owner.currentPathNodeIndex]);
+    }
+
+    private void Wait(EnemyController owner)
+    {
+        owner.Move(0,0);
+
+        if (Time.time > owner.pathUpdTimer)
         {
-            Wait(_owner);
+            owner.pathUpdTimer = Time.time + owner.pathUpdPeriod;
+            EnterState(owner);
         }
     }
 
-    public void Wait(EnemyController _owner)
+    private void LookAndHear(EnemyController owner)
     {
-        _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), 0f, Time.deltaTime *5f));
-        _owner.animator.SetFloat(AnimatorHashes.HorizontalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.HorizontalHash), 0f, Time.deltaTime * 5f));
-
-        if (Time.time > _owner.pathUpdTimer)
+        if(Physics.CheckSphere(owner.transform.position, 5f, 1<<9))
         {
-            _owner.pathUpdTimer = Time.time + _owner.pathUpdPeriod;
-            EnterState(_owner);
-        }
-    }
-
-    public void LookAndHear(EnemyController _owner)
-    {
-        if(Physics.CheckSphere(_owner.transform.position, 5f, 1<<9))
-        {
-            Collider[] cols = Physics.OverlapSphere(_owner.transform.position, 6f, 1 << 9);
+            Collider[] cols = Physics.OverlapSphere(owner.transform.position, 6f, 1 << 9);
             for (int i = 0; i < cols.Length; i++)
             {
-                _owner.TargetingCalculations(cols[i].transform.position);
-                float horizontalAngle = Vector3.Angle(_owner.transform.forward, _owner.targetDirection_XZprojection);
-                float verticalAngle = Vector3.Angle(_owner.transform.forward, _owner.targetDirection_ZYprojection);
+                owner.TargetingCalculations(cols[i].transform.position);
+                float horizontalAngle = Vector3.Angle(owner.transform.forward, owner.targetDirection_XZprojection);
+                float verticalAngle = Vector3.Angle(owner.transform.forward, owner.targetDirection_ZYprojection);
                 if(horizontalAngle < 70 || verticalAngle < 20)
                 {
-                    _owner.stateMachine.ChangeState(AttackState.Instance);
+                    owner.stateMachine.ChangeState(AggressiveState.Instance);
                 }
             }
         }
     }
-
-   
-
 }

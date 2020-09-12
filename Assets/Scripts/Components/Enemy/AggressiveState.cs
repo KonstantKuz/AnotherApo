@@ -26,103 +26,90 @@ public class AggressiveState : State<EnemyController>
         }
     }
     
-    public override void EnterState(EnemyController _owner)
+    public override void EnterState(EnemyController owner)
     {
-        _owner.animator.SetBool(AnimatorHashes.AimingHash, true);
+        owner.pathUpdPeriod = 2;
 
-        GoToPlayer(_owner);
+        owner.animator.SetBool(AnimatorHashes.AimingHash, true);
+        GoToPlayer(owner);
     }
 
-    public override void ExitState(EnemyController _owner)
+    public override void ExitState(EnemyController owner)
     {
 
     }
 
-    public override void UpdateState(EnemyController _owner)
+    public override void UpdateState(EnemyController owner)
     {
-        MoveToNextPoint(_owner);
+        owner.RotateTowards(owner.attackTarget.position);
+
+        MoveToNextPoint(owner);
     }
 
-    public void MoveToNextPoint(EnemyController _owner)
+    private float verticalMoveValue;
+    private float horizontalMoveValue;
+
+    private void MoveToNextPoint(EnemyController owner)
     {
-        if (!ReferenceEquals(_owner.currentPath, null) && _owner.currentPath.vectorPath.Count > 0)
+        owner.CleanPassedNodes();
+
+        if (!owner.HasPath() || owner.PathFullyPassed())
         {
-            if ((_owner.currentPath.vectorPath[_owner.currentPathPointIndex] - _owner.currentPathTargetPosition).magnitude < 1f)
+            Wait(owner);
+            return;
+        }
+        
+        CalculateMoveValues(owner);
+        owner.Move(verticalMoveValue, horizontalMoveValue);
+    }
+
+    private void CalculateMoveValues(EnemyController owner)
+    {
+        float fwdAngleToNextNode = owner.ForwardAngleToNextNode();
+
+        verticalMoveValue = 0;
+        horizontalMoveValue = 0;
+        
+        if (fwdAngleToNextNode > 0)
+        {
+            if (fwdAngleToNextNode > 90)
             {
-                Wait(_owner);
-                return;
-            }
-
-
-            if ((_owner.transform.position - _owner.currentPath.vectorPath[_owner.currentPathPointIndex]).magnitude < 1f)
-            {
-                _owner.currentPath.vectorPath.Remove(_owner.currentPath.vectorPath[_owner.currentPathPointIndex]);
-            }
-            if (_owner.currentPathPointIndex > _owner.currentPath.vectorPath.Count - 1)
-            {
-                return;
-            }
-
-            AttackTargeting(_owner);
-           
-            float angleBtwn_FWD_NextPathPoint = Vector3.SignedAngle(_owner.transform.forward, _owner.currentPath.vectorPath[_owner.currentPathPointIndex] - _owner.transform.position, _owner.transform.up);
-
-            if (angleBtwn_FWD_NextPathPoint > 0)
-            {
-                if (angleBtwn_FWD_NextPathPoint > 90)
-                {
-                    _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), -1, Time.deltaTime * 2f));
-                }
-                else
-                {
-                    _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), 1, Time.deltaTime * 2f));
-                }
-
-                _owner.animator.SetFloat(AnimatorHashes.HorizontalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.HorizontalHash), 1, Time.deltaTime * 2f));
+                verticalMoveValue = -1;
             }
             else
             {
-                if (angleBtwn_FWD_NextPathPoint > -90)
-                {
-                    _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), 1, Time.deltaTime * 2f));
-                }
-                else
-                {
-                    _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), -1, Time.deltaTime * 2f));
-                }
-                _owner.animator.SetFloat(AnimatorHashes.HorizontalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.HorizontalHash), -1, Time.deltaTime * 2f));
+                verticalMoveValue = 1;
             }
 
+            horizontalMoveValue = 1;
         }
         else
         {
-            Wait(_owner);
+            if (fwdAngleToNextNode > -90)
+            {
+                verticalMoveValue = 1;
+            }
+            else
+            {
+                verticalMoveValue = -1;
+            }
+
+            horizontalMoveValue = -1;
         }
     }
 
-
-    public void AttackTargeting(EnemyController _owner)
+    private void Wait(EnemyController owner)
     {
-        _owner.TargetingCalculations(_owner.attackTarget.position);
-        _owner.transform.rotation = Quaternion.Lerp(_owner.transform.rotation, Quaternion.LookRotation(_owner.targetDirection_XZprojection, _owner.transform.up), Time.deltaTime * 2f);
-
-    }
-    public void Wait(EnemyController _owner)
-    {
-        _owner.animator.SetFloat(AnimatorHashes.VerticalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.VerticalHash), 0f, Time.deltaTime * 5f));
-        _owner.animator.SetFloat(AnimatorHashes.HorizontalHash, Mathf.Lerp(_owner.animator.GetFloat(AnimatorHashes.HorizontalHash), 0f, Time.deltaTime * 5f));
-        //_owner.animator.SetBool(AnimatorHashes.CrouchingHash, true);
-
-        AttackTargeting(_owner);
-
-        if (Time.time > _owner.pathUpdTimer)
+        owner.Move(0, 0);
+        
+        if (Time.time > owner.pathUpdTimer)
         {
-            _owner.pathUpdTimer = Time.time + _owner.pathUpdPeriod;
-            EnterState(_owner);
+            owner.pathUpdTimer = Time.time + owner.pathUpdPeriod;
+            EnterState(owner);
         }
     }
 
-    public void GoToPlayer(EnemyController _owner)
+    private void GoToPlayer(EnemyController owner)
     {
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         Vector3 pointToGo = playerController.transform.position + playerController.transform.right * 5f;
@@ -131,6 +118,6 @@ public class AggressiveState : State<EnemyController>
         Vector3 resultNode = (Vector3)coverPointsGraph.GetNearest(pointToGo).node.position;
         resultNode.y = 0;
 
-        _owner.UpdatePath(resultNode);
+        owner.UpdatePath(resultNode);
     }
 }
