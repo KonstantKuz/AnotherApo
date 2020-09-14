@@ -122,7 +122,7 @@ public class PlayerController : MonoCached
 
     private void MoveController()
     {
-        if (PlayerInput.Melee)
+        if (PlayerInput.Melee && controller.isGrounded)
             return;
         
         movementVelocity.x = PlayerInput.Horizontal;
@@ -162,12 +162,11 @@ public class PlayerController : MonoCached
         DoActionOnLanding(
             delegate
             {
-                animator.applyRootMotion = true; 
                 ResetVelocities();
+                animator.applyRootMotion = true; 
             }, 
             0);
         
-        verticalVelocity = controller.velocity;
         ActualJump();
     }
 
