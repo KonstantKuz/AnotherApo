@@ -5,14 +5,14 @@ public class UpdateManager : MonoBehaviour
 {
     private void Awake()
     {
-       Application.targetFrameRate = 30;
+       Application.targetFrameRate = 60;
     }
     
     private void Update()
     {
         for (int i = 0; i < MonoCached.customUpdates.Count; i++)
         {
-            MonoCached.customUpdates[i].CustomUpdatesCall();
+            MonoCached.customUpdates[i].CallCustomUpdate();
         }
     }
 
@@ -20,15 +20,15 @@ public class UpdateManager : MonoBehaviour
     {
         for (int i = 0; i < MonoCached.customFixedUpdates.Count; i++)
         {
-            MonoCached.customFixedUpdates[i].CustomFixedUpdatesCall();
+            MonoCached.customFixedUpdates[i].CallCustomFixedUpdate();
         }
     }
 
-    //private void LateUpdate()
-    //{
-    //    for (int i = 0; i < MonoCached.customLateUpdates.Count; i++)
-    //    {
-    //        MonoCached.customLateUpdates[i].CustomLateUpdatesCall();
-    //    }
-    //}
+    private void LateUpdate()
+    {
+        for (int i = 0; i < MonoCached.customLateUpdates.Count; i++)
+        {
+            MonoCached.customLateUpdates[i].CallCustomLateUpdate();
+        }
+    }
 }

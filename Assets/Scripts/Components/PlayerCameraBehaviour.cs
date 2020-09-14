@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerCameraBehaviour : MonoCached
 {
@@ -8,12 +6,12 @@ public class PlayerCameraBehaviour : MonoCached
     [SerializeField] private Transform positionTarget;
     [SerializeField] private Transform pointForCheckIntersection;
     
-    //[SerializeField] private float lookAtDelta;
-    //[SerializeField] private float positionDelta;
+    [SerializeField] private float rotationUpdSpeed;
+    [SerializeField] private float positionUpdSpeed;
     
     private Vector3 currentPosition;
 
-    public override void CustomUpdate()
+    public override void CustomLateUpdate()
     {
         HandleTransforms();
     }
@@ -38,14 +36,14 @@ public class PlayerCameraBehaviour : MonoCached
     private void SetCurrentPosition()
     {
         transform.position = currentPosition;
-        //transform.position = Vector3.Lerp(transform.position, currentPosition, Time.deltaTime * positionDelta);
+        //transform.position = Vector3.Lerp(transform.position, currentPosition, Time.deltaTime * positionUpdSpeed);
     }
 
     private void SetCurrentRotation()
     {
         Quaternion lookRotation = Quaternion.LookRotation(lookAtPoint.position - transform.position);
         transform.rotation = lookRotation;
-        // transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * lookAtDelta);
+        //transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * rotationUpdSpeed);
     }
 
     public static void FieldOfView(float fieldOfView)

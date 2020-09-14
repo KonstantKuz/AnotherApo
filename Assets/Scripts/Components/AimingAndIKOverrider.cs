@@ -28,15 +28,27 @@ public class SpineOverride
     public Transform rightUpperArm;
 }
 
-public class AimingOverrider : MonoCached
+public class AimingAndIKOverrider : MonoCached
 {
     [SerializeField] private Animator characterAnimator;
     [SerializeField] private HandIKOverride hadnsIKOverrider;
     [SerializeField] private SpineOverride spineOverrider;
-    [SerializeField] private WeaponHolder weaponHolder;
+    [SerializeField] private Gun gun;
     [SerializeField] private Transform target;
 
     private float deltaTime;
+
+    private bool Update = true;
+
+    public void StartUpdate()
+    {
+        Update = true;
+    }
+
+    public void StopUpdate()
+    {
+        Update = false;
+    }
     
     private void Start()
     {
@@ -45,19 +57,19 @@ public class AimingOverrider : MonoCached
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if (IsMelee())
+        if (!Update)
             return;
+        // if (IsMelee())
+        //     return;
         
         if (IsAiming())
         {
             SetWeight(1f);
-
             CalculateLerpedIKs(hadnsIKOverrider.rHandAiming, hadnsIKOverrider.lHandAiming);
         }
         else
         {
             SetWeight(0.75f);
-
             CalculateLerpedIKs(hadnsIKOverrider.rHandSimple, hadnsIKOverrider.lHandSimple);
         }
 
@@ -94,7 +106,10 @@ public class AimingOverrider : MonoCached
 
     public override void CustomUpdate()
     {
-        if (IsMelee() || !IsAiming())
+        if (!Update)
+            return;
+        
+        if (/*IsMelee() ||*/ !IsAiming())
             return;
         
         SetSpinePositionAsRightUpperArm();
@@ -117,9 +132,9 @@ public class AimingOverrider : MonoCached
     {
         Quaternion gunLookRotation =
             Quaternion.LookRotation(target.position -
-                                    weaponHolder.gun.transform.position); //Quaternion.LookRotation(projectedDirection_ZY);
-        weaponHolder.gun.transform.rotation =
-            Quaternion.Lerp(weaponHolder.gun.transform.rotation, gunLookRotation, deltaTime);
+                                    gun.transform.position); //Quaternion.LookRotation(projectedDirection_ZY);
+        gun.transform.rotation =
+            Quaternion.Lerp(gun.transform.rotation, gunLookRotation, deltaTime);
     }
 
     private void SetSpinePositionAsRightUpperArm()
@@ -129,7 +144,7 @@ public class AimingOverrider : MonoCached
 
     private bool TargetIsAhead()
     {
-        Vector3 targetDirection = target.position - weaponHolder.gun.transform.position;
+        Vector3 targetDirection = target.position - gun.transform.position;
         // Debug.Log($"Angle btw animator & target == {SignBtnw(targetDirection, characterAnimator.transform.forward, characterAnimator.transform.up)}");
 
         float distanceToTarget = targetDirection.magnitude;
@@ -146,10 +161,10 @@ public class AimingOverrider : MonoCached
         }
     }
 
-    private bool IsMelee()
-    {
-        return characterAnimator.GetBool(AnimatorHashes.MeleeHash);
-    }
+    // private bool IsMelee()
+    // {
+    //     return characterAnimator.GetBool(AnimatorHashes.MeleeHash);
+    // }
 
     private bool IsAiming()
     {

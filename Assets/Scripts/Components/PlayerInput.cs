@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PlayerInput : MonoCached
 {
-    [SerializeField] private float VerticalSensiv;
-    [SerializeField] private float HorizontalSensiv;
+    // [SerializeField] private float VerticalDamp;
+    // [SerializeField] private float HorizontalDamp;
 
     [SerializeField] private float MouseXSmooth;
     [SerializeField] private float MouseYSmooth;
@@ -38,11 +38,11 @@ public class PlayerInput : MonoCached
         get { return mouseY; }
     }
 
-    private static bool aiming;
-    public static bool Aiming
-    {
-        get { return aiming; }
-    }
+    // private static bool aiming;
+    // public static bool Aiming
+    // {
+    //     get { return aiming; }
+    // }
 
     private static bool firing;
     public static bool Firing
@@ -69,7 +69,7 @@ public class PlayerInput : MonoCached
     }
 
     public static Action OnSwordAttacked;
-    public static Action OnWeaponSwitched;
+    public static Action<bool> OnWeaponSwitched;
     public static Action OnJumped;
 
     private string VerticalName = "Vertical";
@@ -77,6 +77,11 @@ public class PlayerInput : MonoCached
     private string MouseXName = "Mouse X";
     private string MouseYName = "Mouse Y";
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    
     public override void CustomUpdate()
     {
         vertical = Input.GetAxis(VerticalName);
@@ -88,8 +93,7 @@ public class PlayerInput : MonoCached
         
         if (Input.GetMouseButtonDown(1))
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            SwitchAiming();
+            //SwitchAiming();
         }
 
         if (Input.GetMouseButton(0))
@@ -113,8 +117,8 @@ public class PlayerInput : MonoCached
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if(aiming)
-                SwitchAiming();
+            // if(aiming)
+            //     SwitchAiming();
             SwitchWeapon();
         }
 
@@ -132,13 +136,13 @@ public class PlayerInput : MonoCached
     private void SwitchWeapon()
     {
         melee = !melee;
-        OnWeaponSwitched();
+        OnWeaponSwitched(melee);
     }
 
-    private void SwitchAiming()
-    {
-        aiming = !aiming;
-    }
+    // private void SwitchAiming()
+    // {
+    //     aiming = !aiming;
+    // }
 
     private void SwitchCrouching()
     {

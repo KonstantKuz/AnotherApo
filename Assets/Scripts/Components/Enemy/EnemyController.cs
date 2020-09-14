@@ -12,7 +12,7 @@ public class EnemyController : MonoCached
     public Gun gun;
 
     public Animator animator;
-    [SerializeField] private AimingOverrider hands;
+    [SerializeField] private AimingAndIKOverrider hands;
 
     public StateMachine<EnemyController> stateMachine;
 

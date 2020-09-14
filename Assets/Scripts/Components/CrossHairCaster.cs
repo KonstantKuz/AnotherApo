@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Compilation;
 using UnityEngine;
 
 public class CrossHairCaster : MonoCached
@@ -38,7 +37,6 @@ public class CrossHairCaster : MonoCached
 
     public virtual void CastCrossHair()
     {
-
         if(Physics.Raycast(ray, out hit, maxDistance))
         {
             crossHair.position = hit.point;
