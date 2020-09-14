@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoCached
 {
@@ -80,6 +81,7 @@ public class PlayerInput : MonoCached
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     
     public override void CustomUpdate()
@@ -130,6 +132,11 @@ public class PlayerInput : MonoCached
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnJumped();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 
