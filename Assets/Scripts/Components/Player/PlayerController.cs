@@ -7,7 +7,7 @@ public class PlayerController : MonoCached
     [SerializeField] private WeaponHolder weaponHolder;
     [SerializeField] private BodyData bodyData;
     [SerializeField] private CoverSensorsData coverSens;
-    [SerializeField] private AimingAndIKOverrider aimingAndIkOverrider;
+    //[SerializeField] private AimingAndIKOverrider aimingAndIkOverrider;
     [SerializeField] private Animator animator;
     //[SerializeField] private Rigidbody rigidbody;
     [SerializeField] private CharacterController controller;
@@ -39,12 +39,12 @@ public class PlayerController : MonoCached
             
             if (Melee)
             {
-                aimingAndIkOverrider.StopUpdate();
+                //aimingAndIkOverrider.StopUpdate();
                 animator.applyRootMotion = true;
             }
             else
             {
-                aimingAndIkOverrider.StartUpdate();
+                //aimingAndIkOverrider.StartUpdate();
                 animator.applyRootMotion = false;
             }
 
@@ -58,15 +58,15 @@ public class PlayerController : MonoCached
         movementVelocity = Vector3.zero;
     }
 
-    private void Start()
-    {
-        SetUpAnimator();
-    }
-
-    public void SetUpAnimator()
-    {
-        animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
-    }
+    // private void Start()
+    // {
+    //     SetUpAnimator();
+    // }
+    //
+    // public void SetUpAnimator()
+    // {
+    //     animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
+    // }
 
     // private void OnTriggerStay(Collider other)
     // {
@@ -89,17 +89,17 @@ public class PlayerController : MonoCached
     //     }
     // }
 
-    private void OnAnimatorIK(int layerIndex)
-    {
-        if(!PlayerInput.Melee /*&& PlayerInput.Aiming*/)
-        {
-            AimingTransforms();
-        }
-        else
-        {
-            SimpleWalkingTransforms();
-        }
-    }
+    // private void OnAnimatorIK(int layerIndex)
+    // {
+    //     if(!PlayerInput.Melee /*&& PlayerInput.Aiming*/)
+    //     {
+    //         AimingTransforms();
+    //     }
+    //     // else
+    //     // {
+    //     //     SimpleWalkingTransforms();
+    //     // }
+    // }
 
     public override void CustomUpdate()
     {
@@ -258,21 +258,21 @@ public class PlayerController : MonoCached
     //     }
     // }
 
-    public void AimingTransforms()
-    {
-        //PlayerCameraBehaviour.FieldOfView(35f);
+    // public void AimingTransforms()
+    // {
+    //     //PlayerCameraBehaviour.FieldOfView(35f);
+    //
+    //     if ((bodyData.mainCrossHair.position - weaponHolder.gun.transform.position).magnitude > 2f)
+    //     {
+    //         animator.SetLookAtWeight(0.5f, 1f, 1f);
+    //         animator.SetLookAtPosition(bodyData.mainCrossHair.position);
+    //     }
+    // }
 
-        if ((bodyData.mainCrossHair.position - weaponHolder.gun.transform.position).magnitude > 2f)
-        {
-            animator.SetLookAtWeight(0.5f, 1f, 1f);
-            animator.SetLookAtPosition(bodyData.mainCrossHair.position);
-        }
-    }
-
-    public void SimpleWalkingTransforms()
-    {
-        //PlayerCameraBehaviour.FieldOfView(60);
-        animator.SetLookAtWeight(1, 0.4f, 0.4f);
-        animator.SetLookAtPosition(bodyData.bodyAimPivot.position);
-    }
+    // public void SimpleWalkingTransforms()
+    // {
+    //     //PlayerCameraBehaviour.FieldOfView(60);
+    //     animator.SetLookAtWeight(1, 0.4f, 0.4f);
+    //     animator.SetLookAtPosition(bodyData.bodyAimPivot.position);
+    // }
 }
