@@ -412,7 +412,9 @@
             </e>
           </e>
         </e>
+        <e p="PlayerRootMotion.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="BodyLookAtTarget.cs" t="Include" />
           <e p="Components" t="Include">
             <e p="AimingAndIKOverrider.cs" t="Include" />
             <e p="Bullet.cs" t="Include" />

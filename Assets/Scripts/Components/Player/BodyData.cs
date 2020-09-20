@@ -7,6 +7,7 @@ public class BodyData
     public float movingDamp, movingDeltaTime;
     public float speedOnJump;
     public float movementSpeed;
+
     //public float gravityMultiplier;
     //public float distanceToGround;
     public Vector2 bodyAimPivotVerticalClamp;
