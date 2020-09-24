@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private RigBuilder rigBuilder;
     
     private Vector3 movementVelocity;
+    private Vector3 dashVelocity;
     private Vector3 verticalVelocity;
     
     private Vector3 originalAnimatorLocalPosition;
@@ -29,6 +30,21 @@ public class PlayerController : MonoBehaviour
         PlayerInput.OnWeaponSwitched += SwitchWeapon;
         PlayerInput.OnSwordAttacked += SwordAttack;
         PlayerInput.OnJumped += TryJump;
+        PlayerInput.OnDashed += Dash;
+    }
+
+    private void Dash()
+    {
+        dashVelocity.x = PlayerInput.Horizontal;
+        dashVelocity.z = PlayerInput.Vertical;
+        dashVelocity *= bodyData.dashSpeed;
+
+        StartCoroutine(DelayedResetDashVelocity());
+        IEnumerator DelayedResetDashVelocity()
+        {
+            yield return new WaitForSeconds(bodyData.dashDuration);
+            dashVelocity = Vector3.zero;
+        }
     }
 
     private void SwitchWeapon(bool Melee)
@@ -132,27 +148,32 @@ public class PlayerController : MonoBehaviour
 
     private void MoveByController()
     {
-        ResetVelocity();
+        ResetMovementVelocity();
 
         movementVelocity.x = PlayerInput.Horizontal;
         movementVelocity.z = PlayerInput.Vertical;
+        
+        movementVelocity += dashVelocity;
+        
         movementVelocity = transform.TransformDirection(movementVelocity);
         movementVelocity *= bodyData.movementSpeed;
+
+
         controller.Move(movementVelocity * Time.deltaTime);
     }
 
-    private void ResetVelocity()
+    private void ResetMovementVelocity()
     {
         movementVelocity = Vector3.zero;
         movementVelocity = transform.TransformDirection(movementVelocity);
         movementVelocity *= bodyData.movementSpeed;
-        controller.Move(movementVelocity * Time.deltaTime);
+        //controller.Move(movementVelocity * Time.deltaTime);
     }
 
     private void ApplyGravity()
     {
         verticalVelocity += Physics.gravity * Time.deltaTime;
-        verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y, bodyData.speedOnJump);
+        verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y, bodyData.jumpSpeed);
         controller.Move(verticalVelocity * Time.deltaTime);
     }
 
@@ -185,13 +206,13 @@ public class PlayerController : MonoBehaviour
         animator.applyRootMotion = false;
         DoActionOnLanding(delegate { animator.applyRootMotion = true; });
         
-        ResetVelocity();
+        ResetMovementVelocity();
         ActualJump();
     }
 
     private void ActualJump()
     {
-        verticalVelocity.y = bodyData.speedOnJump;
+        verticalVelocity.y = bodyData.jumpSpeed;
         animator.SetTrigger(AnimatorHashes.JumpHash);
         DoActionOnLanding(delegate { animator.SetTrigger(AnimatorHashes.LandingHash); });
     }

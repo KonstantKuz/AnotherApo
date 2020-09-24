@@ -5,8 +5,11 @@ public class BodyData
 {
     public Transform bodyAimPivot, mainCrossHair;
     public float movingDamp, movingDeltaTime;
-    public float speedOnJump;
+    
     public float movementSpeed;
+    public float jumpSpeed;
+    public float dashSpeed;
+    public float dashDuration;
 
     //public float gravityMultiplier;
     //public float distanceToGround;
