@@ -3,21 +3,20 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
-public class PlayerController : MonoCached
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private WeaponHolder weaponHolder;
     [SerializeField] private BodyData bodyData;
-    [SerializeField] private CoverSensorsData coverSens;
-    //[SerializeField] private AimingAndIKOverrider aimingAndIkOverrider;
+    [SerializeField] private PlayerWeaponHolder weaponHolder;
     [SerializeField] private Animator animator;
-    //[SerializeField] private Rigidbody rigidbody;
     [SerializeField] private CharacterController controller;
     [SerializeField] private RigBuilder rigBuilder;
+    
     private Vector3 movementVelocity;
     private Vector3 verticalVelocity;
     
     private Vector3 originalAnimatorLocalPosition;
     private Quaternion originalAnimatorLocalRotation;
+    
 
     private void Awake()
     {
@@ -25,53 +24,50 @@ public class PlayerController : MonoCached
         originalAnimatorLocalRotation = animator.transform.localRotation;
     }
     
-    public override void OnEnable()
+    public void OnEnable()
     {
-        base.OnEnable();
-        PlayerInput.OnJumped += delegate
-        {
-            if (!controller.isGrounded)
-                return;
-            if (PlayerInput.Melee)
-            {
-                JumpWithSword();
-            }
-            else
-            {
-                JumpWithGun();
-            }
-        };
-        
+        PlayerInput.OnWeaponSwitched += SwitchWeapon;
         PlayerInput.OnSwordAttacked += SwordAttack;
-        PlayerInput.OnWeaponSwitched += delegate (bool Melee)
-        {
-            weaponHolder.SwitchWeapons();
-            
-            if (Melee)
-            { 
-                rigBuilder.enabled = false;
-                animator.applyRootMotion = true;
-            }
-            else
-            {
-                animator.applyRootMotion = false;
-                rigBuilder.enabled = true;
-
-                animator.transform.localPosition = originalAnimatorLocalPosition;
-                animator.transform.localRotation = originalAnimatorLocalRotation;
-            }
-
-            ResetVelocities();
-        };
+        PlayerInput.OnJumped += TryJump;
     }
 
-    private void ResetVelocities()
+    private void SwitchWeapon(bool Melee)
     {
-        verticalVelocity = Vector3.zero;
-        movementVelocity = Vector3.zero;
+        weaponHolder.SwitchWeapons(Melee);
+
+        if (Melee)
+        {
+            rigBuilder.enabled = false;
+            animator.applyRootMotion = true;
+        }
+        else
+        {
+            animator.applyRootMotion = false;
+            rigBuilder.enabled = true;
+        }
     }
     
-    public override void CustomUpdate()
+    private void SwordAttack()
+    {
+        animator.SetTrigger(AnimatorHashes.SwordAttackHash);
+    }
+
+    private void TryJump()
+    {
+        if (!controller.isGrounded)
+            return;
+
+        if (PlayerInput.Melee)
+        {
+            JumpWithSword();
+        }
+        else
+        {
+            JumpWithGun();
+        }
+    }
+    
+    public void Update()
     {
         Rotate();
         TryMove();
@@ -87,7 +83,7 @@ public class PlayerController : MonoCached
 
     private void Rotate()
     {
-        if (PlayerInput.Melee)
+        if (animator.applyRootMotion)
         {
             animator.transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, animator.transform.up);
         }
@@ -99,22 +95,45 @@ public class PlayerController : MonoCached
 
     private void TryMove()
     {
-        if (PlayerInput.Melee)
+        if (animator.applyRootMotion)
         {
-            // if (!controller.isGrounded)
-            // {
-            //     animator.applyRootMotion = false;
-            //     MoveByController();
-            //     animator.applyRootMotion = true;
-            // }
-            return;
+            MoveByAnimator();
         }
+        else
+        {
+            MoveByController();
+        }
+    }
+
+    private void MoveByAnimator()
+    {
+        controller.enabled = false;
+
+        transform.position = animator.transform.position;
+
+        animator.transform.RotateAround(animator.transform.position, animator.transform.forward,
+                                        -originalAnimatorLocalRotation.eulerAngles.z);
+        animator.transform.RotateAround(animator.transform.position, animator.transform.right,
+                                        -originalAnimatorLocalRotation.eulerAngles.x);
+        animator.transform.RotateAround(animator.transform.position, animator.transform.up,
+                                        -originalAnimatorLocalRotation.eulerAngles.y);
+
+        transform.rotation = animator.transform.rotation;
+
+        transform.position += -transform.right * originalAnimatorLocalPosition.x;
+        transform.position += -transform.up * originalAnimatorLocalPosition.y;
+        transform.position += -transform.forward * originalAnimatorLocalPosition.z;
+
+        animator.transform.localRotation = originalAnimatorLocalRotation;
+        animator.transform.localPosition = originalAnimatorLocalPosition;
         
-        MoveByController();
+        controller.enabled = true;
     }
 
     private void MoveByController()
     {
+        ResetVelocity();
+
         movementVelocity.x = PlayerInput.Horizontal;
         movementVelocity.z = PlayerInput.Vertical;
         movementVelocity = transform.TransformDirection(movementVelocity);
@@ -122,26 +141,13 @@ public class PlayerController : MonoCached
         controller.Move(movementVelocity * Time.deltaTime);
     }
 
-    // private void MoveToAnimator()
-    // {
-    //     controller.enabled = false;
-    //     
-    //     controller.transform.position = animator.transform.position;
-    //     
-    //     animator.transform.RotateAround(animator.transform.position, animator.transform.forward, -originalAnimatorLocalRotation.eulerAngles.z);
-    //     animator.transform.RotateAround(animator.transform.position, animator.transform.right, -originalAnimatorLocalRotation.eulerAngles.x);
-    //     animator.transform.RotateAround(animator.transform.position, animator.transform.up, -originalAnimatorLocalRotation.eulerAngles.y);
-    //
-    //     controller.transform.rotation = animator.transform.rotation;
-    //     
-    //     controller.transform.position += -controller.transform.right * originalAnimatorLocalPosition.x;
-    //     controller.transform.position += -controller.transform.up * originalAnimatorLocalPosition.y;
-    //     controller.transform.position += -controller.transform.forward * originalAnimatorLocalPosition.z;
-    //     
-    //     animator.transform.localPosition = originalAnimatorLocalPosition;
-    //     
-    //     controller.enabled = true;
-    // }
+    private void ResetVelocity()
+    {
+        movementVelocity = Vector3.zero;
+        movementVelocity = transform.TransformDirection(movementVelocity);
+        movementVelocity *= bodyData.movementSpeed;
+        controller.Move(movementVelocity * Time.deltaTime);
+    }
 
     private void ApplyGravity()
     {
@@ -154,8 +160,6 @@ public class PlayerController : MonoCached
     {
         animator.SetBool(AnimatorHashes.MeleeHash, PlayerInput.Melee);
         animator.SetBool(AnimatorHashes.AimingHash, true);
-        animator.SetBool(AnimatorHashes.CrouchingHash, PlayerInput.Crouching);
-        animator.SetBool(AnimatorHashes.ShiftingHash, PlayerInput.Shifting);
         
         animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
         animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
@@ -179,17 +183,9 @@ public class PlayerController : MonoCached
     private void JumpWithSword()
     {
         animator.applyRootMotion = false;
-        controller.enabled = true;
+        DoActionOnLanding(delegate { animator.applyRootMotion = true; });
         
-        DoActionOnLanding(
-            delegate
-            {
-                ResetVelocities();
-                controller.enabled = false;
-                animator.applyRootMotion = true; 
-            }, 
-            0);
-        
+        ResetVelocity();
         ActualJump();
     }
 
@@ -197,10 +193,10 @@ public class PlayerController : MonoCached
     {
         verticalVelocity.y = bodyData.speedOnJump;
         animator.SetTrigger(AnimatorHashes.JumpHash);
-        DoActionOnLanding(delegate { animator.SetTrigger(AnimatorHashes.LandingHash); }, 0);
+        DoActionOnLanding(delegate { animator.SetTrigger(AnimatorHashes.LandingHash); });
     }
 
-    private void DoActionOnLanding(Action onLanding, float delay)
+    private void DoActionOnLanding(Action onLanding)
     {
         StartCoroutine(waitForLanding());
 
@@ -211,16 +207,9 @@ public class PlayerController : MonoCached
             {
                 yield return null;
             }
-            yield return new WaitForSeconds(delay);
             
             onLanding.Invoke();
         }
-    }
-
-
-    private void SwordAttack()
-    {
-        animator.SetTrigger(AnimatorHashes.SwordAttackHash);
     }
 
 

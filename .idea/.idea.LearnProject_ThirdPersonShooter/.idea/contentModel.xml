@@ -412,14 +412,11 @@
             </e>
           </e>
         </e>
-        <e p="PlayerRootMotion.cs" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="BodyLookAtTarget.cs" t="Include" />
           <e p="Components" t="Include">
             <e p="AimingAndIKOverrider.cs" t="Include" />
+            <e p="BodyLookAtTarget.cs" t="Include" />
             <e p="Bullet.cs" t="Include" />
-            <e p="CameraCrossHairCaster.cs" t="Include" />
-            <e p="Condition.cs" t="Include" />
             <e p="CrossHairCaster.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="AggressiveState.cs" t="Include" />
@@ -428,20 +425,20 @@
             </e>
             <e p="FootIKOverride.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
-            <e p="MeleeWeaponTrail.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="BodyData.cs" t="Include" />
+              <e p="CameraCrossHairCaster.cs" t="Include" />
               <e p="CoverSensorsData.cs" t="Include" />
+              <e p="PlayerCameraBehaviour.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
+              <e p="PlayerInput.cs" t="Include" />
+              <e p="PlayerState.cs" t="Include" />
+              <e p="PlayerWeaponHolder.cs" t="Include" />
               <e p="States" t="Include">
                 <e p="Distant.cs" t="Include" />
                 <e p="Melee.cs" t="Include" />
               </e>
-              <e p="WeaponHolder.cs" t="Include" />
             </e>
-            <e p="PlayerCameraBehaviour.cs" t="Include" />
-            <e p="PlayerInput.cs" t="Include" />
-            <e p="PlayerState.cs" t="Include" />
             <e p="TargetPoints.cs" t="Include" />
           </e>
           <e p="Data" t="Include">

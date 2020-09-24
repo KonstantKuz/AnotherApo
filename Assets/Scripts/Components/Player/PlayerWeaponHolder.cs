@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class WeaponHolder : MonoBehaviour
+public class PlayerWeaponHolder : MonoBehaviour
 {
     public Gun gun;
     public GameObject sword;
@@ -11,9 +11,9 @@ public class WeaponHolder : MonoBehaviour
     public Transform swordPlace_Out;
     
 
-    public void SwitchWeapons()
+    public void SwitchWeapons(bool Melee)
     {
-        if (PlayerInput.Melee)
+        if (Melee)
         {
             SetGunOut();
             SetSwordIn();
