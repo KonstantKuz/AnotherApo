@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Gun : MonoCached
@@ -32,13 +33,22 @@ public class Gun : MonoCached
 
     public void Fire()
     {
+        // if (muzzleFlash == null)
+        // {
+        //     muzzleFlash = ObjectPooler.Instance.SpawnObject("MuzzleFlash");c
+        //     muzzleFlash.transform.parent = barrel;
+        //     muzzleFlash.transform.localPosition = Vector3.zero;
+        //     muzzleFlash.transform.localRotation = quaternion.Euler(Vector3.zero);
+        // }
+        
         if (Time.time > lastShotTime)
         {
             lastShotTime = Time.time + rateoffire;
-            PlayMuzzleFlash();
+            //PlayMuzzleFlash();
             if (trail)
             {
                 ObjectPooler.Instance.SpawnObject("Trail", barrel.position, barrel.rotation);
+                ObjectPooler.Instance.SpawnObject("MuzzleFlash", barrel.position, barrel.rotation);
             }
         }
     }
