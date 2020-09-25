@@ -25,6 +25,9 @@ public class AggressiveState : State<EnemyController>
             return _instance;
         }
     }
+
+    private float verticalMoveValue;
+    private float horizontalMoveValue;
     
     public override void EnterState(EnemyController owner)
     {
@@ -32,6 +35,25 @@ public class AggressiveState : State<EnemyController>
 
         owner.animator.SetBool(AnimatorHashes.AimingHash, true);
         GoToPlayer(owner);
+        
+        StartFiring(owner);
+    }
+
+    private void StartFiring(EnemyController owner)
+    {
+        owner.StartCoroutine(rndFire());
+        IEnumerator rndFire()
+        {
+            yield return new WaitForSeconds(Random.Range(2f, 5f));
+            float fireTime = Random.Range(0.5f, 1f);
+            while (fireTime>0)
+            {
+                fireTime -= Time.deltaTime;
+                owner.gun.Fire();
+                yield return null;
+            }
+            yield return owner.StartCoroutine(rndFire());
+        }
     }
 
     public override void ExitState(EnemyController owner)
@@ -45,9 +67,6 @@ public class AggressiveState : State<EnemyController>
 
         MoveToNextPoint(owner);
     }
-
-    private float verticalMoveValue;
-    private float horizontalMoveValue;
 
     private void MoveToNextPoint(EnemyController owner)
     {

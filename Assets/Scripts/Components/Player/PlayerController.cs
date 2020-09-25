@@ -17,7 +17,11 @@ public class PlayerController : MonoBehaviour
     
     private Vector3 originalAnimatorLocalPosition;
     private Quaternion originalAnimatorLocalRotation;
-    
+    public Animator Animator
+    {
+        get => animator;
+    }
+
 
     private void Awake()
     {

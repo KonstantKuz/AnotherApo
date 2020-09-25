@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using Pathfinding;
 using StateMachine;
+using UnityEngine.Animations;
 
 
 public class EnemyController : MonoCached
 {
-    public Transform[] patrolPoints;
-    public Transform attackTarget;
     public Gun gun;
+    public Transform attackTarget;
+    public LookAtConstraint[] aimingConstraints;
 
     public Animator animator;
-    [SerializeField] private AimingAndIKOverrider hands;
 
     public StateMachine<EnemyController> stateMachine;
 
@@ -34,7 +35,19 @@ public class EnemyController : MonoCached
 
     void Start()
     {
+        StartAiming();
         SetUpStateMachine();
+    }
+
+    private void StartAiming()
+    {
+        for (int i = 0; i < aimingConstraints.Length; i++)
+        { 
+            ConstraintSource source = new ConstraintSource();
+            source.weight = 1;
+            source.sourceTransform = attackTarget;
+            aimingConstraints[i].SetSource(0, source);
+        }
     }
 
     public void SetUpStateMachine()

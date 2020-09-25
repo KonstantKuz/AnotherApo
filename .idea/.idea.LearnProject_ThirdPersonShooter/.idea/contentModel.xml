@@ -414,7 +414,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
-            <e p="AimingAndIKOverrider.cs" t="Include" />
             <e p="BodyLookAtTarget.cs" t="Include" />
             <e p="Bullet.cs" t="Include" />
             <e p="CrossHairCaster.cs" t="Include" />
@@ -445,6 +444,9 @@
             <e p="AnimatorHashes.cs" t="Include" />
             <e p="Tags.cs" t="Include" />
             <e p="WeaponData.cs" t="Include" />
+          </e>
+          <e p="Deprecated" t="Include">
+            <e p="AimingAndIKOverrider.cs" t="Include" />
           </e>
           <e p="Handlers" t="Include">
             <e p="ObjectPoolerBase.cs" t="Include" />
