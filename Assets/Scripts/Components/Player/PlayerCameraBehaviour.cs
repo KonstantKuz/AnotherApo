@@ -10,13 +10,8 @@ public class PlayerCameraBehaviour : MonoCached
     [SerializeField] private float positionUpdSpeed;
     
     private Vector3 currentPosition;
-
+    
     public override void CustomLateUpdate()
-    {
-        HandleTransforms();
-    }
-
-    public void HandleTransforms()
     {
         CalculateCurrentPosition();
         SetCurrentRotation();
@@ -25,29 +20,24 @@ public class PlayerCameraBehaviour : MonoCached
 
     private void CalculateCurrentPosition()
     {
-        currentPosition = positionTarget.position;
-        currentPosition.y -= lookAtPoint.localPosition.y/2;
-        if (Physics.Linecast(currentPosition, pointForCheckIntersection.position, out RaycastHit hit))
+        if (Physics.Linecast(pointForCheckIntersection.position, positionTarget.position, out RaycastHit hit))
         {
-            currentPosition = hit.point + transform.forward;
+            currentPosition = hit.point + hit.normal;
+        }
+        else
+        {
+            currentPosition = positionTarget.position;
         }
     }
-
+    
     private void SetCurrentPosition()
     {
         transform.position = currentPosition;
-        //transform.position = Vector3.Lerp(transform.position, currentPosition, Time.deltaTime * positionUpdSpeed);
     }
 
     private void SetCurrentRotation()
     {
         Quaternion lookRotation = Quaternion.LookRotation(lookAtPoint.position - transform.position);
         transform.rotation = lookRotation;
-        //transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * rotationUpdSpeed);
-    }
-
-    public static void FieldOfView(float fieldOfView)
-    {
-        Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, fieldOfView, Time.fixedDeltaTime);
     }
 }

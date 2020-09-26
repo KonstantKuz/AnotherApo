@@ -1,0 +1,2890 @@
+fileFormatVersion: 2
+guid: 76aafbf2fa2756d499ecdee367b1a530
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Factice001
+  - first:
+      1: 100002
+    second: Factice002
+  - first:
+      1: 100004
+    second: Factice003
+  - first:
+      1: 100006
+    second: Factice004
+  - first:
+      1: 100008
+    second: Factice009
+  - first:
+      1: 100010
+    second: Factice010
+  - first:
+      1: 100012
+    second: Factice023
+  - first:
+      1: 100014
+    second: Factice027
+  - first:
+      1: 100016
+    second: Factice028
+  - first:
+      1: 100018
+    second: Factice030
+  - first:
+      1: 100020
+    second: ie_HOMING_ROCKETS_L
+  - first:
+      1: 100022
+    second: ie_HOMING_ROCKETS_R
+  - first:
+      1: 100024
+    second: ie_MECH_BIPED_CALF_LEFT
+  - first:
+      1: 100026
+    second: ie_MECH_BIPED_CALF_RIGHT
+  - first:
+      1: 100028
+    second: ie_MECH_BIPED_DOOR
+  - first:
+      1: 100030
+    second: ie_MECH_BIPED_FOOT_LEFT
+  - first:
+      1: 100032
+    second: ie_MECH_BIPED_FOOT_RIGHT
+  - first:
+      1: 100034
+    second: ie_MECH_BIPED_HEAD
+  - first:
+      1: 100036
+    second: ie_MECH_BIPED_HIPS_A_LEFT
+  - first:
+      1: 100038
+    second: ie_MECH_BIPED_HIPS_A_RIGHT
+  - first:
+      1: 100040
+    second: ie_MECH_BIPED_HIPS_B_LEFT
+  - first:
+      1: 100042
+    second: ie_MECH_BIPED_HIPS_B_RIGHT
+  - first:
+      1: 100044
+    second: ie_MECH_BIPED_NECK
+  - first:
+      1: 100046
+    second: ie_MECH_BIPED_PELVIS
+  - first:
+      1: 100048
+    second: ie_MECH_BIPED_THIGH_LEFT
+  - first:
+      1: 100050
+    second: ie_MECH_BIPED_THIGH_RIGHT
+  - first:
+      1: 100052
+    second: ie_MECH_BIPED_TOE_1_LEFT
+  - first:
+      1: 100054
+    second: ie_MECH_BIPED_TOE_1_RIGHT
+  - first:
+      1: 100056
+    second: ie_MECH_BIPED_TOE_2_LEFT
+  - first:
+      1: 100058
+    second: ie_MECH_BIPED_TOE_2_RIGHT
+  - first:
+      1: 100060
+    second: ie_MECH_BIPED_TOE_3_LEFT
+  - first:
+      1: 100062
+    second: ie_MECH_BIPED_TOE_3_RIGHT
+  - first:
+      1: 100064
+    second: ie_MINIGUN_L
+  - first:
+      1: 100066
+    second: ie_MINIGUN_L_BARRELS
+  - first:
+      1: 100068
+    second: ie_MINIGUN_R
+  - first:
+      1: 100070
+    second: ie_MINIGUN_R_BARRELS
+  - first:
+      1: 100072
+    second: ie_MISSILE_LAUNCHER_L
+  - first:
+      1: 100074
+    second: ie_MISSILE_LAUNCHER_R
+  - first:
+      1: 100076
+    second: ie_SUPER_LASER_L
+  - first:
+      1: 100078
+    second: ie_SUPER_LASER_R
+  - first:
+      1: 100080
+    second: //RootNode
+  - first:
+      1: 100082
+    second: MECH_BIPED
+  - first:
+      1: 100084
+    second: MECH_BIPED_ROOT_
+  - first:
+      1: 100086
+    second: Factice008
+  - first:
+      1: 100088
+    second: Factice029
+  - first:
+      1: 100090
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_L
+  - first:
+      1: 100092
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_R
+  - first:
+      4: 400000
+    second: Factice001
+  - first:
+      4: 400002
+    second: Factice002
+  - first:
+      4: 400004
+    second: Factice003
+  - first:
+      4: 400006
+    second: Factice004
+  - first:
+      4: 400008
+    second: Factice009
+  - first:
+      4: 400010
+    second: Factice010
+  - first:
+      4: 400012
+    second: Factice023
+  - first:
+      4: 400014
+    second: Factice027
+  - first:
+      4: 400016
+    second: Factice028
+  - first:
+      4: 400018
+    second: Factice030
+  - first:
+      4: 400020
+    second: ie_HOMING_ROCKETS_L
+  - first:
+      4: 400022
+    second: ie_HOMING_ROCKETS_R
+  - first:
+      4: 400024
+    second: ie_MECH_BIPED_CALF_LEFT
+  - first:
+      4: 400026
+    second: ie_MECH_BIPED_CALF_RIGHT
+  - first:
+      4: 400028
+    second: ie_MECH_BIPED_DOOR
+  - first:
+      4: 400030
+    second: ie_MECH_BIPED_FOOT_LEFT
+  - first:
+      4: 400032
+    second: ie_MECH_BIPED_FOOT_RIGHT
+  - first:
+      4: 400034
+    second: ie_MECH_BIPED_HEAD
+  - first:
+      4: 400036
+    second: ie_MECH_BIPED_HIPS_A_LEFT
+  - first:
+      4: 400038
+    second: ie_MECH_BIPED_HIPS_A_RIGHT
+  - first:
+      4: 400040
+    second: ie_MECH_BIPED_HIPS_B_LEFT
+  - first:
+      4: 400042
+    second: ie_MECH_BIPED_HIPS_B_RIGHT
+  - first:
+      4: 400044
+    second: ie_MECH_BIPED_NECK
+  - first:
+      4: 400046
+    second: ie_MECH_BIPED_PELVIS
+  - first:
+      4: 400048
+    second: ie_MECH_BIPED_THIGH_LEFT
+  - first:
+      4: 400050
+    second: ie_MECH_BIPED_THIGH_RIGHT
+  - first:
+      4: 400052
+    second: ie_MECH_BIPED_TOE_1_LEFT
+  - first:
+      4: 400054
+    second: ie_MECH_BIPED_TOE_1_RIGHT
+  - first:
+      4: 400056
+    second: ie_MECH_BIPED_TOE_2_LEFT
+  - first:
+      4: 400058
+    second: ie_MECH_BIPED_TOE_2_RIGHT
+  - first:
+      4: 400060
+    second: ie_MECH_BIPED_TOE_3_LEFT
+  - first:
+      4: 400062
+    second: ie_MECH_BIPED_TOE_3_RIGHT
+  - first:
+      4: 400064
+    second: ie_MINIGUN_L
+  - first:
+      4: 400066
+    second: ie_MINIGUN_L_BARRELS
+  - first:
+      4: 400068
+    second: ie_MINIGUN_R
+  - first:
+      4: 400070
+    second: ie_MINIGUN_R_BARRELS
+  - first:
+      4: 400072
+    second: ie_MISSILE_LAUNCHER_L
+  - first:
+      4: 400074
+    second: ie_MISSILE_LAUNCHER_R
+  - first:
+      4: 400076
+    second: ie_SUPER_LASER_L
+  - first:
+      4: 400078
+    second: ie_SUPER_LASER_R
+  - first:
+      4: 400080
+    second: //RootNode
+  - first:
+      4: 400082
+    second: MECH_BIPED
+  - first:
+      4: 400084
+    second: MECH_BIPED_ROOT_
+  - first:
+      4: 400086
+    second: Factice008
+  - first:
+      4: 400088
+    second: Factice029
+  - first:
+      4: 400090
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_L
+  - first:
+      4: 400092
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_R
+  - first:
+      23: 2300000
+    second: ie_HOMING_ROCKETS_L
+  - first:
+      23: 2300002
+    second: ie_HOMING_ROCKETS_R
+  - first:
+      23: 2300004
+    second: ie_MINIGUN_L
+  - first:
+      23: 2300006
+    second: ie_MINIGUN_L_BARRELS
+  - first:
+      23: 2300008
+    second: ie_MINIGUN_R
+  - first:
+      23: 2300010
+    second: ie_MINIGUN_R_BARRELS
+  - first:
+      23: 2300012
+    second: ie_MISSILE_LAUNCHER_L
+  - first:
+      23: 2300014
+    second: ie_MISSILE_LAUNCHER_R
+  - first:
+      23: 2300016
+    second: ie_SUPER_LASER_L
+  - first:
+      23: 2300018
+    second: ie_SUPER_LASER_R
+  - first:
+      23: 2300020
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_L
+  - first:
+      23: 2300022
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_R
+  - first:
+      33: 3300000
+    second: ie_HOMING_ROCKETS_L
+  - first:
+      33: 3300002
+    second: ie_HOMING_ROCKETS_R
+  - first:
+      33: 3300004
+    second: ie_MINIGUN_L
+  - first:
+      33: 3300006
+    second: ie_MINIGUN_L_BARRELS
+  - first:
+      33: 3300008
+    second: ie_MINIGUN_R
+  - first:
+      33: 3300010
+    second: ie_MINIGUN_R_BARRELS
+  - first:
+      33: 3300012
+    second: ie_MISSILE_LAUNCHER_L
+  - first:
+      33: 3300014
+    second: ie_MISSILE_LAUNCHER_R
+  - first:
+      33: 3300016
+    second: ie_SUPER_LASER_L
+  - first:
+      33: 3300018
+    second: ie_SUPER_LASER_R
+  - first:
+      33: 3300020
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_L
+  - first:
+      33: 3300022
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_R
+  - first:
+      43: 4300000
+    second: MECH_BIPED
+  - first:
+      43: 4300002
+    second: ie_HOMING_ROCKETS_L
+  - first:
+      43: 4300004
+    second: ie_SUPER_LASER_L
+  - first:
+      43: 4300006
+    second: ie_MISSILE_LAUNCHER_L
+  - first:
+      43: 4300008
+    second: ie_MINIGUN_L
+  - first:
+      43: 4300010
+    second: ie_MINIGUN_L_BARRELS
+  - first:
+      43: 4300012
+    second: ie_HOMING_ROCKETS_R
+  - first:
+      43: 4300014
+    second: ie_SUPER_LASER_R
+  - first:
+      43: 4300016
+    second: ie_MISSILE_LAUNCHER_R
+  - first:
+      43: 4300018
+    second: ie_MINIGUN_R
+  - first:
+      43: 4300020
+    second: ie_MINIGUN_R_BARRELS
+  - first:
+      43: 4300022
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_L
+  - first:
+      43: 4300024
+    second: MECH_BIPED_AMMO_LEFT_WEAPON_R
+  - first:
+      74: 7400000
+    second: offIdle
+  - first:
+      74: 7400002
+    second: activating
+  - first:
+      74: 7400004
+    second: deactivating
+  - first:
+      74: 7400006
+    second: walkForward
+  - first:
+      74: 7400008
+    second: walkLeft
+  - first:
+      74: 7400010
+    second: walkRight
+  - first:
+      74: 7400012
+    second: strafeRight
+  - first:
+      74: 7400014
+    second: StrafeLeft
+  - first:
+      74: 7400016
+    second: walkBackwards
+  - first:
+      74: 7400018
+    second: walkBackwardsLeft
+  - first:
+      74: 7400020
+    second: walkBackwardsRight
+  - first:
+      74: 7400022
+    second: idle
+  - first:
+      74: 7400024
+    second: jumpToApex
+  - first:
+      74: 7400026
+    second: inAir
+  - first:
+      74: 7400028
+    second: landing
+  - first:
+      74: 7400030
+    second: jump
+  - first:
+      74: 7400032
+    second: dodgeLeft
+  - first:
+      74: 7400034
+    second: dodgeRight
+  - first:
+      74: 7400036
+    second: dodgeBackwards
+  - first:
+      74: 7400038
+    second: dodgeForward
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: MECH_BIPED
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: offIdle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 5
+      lastFrame: 15
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: activating
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 20
+      lastFrame: 50
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: deactivating
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 55
+      lastFrame: 85
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walkForward
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 90
+      lastFrame: 120
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walkRight
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 125
+      lastFrame: 155
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walkLeft
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 160
+      lastFrame: 190
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: strafeRight
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 195
+      lastFrame: 225
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: StrafeLeft
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 230
+      lastFrame: 260
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walkBackwards
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 265
+      lastFrame: 295
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walkBackwardsRight
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 300
+      lastFrame: 330
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walkBackwardsLeft
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 335
+      lastFrame: 365
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 50
+      lastFrame: 55
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jumpToApex
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 400
+      lastFrame: 406
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: inAir
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 415
+      lastFrame: 425
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: landing
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 435
+      lastFrame: 448
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jump
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 370
+      lastFrame: 395
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dodgeLeft
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 455
+      lastFrame: 475
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/Factice029
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/Factice008
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dodgeRight
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 480
+      lastFrame: 500
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/Factice029
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/Factice008
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dodgeBackwards
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 505
+      lastFrame: 525
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/Factice029
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/Factice008
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dodgeForward
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 530
+      lastFrame: 550
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: MECH_BIPED
+        weight: 1
+      - path: MECH_BIPED_ROOT_
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/Factice029
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice027/ie_MECH_BIPED_TOE_2_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice028/ie_MECH_BIPED_TOE_1_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice009/ie_MECH_BIPED_HIPS_A_RIGHT/ie_MECH_BIPED_HIPS_B_RIGHT/ie_MECH_BIPED_THIGH_RIGHT/ie_MECH_BIPED_CALF_RIGHT/ie_MECH_BIPED_FOOT_RIGHT/Factice030/ie_MECH_BIPED_TOE_3_RIGHT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/Factice001/ie_MECH_BIPED_DOOR
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_HOMING_ROCKETS_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_L/ie_MINIGUN_L_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MINIGUN_R/ie_MINIGUN_R_BARRELS
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_MISSILE_LAUNCHER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/ie_SUPER_LASER_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_L
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice010/ie_MECH_BIPED_NECK/ie_MECH_BIPED_HEAD/MECH_BIPED_AMMO_LEFT_WEAPON_R
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/Factice008
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice002/ie_MECH_BIPED_TOE_3_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice003/ie_MECH_BIPED_TOE_2_LEFT
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004
+        weight: 1
+      - path: MECH_BIPED_ROOT_/ie_MECH_BIPED_PELVIS/Factice023/ie_MECH_BIPED_HIPS_A_LEFT/ie_MECH_BIPED_HIPS_B_LEFT/ie_MECH_BIPED_THIGH_LEFT/ie_MECH_BIPED_CALF_LEFT/ie_MECH_BIPED_FOOT_LEFT/Factice004/ie_MECH_BIPED_TOE_1_LEFT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
