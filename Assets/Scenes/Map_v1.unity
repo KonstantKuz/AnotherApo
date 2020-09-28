@@ -23162,10 +23162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAtPoint: {fileID: 4762515743895105285}
-  positionTarget: {fileID: 4762515744819562959}
-  pointForCheckIntersection: {fileID: 4762515745301896013}
-  rotationUpdSpeed: 25
+  maxPositionTarget: {fileID: 4762515744819562959}
+  minPositionTarget: {fileID: 4762515745301896013}
   positionUpdSpeed: 25
+  rotationUpdSpeed: 25
 --- !u!114 &1765085507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30460,11 +30460,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3966525467532059749, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
-        type: 3}
-      propertyPath: m_Sources.Array.data[0].sourceTransform
-      value: 
-      objectReference: {fileID: 4637666517670839293}
     - target: {fileID: 3966525467938663891, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
         type: 3}
       propertyPath: m_Name
@@ -30530,11 +30525,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3966525468221232308, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
-        type: 3}
-      propertyPath: m_Sources.Array.data[0].sourceTransform
-      value: 
-      objectReference: {fileID: 4637666517670839293}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ee9cb8239a74c54cb74c4e91f849e21, type: 3}
 --- !u!4 &4637666517670839293 stripped

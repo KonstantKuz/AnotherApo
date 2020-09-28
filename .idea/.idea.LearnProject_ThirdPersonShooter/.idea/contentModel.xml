@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CameraHeightUpdater.cs" t="Include" />
         <e p="GameAssets" t="Include">
           <e p="Afghanistan" t="Include">
             <e p="_info.txt" t="Include" />
@@ -31,6 +30,18 @@
                 </e>
                 <e p="TerrainRand.cs" t="Include" />
               </e>
+            </e>
+          </e>
+          <e p="Animsets" t="Include">
+            <e p="Dynamic Sword Animset" t="Include">
+              <e p="Readme.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Animation_view.cs" t="Include" />
+                <e p="Blue_CameraControll.cs" t="Include" />
+              </e>
+            </e>
+            <e p="RifleAnimsetPro" t="Include">
+              <e p="Readme.txt" t="Include" />
             </e>
           </e>
           <e p="AstarPathfindingProject" t="Include">
@@ -235,11 +246,47 @@
               <e p="UnityReferenceHelper.cs" t="Include" />
             </e>
           </e>
-          <e p="Dynamic Sword Animset" t="Include">
-            <e p="Readme.txt" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="Animation_view.cs" t="Include" />
-              <e p="Blue_CameraControll.cs" t="Include" />
+          <e p="BeatDetection" t="Include">
+            <e p="Beat Detection" t="Include">
+              <e p="BeatDetection.cs" t="Include" />
+              <e p="Event - Example" t="Include">
+                <e p="EventExample.cs" t="Include" />
+              </e>
+              <e p="Event - Example Mic Input" t="Include">
+                <e p="EventMicExample.cs" t="Include" />
+              </e>
+              <e p="No Event - Example" t="Include">
+                <e p="BeatDetectionExample.cs" t="Include" />
+              </e>
+              <e p="No Event - Example Mic Input" t="Include">
+                <e p="BeatDetectionExampleMic.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Sequencer" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Audio Sequencer" t="Include">
+                  <e p="EditorExtension.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Sample" t="Include">
+                <e p="Sample.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Audio Sequencer" t="Include">
+                  <e p="Helper" t="Include">
+                    <e p="BitMaskAttribute.cs" t="Include" />
+                    <e p="EnumExtensions.cs" t="Include" />
+                  </e>
+                  <e p="Sequencer.cs" t="Include" />
+                  <e p="SequencerBase.cs" t="Include" />
+                  <e p="SequencerDriver.cs" t="Include" />
+                  <e p="SequencerGroup.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Unity-Beat-Detection" t="Include">
+              <e p="AudioProcessor.cs" t="Include" />
+              <e p="Example.cs" t="Include" />
             </e>
           </e>
           <e p="krovosos" t="Include">
@@ -334,9 +381,6 @@
               </e>
             </e>
           </e>
-          <e p="RifleAnimsetPro" t="Include">
-            <e p="Readme.txt" t="Include" />
-          </e>
           <e p="Templates" t="Include">
             <e p="ObjectPooler" t="Include">
               <e p="Core" t="Include">
@@ -428,6 +472,7 @@
             <e p="Player" t="Include">
               <e p="BodyData.cs" t="Include" />
               <e p="CameraCrossHairCaster.cs" t="Include" />
+              <e p="CameraHeightUpdater.cs" t="Include" />
               <e p="CoverSensorsData.cs" t="Include" />
               <e p="PlayerCameraBehaviour.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />

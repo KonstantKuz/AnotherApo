@@ -250,7 +250,7 @@ public class PlayerController : MonoBehaviour
 
     // private void OnTriggerStay(Collider other)
     // {
-    //     if (other.CompareTag(Tags.Cover))
+    //     if (other.CompareTag(TagsAndNames.Cover))
     //     {
     //         coverSens.currentCover = other.transform;
     //         animator.SetBool(AnimatorHashes.CoverHash, true);
@@ -263,7 +263,7 @@ public class PlayerController : MonoBehaviour
     // }
     // private void OnTriggerExit(Collider other)
     // {
-    //     if (other.CompareTag(Tags.Cover))
+    //     if (other.CompareTag(TagsAndNames.Cover))
     //     {
     //         animator.SetBool(AnimatorHashes.CoverHash, false);
     //     }

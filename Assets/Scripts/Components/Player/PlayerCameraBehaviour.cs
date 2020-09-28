@@ -3,12 +3,12 @@
 public class PlayerCameraBehaviour : MonoCached
 {
     [SerializeField] private Transform lookAtPoint;
-    [SerializeField] private Transform positionTarget;
-    [SerializeField] private Transform pointForCheckIntersection;
+    [SerializeField] private Transform maxPositionTarget;
+    [SerializeField] private Transform minPositionTarget;
     
-    [SerializeField] private float rotationUpdSpeed;
     [SerializeField] private float positionUpdSpeed;
-    
+    [SerializeField] private float rotationUpdSpeed;
+
     private Vector3 currentPosition;
     
     public override void CustomLateUpdate()
@@ -20,19 +20,19 @@ public class PlayerCameraBehaviour : MonoCached
 
     private void CalculateCurrentPosition()
     {
-        if (Physics.Linecast(pointForCheckIntersection.position, positionTarget.position, out RaycastHit hit))
+        if (Physics.Linecast(minPositionTarget.position, maxPositionTarget.position, out RaycastHit hit))
         {
             currentPosition = hit.point + hit.normal;
         }
         else
         {
-            currentPosition = positionTarget.position;
+            currentPosition = maxPositionTarget.position;
         }
     }
     
     private void SetCurrentPosition()
     {
-        transform.position = currentPosition;
+        transform.position = Vector3.Lerp(transform.position, currentPosition, Time.deltaTime * 20);
     }
 
     private void SetCurrentRotation()

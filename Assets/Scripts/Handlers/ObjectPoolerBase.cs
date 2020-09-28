@@ -26,7 +26,7 @@ public class ObjectPoolerBase : ScriptableObject
     public List<string> tags { get; private set; }
 
 
-    [ContextMenu("Set Tags as Prefabs Name")]
+    [ContextMenu("Set TagsAndNames as Prefabs Name")]
     public void SetTagsAsPrefabsName()
     {
         for (int i = 0; i < pools.Count; i++)
