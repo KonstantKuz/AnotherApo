@@ -1,0 +1,1 @@
+![Gameplay](https://github.com/KonstantKuz/AnotherApo/blob/master/GIF/anotherApo.gif)
