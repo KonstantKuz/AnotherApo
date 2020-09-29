@@ -15,13 +15,13 @@ MonoBehaviour:
   active: 0
   m_AdvancedMode: 0
   shadows:
-    m_OverrideState: 1
-    m_Value: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    m_OverrideState: 0
+    m_Value: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
   highlights:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     hdr: 0
     showAlpha: 0
@@ -80,10 +80,35 @@ MonoBehaviour:
   m_Name: Main Camera Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 9123609933807644802}
   - {fileID: 7032663553564729663}
   - {fileID: -8636768853026897357}
   - {fileID: -5914849632452255515}
+  - {fileID: 8651565520519590779}
+  - {fileID: 3893768657554037842}
+--- !u!114 &3893768657554037842
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
+  m_Name: WhiteBalance
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  temperature:
+    m_OverrideState: 1
+    m_Value: 20
+    min: -100
+    max: 100
+  tint:
+    m_OverrideState: 0
+    m_Value: 100
+    min: -100
+    max: 100
 --- !u!114 &7032663553564729663
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -131,7 +156,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
     min: 0
---- !u!114 &9123609933807644802
+--- !u!114 &8651565520519590779
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +165,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-  m_Name: Tonemapping
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
-  mode:
+  postExposure:
+    m_OverrideState: 0
+    m_Value: 0.6
+  contrast:
     m_OverrideState: 1
+    m_Value: -10
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 0
     m_Value: 0
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 1
+    m_Value: -10
+    min: -100
+    max: 100

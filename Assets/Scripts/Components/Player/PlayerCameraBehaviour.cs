@@ -11,7 +11,7 @@ public class PlayerCameraBehaviour : MonoCached
 
     private Vector3 currentPosition;
     
-    public override void CustomLateUpdate()
+    public override void CustomUpdate()
     {
         CalculateCurrentPosition();
         SetCurrentRotation();
