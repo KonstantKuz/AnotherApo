@@ -18,11 +18,11 @@ public class Gun : MonoCached
         }
 
         lastShotTime = Time.time + rateoffire;
-        ObjectPooler.Instance.SpawnObject(TagsAndNames.PoolFlash, barrel.position, barrel.rotation);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolFlash, barrel.position, barrel.rotation);
         
         if (trail)
         {
-            ObjectPooler.Instance.SpawnObject(TagsAndNames.PoolTrail, barrel.position, barrel.rotation);
+            ObjectPooler.Instance.SpawnObject(Constants.PoolTrail, barrel.position, barrel.rotation);
         }
     }
 }

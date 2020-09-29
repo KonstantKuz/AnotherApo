@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using StateMachine;
 
-public class AggressiveState : State<EnemyController>
+public class AggressiveState : State<Durashka>
 {
     public static AggressiveState _instance;
 
@@ -26,10 +26,7 @@ public class AggressiveState : State<EnemyController>
         }
     }
 
-    private float verticalMoveValue;
-    private float horizontalMoveValue;
-    
-    public override void EnterState(EnemyController owner)
+    public override void EnterState(Durashka owner)
     {
         owner.pathUpdPeriod = 2;
 
@@ -39,7 +36,7 @@ public class AggressiveState : State<EnemyController>
         StartFiring(owner);
     }
 
-    private void StartFiring(EnemyController owner)
+    private void StartFiring(Durashka owner)
     {
         owner.StartCoroutine(rndFire());
         IEnumerator rndFire()
@@ -56,19 +53,19 @@ public class AggressiveState : State<EnemyController>
         }
     }
 
-    public override void ExitState(EnemyController owner)
+    public override void ExitState(Durashka owner)
     {
 
     }
 
-    public override void UpdateState(EnemyController owner)
+    public override void UpdateState(Durashka owner)
     {
-        owner.RotateTowards(owner.attackTarget.position);
+        owner.RotateTowards(owner.player.transform.position);
 
         MoveToNextPoint(owner);
     }
 
-    private void MoveToNextPoint(EnemyController owner)
+    private void MoveToNextPoint(Durashka owner)
     {
         owner.CleanPassedNodes();
 
@@ -77,47 +74,11 @@ public class AggressiveState : State<EnemyController>
             Wait(owner);
             return;
         }
-        
-        CalculateMoveValues(owner);
-        owner.Move(verticalMoveValue, horizontalMoveValue);
+        owner.CalculateMoveValuesToNextNode();
+        owner.MoveToNextNode();
     }
 
-    private void CalculateMoveValues(EnemyController owner)
-    {
-        float fwdAngleToNextNode = owner.ForwardAngleToNextNode();
-
-        verticalMoveValue = 0;
-        horizontalMoveValue = 0;
-        
-        if (fwdAngleToNextNode > 0)
-        {
-            if (fwdAngleToNextNode > 90)
-            {
-                verticalMoveValue = -1;
-            }
-            else
-            {
-                verticalMoveValue = 1;
-            }
-
-            horizontalMoveValue = 1;
-        }
-        else
-        {
-            if (fwdAngleToNextNode > -90)
-            {
-                verticalMoveValue = 1;
-            }
-            else
-            {
-                verticalMoveValue = -1;
-            }
-
-            horizontalMoveValue = -1;
-        }
-    }
-
-    private void Wait(EnemyController owner)
+    private void Wait(Durashka owner)
     {
         owner.Move(0, 0);
         
@@ -128,7 +89,7 @@ public class AggressiveState : State<EnemyController>
         }
     }
 
-    private void GoToPlayer(EnemyController owner)
+    private void GoToPlayer(Durashka owner)
     {
         PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
         Vector3 side = playerController.transform.right * RandomSign();

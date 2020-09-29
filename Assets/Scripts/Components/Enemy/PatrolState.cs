@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using StateMachine;
 
-// public class PatrolState : State<EnemyController>
+// public class PatrolState : State<Durashka>
 // {
 //     public static PatrolState _instance;
 //
@@ -25,24 +25,24 @@ using StateMachine;
 //             return _instance;
 //         }
 //     }
-//     public override void EnterState(EnemyController owner)
+//     public override void EnterState(Durashka owner)
 //     {
 //         owner.UpdatePath(owner.patrolPoints[Random.Range(0, owner.patrolPoints.Length)].position);
 //         owner.pathUpdPeriod = 30;
 //     }
 //
-//     public override void ExitState(EnemyController owner)
+//     public override void ExitState(Durashka owner)
 //     {
 //
 //     }
 //
-//     public override void UpdateState(EnemyController owner)
+//     public override void UpdateState(Durashka owner)
 //     {
 //         MoveToNextPoint(owner);
 //         LookAndHear(owner);
 //     }
 //
-//     public void MoveToNextPoint(EnemyController owner)
+//     public void MoveToNextPoint(Durashka owner)
 //     {
 //         owner.CleanPassedNodes();
 //
@@ -55,7 +55,7 @@ using StateMachine;
 //         owner.RotateTowards(owner.currentPath.vectorPath[owner.currentPathNodeIndex]);
 //     }
 //
-//     private void Wait(EnemyController owner)
+//     private void Wait(Durashka owner)
 //     {
 //         owner.Move(0,0);
 //
@@ -66,7 +66,7 @@ using StateMachine;
 //         }
 //     }
 //
-//     private void LookAndHear(EnemyController owner)
+//     private void LookAndHear(Durashka owner)
 //     {
 //         if(Physics.CheckSphere(owner.transform.position, 5f, 1<<9))
 //         {

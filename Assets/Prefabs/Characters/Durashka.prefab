@@ -1405,24 +1405,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 3966525467938663891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4396d6fe20d6f944f92329aa53b2a2dd, type: 3}
+  m_Script: {fileID: 11500000, guid: b3d58361807524448b80781b242f061c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 7243676974583412704}
-  attackTarget: {fileID: 0}
-  aimingConstraints:
-  - {fileID: 3966525467532059749}
-  - {fileID: 3966525468221232308}
-  animator: {fileID: 3966525467938663895}
   targetDirection: {x: 0, y: 0, z: 0}
   targetDirection_XZprojection: {x: 0, y: 0, z: 0}
   targetDirection_ZYprojection: {x: 0, y: 0, z: 0}
   angleBtwn_targetDirZY_FWD: 0
   angleBtwn_targetDirXZ_FWD: 0
+  verticalMoveValue: 0
+  horizontalMoveValue: 0
+  player: {fileID: 0}
   pathUpdTimer: 0
   pathUpdPeriod: 2
-  currentPathNodeIndex: 0
-  currentPathTarget: {x: 0, y: 0, z: 0}
+  gun: {fileID: 7243676974583412704}
+  animator: {fileID: 3966525467938663895}
+  aimingConstraints:
+  - {fileID: 3966525468221232308}
+  - {fileID: 3966525467532059749}
 --- !u!95 &3966525467938663895
 Animator:
   serializedVersion: 3

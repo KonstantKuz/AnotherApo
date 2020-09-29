@@ -269,6 +269,9 @@
               </e>
             </e>
           </e>
+          <e p="Dark City" t="Include">
+            <e p="info.txt" t="Include" />
+          </e>
           <e p="MuzzleFlash" t="Include">
             <e p="Editor" t="Include">
               <e p="ImageEffects" t="Include">
@@ -439,8 +442,10 @@
             <e p="CrossHairCaster.cs" t="Include" />
             <e p="Enemy" t="Include">
               <e p="AggressiveState.cs" t="Include" />
-              <e p="EnemyController.cs" t="Include" />
+              <e p="Durashka.cs" t="Include" />
+              <e p="Enemy.cs" t="Include" />
               <e p="PatrolState.cs" t="Include" />
+              <e p="Spiderast.cs" t="Include" />
             </e>
             <e p="FootIKOverride.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
@@ -463,15 +468,14 @@
             <e p="TargetPoints.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
-            <e p="AnimatorHashes.cs" t="Include" />
-            <e p="TagsAndNames.cs" t="Include" />
+            <e p="PersistentData.cs" t="Include" />
             <e p="WeaponData.cs" t="Include" />
           </e>
           <e p="Deprecated" t="Include">
             <e p="AimingAndIKOverrider.cs" t="Include" />
-          </e>
-          <e p="Handlers" t="Include">
-            <e p="ObjectPoolerBase.cs" t="Include" />
+            <e p="Handlers" t="Include">
+              <e p="ObjectPoolerBase.cs" t="Include" />
+            </e>
           </e>
           <e p="Systems" t="Include">
             <e p="GridMaker.cs" t="Include" />
