@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 6500000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Build8_el6_LOD1(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3300002}
   - component: {fileID: 2300002}
   - component: {fileID: 6500002}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Build8_el6(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400004}
   - component: {fileID: 20500000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Build8_el6
   m_TagString: Untagged
   m_Icon: {fileID: 0}

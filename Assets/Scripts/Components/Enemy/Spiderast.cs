@@ -47,7 +47,6 @@ public class Spiderast : Enemy
             return;
         
         ApplyGravity();
-        
         CleanPassedNodes();
         
         if (!HasPath() || PathFullyPassed())
@@ -70,7 +69,7 @@ public class Spiderast : Enemy
         {
             yield return new WaitForSeconds(0.5f);
             ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, explosionRoot.position);
-            gameObject.SetActive(false);
+            ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }
     }
 

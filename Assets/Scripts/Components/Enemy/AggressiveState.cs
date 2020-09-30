@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 using StateMachine;
 
@@ -30,10 +31,11 @@ public class AggressiveState : State<Durashka>
     {
         owner.pathUpdPeriod = 2;
 
-        owner.animator.SetBool(AnimatorHashes.AimingHash, true);
-        GoToPlayer(owner);
+        owner.Animator.SetBool(AnimatorHashes.AimingHash, true);
+        GoToRandomPlayerSide(owner);
         
         StartFiring(owner);
+        UpdatePathPeriodically(owner);
     }
 
     private void StartFiring(Durashka owner)
@@ -46,10 +48,21 @@ public class AggressiveState : State<Durashka>
             while (fireTime>0)
             {
                 fireTime -= Time.deltaTime;
-                owner.gun.Fire();
+                owner.Gun.Fire();
                 yield return null;
             }
             yield return owner.StartCoroutine(rndFire());
+        }
+    }
+    
+    private void UpdatePathPeriodically(Durashka owner)
+    {
+        owner.StartCoroutine(UpdatePathToPlayerPeriodically());
+        IEnumerator UpdatePathToPlayerPeriodically()
+        {
+            EnterState(owner);
+            yield return new WaitForSeconds(owner.pathUpdPeriod);
+            owner.StartCoroutine(UpdatePathToPlayerPeriodically());
         }
     }
 
@@ -81,30 +94,24 @@ public class AggressiveState : State<Durashka>
     private void Wait(Durashka owner)
     {
         owner.Move(0, 0);
-        
-        if (Time.time > owner.pathUpdTimer)
-        {
-            owner.pathUpdTimer = Time.time + owner.pathUpdPeriod;
-            EnterState(owner);
-        }
     }
 
-    private void GoToPlayer(Durashka owner)
+    private void GoToRandomPlayerSide(Durashka owner)
     {
-        PlayerController playerController = GameObject.FindObjectOfType<PlayerController>();
-        Vector3 side = playerController.transform.right * RandomSign();
-        Vector3 pointToGo = playerController.transform.position + side * Random.Range(5,8);
+        Vector3 side = owner.player.transform.right * RandomSign();
+        Vector3 pointToGo = owner.player.transform.position + side * Random.Range(5,8);
         
-        var coverPointsGraph = AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == "General");
+        NavGraph coverPointsGraph = 
+            AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == Constants.GeneralGraph);
+        
         Vector3 resultNode = (Vector3)coverPointsGraph.GetNearest(pointToGo).node.position;
         resultNode.y = 0;
 
         owner.UpdatePath(resultNode);
     }
 
-    public int RandomSign()
+    private int RandomSign()
     {
-        return Random.Range(0, 2) * 2 - 1;
         return Random.value > 0.5f ? 1 : -1;
     }
 }

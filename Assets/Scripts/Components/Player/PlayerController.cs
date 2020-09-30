@@ -245,7 +245,7 @@ public class PlayerController : MonoBehaviour
     //
     // public void SetUpAnimator()
     // {
-    //     animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
+    //     Animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
     // }
 
     // private void OnTriggerStay(Collider other)
@@ -253,19 +253,19 @@ public class PlayerController : MonoBehaviour
     //     if (other.CompareTag(Constants.Cover))
     //     {
     //         coverSens.currentCover = other.transform;
-    //         animator.SetBool(AnimatorHashes.CoverHash, true);
+    //         Animator.SetBool(AnimatorHashes.CoverHash, true);
     //         if (PlayerInput.Horizontal == 0)
     //         {
     //             return;
     //         }
-    //         animator.SetFloat(AnimatorHashes.CoverSideHash, PlayerInput.Horizontal > 0 ? 1 : -1);
+    //         Animator.SetFloat(AnimatorHashes.CoverSideHash, PlayerInput.Horizontal > 0 ? 1 : -1);
     //     }
     // }
     // private void OnTriggerExit(Collider other)
     // {
     //     if (other.CompareTag(Constants.Cover))
     //     {
-    //         animator.SetBool(AnimatorHashes.CoverHash, false);
+    //         Animator.SetBool(AnimatorHashes.CoverHash, false);
     //     }
     // }
 
@@ -283,17 +283,17 @@ public class PlayerController : MonoBehaviour
 
     // public void CoverTransforms()
     // {
-    //     if(animator.GetFloat(AnimatorHashes.VerticalHash) < -0.7f)
+    //     if(Animator.GetFloat(AnimatorHashes.VerticalHash) < -0.7f)
     //     {
     //         return;
     //     }
-    //     if (!animator.GetBool(AnimatorHashes.AimingHash) && animator.GetBool(AnimatorHashes.CrouchingHash))
+    //     if (!Animator.GetBool(AnimatorHashes.AimingHash) && Animator.GetBool(AnimatorHashes.CrouchingHash))
     //     {
     //         RaycastHit hitCover;
     //         Debug.DrawRay(coverSens.rightSensor.position, coverSens.rightSensor.forward, Color.blue);
     //         Debug.DrawRay(coverSens.leftSensor.position, coverSens.leftSensor.forward, Color.blue);
     //
-    //         if (animator.GetFloat(AnimatorHashes.CoverSideHash) > 0)
+    //         if (Animator.GetFloat(AnimatorHashes.CoverSideHash) > 0)
     //         {
     //             if (Physics.Raycast(coverSens.rightSensor.position, coverSens.rightSensor.forward, out hitCover, 2f, 1<<10))
     //             {
@@ -303,10 +303,10 @@ public class PlayerController : MonoBehaviour
     //             }
     //             else
     //             {
-    //                 animator.SetFloat(AnimatorHashes.CoverSideHash, 2f);
+    //                 Animator.SetFloat(AnimatorHashes.CoverSideHash, 2f);
     //             }
     //         }
-    //         if (animator.GetFloat(AnimatorHashes.CoverSideHash) < 0)
+    //         if (Animator.GetFloat(AnimatorHashes.CoverSideHash) < 0)
     //         {
     //             if (Physics.Raycast(coverSens.leftSensor.position, coverSens.leftSensor.forward, out hitCover, 2f, 1 << 10))
     //             {
@@ -316,7 +316,7 @@ public class PlayerController : MonoBehaviour
     //             }
     //             else
     //             {
-    //                 animator.SetFloat(AnimatorHashes.CoverSideHash, -2f);
+    //                 Animator.SetFloat(AnimatorHashes.CoverSideHash, -2f);
     //             }
     //         }
     //
@@ -330,15 +330,15 @@ public class PlayerController : MonoBehaviour
     //
     //     if ((bodyData.mainCrossHair.position - weaponHolder.gun.transform.position).magnitude > 2f)
     //     {
-    //         animator.SetLookAtWeight(0.5f, 1f, 1f);
-    //         animator.SetLookAtPosition(bodyData.mainCrossHair.position);
+    //         Animator.SetLookAtWeight(0.5f, 1f, 1f);
+    //         Animator.SetLookAtPosition(bodyData.mainCrossHair.position);
     //     }
     // }
 
     // public void SimpleWalkingTransforms()
     // {
     //     //PlayerCameraBehaviour.FieldOfView(60);
-    //     animator.SetLookAtWeight(1, 0.4f, 0.4f);
-    //     animator.SetLookAtPosition(bodyData.bodyAimPivot.position);
+    //     Animator.SetLookAtWeight(1, 0.4f, 0.4f);
+    //     Animator.SetLookAtPosition(bodyData.bodyAimPivot.position);
     // }
 }

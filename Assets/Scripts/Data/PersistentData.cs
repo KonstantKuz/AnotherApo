@@ -74,4 +74,6 @@ public class Constants
     public const string PoolTrail = "Trail";
     public const string PoolFlash = "MuzzleFlash";
     public const string PoolMidExplosion = "MidExplosion";
+
+    public const string GeneralGraph = "General";
 }

@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 4456835378029736981}
   - component: {fileID: 4456835378029736983}
   m_Layer: 0
-  m_Name: Spiderast
+  m_Name: SpiderAst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,8 +351,8 @@ MonoBehaviour:
   player: {fileID: 0}
   pathUpdTimer: 0
   pathUpdPeriod: 2
-  movementSpeed: 2
-  jumpSpeed: 2
+  movementSpeed: 2.2
+  jumpSpeed: 1.5
   explosionRoot: {fileID: 4456835378029832238}
   animator: {fileID: 9175226167313878281}
   controller: {fileID: 4456835378029736983}

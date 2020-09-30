@@ -145,7 +145,7 @@ public class AimingAndIKOverrider : MonoCached
     private bool TargetIsAhead()
     {
         Vector3 targetDirection = target.position - gun.transform.position;
-        // Debug.Log($"Angle btw animator & target == {SignBtnw(targetDirection, characterAnimator.transform.forward, characterAnimator.transform.up)}");
+        // Debug.Log($"Angle btw Animator & target == {SignBtnw(targetDirection, characterAnimator.transform.forward, characterAnimator.transform.up)}");
 
         float distanceToTarget = targetDirection.magnitude;
         // float direction = SignBtnw(targetDirection, characterAnimator.transform.forward,

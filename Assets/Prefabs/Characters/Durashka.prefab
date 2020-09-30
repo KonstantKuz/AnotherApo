@@ -1418,8 +1418,11 @@ MonoBehaviour:
   player: {fileID: 0}
   pathUpdTimer: 0
   pathUpdPeriod: 2
-  gun: {fileID: 7243676974583412704}
-  animator: {fileID: 3966525467938663895}
+  Gun: {fileID: 7243676974583412704}
+  Animator: {fileID: 3966525467938663895}
+  Controller: {fileID: 1903904525888752669}
+  movementSpeed: 4
+  jumpSpeed: 6
   aimingConstraints:
   - {fileID: 3966525468221232308}
   - {fileID: 3966525467532059749}
@@ -1436,7 +1439,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3aa17f8090308df408fb4d62df55e827, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
