@@ -16,5 +16,5 @@ MonoBehaviour:
   nameAsTag: 1
   poolTag: MuzzleFlash
   autoReturn: 1
-  autoReturnDelay: 0.5
+  autoReturnDelay: 1
   parent: {fileID: 0}
