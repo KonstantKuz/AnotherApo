@@ -224,43 +224,20 @@
             </e>
           </e>
           <e p="BeatDetection" t="Include">
-            <e p="Beat Detection" t="Include">
-              <e p="BeatDetection.cs" t="Include" />
-              <e p="Event - Example" t="Include">
-                <e p="EventExample.cs" t="Include" />
-              </e>
-              <e p="Event - Example Mic Input" t="Include">
-                <e p="EventMicExample.cs" t="Include" />
-              </e>
-              <e p="No Event - Example" t="Include">
-                <e p="BeatDetectionExample.cs" t="Include" />
-              </e>
-              <e p="No Event - Example Mic Input" t="Include">
-                <e p="BeatDetectionExampleMic.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Sequencer" t="Include">
-              <e p="Editor" t="Include">
-                <e p="Audio Sequencer" t="Include">
-                  <e p="EditorExtension.cs" t="Include" />
-                </e>
+            <e p="AudioSequencer" t="Include">
+              <e p="Helper" t="Include">
+                <e p="BitMaskAttribute.cs" t="Include" />
+                <e p="EnumExtensions.cs" t="Include" />
               </e>
               <e p="Sample" t="Include">
                 <e p="Sample.cs" t="Include" />
               </e>
-              <e p="Scripts" t="Include">
-                <e p="Audio Sequencer" t="Include">
-                  <e p="Helper" t="Include">
-                    <e p="BitMaskAttribute.cs" t="Include" />
-                    <e p="EnumExtensions.cs" t="Include" />
-                  </e>
-                  <e p="Sequencer.cs" t="Include" />
-                  <e p="SequencerBase.cs" t="Include" />
-                  <e p="SequencerDriver.cs" t="Include" />
-                  <e p="SequencerGroup.cs" t="Include" />
-                </e>
-              </e>
+              <e p="Sequencer.cs" t="Include" />
+              <e p="SequencerBase.cs" t="Include" />
+              <e p="SequencerDriver.cs" t="Include" />
+              <e p="SequencerGroup.cs" t="Include" />
             </e>
+            <e p="UniBpmAnalyzer.cs" t="Include" />
           </e>
           <e p="CHARACTERS" t="Include">
             <e p="krovosos" t="Include">
@@ -448,6 +425,7 @@
               <e p="Spiderast.cs" t="Include" />
             </e>
             <e p="FootIKOverride.cs" t="Include" />
+            <e p="GameBeatSequencer.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="Lazer.cs" t="Include" />
             <e p="Player" t="Include">

@@ -34,26 +34,31 @@ public class AggressiveState : State<Durashka>
         owner.Animator.SetBool(AnimatorHashes.AimingHash, true);
         //GoToRandomPlayerSide(owner);
         
-        StartFiring(owner);
+        // StartFiring(owner);
         GoToRandomPlayerSidePeriodically(owner);
+        
+        GameBeatSequencer.OnGeneratedBeat += delegate
+        {
+            owner.Gun.Fire();
+        };
     }
 
-    private void StartFiring(Durashka owner)
-    {
-        owner.StartCoroutine(rndFire());
-        IEnumerator rndFire()
-        {
-            yield return new WaitForSeconds(Random.Range(2f, 5f));
-            float fireTime = Random.Range(0.5f, 1f);
-            while (fireTime>0)
-            {
-                fireTime -= Time.deltaTime;
-                owner.Gun.Fire();
-                yield return null;
-            }
-            yield return owner.StartCoroutine(rndFire());
-        }
-    }
+    // private void StartFiring(Durashka owner)
+    // {
+    //     owner.StartCoroutine(rndFire());
+    //     IEnumerator rndFire()
+    //     {
+    //         yield return new WaitForSeconds(Random.Range(2f, 5f));
+    //         float fireTime = Random.Range(0.5f, 1f);
+    //         while (fireTime>0)
+    //         {
+    //             fireTime -= Time.deltaTime;
+    //             owner.Gun.Fire();
+    //             yield return null;
+    //         }
+    //         yield return owner.StartCoroutine(rndFire());
+    //     }
+    // }
     
     private void GoToRandomPlayerSidePeriodically(Durashka owner)
     {
