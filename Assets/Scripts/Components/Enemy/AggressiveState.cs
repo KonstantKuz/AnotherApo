@@ -32,10 +32,10 @@ public class AggressiveState : State<Durashka>
         owner.pathUpdPeriod = 2;
 
         owner.Animator.SetBool(AnimatorHashes.AimingHash, true);
-        GoToRandomPlayerSide(owner);
+        //GoToRandomPlayerSide(owner);
         
         StartFiring(owner);
-        UpdatePathPeriodically(owner);
+        GoToRandomPlayerSidePeriodically(owner);
     }
 
     private void StartFiring(Durashka owner)
@@ -55,14 +55,16 @@ public class AggressiveState : State<Durashka>
         }
     }
     
-    private void UpdatePathPeriodically(Durashka owner)
+    private void GoToRandomPlayerSidePeriodically(Durashka owner)
     {
-        owner.StartCoroutine(UpdatePathToPlayerPeriodically());
-        IEnumerator UpdatePathToPlayerPeriodically()
+        owner.StartCoroutine(GoToRandomSide());
+        IEnumerator GoToRandomSide()
         {
-            EnterState(owner);
-            yield return new WaitForSeconds(owner.pathUpdPeriod);
-            owner.StartCoroutine(UpdatePathToPlayerPeriodically());
+            while (true)
+            {
+                GoToRandomPlayerSide(owner);
+                yield return new WaitForSeconds(owner.pathUpdPeriod);
+            }
         }
     }
 
