@@ -41,25 +41,16 @@ public class Durashka : Enemy
         targetInterpolator.SetConstraint(currentAttackTarget, aimingSpeed);
         for (int i = 0; i < aimingConstraints.Length; i++)
         {
-            aimingConstraints[i].AddSource(InterpolatorConstraintSource());
-            //aimingConstraints[i].AddSource(PlayerConstraintSource());
+            aimingConstraints[i].AddSource(Interpolator());
         }
     }
 
-    private ConstraintSource InterpolatorConstraintSource()
+    private ConstraintSource Interpolator()
     {
         ConstraintSource interpolatorSource = new ConstraintSource();
         interpolatorSource.weight = 1;
         interpolatorSource.sourceTransform = targetInterpolator.transform;
         return interpolatorSource;
-    }
-
-    private ConstraintSource PlayerConstraintSource()
-    {
-        ConstraintSource playerSource = new ConstraintSource();
-        playerSource.weight = 1;
-        playerSource.sourceTransform = currentAttackTarget;
-        return playerSource;
     }
 
     public void SetUpStateMachine()

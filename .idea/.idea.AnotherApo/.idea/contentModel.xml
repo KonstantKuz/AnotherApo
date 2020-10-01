@@ -423,6 +423,7 @@
               <e p="Enemy.cs" t="Include" />
               <e p="PatrolState.cs" t="Include" />
               <e p="Spiderast.cs" t="Include" />
+              <e p="TargetInterpolator.cs" t="Include" />
             </e>
             <e p="FootIKOverride.cs" t="Include" />
             <e p="GameBeatSequencer.cs" t="Include" />
@@ -463,7 +464,6 @@
             <e p="UpdateManager.cs" t="Include" />
           </e>
         </e>
-        <e p="TargetInterpolator.cs" t="Include" />
       </e>
       <e p="AstarPathfindingProject.csproj" t="IncludeRecursive" />
       <e p="AstarPathfindingProjectEditor.csproj" t="IncludeRecursive" />

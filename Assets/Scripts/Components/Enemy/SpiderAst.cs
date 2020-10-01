@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spiderast : Enemy
+public class SpiderAst : Enemy
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
