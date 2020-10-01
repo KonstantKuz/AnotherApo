@@ -9,11 +9,16 @@ using UnityEngine.Animations;
 
 public class Durashka : Enemy
 {
-    public Gun Gun;
+    [Header("Movement")]
     public Animator Animator;
     public CharacterController Controller;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
+    
+    [Header("Targeting")]
+    public Gun Gun;
+    [SerializeField] private float aimingSpeed;
+    [SerializeField] private TargetInterpolator targetInterpolator;
     [SerializeField] private LookAtConstraint[] aimingConstraints;
     
     private StateMachine<Durashka> stateMachine;
@@ -33,14 +38,28 @@ public class Durashka : Enemy
     private void StartAiming()
     {
         currentAttackTarget = player.Animator.GetBoneTransform(HumanBodyBones.Spine);
-        
+        targetInterpolator.SetConstraint(currentAttackTarget, aimingSpeed);
         for (int i = 0; i < aimingConstraints.Length; i++)
-        { 
-            ConstraintSource source = new ConstraintSource();
-            source.weight = 1;
-            source.sourceTransform = currentAttackTarget;
-            aimingConstraints[i].SetSource(0, source);
+        {
+            aimingConstraints[i].AddSource(InterpolatorConstraintSource());
+            //aimingConstraints[i].AddSource(PlayerConstraintSource());
         }
+    }
+
+    private ConstraintSource InterpolatorConstraintSource()
+    {
+        ConstraintSource interpolatorSource = new ConstraintSource();
+        interpolatorSource.weight = 1;
+        interpolatorSource.sourceTransform = targetInterpolator.transform;
+        return interpolatorSource;
+    }
+
+    private ConstraintSource PlayerConstraintSource()
+    {
+        ConstraintSource playerSource = new ConstraintSource();
+        playerSource.weight = 1;
+        playerSource.sourceTransform = currentAttackTarget;
+        return playerSource;
     }
 
     public void SetUpStateMachine()

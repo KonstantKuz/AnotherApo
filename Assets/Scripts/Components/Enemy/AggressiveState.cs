@@ -30,36 +30,19 @@ public class AggressiveState : State<Durashka>
     public override void EnterState(Durashka owner)
     {
         owner.pathUpdPeriod = 2;
-
         owner.Animator.SetBool(AnimatorHashes.AimingHash, true);
-        //GoToRandomPlayerSide(owner);
         
-        // StartFiring(owner);
         GoToRandomPlayerSidePeriodically(owner);
         
-        GameBeatSequencer.OnGeneratedBeat += delegate
+        GameBeatSequencer.OnBPM += delegate
         {
-            owner.Gun.Fire();
+            if (Random.value > 0.5f)
+            {
+                owner.Gun.Fire();
+            }
         };
     }
 
-    // private void StartFiring(Durashka owner)
-    // {
-    //     owner.StartCoroutine(rndFire());
-    //     IEnumerator rndFire()
-    //     {
-    //         yield return new WaitForSeconds(Random.Range(2f, 5f));
-    //         float fireTime = Random.Range(0.5f, 1f);
-    //         while (fireTime>0)
-    //         {
-    //             fireTime -= Time.deltaTime;
-    //             owner.Gun.Fire();
-    //             yield return null;
-    //         }
-    //         yield return owner.StartCoroutine(rndFire());
-    //     }
-    // }
-    
     private void GoToRandomPlayerSidePeriodically(Durashka owner)
     {
         owner.StartCoroutine(GoToRandomSide());
@@ -105,14 +88,13 @@ public class AggressiveState : State<Durashka>
 
     private void GoToRandomPlayerSide(Durashka owner)
     {
-        Vector3 side = owner.player.transform.right * RandomSign();
+        Vector3 side = owner.player.transform.right * RandomSign() + owner.player.transform.forward * RandomSign();
         Vector3 pointToGo = owner.player.transform.position + side * Random.Range(5,8);
         
-        NavGraph coverPointsGraph = 
+        NavGraph generalGraph = 
             AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == Constants.GeneralGraph);
         
-        Vector3 resultNode = (Vector3)coverPointsGraph.GetNearest(pointToGo).node.position;
-        resultNode.y = 0;
+        Vector3 resultNode = (Vector3)generalGraph.GetNearest(pointToGo).node.position;
 
         owner.UpdatePath(resultNode);
     }

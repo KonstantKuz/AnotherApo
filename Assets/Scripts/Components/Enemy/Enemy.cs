@@ -99,7 +99,7 @@ public abstract class Enemy : MonoCached
     {
         TargetingCalculations(target);
         Quaternion lookRotation = Quaternion.LookRotation(targetDirection_XZprojection, transform.up);
-        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 2f);
+        transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
     public void TargetingCalculations(Vector3 target)
