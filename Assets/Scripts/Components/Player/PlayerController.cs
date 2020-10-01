@@ -8,21 +8,25 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private BodyData bodyData;
     [SerializeField] private PlayerWeaponHolder weaponHolder;
     [SerializeField] private Animator animator;
-    [SerializeField] private CharacterController controller;
+    public Animator Animator
+    {
+        get => animator;
+    }
     [SerializeField] private RigBuilder rigBuilder;
-    
+    private CharacterController controller;
+
     private Vector3 movementVelocity;
     private Vector3 dashVelocity;
     private Vector3 verticalVelocity;
     
     private Vector3 originalAnimatorLocalPosition;
     private Quaternion originalAnimatorLocalRotation;
-    public Animator Animator
+
+    private void OnValidate()
     {
-        get => animator;
+        controller = GetComponent<CharacterController>();
     }
-
-
+    
     private void Awake()
     {
         originalAnimatorLocalPosition = animator.transform.localPosition;
