@@ -18,8 +18,8 @@ TagManager:
   - InteractionLayer
   - Cover
   - Obstacle
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 

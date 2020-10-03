@@ -9,8 +9,8 @@ public class GameBeatSequencer : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private SequencerDriver beatDriver;
 
-    public static Action OnGeneratedBeat = delegate { Debug.Log("OnGeneratedBeat"); };
-    public static Action OnBPM = delegate { Debug.Log("OnBPM"); };
+    public static Action OnGeneratedBeat = delegate { };
+    public static Action OnBPM = delegate { };
 
     private Sequencer beatSequencer;
     private int currentTrackBPM;

@@ -175,7 +175,6 @@ public class PlayerController : MonoBehaviour
         movementVelocity = Vector3.zero;
         movementVelocity = transform.TransformDirection(movementVelocity);
         movementVelocity *= bodyData.movementSpeed;
-        //controller.Move(movementVelocity * Time.deltaTime);
     }
 
     private void ApplyGravity()

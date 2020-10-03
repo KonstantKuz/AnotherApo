@@ -28,9 +28,11 @@ public class SpiderAst : Enemy
         StartCoroutine(UpdatePathToPlayerPeriodically());
         IEnumerator UpdatePathToPlayerPeriodically()
         {
-            UpdatePath(player.transform.position);
-            yield return new WaitForSeconds(pathUpdPeriod);
-            StartCoroutine(UpdatePathToPlayerPeriodically());
+            while (true)
+            {
+                UpdatePath(player.transform.position);
+                yield return new WaitForSeconds(pathUpdPeriod);
+            }
         }
     }
 
@@ -41,14 +43,13 @@ public class SpiderAst : Enemy
     
     public override void CustomUpdate()
     {
-        SetMoveAnimationSpeed();
-        
         if (player == null)
             return;
         
         ApplyGravity();
-        CleanPassedNodes();
         
+
+        CleanPassedNodes();
         if (!HasPath() || PathFullyPassed())
         {
             JumpThenAttack();

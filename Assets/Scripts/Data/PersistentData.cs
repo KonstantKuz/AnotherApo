@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PersistentData : MonoBehaviour
 {
@@ -76,4 +77,5 @@ public class Constants
     public const string PoolMidExplosion = "MidExplosion";
 
     public const string GeneralGraph = "General";
+    public const string UMUBotGraph = "UMUBot";
 }

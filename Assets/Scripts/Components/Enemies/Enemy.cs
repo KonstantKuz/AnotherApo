@@ -10,12 +10,14 @@ public abstract class Enemy : MonoCached
 
     [HideInInspector] public float verticalMoveValue, horizontalMoveValue;
 
-    [HideInInspector] public PlayerController player;
-    [HideInInspector] public float pathUpdTimer;
-    [HideInInspector] public float pathUpdPeriod = 2f;
-    private protected ABPath currentPath;
-    private protected int currentPathNodeIndex;
-    private protected Vector3 currentPathTarget;
+    protected PlayerController player;
+    protected float pathUpdTimer;
+    protected float pathUpdPeriod = 2f;
+    protected float pathCleanDistance = 1f;
+    public string graphName;
+    protected Path currentPath;
+    protected int currentPathNodeIndex;
+    protected Vector3 currentPathTarget;
     
     
     public virtual void Start()
@@ -23,11 +25,13 @@ public abstract class Enemy : MonoCached
         player = FindObjectOfType<PlayerController>();
     }
 
-    public void UpdatePath(Vector3 currentPathTarget)
+    protected void UpdatePath(Vector3 currentPathTarget)
     {
         this.currentPathTarget = currentPathTarget;
         currentPathNodeIndex = 0;
-        currentPath = ABPath.Construct(transform.position, this.currentPathTarget);
+        
+        currentPath = ABPath.Construct(transform.position, currentPathTarget);
+        currentPath.nnConstraint.graphMask = GraphMask.FromGraphName(graphName);
         AstarPath.StartPath(currentPath);
     }
 
@@ -42,12 +46,12 @@ public abstract class Enemy : MonoCached
                (currentPath.vectorPath[currentPathNodeIndex] - currentPathTarget).magnitude < 1f;
     }
 
-    public void CleanPassedNodes()
+    protected void CleanPassedNodes()
     {
         if (PathFullyPassed())
             return;
         
-        if ((transform.position - currentPath.vectorPath[currentPathNodeIndex]).magnitude < 1f)
+        if ((transform.position - currentPath.vectorPath[currentPathNodeIndex]).magnitude < pathCleanDistance)
         {
             currentPath.vectorPath.Remove(currentPath.vectorPath[currentPathNodeIndex]);
         }
@@ -128,9 +132,4 @@ public abstract class Enemy : MonoCached
             }
         }
     }
-}
-
-public interface IPathFollower
-{
-    
 }

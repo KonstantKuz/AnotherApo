@@ -414,16 +414,14 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
-            <e p="BodyLookAtTarget.cs" t="Include" />
             <e p="Bullet.cs" t="Include" />
             <e p="CrossHairCaster.cs" t="Include" />
-            <e p="Enemy" t="Include">
-              <e p="AggressiveState.cs" t="Include" />
+            <e p="Enemies" t="Include">
               <e p="Durashka.cs" t="Include" />
               <e p="Enemy.cs" t="Include" />
-              <e p="PatrolState.cs" t="Include" />
               <e p="Spiderast.cs" t="Include" />
               <e p="TargetInterpolator.cs" t="Include" />
+              <e p="UMUBot.cs" t="Include" />
             </e>
             <e p="FootIKOverride.cs" t="Include" />
             <e p="GameBeatSequencer.cs" t="Include" />
@@ -451,10 +449,12 @@
             <e p="WeaponData.cs" t="Include" />
           </e>
           <e p="Deprecated" t="Include">
+            <e p="AggressiveState.cs" t="Include" />
             <e p="AimingAndIKOverrider.cs" t="Include" />
             <e p="Handlers" t="Include">
               <e p="ObjectPoolerBase.cs" t="Include" />
             </e>
+            <e p="PatrolState.cs" t="Include" />
           </e>
           <e p="Systems" t="Include">
             <e p="GridMaker.cs" t="Include" />

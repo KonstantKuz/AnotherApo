@@ -465,7 +465,17 @@ ModelImporter:
   - first:
       137: 13700000
     second: MECH_BIPED
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MECH_BIPED
+    second: {fileID: 2100000, guid: 961df38914e19f746b69c2269334e3ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MECH_BIPED_WEAPONS
+    second: {fileID: 2100000, guid: 39d557874a0d0f549ac5e8e7fb2a52fd, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -485,7 +495,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 0
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -850,11 +860,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -965,11 +975,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1080,11 +1090,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1195,11 +1205,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1310,11 +1320,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1425,11 +1435,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1540,11 +1550,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1655,11 +1665,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1770,11 +1780,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -2345,11 +2355,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -2468,11 +2478,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -2591,11 +2601,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -2714,11 +2724,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -2866,7 +2876,242 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: MECH_BIPED(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MECH_BIPED
+      parentName: MECH_BIPED(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MECH_BIPED_ROOT_
+      parentName: MECH_BIPED(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ie_MECH_BIPED_PELVIS
+      parentName: MECH_BIPED_ROOT_
+      position: {x: 0, y: 0.1833291, z: 2.9191246}
+      rotation: {x: 0.5, y: 0.50000006, z: 0.49999994, w: 0.5}
+      scale: {x: 1.0000001, y: 2.666149, z: 4.379518}
+    - name: Factice010
+      parentName: ie_MECH_BIPED_PELVIS
+      position: {x: -0.31067124, y: 0.1740696, z: -0.00000015258789}
+      rotation: {x: -0.5, y: -0.50000006, z: -0.5, w: 0.50000006}
+      scale: {x: 0.22833566, y: 1, z: 0.37507284}
+    - name: ie_MECH_BIPED_NECK
+      parentName: Factice010
+      position: {x: -0.000000629425, y: 0, z: 0.00000015258789}
+      rotation: {x: 0.5115382, y: 0.5115376, z: -0.4881898, w: 0.4881892}
+      scale: {x: 0.56369793, y: 0.56369793, z: 0.56369776}
+    - name: ie_MECH_BIPED_HEAD
+      parentName: ie_MECH_BIPED_NECK
+      position: {x: -0.35812467, y: -0.000000057220458, z: -0.007297058}
+      rotation: {x: -0.00000011920926, y: -0.04424915, z: 0.0000026822083, w: 0.9990205}
+      scale: {x: 1.774001, y: 8.595942, z: 16.442917}
+    - name: Factice001
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -2.306374, y: 0.000037078855, z: 0.14877716}
+      rotation: {x: -0.5000001, y: -0.49999997, z: 0.4999999, w: 0.50000006}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.99999994}
+    - name: ie_MECH_BIPED_DOOR
+      parentName: Factice001
+      position: {x: -0.0000009155273, y: -0.0000044250487, z: -0.00000030517577}
+      rotation: {x: 0.6678651, y: 0.667867, z: -0.23228134, w: 0.23228268}
+      scale: {x: 0.9999995, y: 4.760197, z: 1}
+    - name: ie_HOMING_ROCKETS_L
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.89613235, y: -0.268493, z: -0.029081421}
+      rotation: {x: 0.5000006, y: 0.5, z: -0.49999988, w: -0.49999952}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.9999999}
+    - name: ie_SUPER_LASER_L
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.9560646, y: -0.26839614, z: 0.06798492}
+      rotation: {x: 0.5000006, y: 0.5, z: -0.49999988, w: -0.49999952}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.9999999}
+    - name: ie_MISSILE_LAUNCHER_L
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.899037, y: -0.2678917, z: 0.03962372}
+      rotation: {x: 0.5000006, y: 0.5, z: -0.49999988, w: -0.49999952}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.9999999}
+    - name: ie_MINIGUN_L
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.96033657, y: -0.31207877, z: -0.026241759}
+      rotation: {x: 0.5000006, y: 0.5, z: -0.49999988, w: -0.49999952}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.9999999}
+    - name: ie_MINIGUN_L_BARRELS
+      parentName: ie_MINIGUN_L
+      position: {x: 0.20879303, y: -0.96655416, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ie_HOMING_ROCKETS_R
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.8961314, y: 0.26843405, z: -0.029081725}
+      rotation: {x: 0.49999955, y: 0.4999999, z: 0.49999997, w: 0.5000006}
+      scale: {x: -0.20637651, y: -0.10788839, z: -0.9999999}
+    - name: ie_SUPER_LASER_R
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.956064, y: 0.2683373, z: 0.06798431}
+      rotation: {x: 0.49999955, y: 0.4999999, z: 0.49999997, w: 0.5000006}
+      scale: {x: -0.20637651, y: -0.10788839, z: -0.9999999}
+    - name: ie_MISSILE_LAUNCHER_R
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.8990361, y: 0.26783282, z: 0.039623108}
+      rotation: {x: 0.49999955, y: 0.4999999, z: 0.49999997, w: 0.5000006}
+      scale: {x: -0.20637651, y: -0.10788839, z: -0.9999999}
+    - name: ie_MINIGUN_R
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -0.9603355, y: 0.31201977, z: -0.026242064}
+      rotation: {x: 0.49999955, y: 0.4999999, z: 0.49999997, w: 0.5000006}
+      scale: {x: -0.20637651, y: -0.10788839, z: -0.9999999}
+    - name: ie_MINIGUN_R_BARRELS
+      parentName: ie_MINIGUN_R
+      position: {x: 0.20879318, y: -0.96655416, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MECH_BIPED_AMMO_LEFT_WEAPON_L
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -1.7096288, y: -0.08523346, z: -0.16761963}
+      rotation: {x: 0.5000006, y: 0.5, z: -0.49999988, w: -0.49999952}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.9999999}
+    - name: MECH_BIPED_AMMO_LEFT_WEAPON_R
+      parentName: ie_MECH_BIPED_HEAD
+      position: {x: -1.7096286, y: 0.08523346, z: -0.16762024}
+      rotation: {x: 0.5000006, y: 0.5, z: -0.49999988, w: -0.49999952}
+      scale: {x: 0.20637651, y: 0.10788839, z: 0.9999999}
+    - name: Factice023
+      parentName: ie_MECH_BIPED_PELVIS
+      position: {x: -0.31598666, y: 0, z: -0.09058701}
+      rotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 0.22833566, y: 1, z: 0.37507284}
+    - name: ie_MECH_BIPED_HIPS_A_LEFT
+      parentName: Factice023
+      position: {x: -0.0000010299682, y: 0.000000019073486, z: 0}
+      rotation: {x: 0.70710695, y: -0, z: -0, w: 0.70710665}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999976}
+    - name: ie_MECH_BIPED_HIPS_B_LEFT
+      parentName: ie_MECH_BIPED_HIPS_A_LEFT
+      position: {x: -0.32774654, y: 0.18852279, z: -0.008874511}
+      rotation: {x: -0.35783887, y: -0.32375908, z: -0.40642858, w: 0.77585256}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Factice008
+      parentName: ie_MECH_BIPED_HIPS_B_LEFT
+      position: {x: 1.4446898, y: -0.5864834, z: -0.19596256}
+      rotation: {x: 0.5000003, y: 0.4999998, z: -0.5, w: -0.4999999}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: ie_MECH_BIPED_THIGH_LEFT
+      parentName: ie_MECH_BIPED_HIPS_B_LEFT
+      position: {x: -0.21045837, y: -0.5864841, z: 0.008874835}
+      rotation: {x: 0.00000022672461, y: 0.83190745, z: -0.00000022088742, w: -0.55491453}
+      scale: {x: 0.9999997, y: 0.9999999, z: 0.99999964}
+    - name: ie_MECH_BIPED_CALF_LEFT
+      parentName: ie_MECH_BIPED_THIGH_LEFT
+      position: {x: -1.1581901, y: -0.00000015258789, z: -0.00000045776366}
+      rotation: {x: -0.94166094, y: -0.19340353, z: -0.1298507, w: -0.2429168}
+      scale: {x: 1.0000005, y: 1, z: 1.0000004}
+    - name: ie_MECH_BIPED_FOOT_LEFT
+      parentName: ie_MECH_BIPED_CALF_LEFT
+      position: {x: -1.4872873, y: 0.00000015258789, z: -0.0000002670288}
+      rotation: {x: 0.9528769, y: -0.0015866456, z: 0.04955509, w: -0.29927823}
+      scale: {x: 0.99999994, y: 1.7418809, z: 1.9438685}
+    - name: Factice002
+      parentName: ie_MECH_BIPED_FOOT_LEFT
+      position: {x: -0.33318368, y: -0.15375236, z: -0.13795443}
+      rotation: {x: 0.35355353, y: 0.6123724, z: 0.3535533, w: 0.61237246}
+      scale: {x: 0.5740922, y: 0.5144383, z: 1}
+    - name: ie_MECH_BIPED_TOE_3_LEFT
+      parentName: Factice002
+      position: {x: -0.0000022125244, y: -0.00000061035155, z: -0.000000076293944}
+      rotation: {x: -0.5000001, y: -0.5000002, z: -0.49999982, w: -0.49999982}
+      scale: {x: 0.99999994, y: 0.44282377, z: 1.0000004}
+    - name: Factice003
+      parentName: ie_MECH_BIPED_FOOT_LEFT
+      position: {x: -0.33318344, y: 0.15365009, z: -0.13752572}
+      rotation: {x: 0.6123725, y: 0.35355327, z: 0.6123724, w: 0.35355344}
+      scale: {x: 0.5740922, y: 0.5144382, z: 1}
+    - name: ie_MECH_BIPED_TOE_2_LEFT
+      parentName: Factice003
+      position: {x: -0.0000015258788, y: 0.0000014495849, z: -0.00000022888183}
+      rotation: {x: -0.50000006, y: -0.5000002, z: -0.5000001, w: -0.49999973}
+      scale: {x: 1.0000002, y: 0.4428237, z: 0.99999994}
+    - name: Factice004
+      parentName: ie_MECH_BIPED_FOOT_LEFT
+      position: {x: -0.3331836, y: 0.0018311309, z: 0.18244793}
+      rotation: {x: 0.50000006, y: 0.49999994, z: 0.49999994, w: 0.50000006}
+      scale: {x: 0.5740922, y: 0.5144383, z: 1}
+    - name: ie_MECH_BIPED_TOE_1_LEFT
+      parentName: Factice004
+      position: {x: -0.0000021362305, y: 0.00000045776366, z: -0.00000015258789}
+      rotation: {x: -0.49999973, y: 0.49999985, z: 0.50000024, w: -0.50000024}
+      scale: {x: 1.0000005, y: 0.44282374, z: 1.0000004}
+    - name: Factice009
+      parentName: ie_MECH_BIPED_PELVIS
+      position: {x: -0.3159868, y: 0, z: 0.0906491}
+      rotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 0.22833566, y: 1, z: 0.37507284}
+    - name: ie_MECH_BIPED_HIPS_A_RIGHT
+      parentName: Factice009
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.0000001937151, y: -0.7071071, z: 0.70710653, w: -0.000000080678035}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.99999976}
+    - name: ie_MECH_BIPED_HIPS_B_RIGHT
+      parentName: ie_MECH_BIPED_HIPS_A_RIGHT
+      position: {x: -0.32774642, y: -0.1885231, z: -0.008874826}
+      rotation: {x: -0.3578388, y: 0.32375947, z: -0.40642884, w: -0.7758523}
+      scale: {x: 0.9999996, y: 0.9999997, z: 0.9999999}
+    - name: Factice029
+      parentName: ie_MECH_BIPED_HIPS_B_RIGHT
+      position: {x: 1.4446902, y: 0.58625394, z: -0.19596277}
+      rotation: {x: -0.4999997, y: -0.5000002, z: 0.4999999, w: 0.50000024}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: ie_MECH_BIPED_THIGH_RIGHT
+      parentName: ie_MECH_BIPED_HIPS_B_RIGHT
+      position: {x: -0.2104579, y: 0.5864841, z: 0.008874835}
+      rotation: {x: -0.000000092907975, y: 0.83190745, z: 0.00000027341974, w: -0.5549144}
+      scale: {x: 1.0000005, y: 0.9999998, z: 0.99999994}
+    - name: ie_MECH_BIPED_CALF_RIGHT
+      parentName: ie_MECH_BIPED_THIGH_RIGHT
+      position: {x: -1.1581895, y: 0.00000015258789, z: -0.00000015258789}
+      rotation: {x: -0.941661, y: 0.19340356, z: -0.12985094, w: 0.24291632}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000001}
+    - name: ie_MECH_BIPED_FOOT_RIGHT
+      parentName: ie_MECH_BIPED_CALF_RIGHT
+      position: {x: -1.4872881, y: -0.00000015258789, z: -0.0000004196167}
+      rotation: {x: 0.9528764, y: 0.0015868237, z: 0.04955577, w: 0.29927957}
+      scale: {x: 0.99999994, y: 1.6668339, z: 1.9351517}
+    - name: Factice028
+      parentName: ie_MECH_BIPED_FOOT_RIGHT
+      position: {x: -0.33318374, y: -0.001938324, z: 0.1832697}
+      rotation: {x: 0.49999997, y: 0.49999982, z: 0.50000006, w: 0.5000002}
+      scale: {x: 0.59994006, y: 0.51675546, z: 1}
+    - name: ie_MECH_BIPED_TOE_1_RIGHT
+      parentName: Factice028
+      position: {x: 0.000043792723, y: 0.00000028535723, z: 0.000000057220458}
+      rotation: {x: -0.5, y: 0.50000036, z: -0.49999988, w: 0.49999988}
+      scale: {x: 1, y: 0.44551966, z: 0.9999998}
+    - name: Factice027
+      parentName: ie_MECH_BIPED_FOOT_RIGHT
+      position: {x: -0.3331836, y: -0.1609225, z: -0.13814527}
+      rotation: {x: 0.35355353, y: 0.6123722, z: 0.3535533, w: 0.61237264}
+      scale: {x: 0.59994006, y: 0.51675546, z: 1}
+    - name: ie_MECH_BIPED_TOE_2_RIGHT
+      parentName: Factice027
+      position: {x: 0.0005135345, y: 0.000297184, z: 0.000000076293944}
+      rotation: {x: -0.49999964, y: -0.5, z: 0.50000036, w: 0.5000001}
+      scale: {x: 0.9999998, y: 0.44551948, z: 0.9999995}
+    - name: Factice030
+      parentName: ie_MECH_BIPED_FOOT_RIGHT
+      position: {x: -0.3331833, y: 0.16064534, z: -0.13857582}
+      rotation: {x: 0.61237246, y: 0.3535532, z: 0.61237246, w: 0.35355353}
+      scale: {x: 0.59994006, y: 0.51675546, z: 1}
+    - name: ie_MECH_BIPED_TOE_3_RIGHT
+      parentName: Factice030
+      position: {x: 0.00004501343, y: -0.000025711059, z: -0.000000085830685}
+      rotation: {x: 0.49999946, y: 0.50000024, z: -0.49999994, w: -0.5000003}
+      scale: {x: 1.0000004, y: 0.4455197, z: 1.0000004}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -2875,15 +3120,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 0.01
-    rootMotionBoneName: 
+    rootMotionBoneName: MECH_BIPED
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
