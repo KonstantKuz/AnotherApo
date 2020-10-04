@@ -47,9 +47,9 @@ public class UMUBot : Enemy
     {
         base.Start();
         SubscribeToCheckDeath();
-        UpdatePathPeriodically();
         StartAiming();
         LookAt(currentAttackTarget);
+        UpdatePathPeriodically();
     }
 
     private void SubscribeToCheckDeath()
@@ -141,7 +141,7 @@ public class UMUBot : Enemy
         {
             while (true)
             {
-                UpdatePath(player.transform.position);
+                UpdatePath(player.transform.position + player.transform.forward*Random.Range(2,10));
                 yield return new WaitForSeconds(pathUpdPeriod);
             }
         }

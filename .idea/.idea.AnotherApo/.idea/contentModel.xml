@@ -509,7 +509,6 @@
             </e>
           </e>
         </e>
-        <e p="MusicRandomizer.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="IngameDebugConsole" t="Include">
             <e p="Editor" t="Include">
@@ -555,6 +554,7 @@
             <e p="Metal.cs" t="Include" />
             <e p="MusicMixer.cs" t="Include" />
             <e p="MusicPart.cs" t="Include" />
+            <e p="MusicRandomizer.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="BodyData.cs" t="Include" />
               <e p="CameraCrossHairCaster.cs" t="Include" />

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 public class SpiderAst : Enemy, IDamageable
 {
     [Header("Attack")] 
@@ -52,7 +52,7 @@ public class SpiderAst : Enemy, IDamageable
         {
             while (true)
             {
-                UpdatePath(player.transform.position);
+                UpdatePath(player.transform.position + player.transform.forward * Random.Range(-2,0));
                 yield return new WaitForSeconds(pathUpdPeriod);
             }
         }

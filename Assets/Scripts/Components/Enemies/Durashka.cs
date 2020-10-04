@@ -53,7 +53,7 @@ public class Durashka : Enemy, IDamageable
 
     private void TryFire()
     {
-        if (Random.value > 0.5f)
+        if (Random.value > 0.1f)
         {
             gun.Fire();
         }
@@ -75,7 +75,7 @@ public class Durashka : Enemy, IDamageable
     private void GoToRandomPlayerSide()
     {
         Vector3 side = player.transform.right * RandomSign() + player.transform.forward * RandomSign();
-        Vector3 pointToGo = player.transform.position + side * Random.Range(5,8);
+        Vector3 pointToGo = player.transform.position + side * Random.Range(5,20);
         
         // NavGraph generalGraph = 
         //     AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == Constants.GeneralGraph);
