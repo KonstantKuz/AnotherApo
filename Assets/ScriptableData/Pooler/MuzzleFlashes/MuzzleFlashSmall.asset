@@ -15,6 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 4119187842477860395, guid: 04ebe36532a73354eb52cd92771f060d, type: 3}
   nameAsTag: 1
   poolTag: MuzzleFlash
-  autoReturn: 0
-  autoReturnDelay: 1
+  autoReturn: 1
+  autoReturnDelay: 3
   parent: {fileID: 0}

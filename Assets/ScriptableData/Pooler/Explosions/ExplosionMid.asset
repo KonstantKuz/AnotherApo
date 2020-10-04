@@ -15,6 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 7108699193672254333, guid: b1c61c916f44da5438ca64a2f4f2d10f, type: 3}
   nameAsTag: 1
   poolTag: MidExplosion
-  autoReturn: 0
-  autoReturnDelay: 2
+  autoReturn: 1
+  autoReturnDelay: 3
   parent: {fileID: 0}
