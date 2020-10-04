@@ -9,15 +9,17 @@ public class UMUGun : Gun, IDamageable
     [SerializeField] private Transform[] additiveBarrels;
     
     public Action OnFullDamaged;
-    public int BulletCountToDie { get; private set; }
+    public int TotalHealth { get; private set; }
 
     private int currentBarrel;
     
     public void Start()
     {
-        BulletCountToDie = Constants.BulletCountsToDie.UMUGun;
+        SetDamageValue(Constants.DamagePerHit.UMUGun);
+        TotalHealth = Constants.TotalHealth.UMUGun;
+        GameBeatSequencer.OnGeneratedBeat += Fire;
     }
-    
+
     public override void Fire()
     {
         if (Time.time < nextShotTime)
@@ -47,11 +49,11 @@ public class UMUGun : Gun, IDamageable
 
     private void FireFromBarrel(Transform actualBarrel)
     {
-        ObjectPooler.Instance.SpawnObject(Constants.PoolMidFlash, actualBarrel.position, actualBarrel.rotation);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolFlashMid, actualBarrel.position, actualBarrel.rotation);
 
         if (trail)
         {
-            ObjectPooler.Instance.SpawnObject(Constants.PoolTrail, actualBarrel.position, actualBarrel.rotation);
+            ObjectPooler.Instance.SpawnObject(Constants.PoolBulletTrail, actualBarrel.position, actualBarrel.rotation);
         }
 
         if (Physics.Raycast(actualBarrel.position, actualBarrel.forward, out hit, mask))
@@ -59,23 +61,26 @@ public class UMUGun : Gun, IDamageable
             IDamageable target;
             if (hit.transform.TryGetComponent(out target))
             {
-                target.TakeDamage();
+                target.TakeDamage(damage);
             }
+            CheckForGround();
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int value)
     {
-        BulletCountToDie--;
-        if (BulletCountToDie > 0)
+        TotalHealth -= value;
+        if (TotalHealth > 0)
         {
             return;
         }
+        
+        GameBeatSequencer.OnGeneratedBeat -= Fire;
 
         OnFullDamaged();
         
-        ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, transform.position + transform.forward/2);
-        ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, transform.position - transform.forward/2);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position + transform.forward/2);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position - transform.forward/2);
         gameObject.SetActive(false);
     }
 }

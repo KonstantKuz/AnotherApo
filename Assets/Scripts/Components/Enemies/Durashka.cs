@@ -29,12 +29,13 @@ public class Durashka : Enemy, IDamageable
     private Vector3 verticalVelocity;
     private Vector3 dashVelocity;
     
-    public int BulletCountToDie { get; private set; }
+    public int TotalHealth { get; private set; }
 
     public override void Start()
     {
         base.Start();
-        BulletCountToDie = Constants.BulletCountsToDie.Durashka;
+        TotalHealth = Constants.TotalHealth.Durashka;
+        gun.SetDamageValue(Constants.DamagePerHit.Durashka);
         StartAiming();
         GoToRandomPlayerSidePeriodically();
         
@@ -67,12 +68,12 @@ public class Durashka : Enemy, IDamageable
         Vector3 side = player.transform.right * RandomSign() + player.transform.forward * RandomSign();
         Vector3 pointToGo = player.transform.position + side * Random.Range(5,8);
         
-        NavGraph generalGraph = 
-            AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == Constants.GeneralGraph);
-        
-        Vector3 resultNode = (Vector3)generalGraph.GetNearest(pointToGo).node.position;
+        // NavGraph generalGraph = 
+        //     AstarPath.active.data.FindGraph(graphToFind => graphToFind.name == Constants.GeneralGraph);
+        //
+        // Vector3 resultNode = (Vector3)generalGraph.GetNearest(pointToGo).node.position;
 
-        UpdatePath(resultNode);
+        UpdatePath(pointToGo);
     }
 
     private int RandomSign()
@@ -154,10 +155,10 @@ public class Durashka : Enemy, IDamageable
         controller.Move(movementVelocity * Time.deltaTime);
     }
     
-    public void TakeDamage()
+    public void TakeDamage(int value)
     {
-        BulletCountToDie--;
-        if (BulletCountToDie > 0)
+        TotalHealth -= value;
+        if (TotalHealth > 0)
         {
             return;
         }
@@ -177,7 +178,7 @@ public class Durashka : Enemy, IDamageable
         IEnumerator DelayedSpawnExplosion()
         {
             yield return new WaitForSeconds(2f);
-            ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, transform.position);
+            ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position);
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }
     }

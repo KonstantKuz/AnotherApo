@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SpiderAst : Enemy, IDamageable
 {
+    [Header("Attack")] 
+    [SerializeField] private float attackRadius;
+    [SerializeField] private LayerMask mask;
+    
     [Header("Movement")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
@@ -15,12 +19,12 @@ public class SpiderAst : Enemy, IDamageable
     private Vector3 verticalVelocity;
     private bool canAttack;
     
-    public int BulletCountToDie { get; private set; }
+    public int TotalHealth { get; private set; }
 
     public override void Start()
     {
         base.Start();
-        BulletCountToDie = Constants.BulletCountsToDie.SpiderAst;
+        TotalHealth = Constants.TotalHealth.SpiderAst;
         SetMoveAnimationSpeed();
         UpdatePathPeriodically();
 
@@ -89,10 +93,43 @@ public class SpiderAst : Enemy, IDamageable
     private void Attack()
     {
         SetAttackPossibility(false);
-        ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, explosionRoot.position);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, explosionRoot.position);
+        SetActualDamage();
         ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
     }
 
+    private void SetActualDamage()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, mask);
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            IDamageable damageable;
+            if (hitColliders[i].TryGetComponent(out damageable))
+            {
+                float minDamage = Constants.DamagePerHit.SpiderAst;
+                float damageMultiplierByDistance =
+                    attackRadius / (transform.position - hitColliders[i].transform.position).magnitude;
+                float resultDamage = minDamage * damageMultiplierByDistance;
+                damageable.TakeDamage((int)resultDamage);
+            }
+        }
+    }
+    
+    public static float Remap (float from, float fromMin, float fromMax, float toMin,  float toMax)
+    {
+        var fromAbs  =  from - fromMin;
+        var fromMaxAbs = fromMax - fromMin;      
+       
+        var normal = fromAbs / fromMaxAbs;
+ 
+        var toMaxAbs = toMax - toMin;
+        var toAbs = toMaxAbs * normal;
+ 
+        var to = toAbs + toMin;
+       
+        return to;
+    }
+    
     private void ApplyGravity()
     {
         verticalVelocity += Physics.gravity * Time.deltaTime;
@@ -111,14 +148,20 @@ public class SpiderAst : Enemy, IDamageable
         controller.Move(movementVelocity * Time.deltaTime);
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int value)
     {
-        BulletCountToDie--;
-        if (BulletCountToDie > 0)
+        TotalHealth-=value;
+        if (TotalHealth > 0)
         {
             return;
         }
         
         Attack();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 }

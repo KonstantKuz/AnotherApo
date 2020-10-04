@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
         originalAnimatorLocalPosition = animator.transform.localPosition;
         originalAnimatorLocalRotation = animator.transform.localRotation;
+        
+        weaponHolder.gun.SetDamageValue(Constants.DamagePerHit.Player);
     }
     
     public void OnEnable()

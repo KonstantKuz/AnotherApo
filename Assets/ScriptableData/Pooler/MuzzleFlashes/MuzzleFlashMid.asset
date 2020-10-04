@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a741c54dd9dbd2f4499079c33106d206, type: 3}
-  m_Name: BigExplosion
+  m_Name: MuzzleFlashMid
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6258200207432432011, guid: 7375aaba193581c4a95e84865c0632a6, type: 3}
+  prefab: {fileID: 3029640366102612357, guid: 10fada2149b3695439238186db290e9c, type: 3}
   nameAsTag: 1
-  poolTag: BigExplosion
-  autoReturn: 1
-  autoReturnDelay: 5
+  poolTag: MidMuzzleFlash
+  autoReturn: 0
+  autoReturnDelay: 1
   parent: {fileID: 0}

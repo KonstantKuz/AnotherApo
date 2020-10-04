@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a741c54dd9dbd2f4499079c33106d206, type: 3}
-  m_Name: MuzzleFlash
+  m_Name: BulletTrail
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4119187842477860395, guid: 04ebe36532a73354eb52cd92771f060d, type: 3}
+  prefab: {fileID: 8092826504682657451, guid: c4d1f5fd4e1f67b47867f5a4fc98ed0f, type: 3}
   nameAsTag: 1
-  poolTag: MuzzleFlash
+  poolTag: Trail
   autoReturn: 1
-  autoReturnDelay: 1
+  autoReturnDelay: 0.5
   parent: {fileID: 0}

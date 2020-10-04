@@ -65,31 +65,40 @@ public class AnimatorHashes
 public class LayerMasks
 {
     public static LayerMask interactionLayer;
-    public static LayerMask coverLayer;
-
+    public static LayerMask Ground;
     public static void CacheLayers()
     {
         interactionLayer = LayerMask.NameToLayer("InteractionLayer");
+        Ground = LayerMask.NameToLayer("Ground");
     }
 }
 
 public class Constants
 {
-    public const string Cover = "Cover";
-
-    public const string PoolTrail = "Trail";
-    public const string PoolSmallFlash = "MuzzleFlash";
-    public const string PoolMidFlash = "MidMuzzleFlash";
-    public const string PoolMidExplosion = "MidExplosion";
-    public const string PoolBigExplosion = "BigExplosion";
+    public const string PoolBulletTrail = "BulletTrail";
     
-    public const string GeneralGraph = "General";
-    public const string UMUBotGraph = "UMUBot";
+    public const string PoolFlashSmall = "MuzzleFlashSmall";
+    public const string PoolFlashMid = "MuzzleFlashMid";
+    
+    public const string PoolExplosionMid = "MidExplosion";
+    public const string PoolExplosionBig = "BigExplosion";
+    
+    public const string PoolHitGroundSmall = "HitGroundSmall";
+    public const string PoolHitMetal = "HitMetal";
 
-    public class BulletCountsToDie
+    public class TotalHealth
     {
-        public const int Durashka = 5;
-        public const int SpiderAst = 5;
-        public const int UMUGun = 15;
+        public const int Player = 50000;
+        public const int Durashka = 1000;
+        public const int SpiderAst = 2000;
+        public const int UMUGun = 3000;
+    }
+    
+    public class DamagePerHit
+    {
+        public const int Player = 200;
+        public const int Durashka = 100;
+        public const int SpiderAst = 500;
+        public const int UMUGun = 300;
     }
 }

@@ -18,7 +18,7 @@ public class UMUBot : Enemy
     [SerializeField] private float aimingSpeed;
     [SerializeField] private Vector3 targetOffset;
     [SerializeField] private TargetInterpolator targetInterpolator;
-    [SerializeField] private LookAtConstraint aimingConstraint;
+    [SerializeField] private LookAtConstraint[] aimingConstraints;
     [SerializeField] private Transform fireShowStartPoint;
     private Transform currentAttackTarget;
     
@@ -32,9 +32,8 @@ public class UMUBot : Enemy
     {
         base.Start();
         SubscribeToCheckDeath();
-        SubscribeToGameBeat();
-        StartAiming();
         UpdatePathPeriodically();
+        StartAiming();
     }
 
     private void SubscribeToCheckDeath()
@@ -51,10 +50,9 @@ public class UMUBot : Enemy
         if (damagedGunsCount == guns.Length)
         {
             animator.SetTrigger(AnimatorHashes.DeathHash);
-            UnsubscribeFromGameBeat();
             DeathFireShow();
-            DisableActivities();
             LookDown();
+            enabled = false;
         }
     }
 
@@ -64,16 +62,15 @@ public class UMUBot : Enemy
         IEnumerator DelayedFireShow()
         {
             yield return new WaitForSeconds(1f);
+            
             for (int i = 0; i < 3; i++)
             {
-                SpawnExplosionsOnRandomPosition(Constants.PoolMidExplosion);
-                yield return new WaitForSeconds(0.1f);
+                SpawnExplosionsOnRandomPosition(Constants.PoolExplosionMid);
+                yield return null;
             }
-            
             for (int i = 0; i < 2; i++)
             {
-                SpawnExplosionsOnRandomPosition(Constants.PoolBigExplosion);
-                yield return new WaitForSeconds(0.1f);
+                SpawnExplosionsOnRandomPosition(Constants.PoolExplosionBig);
             }
             
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
@@ -82,39 +79,20 @@ public class UMUBot : Enemy
         void SpawnExplosionsOnRandomPosition(string explosion)
         {
             Vector3 rndExplosionPosition = fireShowStartPoint.position +
-                                           fireShowStartPoint.up * Random.Range(0.2f, 1f) +
+                                           fireShowStartPoint.up * Random.Range(-1f, 1f) +
                                            fireShowStartPoint.right * Random.Range(-1f, 1f);
             
             ObjectPooler.Instance.SpawnObject(explosion, rndExplosionPosition);
         }
-    }
-    
-    private void DisableActivities()
-    {
-        controller.enabled = false;
-        enabled = false;
     }
 
     private void LookDown()
     {
         currentAttackTarget = fireShowStartPoint;
         targetInterpolator.SetConstraint(currentAttackTarget, targetOffset, aimingSpeed);
-        aimingConstraint.AddSource(Interpolator());
-    }
-
-    private void SubscribeToGameBeat()
-    {
-        for (int i = 0; i < guns.Length; i++)
+        for (int i = 0; i < aimingConstraints.Length; i++)
         {
-            GameBeatSequencer.OnBPM += guns[i].Fire;
-        }
-    }
-
-    private void UnsubscribeFromGameBeat()
-    {
-        for (int i = 0; i < guns.Length; i++)
-        {
-            GameBeatSequencer.OnBPM -= guns[i].Fire;
+            aimingConstraints[i].AddSource(Interpolator());
         }
     }
 
@@ -122,7 +100,10 @@ public class UMUBot : Enemy
     {
         currentAttackTarget = player.Animator.GetBoneTransform(HumanBodyBones.Spine);
         targetInterpolator.SetConstraint(currentAttackTarget, targetOffset, aimingSpeed);
-        aimingConstraint.AddSource(Interpolator());
+        for (int i = 0; i < aimingConstraints.Length; i++)
+        {
+            aimingConstraints[i].AddSource(Interpolator());
+        }
     }
 
     private ConstraintSource Interpolator()

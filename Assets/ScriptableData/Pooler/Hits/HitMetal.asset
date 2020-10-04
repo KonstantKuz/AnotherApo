@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a741c54dd9dbd2f4499079c33106d206, type: 3}
-  m_Name: MidExplosion
+  m_Name: HitMetal
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7108699193672254333, guid: b1c61c916f44da5438ca64a2f4f2d10f, type: 3}
+  prefab: {fileID: 5542446143850704250, guid: fc60aefff88146940956dbb3938ae6b3, type: 3}
   nameAsTag: 1
-  poolTag: MidExplosion
+  poolTag: HitMetal
   autoReturn: 1
   autoReturnDelay: 2
   parent: {fileID: 0}

@@ -11,6 +11,12 @@ public class Gun : MonoCached
     [SerializeField] protected float rateoffire;
     protected float nextShotTime;
     protected RaycastHit hit;
+    protected int damage;
+
+    public void SetDamageValue(int value)
+    {
+        damage = value;
+    }
     
     public virtual void Fire()
     {
@@ -20,11 +26,11 @@ public class Gun : MonoCached
         }
 
         nextShotTime = Time.time + rateoffire;
-        ObjectPooler.Instance.SpawnObject(Constants.PoolSmallFlash, barrel.position, barrel.rotation);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolFlashSmall, barrel.position, barrel.rotation);
         
         if (trail)
         {
-            ObjectPooler.Instance.SpawnObject(Constants.PoolTrail, barrel.position, barrel.rotation);
+            ObjectPooler.Instance.SpawnObject(Constants.PoolBulletTrail, barrel.position, barrel.rotation);
         }
 
         if (Physics.Raycast(barrel.position, barrel.forward, out hit, mask))
@@ -32,8 +38,26 @@ public class Gun : MonoCached
             IDamageable target;
             if (hit.transform.TryGetComponent(out target))
             {
-                target.TakeDamage();
+                target.TakeDamage(damage);
             }
+
+            IHitMaterial material;
+            if (hit.transform.TryGetComponent(out material))
+            {
+                material.SpawnHitReaction(hit.point, hit.normal);
+            }
+            
+            CheckForGround();
         }
+    }
+
+    public void CheckForGround()
+    {
+        if (hit.collider.gameObject.layer == LayerMasks.Ground)
+        {
+            Transform groundHit = ObjectPooler.Instance.SpawnObject(Constants.PoolHitGroundSmall).transform;
+            groundHit.transform.position = hit.point;
+            groundHit.forward = hit.normal;
+        } 
     }
 }

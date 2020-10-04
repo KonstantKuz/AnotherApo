@@ -6,7 +6,7 @@ public class Bullet : MonoCached
 {
     public float speed;
 
-    public override void CustomFixedUpdate()
+    public override void CustomUpdate()
     {
         transform.position += transform.forward * speed;
     }
