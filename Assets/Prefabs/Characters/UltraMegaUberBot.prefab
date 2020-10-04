@@ -232,7 +232,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 150
+  MaxDistance: 300
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 1
@@ -379,7 +379,7 @@ MonoBehaviour:
     lookAtConstraint: {fileID: 7092732148264126800}
   targetingSection:
     targetInterpolator: {fileID: 4855559897401219554}
-    targetOffset: {x: 0, y: 1, z: 0}
+    targetOffset: {x: 0, y: 0.2, z: 0}
     targetingConstraints:
     - {fileID: 7947986821526878099}
     - {fileID: 4505953165199983149}

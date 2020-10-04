@@ -39,7 +39,7 @@ public class Durashka : Enemy, IDamageable
         StartAiming();
         GoToRandomPlayerSidePeriodically();
         
-        GameBeatSequencer.OnBPM += TryFire;
+        GameBeatSequencer.OnGeneratedBeat += TryFire;
     }
 
     private void TryFire()
@@ -185,7 +185,7 @@ public class Durashka : Enemy, IDamageable
 
     private void DisableGun()
     {
-        GameBeatSequencer.OnBPM -= TryFire;
+        GameBeatSequencer.OnGeneratedBeat -= TryFire;
         gun.GetComponent<Rigidbody>().isKinematic = false;
     }
 

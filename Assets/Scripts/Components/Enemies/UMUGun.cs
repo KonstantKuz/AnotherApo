@@ -17,6 +17,7 @@ public class UMUGun : Gun, IDamageable
     {
         SetDamageValue(Constants.DamagePerHit.UMUGun);
         TotalHealth = Constants.TotalHealth.UMUGun;
+        
         GameBeatSequencer.OnGeneratedBeat += Fire;
     }
 

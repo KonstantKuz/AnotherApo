@@ -38,6 +38,14 @@ public class PlayerController : MonoBehaviour
         PlayerInput.OnSwordAttacked += SwordAttack;
         PlayerInput.OnJumped += TryJump;
         PlayerInput.OnDashed += Dash;
+        
+        GameBeatSequencer.OnBPM += delegate
+        {
+            if (PlayerInput.Firing)
+            {
+                weaponHolder.gun.Fire();
+            }
+        };
     }
 
     private void Dash()
@@ -97,11 +105,6 @@ public class PlayerController : MonoBehaviour
         ApplyGravity();
         SetInputsToAnimator();
         UpdateBodyAimPivot();
-
-        if(!PlayerInput.Melee && PlayerInput.Firing)
-        {
-            weaponHolder.gun.Fire();
-        }
     }
 
     private void Rotate()

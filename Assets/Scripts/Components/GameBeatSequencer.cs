@@ -37,8 +37,14 @@ public class GameBeatSequencer : MonoBehaviour
         beatSequencer.sequence[0] = Random.value > 0.5f;
         for (int i = 1; i < beatSequencer.sequence.Length; i++)
         {
-            if (!beatSequencer.sequence[0] && i%2 == 0)
-                beatSequencer.sequence[i] = Random.value > 0.5f;
+            if (i % 2 == 0)
+            {
+                beatSequencer.sequence[i] = Random.value > 0.3f;
+            }
+            else
+            {
+                beatSequencer.sequence[i] = Random.value > 0.6f;
+            }
         }
     }
 
