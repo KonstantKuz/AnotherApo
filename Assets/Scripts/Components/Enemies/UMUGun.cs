@@ -17,8 +17,17 @@ public class UMUGun : Gun, IDamageable
     {
         SetDamageValue(Constants.DamagePerHit.UMUGun);
         TotalHealth = Constants.TotalHealth.UMUGun;
-        
-        GameBeatSequencer.OnGeneratedBeat += Fire;
+        SubscribeToBeat();
+    }
+
+    private void SubscribeToBeat()
+    {
+        GameBeatSequencer.OnGeneratedBeat_UMUGun += Fire;
+    }
+
+    private void UnsubscribeFromBeat()
+    {
+        GameBeatSequencer.OnGeneratedBeat_UMUGun -= Fire;
     }
 
     public override void Fire()
@@ -76,8 +85,7 @@ public class UMUGun : Gun, IDamageable
             return;
         }
         
-        GameBeatSequencer.OnGeneratedBeat -= Fire;
-
+        UnsubscribeFromBeat();
         OnFullDamaged();
         
         ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position + transform.forward/2);

@@ -9,19 +9,25 @@ public class GameBeatSequencer : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private SequencerDriver beatDriver;
 
+    [SerializeField] private Sequencer generalBeat;
+    [SerializeField] private Sequencer durashkaBeat;
+    [SerializeField] private Sequencer umuBeat;
+    
     public static Action OnGeneratedBeat = delegate { };
     public static Action OnBPM = delegate { };
-
-    private Sequencer beatSequencer;
+    public static Action OnGeneratedBeat_Durashka = delegate {  };
+    public static Action OnGeneratedBeat_UMUGun = delegate {  };
+    
     private int currentTrackBPM;
     
     private IEnumerator Start()
     {
-        CacheAndSetBPM();
-        GenerateRandomBeat();
-        HandleEvents();
         yield return new WaitForSeconds(2);
-        Play();
+        CacheAndSetBPM();
+        GenerateRandomBeats();
+        HandleEvents();
+        yield return new WaitForSeconds(3);
+        beatDriver.Play();
     }
 
     private void CacheAndSetBPM()
@@ -30,36 +36,41 @@ public class GameBeatSequencer : MonoBehaviour
         beatDriver.SetBpm(currentTrackBPM);
     }
 
-    private void GenerateRandomBeat()
+    private void GenerateRandomBeats()
     {
-        beatSequencer = beatDriver.sequencers[0] as Sequencer;
+        GenerateBeatOn(generalBeat, 0.2f, 0.2f);
+        GenerateBeatOn(durashkaBeat, 0.4f, 0.2f);
+        GenerateBeatOn(umuBeat, 0.2f, 0.4f);
+    }
 
-        beatSequencer.sequence[0] = Random.value > 0.5f;
-        for (int i = 1; i < beatSequencer.sequence.Length; i++)
+    private void GenerateBeatOn(Sequencer seq, float evenBeatChance, float unevenBeatChance)
+    {
+        System.Random generator = new System.Random();
+        int rndInt = generator.Next(0, 100);
+        float rndValue = (float)rndInt / 100f;
+        seq.sequence[0] = rndValue > 0.5f;
+        for (int i = 1; i < generalBeat.sequence.Length; i++)
         {
+            rndInt = generator.Next(0, 100);
+            rndValue = (float)rndInt / 100f;
+            
             if (i % 2 == 0)
             {
-                beatSequencer.sequence[i] = Random.value > 0.3f;
+                seq.sequence[i] = rndValue > evenBeatChance;
             }
             else
             {
-                beatSequencer.sequence[i] = Random.value > 0.6f;
+                seq.sequence[i] = rndValue > unevenBeatChance;
             }
         }
     }
 
     private void HandleEvents()
     {
-        Sequencer sequencer = beatDriver.sequencers[0] as Sequencer;
-
-        sequencer.onBeat += delegate { OnGeneratedBeat(); };
-        sequencer.onAnyStep += delegate { OnBPM(); };
-    }
-
-    [ContextMenu("PLAY")]
-    private void Play()
-    {
-        musicSource.Play();
-        beatDriver.Play();
+        generalBeat.onBeat += delegate { OnGeneratedBeat(); };
+        generalBeat.onAnyStep += delegate { OnBPM(); };
+        
+        durashkaBeat.onBeat += delegate { OnGeneratedBeat_Durashka(); };
+        umuBeat.onBeat += delegate { OnGeneratedBeat_UMUGun(); };
     }
 }

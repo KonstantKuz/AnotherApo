@@ -27,10 +27,19 @@ public class SpiderAst : Enemy, IDamageable
         TotalHealth = Constants.TotalHealth.SpiderAst;
         SetMoveAnimationSpeed();
         UpdatePathPeriodically();
+        SubscribeToBeat();
+    }
 
+    private void SubscribeToBeat()
+    {
         GameBeatSequencer.OnGeneratedBeat += delegate { SetAttackPossibility(true); };
     }
 
+    private void UnsubscribeFromBeat()
+    {
+        GameBeatSequencer.OnGeneratedBeat -= delegate { SetAttackPossibility(true); };
+    }
+    
     public void SetAttackPossibility(bool value)
     {
         canAttack = value;
@@ -95,6 +104,7 @@ public class SpiderAst : Enemy, IDamageable
         SetAttackPossibility(false);
         ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, explosionRoot.position);
         SetActualDamage();
+        UnsubscribeFromBeat();
         ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
     }
 

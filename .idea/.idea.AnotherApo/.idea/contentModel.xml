@@ -509,6 +509,7 @@
             </e>
           </e>
         </e>
+        <e p="MusicRandomizer.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="IngameDebugConsole" t="Include">
             <e p="Editor" t="Include">

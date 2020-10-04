@@ -38,8 +38,17 @@ public class Durashka : Enemy, IDamageable
         gun.SetDamageValue(Constants.DamagePerHit.Durashka);
         StartAiming();
         GoToRandomPlayerSidePeriodically();
-        
-        GameBeatSequencer.OnGeneratedBeat += TryFire;
+        SubscribeToBeat();
+    }
+
+    private void SubscribeToBeat()
+    {
+        GameBeatSequencer.OnGeneratedBeat_Durashka += TryFire;
+    }
+    
+    private void UnsubscribeFromBeat()
+    {
+        GameBeatSequencer.OnGeneratedBeat_Durashka -= TryFire;
     }
 
     private void TryFire()
@@ -167,6 +176,8 @@ public class Durashka : Enemy, IDamageable
         animator.SetFloat(AnimatorHashes.DeathTypeHash, Random.Range(0, 4));
         
         StopAllCoroutines();
+        
+        UnsubscribeFromBeat();
         DisableGun();
         DisableActivities();
         DelayedSpawnExplosion();
@@ -185,7 +196,7 @@ public class Durashka : Enemy, IDamageable
 
     private void DisableGun()
     {
-        GameBeatSequencer.OnGeneratedBeat -= TryFire;
+        UnsubscribeFromBeat();
         gun.GetComponent<Rigidbody>().isKinematic = false;
     }
 
