@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderAst : Enemy
+public class SpiderAst : Enemy, IDamageable
 {
+    [Header("Movement")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
     [SerializeField] private Transform explosionRoot;
@@ -12,15 +13,23 @@ public class SpiderAst : Enemy
 
     private Vector3 movementVelocity;
     private Vector3 verticalVelocity;
+    private bool canAttack;
     
+    public int BulletCountToDie { get; private set; }
+
     public override void Start()
     {
         base.Start();
-        
+        BulletCountToDie = Constants.BulletCountsToDie.SpiderAst;
         SetMoveAnimationSpeed();
-        
-        pathUpdPeriod = 0.5f;
         UpdatePathPeriodically();
+
+        GameBeatSequencer.OnGeneratedBeat += delegate { SetAttackPossibility(true); };
+    }
+
+    public void SetAttackPossibility(bool value)
+    {
+        canAttack = value;
     }
 
     private void UpdatePathPeriodically()
@@ -47,7 +56,6 @@ public class SpiderAst : Enemy
             return;
         
         ApplyGravity();
-        
 
         CleanPassedNodes();
         if (!HasPath() || PathFullyPassed())
@@ -63,15 +71,26 @@ public class SpiderAst : Enemy
     private void JumpThenAttack()
     {
         animator.SetTrigger(AnimatorHashes.SpiderHashes.Jump);
-        verticalVelocity.y += jumpSpeed;
+        verticalVelocity.y = jumpSpeed;
         
-        StartCoroutine(Attack());
-        IEnumerator Attack()
+        StartCoroutine(DelayedAttack());
+        IEnumerator DelayedAttack()
         {
-            yield return new WaitForSeconds(0.5f);
-            ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, explosionRoot.position);
-            ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
+            SetAttackPossibility(false);
+            yield return new WaitForSeconds(0.3f);
+            while (!canAttack)
+            {
+                yield return null;
+            }
+            Attack();
         }
+    }
+
+    private void Attack()
+    {
+        SetAttackPossibility(false);
+        ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, explosionRoot.position);
+        ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
     }
 
     private void ApplyGravity()
@@ -90,5 +109,16 @@ public class SpiderAst : Enemy
         movementVelocity *= movementSpeed;
 
         controller.Move(movementVelocity * Time.deltaTime);
+    }
+
+    public void TakeDamage()
+    {
+        BulletCountToDie--;
+        if (BulletCountToDie > 0)
+        {
+            return;
+        }
+        
+        Attack();
     }
 }

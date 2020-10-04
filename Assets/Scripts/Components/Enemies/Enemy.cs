@@ -11,10 +11,12 @@ public abstract class Enemy : MonoCached
     [HideInInspector] public float verticalMoveValue, horizontalMoveValue;
 
     protected PlayerController player;
+    
+    [Header("Pathfinding")]
+    [SerializeField] protected string patgGraphName;
+    [SerializeField] protected float pathUpdPeriod;
     protected float pathUpdTimer;
-    protected float pathUpdPeriod = 2f;
     protected float pathCleanDistance = 1f;
-    public string graphName;
     protected Path currentPath;
     protected int currentPathNodeIndex;
     protected Vector3 currentPathTarget;
@@ -31,7 +33,7 @@ public abstract class Enemy : MonoCached
         currentPathNodeIndex = 0;
         
         currentPath = ABPath.Construct(transform.position, currentPathTarget);
-        currentPath.nnConstraint.graphMask = GraphMask.FromGraphName(graphName);
+        currentPath.nnConstraint.graphMask = GraphMask.FromGraphName(patgGraphName);
         AstarPath.StartPath(currentPath);
     }
 

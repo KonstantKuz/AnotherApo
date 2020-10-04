@@ -106,6 +106,11 @@ public class PlayerInput : MonoCached
         {
             Application.Quit();
         }
+
+        if (Input.GetKeyDown(KeyCode.Tilde))
+        {
+            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+        }
     }
 
     private void SwitchWeapon()

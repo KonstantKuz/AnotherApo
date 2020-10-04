@@ -213,14 +213,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3966525466852835218}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3966525468250195189}
   m_Father: {fileID: 8803464217018617739}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &3966525466867411018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,8 +1494,7 @@ GameObject:
   - component: {fileID: 3966525467938663897}
   - component: {fileID: 3966525467938663894}
   - component: {fileID: 1903904525888752669}
-  - component: {fileID: 2933025952281113293}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Durashka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1538,11 +1537,13 @@ MonoBehaviour:
   angleBtwn_targetDirXZ_FWD: 0
   verticalMoveValue: 0
   horizontalMoveValue: 0
-  graphName: General
+  patgGraphName: General
+  pathUpdPeriod: 5
   movementSpeed: 4
   jumpSpeed: 6
   animator: {fileID: 5223943195820137837}
-  Controller: {fileID: 1903904525888752669}
+  controller: {fileID: 1903904525888752669}
+  rig: {fileID: 1718407058043221017}
   gun: {fileID: 7243676974583412704}
   aimingSpeed: 1
   targetInterpolator: {fileID: 8938755795881548331}
@@ -1567,34 +1568,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &2933025952281113293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3966525467938663891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 0
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: 0
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: 1
 --- !u!1 &3966525467990188166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 6020565246720113433, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6024024703194270343, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3228,12 +3206,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f716d73c4eb9b54aa4e48b8bc29934a, type: 3}
---- !u!4 &7242600597685856383 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6019359123159704711, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3966525468465171704}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7246942062455195263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6024024703194270343, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
@@ -3255,6 +3227,12 @@ MonoBehaviour:
 --- !u!4 &7242600597460303558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6019359123870528062, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3966525468465171704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7242600597685856383 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6019359123159704711, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
     type: 3}
   m_PrefabInstance: {fileID: 3966525468465171704}
   m_PrefabAsset: {fileID: 0}

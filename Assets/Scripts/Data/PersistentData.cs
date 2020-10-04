@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -21,6 +22,8 @@ public class AnimatorHashes
     public static int ShiftingHash;
     public static int JumpHash;
     public static int LandingHash;
+    public static int DeathHash;
+    public static int DeathTypeHash;
     public static int CoverHash;
     public static int CoverSideHash;
     public static int VerticalHash;
@@ -43,6 +46,8 @@ public class AnimatorHashes
         ShiftingHash = Animator.StringToHash("Shifting");
         JumpHash = Animator.StringToHash("Jump");
         LandingHash = Animator.StringToHash("Landing");
+        DeathHash = Animator.StringToHash("Death");
+        DeathTypeHash = Animator.StringToHash("DeathType");
         CoverHash = Animator.StringToHash("Cover");
         CoverSideHash = Animator.StringToHash("Cover_Side");
         VerticalHash = Animator.StringToHash("Vertical_Move");
@@ -73,9 +78,18 @@ public class Constants
     public const string Cover = "Cover";
 
     public const string PoolTrail = "Trail";
-    public const string PoolFlash = "MuzzleFlash";
+    public const string PoolSmallFlash = "MuzzleFlash";
+    public const string PoolMidFlash = "MidMuzzleFlash";
     public const string PoolMidExplosion = "MidExplosion";
-
+    public const string PoolBigExplosion = "BigExplosion";
+    
     public const string GeneralGraph = "General";
     public const string UMUBotGraph = "UMUBot";
+
+    public class BulletCountsToDie
+    {
+        public const int Durashka = 5;
+        public const int SpiderAst = 5;
+        public const int UMUGun = 15;
+    }
 }

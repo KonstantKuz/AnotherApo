@@ -22,13 +22,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 originalAnimatorLocalPosition;
     private Quaternion originalAnimatorLocalRotation;
 
-    private void OnValidate()
-    {
-        controller = GetComponent<CharacterController>();
-    }
-    
     private void Awake()
     {
+        controller = GetComponent<CharacterController>();
+
         originalAnimatorLocalPosition = animator.transform.localPosition;
         originalAnimatorLocalRotation = animator.transform.localRotation;
     }
@@ -165,8 +162,7 @@ public class PlayerController : MonoBehaviour
         
         movementVelocity = transform.TransformDirection(movementVelocity);
         movementVelocity *= bodyData.movementSpeed;
-
-
+        
         controller.Move(movementVelocity * Time.deltaTime);
     }
 

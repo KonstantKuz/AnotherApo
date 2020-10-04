@@ -5,15 +5,17 @@ using UnityEngine;
 using Pathfinding;
 using StateMachine;
 using UnityEngine.Animations;
+using UnityEngine.Animations.Rigging;
 
 
-public class Durashka : Enemy
+public class Durashka : Enemy, IDamageable
 {
     [Header("Movement")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
     [SerializeField] private Animator animator;
-    [SerializeField] private CharacterController Controller;
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private RigBuilder rig;
     
     [Header("Targeting")]
     [SerializeField] private Gun gun;
@@ -27,21 +29,24 @@ public class Durashka : Enemy
     private Vector3 verticalVelocity;
     private Vector3 dashVelocity;
     
+    public int BulletCountToDie { get; private set; }
+
     public override void Start()
     {
         base.Start();
+        BulletCountToDie = Constants.BulletCountsToDie.Durashka;
         StartAiming();
-        pathUpdPeriod = 2;
-        
         GoToRandomPlayerSidePeriodically();
         
-        GameBeatSequencer.OnBPM += delegate
+        GameBeatSequencer.OnBPM += TryFire;
+    }
+
+    private void TryFire()
+    {
+        if (Random.value > 0.5f)
         {
-            if (Random.value > 0.5f)
-            {
-                gun.Fire();
-            }
-        };
+            gun.Fire();
+        }
     }
 
     private void GoToRandomPlayerSidePeriodically()
@@ -106,6 +111,7 @@ public class Durashka : Enemy
         CleanPassedNodes();
         if (!HasPath() || PathFullyPassed())
         {
+            verticalVelocity.y = 0;
             Move(0,0);
             return;
         }
@@ -118,7 +124,7 @@ public class Durashka : Enemy
     {
         verticalVelocity += Physics.gravity * Time.deltaTime;
         verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y, jumpSpeed);
-        Controller.Move(verticalVelocity * Time.deltaTime);
+        controller.Move(verticalVelocity * Time.deltaTime);
     }
 
     public override void MoveToNextNode()
@@ -145,6 +151,47 @@ public class Durashka : Enemy
         movementVelocity = transform.TransformDirection(movementVelocity);
         movementVelocity *= movementSpeed;
 
-        Controller.Move(movementVelocity * Time.deltaTime);
+        controller.Move(movementVelocity * Time.deltaTime);
+    }
+    
+    public void TakeDamage()
+    {
+        BulletCountToDie--;
+        if (BulletCountToDie > 0)
+        {
+            return;
+        }
+        
+        animator.SetTrigger(AnimatorHashes.DeathHash);
+        animator.SetFloat(AnimatorHashes.DeathTypeHash, Random.Range(0, 4));
+        
+        StopAllCoroutines();
+        DisableGun();
+        DisableActivities();
+        DelayedSpawnExplosion();
+    }
+
+    private void DelayedSpawnExplosion()
+    {
+        StartCoroutine(DelayedSpawnExplosion());
+        IEnumerator DelayedSpawnExplosion()
+        {
+            yield return new WaitForSeconds(2f);
+            ObjectPooler.Instance.SpawnObject(Constants.PoolMidExplosion, transform.position);
+            ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
+        }
+    }
+
+    private void DisableGun()
+    {
+        GameBeatSequencer.OnBPM -= TryFire;
+        gun.GetComponent<Rigidbody>().isKinematic = false;
+    }
+
+    private void DisableActivities()
+    {
+        rig.enabled = false;
+        controller.enabled = false;
+        enabled = false;
     }
 }

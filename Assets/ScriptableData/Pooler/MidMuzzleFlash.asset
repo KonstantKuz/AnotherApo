@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a741c54dd9dbd2f4499079c33106d206, type: 3}
+  m_Name: MidMuzzleFlash
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3029640366102612357, guid: 10fada2149b3695439238186db290e9c, type: 3}
+  nameAsTag: 1
+  poolTag: MidMuzzleFlash
+  autoReturn: 1
+  autoReturnDelay: 1
+  parent: {fileID: 0}

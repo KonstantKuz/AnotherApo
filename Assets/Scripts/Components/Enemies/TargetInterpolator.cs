@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetInterpolator : MonoCached
 {
+    private Vector3 offset;
     private Transform target;
     private float speed;
 
@@ -15,12 +16,20 @@ public class TargetInterpolator : MonoCached
         this.speed = speed;
         isActive = true;
     }
+    
+    public void SetConstraint(Transform target, Vector3 offset, float speed)
+    {
+        this.target = target;
+        this.speed = speed;
+        this.offset = offset;
+        isActive = true;
+    }
 
     public override void CustomUpdate()
     {
         if (!isActive)
             return;
         
-        transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * speed);
+        transform.position = Vector3.Lerp(transform.position, target.position + offset, Time.deltaTime * speed);
     }
 }

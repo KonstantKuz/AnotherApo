@@ -307,8 +307,7 @@ GameObject:
   - component: {fileID: 4456835378029832240}
   - component: {fileID: 4456835378029736981}
   - component: {fileID: 4456835378029736983}
-  - component: {fileID: 4133257811120152491}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpiderAst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +349,8 @@ MonoBehaviour:
   angleBtwn_targetDirXZ_FWD: 0
   verticalMoveValue: 0
   horizontalMoveValue: 0
-  graphName: General
+  patgGraphName: General
+  pathUpdPeriod: 0.5
   movementSpeed: 2.2
   jumpSpeed: 1.5
   explosionRoot: {fileID: 4456835378029832238}
@@ -374,34 +374,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0.02, y: 0.6, z: -0.15}
---- !u!114 &4133257811120152491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4456835378029736976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 0
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: 0
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: 1
 --- !u!1 &4456835378029736978
 GameObject:
   m_ObjectHideFlags: 0
