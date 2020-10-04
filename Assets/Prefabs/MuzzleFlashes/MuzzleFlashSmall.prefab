@@ -4787,7 +4787,7 @@ GameObject:
   - component: {fileID: 4119187842478230219}
   - component: {fileID: 7413639158815608706}
   m_Layer: 0
-  m_Name: MuzzleFlash
+  m_Name: MuzzleFlashSmall
   m_TagString: Untagged
   m_Icon: {fileID: -1077886335, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4822,7 +4822,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6627c2b7c9dcb2349b21c06ef7969c8e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

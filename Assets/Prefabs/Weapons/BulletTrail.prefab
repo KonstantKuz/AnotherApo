@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4890447570634888356}
   - component: {fileID: 8092826504688265739}
   m_Layer: 0
-  m_Name: Trail
+  m_Name: BulletTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a972a4d7f820804a9440957234faffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
 --- !u!120 &8092826504688265739
 LineRenderer:
   m_ObjectHideFlags: 0

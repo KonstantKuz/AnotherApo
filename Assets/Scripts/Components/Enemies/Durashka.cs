@@ -19,9 +19,9 @@ public class Durashka : Enemy, IDamageable
     
     [Header("Targeting")]
     [SerializeField] private Gun gun;
-    [SerializeField] private float aimingSpeed;
+    [SerializeField] private float targetingSpeed;
     [SerializeField] private TargetInterpolator targetInterpolator;
-    [SerializeField] private LookAtConstraint[] aimingConstraints;
+    [SerializeField] private LookAtConstraint[] targetingConstraints;
     
     private Transform currentAttackTarget;
 
@@ -85,10 +85,10 @@ public class Durashka : Enemy, IDamageable
     {
         animator.SetBool(AnimatorHashes.AimingHash, true);
         currentAttackTarget = player.Animator.GetBoneTransform(HumanBodyBones.Spine);
-        targetInterpolator.SetConstraint(currentAttackTarget, aimingSpeed);
-        for (int i = 0; i < aimingConstraints.Length; i++)
+        targetInterpolator.SetConstraint(currentAttackTarget, targetingSpeed);
+        for (int i = 0; i < targetingConstraints.Length; i++)
         {
-            aimingConstraints[i].AddSource(Interpolator());
+            targetingConstraints[i].AddSource(Interpolator());
         }
     }
 

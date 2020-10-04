@@ -20,7 +20,7 @@ public class GameBeatSequencer : MonoBehaviour
         CacheAndSetBPM();
         GenerateRandomBeat();
         HandleEvents();
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2);
         Play();
     }
 

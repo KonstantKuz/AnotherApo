@@ -7283,7 +7283,7 @@ PrefabInstance:
     - target: {fileID: 6020565246720113432, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
         type: 3}
       propertyPath: mask.m_Bits
-      value: 4096
+      value: 4352
       objectReference: {fileID: 0}
     - target: {fileID: 6020565246720113433, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
         type: 3}

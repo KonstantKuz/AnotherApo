@@ -1545,9 +1545,9 @@ MonoBehaviour:
   controller: {fileID: 1903904525888752669}
   rig: {fileID: 1718407058043221017}
   gun: {fileID: 7243676974583412704}
-  aimingSpeed: 1
+  targetingSpeed: 1
   targetInterpolator: {fileID: 8938755795881548331}
-  aimingConstraints:
+  targetingConstraints:
   - {fileID: 3966525468221232308}
   - {fileID: 3966525467532059749}
 --- !u!143 &1903904525888752669
@@ -3142,7 +3142,7 @@ PrefabInstance:
     - target: {fileID: 6020565246720113432, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
         type: 3}
       propertyPath: mask.m_Bits
-      value: 8192
+      value: 8448
       objectReference: {fileID: 0}
     - target: {fileID: 6020565246720113433, guid: 8f716d73c4eb9b54aa4e48b8bc29934a,
         type: 3}
