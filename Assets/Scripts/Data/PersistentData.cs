@@ -80,8 +80,8 @@ public class Constants
     public const string PoolFlashSmall = "MuzzleFlashSmall";
     public const string PoolFlashMid = "MuzzleFlashMid";
     
-    public const string PoolExplosionMid = "MidExplosion";
-    public const string PoolExplosionBig = "BigExplosion";
+    public const string PoolExplosionMid = "ExplosionMid";
+    public const string PoolExplosionBig = "ExplosionBig";
     
     public const string PoolHitGroundSmall = "HitGroundSmall";
     public const string PoolHitMetal = "HitMetal";
