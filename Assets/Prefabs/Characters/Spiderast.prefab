@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 4456835378029832236}
   - component: {fileID: 8648022587436912055}
   - component: {fileID: 7916898498575547376}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_abdomen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 4456835378029832238}
   - component: {fileID: 2582443598984492483}
   - component: {fileID: 4280281578342622297}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

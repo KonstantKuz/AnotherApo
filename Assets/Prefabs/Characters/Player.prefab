@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 607693110548215636}
   m_Layer: 13
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,8 +379,9 @@ MonoBehaviour:
     mainCrossHair: {fileID: 5366372641293666596}
     movingDamp: 0.025
     movingDeltaTime: 5
+    gravityMultiplier: 2
     movementSpeed: 4
-    jumpSpeed: 6
+    jumpSpeed: 10
     dashSpeed: 6
     dashDuration: 0.2
     bodyAimPivotVerticalClamp: {x: -0.5, y: 3.5}
@@ -2485,7 +2486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5202620377443841296
 Transform:
   m_ObjectHideFlags: 0
@@ -4640,7 +4641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5366372641029668830
 Transform:
   m_ObjectHideFlags: 0

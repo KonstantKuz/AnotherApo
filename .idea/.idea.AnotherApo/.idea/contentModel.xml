@@ -240,15 +240,18 @@
             </e>
             <e p="UniBpmAnalyzer.cs" t="Include" />
           </e>
-          <e p="CHARACTERS" t="Include">
-            <e p="krovosos" t="Include">
-              <e p="smd" t="Include">
-                <e p="Текстуры.txt" t="Include" />
-              </e>
-            </e>
-          </e>
           <e p="Dark City" t="Include">
             <e p="info.txt" t="Include" />
+          </e>
+          <e p="East" t="Include">
+            <e p="StalkerDancers" t="Include">
+              <e p="krovosos" t="Include">
+                <e p="smd" t="Include">
+                  <e p="Текстуры.txt" t="Include" />
+                </e>
+              </e>
+              <e p="MusicTrigger.cs" t="Include" />
+            </e>
           </e>
           <e p="MuzzleFlash" t="Include">
             <e p="Editor" t="Include">

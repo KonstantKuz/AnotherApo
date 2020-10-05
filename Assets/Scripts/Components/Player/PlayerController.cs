@@ -180,8 +180,9 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyGravity()
     {
-        verticalVelocity += Physics.gravity * Time.deltaTime;
-        verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y, bodyData.jumpSpeed);
+        verticalVelocity += Physics.gravity * bodyData.gravityMultiplier * Time.deltaTime;
+        verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y * bodyData.gravityMultiplier,
+                                         bodyData.jumpSpeed);
         controller.Move(verticalVelocity * Time.deltaTime);
     }
 

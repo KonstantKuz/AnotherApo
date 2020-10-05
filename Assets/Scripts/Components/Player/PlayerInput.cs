@@ -89,7 +89,7 @@ public class PlayerInput : MonoCached
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            SwitchWeapon();
+            //SwitchWeapon();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
