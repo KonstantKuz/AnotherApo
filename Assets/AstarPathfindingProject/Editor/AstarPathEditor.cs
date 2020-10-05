@@ -68,8 +68,6 @@ namespace Pathfinding {
 
 		#endregion
 
-		/// <summary>Holds defines found in script files, used for optimizations.</summary>
-		List<OptimizationHandler.DefineDefinition> defines;
 
 		/// <summary>Enables editor stuff. Loads graphs, reads settings and sets everything up</summary>
 		public void OnEnable () {
@@ -266,13 +264,13 @@ namespace Pathfinding {
 			}
 
 
-	#if ProfileAstar
+#if ProfileAstar
 			if (GUILayout.Button("Log Profiles")) {
 				AstarProfiler.PrintResults();
 				AstarProfiler.PrintFastResults();
 				AstarProfiler.Reset();
 			}
-	#endif
+#endif
 
 			// Handle undo
 			SaveGraphsAndUndo(storedEventType, storedEventCommand);
@@ -395,38 +393,11 @@ namespace Pathfinding {
 			optimizationSettingsArea.Header("Optimization");
 
 			if (optimizationSettingsArea.BeginFade()) {
-				defines = defines ?? OptimizationHandler.FindDefines();
-
-				EditorGUILayout.HelpBox("Using C# pre-processor directives, performance and memory usage can be improved by disabling features that you don't use in the project.\n" +
-					"Every change to these settings requires recompiling the scripts", MessageType.Info);
-
-				foreach (var define in defines) {
-					EditorGUILayout.Separator();
-
-					var label = new GUIContent(ObjectNames.NicifyVariableName(define.name), define.description);
-					define.enabled = EditorGUILayout.Toggle(label, define.enabled);
-					EditorGUILayout.HelpBox(define.description, MessageType.None);
-
-					if (!define.consistent) {
-						GUIUtilityx.PushTint(Color.red);
-						EditorGUILayout.HelpBox("This define is not consistent for all build targets, some have it enabled enabled some have it disabled. Press Apply to change them to the same value", MessageType.Error);
-						GUIUtilityx.PopTint();
-					}
+				GUIUtilityx.PushTint(Color.Lerp(Color.yellow, Color.white, 0.5F));
+				if (GUILayout.Button("Optimizations is an A* Pathfinding Project Pro only feature\nThe Pro version can be bought on the A* Pathfinding Project homepage, click here for info", helpBox)) {
+					Application.OpenURL(AstarUpdateChecker.GetURL("astarpro"));
 				}
-
-				EditorGUILayout.Separator();
-				GUILayout.BeginHorizontal();
-				GUILayout.FlexibleSpace();
-
-				if (GUILayout.Button("Apply", GUILayout.Width(150))) {
-					if (EditorUtility.DisplayDialog("Apply Optimizations", "Applying optimizations requires (in case anything changed) a recompilation of the scripts. The inspector also has to be reloaded. Do you want to continue?", "Ok", "Cancel")) {
-						OptimizationHandler.ApplyDefines(defines);
-						AssetDatabase.Refresh();
-						defines = null;
-					}
-				}
-				GUILayout.FlexibleSpace();
-				GUILayout.EndHorizontal();
+				GUIUtilityx.PopTint();
 			}
 
 			optimizationSettingsArea.End();
@@ -794,7 +765,7 @@ namespace Pathfinding {
 					serializationSettings.nodes = true;
 
 					if (EditorUtility.DisplayDialog("Scan before generating cache?", "Do you want to scan the graphs before saving the cache.\n" +
-							"If the graphs have not been scanned then the cache may not contain node data and then the graphs will have to be scanned at startup anyway.", "Scan", "Don't scan")) {
+						"If the graphs have not been scanned then the cache may not contain node data and then the graphs will have to be scanned at startup anyway.", "Scan", "Don't scan")) {
 						MenuScan();
 					}
 
@@ -833,12 +804,12 @@ namespace Pathfinding {
 					if (path != "") {
 						var serializationSettings = Pathfinding.Serialization.SerializeSettings.Settings;
 						if (EditorUtility.DisplayDialog("Include node data?", "Do you want to include node data in the save file. " +
-								"If node data is included the graph can be restored completely without having to scan it first.", "Include node data", "Only settings")) {
+							"If node data is included the graph can be restored completely without having to scan it first.", "Include node data", "Only settings")) {
 							serializationSettings.nodes = true;
 						}
 
 						if (serializationSettings.nodes && EditorUtility.DisplayDialog("Scan before saving?", "Do you want to scan the graphs before saving? " +
-								"\nNot scanning can cause node data to be omitted from the file if the graph is not yet scanned.", "Scan", "Don't scan")) {
+							"\nNot scanning can cause node data to be omitted from the file if the graph is not yet scanned.", "Scan", "Don't scan")) {
 							MenuScan();
 						}
 
@@ -893,16 +864,16 @@ namespace Pathfinding {
 			EditorGUI.BeginDisabledGroup(Application.isPlaying);
 
 			script.threadCount = (ThreadCount)EditorGUILayout.EnumPopup(new GUIContent("Thread Count", "Number of threads to run the pathfinding in (if any). More threads " +
-					"can boost performance on multi core systems. \n" +
-					"Use None for debugging or if you dont use pathfinding that much.\n " +
-					"See docs for more info"), script.threadCount);
+				"can boost performance on multi core systems. \n" +
+				"Use None for debugging or if you dont use pathfinding that much.\n " +
+				"See docs for more info"), script.threadCount);
 
 			EditorGUI.EndDisabledGroup();
 
 			int threads = AstarPath.CalculateThreadCount(script.threadCount);
-			if (threads > 0) EditorGUILayout.HelpBox("Using " + threads +" thread(s)" + (script.threadCount < 0 ? " on your machine" : ""), MessageType.None);
+			if (threads > 0) EditorGUILayout.HelpBox("Using " + threads +" thread(s)" + (script.threadCount < 0 ? " on your machine" : "") + ".\n" +
+				"The free version of the A* Pathfinding Project is limited to at most one thread.", MessageType.None);
 			else EditorGUILayout.HelpBox("Using a single coroutine (no threads)" + (script.threadCount < 0 ? " on your machine" : ""), MessageType.None);
-			if (threads > SystemInfo.processorCount) EditorGUILayout.HelpBox("Using more threads than there are CPU cores may not have a positive effect on performance", MessageType.Warning);
 
 			if (script.threadCount == ThreadCount.None) {
 				script.maxFrameTime = EditorGUILayout.FloatField(new GUIContent("Max Frame Time", "Max number of milliseconds to use for path calculation per frame"), script.maxFrameTime);
@@ -911,8 +882,8 @@ namespace Pathfinding {
 			}
 
 			script.maxNearestNodeDistance = EditorGUILayout.FloatField(new GUIContent("Max Nearest Node Distance",
-					"Normally, if the nearest node to e.g the start point of a path was not walkable" +
-					" a search will be done for the nearest node which is walkble. This is the maximum distance (world units) which it will search"),
+				"Normally, if the nearest node to e.g the start point of a path was not walkable" +
+				" a search will be done for the nearest node which is walkble. This is the maximum distance (world units) which it will search"),
 				script.maxNearestNodeDistance);
 
 			script.heuristic = (Heuristic)EditorGUILayout.EnumPopup("Heuristic", script.heuristic);
@@ -942,7 +913,7 @@ namespace Pathfinding {
 			}
 
 			script.prioritizeGraphs = EditorGUILayout.Toggle(new GUIContent("Prioritize Graphs", "Normally, the system will search for the closest node in all graphs and choose the closest one" +
-					"but if Prioritize Graphs is enabled, the first graph which has a node closer than Priority Limit will be chosen and additional search (e.g for the closest WALKABLE node) will be carried out on that graph only"),
+				"but if Prioritize Graphs is enabled, the first graph which has a node closer than Priority Limit will be chosen and additional search (e.g for the closest WALKABLE node) will be carried out on that graph only"),
 				script.prioritizeGraphs);
 			if (script.prioritizeGraphs) {
 				EditorGUI.indentLevel++;
@@ -951,8 +922,8 @@ namespace Pathfinding {
 			}
 
 			script.fullGetNearestSearch = EditorGUILayout.Toggle(new GUIContent("Full Get Nearest Node Search", "Forces more accurate searches on all graphs. " +
-					"Normally only the closest graph in the initial fast check will perform additional searches, " +
-					"if this is toggled, all graphs will do additional searches. Slower, but more accurate"), script.fullGetNearestSearch);
+				"Normally only the closest graph in the initial fast check will perform additional searches, " +
+				"if this is toggled, all graphs will do additional searches. Slower, but more accurate"), script.fullGetNearestSearch);
 #endif
 			script.scanOnStartup = EditorGUILayout.Toggle(new GUIContent("Scan on Awake", "Scan all graphs on Awake. If this is false, you must call AstarPath.active.Scan () yourself. Useful if you want to make changes to the graphs with code."), script.scanOnStartup);
 
@@ -960,39 +931,7 @@ namespace Pathfinding {
 		}
 
 		void DrawHeuristicOptimizationSettings () {
-			script.euclideanEmbedding.mode = (HeuristicOptimizationMode)EditorGUILayout.EnumPopup(new GUIContent("Heuristic Optimization"), script.euclideanEmbedding.mode);
-
-			EditorGUI.indentLevel++;
-			if (script.euclideanEmbedding.mode == HeuristicOptimizationMode.Random) {
-				script.euclideanEmbedding.spreadOutCount = EditorGUILayout.IntField(new GUIContent("Count", "Number of optimization points, higher numbers give better heuristics and could make it faster, " +
-						"but too many could make the overhead too great and slow it down. Try to find the optimal value for your map. Recommended value < 100"), script.euclideanEmbedding.spreadOutCount);
-			} else if (script.euclideanEmbedding.mode == HeuristicOptimizationMode.Custom) {
-				script.euclideanEmbedding.pivotPointRoot = EditorGUILayout.ObjectField(new GUIContent("Pivot point root",
-						"All children of this transform are going to be used as pivot points. " +
-						"Recommended count < 100"), script.euclideanEmbedding.pivotPointRoot, typeof(Transform), true) as Transform;
-				if (script.euclideanEmbedding.pivotPointRoot == null) {
-					EditorGUILayout.HelpBox("Please assign an object", MessageType.Error);
-				}
-			} else if (script.euclideanEmbedding.mode == HeuristicOptimizationMode.RandomSpreadOut) {
-				script.euclideanEmbedding.pivotPointRoot = EditorGUILayout.ObjectField(new GUIContent("Pivot point root",
-						"All children of this transform are going to be used as pivot points. " +
-						"They will seed the calculation of more pivot points. " +
-						"Recommended count < 100"), script.euclideanEmbedding.pivotPointRoot, typeof(Transform), true) as Transform;
-
-				if (script.euclideanEmbedding.pivotPointRoot == null) {
-					EditorGUILayout.HelpBox("No root is assigned. A random node will be choosen as the seed.", MessageType.Info);
-				}
-
-				script.euclideanEmbedding.spreadOutCount = EditorGUILayout.IntField(new GUIContent("Count", "Number of optimization points, higher numbers give better heuristics and could make it faster, " +
-						"but too many could make the overhead too great and slow it down. Try to find the optimal value for your map. Recommended value < 100"), script.euclideanEmbedding.spreadOutCount);
-			}
-
-			if (script.euclideanEmbedding.mode != HeuristicOptimizationMode.None) {
-				EditorGUILayout.HelpBox("Heuristic optimization assumes the graph remains static. No graph updates, dynamic obstacles or similar should be applied to the graph " +
-					"when using heuristic optimization.", MessageType.Info);
-			}
-
-			EditorGUI.indentLevel--;
+			// Pro only feature
 		}
 
 		/// <summary>Opens the A* Inspector and shows the section for editing tags</summary>

@@ -126,7 +126,7 @@ namespace Pathfinding {
 			// to avoid too large FPS drops
 			IEnumerator ie = UpdateGraphCoroutine();
 			AstarPath.active.AddWorkItem(new AstarWorkItem(
-					(context, force) => {
+				(context, force) => {
 				// If force is true we need to calculate all steps at once
 				if (force) while (ie.MoveNext()) {}
 
@@ -176,12 +176,7 @@ namespace Pathfinding {
 			GridNodeBase[] nodes;
 			// Layers are required when handling LayeredGridGraphs
 			int layers = graph.LayerCount;
-			var layeredGraph = graph as LayerGridGraph;
-			if (layeredGraph != null) {
-				nodes = layeredGraph.nodes;
-			} else {
-				nodes = graph.nodes;
-			}
+			nodes = graph.nodes;
 
 			// Create a temporary buffer required for the calculations
 			if (buffer == null || buffer.Length != width*depth) {

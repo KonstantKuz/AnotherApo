@@ -26,13 +26,13 @@ using Thread = System.Threading.Thread;
 [HelpURL("http://arongranberg.com/astar/docs/class_astar_path.php")]
 public class AstarPath : VersionedMonoBehaviour {
 	/// <summary>The version number for the A* %Pathfinding Project</summary>
-	public static readonly System.Version Version = new System.Version(4, 3, 10);
+	public static readonly System.Version Version = new System.Version(4, 2, 15);
 
 	/// <summary>Information about where the package was downloaded</summary>
-	public enum AstarDistribution { WebsiteDownload, AssetStore };
+	public enum AstarDistribution { WebsiteDownload, AssetStore, PackageManager };
 
 	/// <summary>Used by the editor to guide the user to the correct place to download updates</summary>
-	public static readonly AstarDistribution Distribution = AstarDistribution.AssetStore;
+	public static readonly AstarDistribution Distribution = AstarDistribution.WebsiteDownload;
 
 	/// <summary>
 	/// Which branch of the A* %Pathfinding Project is this release.
@@ -40,7 +40,7 @@ public class AstarPath : VersionedMonoBehaviour {
 	/// users of the development versions can get notifications of development
 	/// updates.
 	/// </summary>
-	public static readonly string Branch = "master_Pro";
+	public static readonly string Branch = "master";
 
 	/// <summary>
 	/// See Pathfinding.AstarData
@@ -688,7 +688,7 @@ public class AstarPath : VersionedMonoBehaviour {
 	/// </summary>
 	public static string[] FindTagNames () {
 		FindAstarPath();
-		return active != null ? active.GetTagNames() : new string[1] { "There is no AstarPath component in the scene" };
+		return active != null? active.GetTagNames () : new string[1] { "There is no AstarPath component in the scene" };
 	}
 
 	/// <summary>Returns the next free path ID</summary>
@@ -1189,10 +1189,6 @@ public class AstarPath : VersionedMonoBehaviour {
 		return 0;
 #else
 		if (count == ThreadCount.AutomaticLowLoad || count == ThreadCount.AutomaticHighLoad) {
-#if ASTARDEBUG
-			Debug.Log(SystemInfo.systemMemorySize + " " + SystemInfo.processorCount + " " + SystemInfo.processorType);
-#endif
-
 			int logicalCores = Mathf.Max(1, SystemInfo.processorCount);
 			int memory = SystemInfo.systemMemorySize;
 
@@ -1202,27 +1198,11 @@ public class AstarPath : VersionedMonoBehaviour {
 			}
 
 			if (logicalCores <= 1) return 0;
-
 			if (memory <= 512) return 0;
 
-			if (count == ThreadCount.AutomaticHighLoad) {
-				if (memory <= 1024) logicalCores = System.Math.Min(logicalCores, 2);
-			} else {
-				//Always run at at most processorCount-1 threads (one core reserved for unity thread).
-				// Many computers use hyperthreading, so dividing by two is used to remove the hyperthreading cores, pathfinding
-				// doesn't scale well past the number of physical cores anyway
-				logicalCores /= 2;
-				logicalCores = Mathf.Max(1, logicalCores);
-
-				if (memory <= 1024) logicalCores = System.Math.Min(logicalCores, 2);
-
-				logicalCores = System.Math.Min(logicalCores, 6);
-			}
-
-			return logicalCores;
+			return 1;
 		} else {
-			int val = (int)count;
-			return val;
+			return (int)count > 0 ? 1 : 0;
 		}
 #endif
 	}
@@ -1283,6 +1263,11 @@ public class AstarPath : VersionedMonoBehaviour {
 		// Outside of play mode everything is synchronous, so no threads are used.
 		if (!Application.isPlaying) numThreads = 0;
 
+		// Trying to prevent simple modding to add support for more than one thread
+		if (numThreads > 1) {
+			threadCount = ThreadCount.One;
+			numThreads = 1;
+		}
 
 		int numProcessors = Mathf.Max(numThreads, 1);
 		bool multithreaded = numThreads > 0;
@@ -1692,9 +1677,19 @@ public class AstarPath : VersionedMonoBehaviour {
 			GraphModifier.FindAllModifiers();
 		}
 
+		int startFrame = Time.frameCount;
 
 		yield return new Progress(0.05F, "Pre processing graphs");
 
+		// Yes, this constraint is trivial to circumvent
+		// the code is the same because it is annoying
+		// to have to have separate code for the free
+		// and the pro version that does essentially the same thing.
+		// I would appreciate if you purchased the pro version of the A* Pathfinding Project
+		// if you need async scanning.
+		if (Time.frameCount != startFrame) {
+			throw new System.Exception("Async scanning can only be done in the pro version of the A* Pathfinding Project");
+		}
 
 		if (OnPreScan != null) {
 			OnPreScan(this);

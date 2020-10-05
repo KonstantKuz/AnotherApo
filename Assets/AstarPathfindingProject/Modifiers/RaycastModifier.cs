@@ -39,12 +39,12 @@ namespace Pathfinding {
 	[System.Serializable]
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_raycast_modifier.php")]
 	public class RaycastModifier : MonoModifier {
-	#if UNITY_EDITOR
+#if UNITY_EDITOR
 		[UnityEditor.MenuItem("CONTEXT/Seeker/Add Raycast Simplifier Modifier")]
 		public static void AddComp (UnityEditor.MenuCommand command) {
 			(command.context as Component).gameObject.AddComponent(typeof(RaycastModifier));
 		}
-	#endif
+#endif
 
 		public override int Order { get { return 40; } }
 
@@ -261,7 +261,6 @@ namespace Pathfinding {
 			}
 
 			if (useGraphRaycasting) {
-				bool betweenNodeCenters = n1 != null && n2 != null;
 				if (n1 == null) n1 = AstarPath.active.GetNearest(v1).node;
 				if (n2 == null) n2 = AstarPath.active.GetNearest(v2).node;
 
@@ -275,14 +274,6 @@ namespace Pathfinding {
 					}
 
 					var rayGraph = graph as IRaycastableGraph;
-					GridGraph gg = graph as GridGraph;
-					if (betweenNodeCenters && gg != null) {
-						// If the linecast is exactly between the centers of two nodes on a grid graph then a more optimized linecast can be used.
-						// This method is also more stable when raycasting along a diagonal when the line just touches an obstacle.
-						// The normal linecast method may or may not detect that as a hit depending on floating point errors
-						// however this method never detect it as an obstacle (and that is very good for this component as it improves the simplification).
-						return !gg.Linecast(n1 as GridNodeBase, n2 as GridNodeBase);
-					} else
 					if (rayGraph != null) {
 						return !rayGraph.Linecast(v1, v2, n1);
 					}

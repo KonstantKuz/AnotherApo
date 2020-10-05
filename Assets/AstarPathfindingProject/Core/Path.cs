@@ -64,7 +64,7 @@ namespace Pathfinding {
 
 		/// <summary>Returns the state of the path in the pathfinding pipeline</summary>
 		public PathState PipelineState { get; private set; }
-		System.Object stateLock = new object ();
+		System.Object stateLock = new object();
 
 		/// <summary>
 		/// Provides additional traversal information to a path request.
@@ -322,19 +322,10 @@ namespace Pathfinding {
 			switch (heuristic) {
 			case Heuristic.Euclidean:
 				h = (uint)(((GetHTarget() - node.position).costMagnitude)*heuristicScale);
-				// Inlining this check and the return
-				// for each case saves an extra jump.
-				// This code is pretty hot
-				if (hTargetNode != null) {
-					h = System.Math.Max(h, AstarPath.active.euclideanEmbedding.GetHeuristic(node.NodeIndex, hTargetNode.NodeIndex));
-				}
 				return h;
 			case Heuristic.Manhattan:
 				Int3 p2 = node.position;
 				h = (uint)((System.Math.Abs(hTarget.x-p2.x) + System.Math.Abs(hTarget.y-p2.y) + System.Math.Abs(hTarget.z-p2.z))*heuristicScale);
-				if (hTargetNode != null) {
-					h = System.Math.Max(h, AstarPath.active.euclideanEmbedding.GetHeuristic(node.NodeIndex, hTargetNode.NodeIndex));
-				}
 				return h;
 			case Heuristic.DiagonalManhattan:
 				Int3 p = GetHTarget() - node.position;
@@ -344,9 +335,6 @@ namespace Pathfinding {
 				int diag = System.Math.Min(p.x, p.z);
 				int diag2 = System.Math.Max(p.x, p.z);
 				h = (uint)((((14*diag)/10) + (diag2-diag) + p.y) * heuristicScale);
-				if (hTargetNode != null) {
-					h = System.Math.Max(h, AstarPath.active.euclideanEmbedding.GetHeuristic(node.NodeIndex, hTargetNode.NodeIndex));
-				}
 				return h;
 			}
 			return 0U;
@@ -499,8 +487,8 @@ namespace Pathfinding {
 		/// Warning: Do not call this function manually.
 		/// </summary>
 		protected virtual void OnEnterPool () {
-			if (vectorPath != null) Pathfinding.Util.ListPool<Vector3>.Release(ref vectorPath);
-			if (path != null) Pathfinding.Util.ListPool<GraphNode>.Release(ref path);
+			if (vectorPath != null) Pathfinding.Util.ListPool<Vector3>.Release (ref vectorPath);
+			if (path != null) Pathfinding.Util.ListPool<GraphNode>.Release (ref path);
 			// Clear the callback to remove a potential memory leak
 			// while the path is in the pool (which it could be for a long time).
 			callback = null;
@@ -537,8 +525,8 @@ namespace Pathfinding {
 			errorLog = "";
 			completeState = PathCompleteState.NotCalculated;
 
-			path = Pathfinding.Util.ListPool<GraphNode>.Claim();
-			vectorPath = Pathfinding.Util.ListPool<Vector3>.Claim();
+			path = Pathfinding.Util.ListPool<GraphNode>.Claim ();
+			vectorPath = Pathfinding.Util.ListPool<Vector3>.Claim ();
 
 			currentR = null;
 
