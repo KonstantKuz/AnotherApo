@@ -46,6 +46,12 @@ public class UMUBot : Enemy
     public override void Start()
     {
         base.Start();
+        
+        for (int i = 0; i < guns.Length; i++)
+        {
+            guns[i].SubscribeToBeat();
+        }
+        
         SubscribeToCheckDeath();
         StartAiming();
         LookAt(currentAttackTarget);

@@ -7,7 +7,7 @@ public class CrossHairCaster : MonoCached
 {
     [SerializeField] private float maxDistance = 15f;
     [SerializeField] private Transform crossHair;
-    private protected Ray ray;
+    protected Ray ray;
     private RaycastHit hit;
 
     public RaycastHit Hit

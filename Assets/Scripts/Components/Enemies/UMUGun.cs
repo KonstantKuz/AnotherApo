@@ -17,10 +17,9 @@ public class UMUGun : Gun, IDamageable
     {
         SetDamageValue(Constants.DamagePerHit.UMUGun);
         TotalHealth = Constants.TotalHealth.UMUGun;
-        SubscribeToBeat();
     }
 
-    private void SubscribeToBeat()
+    public void SubscribeToBeat()
     {
         GameBeatSequencer.OnGeneratedBeat_UMUGun += Fire;
     }
@@ -32,48 +31,39 @@ public class UMUGun : Gun, IDamageable
 
     public override void Fire()
     {
-        if (Time.time < nextShotTime)
-        {
-            return;
-        }
+        // if (Time.time < nextShotTime)
+        // {
+        //     return;
+        // }
+        // nextShotTime = Time.time + rateoffire;
 
-        nextShotTime = Time.time + rateoffire;
+        SpawnEffects();
+        UpdateCurrentBarrel();
+        HandleHit();
+    }
 
-        if (currentBarrel > additiveBarrels.Length)
-        {
-            currentBarrel = 0;
-        } 
-        
+    private void SpawnEffects()
+    {
         if (currentBarrel == 0)
         {
-            FireFromBarrel(barrel);
+            SpawnFlash(actualCaster.transform);
+            TrySpawnTrail(actualCaster.transform);
         }
 
         if (currentBarrel >= 1)
         {
-            FireFromBarrel(additiveBarrels[currentBarrel-1]);
+            SpawnFlash(additiveBarrels[currentBarrel - 1]);
+            TrySpawnTrail(additiveBarrels[currentBarrel - 1]);
         }
-        
-        currentBarrel++;
     }
-
-    private void FireFromBarrel(Transform actualBarrel)
+    
+    private void UpdateCurrentBarrel()
     {
-        ObjectPooler.Instance.SpawnObject(Constants.PoolFlashMid, actualBarrel.position, actualBarrel.rotation);
+        currentBarrel++;
 
-        if (trail)
+        if (currentBarrel > additiveBarrels.Length)
         {
-            ObjectPooler.Instance.SpawnObject(Constants.PoolBulletTrail, actualBarrel.position, actualBarrel.rotation);
-        }
-
-        if (Physics.Raycast(actualBarrel.position, actualBarrel.forward, out hit, mask))
-        {
-            IDamageable target;
-            if (hit.transform.TryGetComponent(out target))
-            {
-                target.TakeDamage(damage);
-            }
-            CheckForGround();
+            currentBarrel = 0;
         }
     }
 

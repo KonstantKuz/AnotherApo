@@ -8,13 +8,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private BodyData bodyData;
     [SerializeField] private PlayerWeaponHolder weaponHolder;
     [SerializeField] private Animator animator;
+    [SerializeField] private RigBuilder rigBuilder;
+    private CharacterController controller;
     public Animator Animator
     {
         get => animator;
     }
-    [SerializeField] private RigBuilder rigBuilder;
-    private CharacterController controller;
-
+    
     private Vector3 movementVelocity;
     private Vector3 dashVelocity;
     private Vector3 verticalVelocity;
@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
     
     public void OnEnable()
     {
-        PlayerInput.OnWeaponSwitched += SwitchWeapon;
-        PlayerInput.OnSwordAttacked += SwordAttack;
+        // PlayerInput.OnWeaponSwitched += SwitchWeapon;
+        // PlayerInput.OnSwordAttacked += SwordAttack;
         PlayerInput.OnJumped += TryJump;
         PlayerInput.OnDashed += Dash;
         
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
             if (PlayerInput.Firing)
             {
                 weaponHolder.gun.Fire();
+                UpdateBodyAimPivot(0.05f);
             }
         };
     }
@@ -62,101 +63,39 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void SwitchWeapon(bool Melee)
-    {
-        weaponHolder.SwitchWeapons(Melee);
-
-        if (Melee)
-        {
-            rigBuilder.enabled = false;
-            animator.applyRootMotion = true;
-        }
-        else
-        {
-            animator.applyRootMotion = false;
-            rigBuilder.enabled = true;
-        }
-    }
-    
-    private void SwordAttack()
-    {
-        animator.SetTrigger(AnimatorHashes.SwordAttackHash);
-    }
+    // private void SwitchWeapon(bool Melee)
+    // {
+    //     weaponHolder.SwitchWeapons(Melee);
+    // }
+    //
+    // private void SwordAttack()
+    // {
+    //     animator.SetTrigger(AnimatorHashes.SwordAttackHash);
+    // }
 
     private void TryJump()
     {
         if (!controller.isGrounded)
             return;
-
-        if (PlayerInput.Melee)
-        {
-            JumpWithSword();
-        }
-        else
-        {
-            JumpWithGun();
-        }
+        
+        ActualJump();
     }
     
     public void Update()
     {
         Rotate();
-        TryMove();
+        Move();
         ApplyGravity();
         SetInputsToAnimator();
-        UpdateBodyAimPivot();
+        UpdateBodyAimPivot(PlayerInput.MouseY);
     }
 
     private void Rotate()
     {
-        if (animator.applyRootMotion)
-        {
-            animator.transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, animator.transform.up);
-        }
-        else
-        {
-            transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, transform.up);
-        }
+        transform.rotation *= Quaternion.AngleAxis(PlayerInput.MouseX * 15f, transform.up);
     }
 
-    private void TryMove()
-    {
-        if (animator.applyRootMotion)
-        {
-            MoveByAnimator();
-        }
-        else
-        {
-            MoveByController();
-        }
-    }
-
-    private void MoveByAnimator()
-    {
-        controller.enabled = false;
-
-        transform.position = animator.transform.position;
-
-        animator.transform.RotateAround(animator.transform.position, animator.transform.forward,
-                                        -originalAnimatorLocalRotation.eulerAngles.z);
-        animator.transform.RotateAround(animator.transform.position, animator.transform.right,
-                                        -originalAnimatorLocalRotation.eulerAngles.x);
-        animator.transform.RotateAround(animator.transform.position, animator.transform.up,
-                                        -originalAnimatorLocalRotation.eulerAngles.y);
-
-        transform.rotation = animator.transform.rotation;
-
-        transform.position += -transform.right * originalAnimatorLocalPosition.x;
-        transform.position += -transform.up * originalAnimatorLocalPosition.y;
-        transform.position += -transform.forward * originalAnimatorLocalPosition.z;
-
-        animator.transform.localRotation = originalAnimatorLocalRotation;
-        animator.transform.localPosition = originalAnimatorLocalPosition;
-        
-        controller.enabled = true;
-    }
-
-    private void MoveByController()
+    private void Move()
     {
         ResetMovementVelocity();
 
@@ -188,35 +127,20 @@ public class PlayerController : MonoBehaviour
 
     private void SetInputsToAnimator()
     {
-        animator.SetBool(AnimatorHashes.MeleeHash, PlayerInput.Melee);
         animator.SetBool(AnimatorHashes.AimingHash, true);
         
         animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
         animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
     }
 
-    private void UpdateBodyAimPivot()
+    private void UpdateBodyAimPivot(float appendHeight)
     {
-        bodyData.bodyAimPivotPosition.y += PlayerInput.MouseY;
+        bodyData.bodyAimPivotPosition.y += appendHeight;
         bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y,
                                                       bodyData.bodyAimPivotVerticalClamp.x, 
                                                       bodyData.bodyAimPivotVerticalClamp.y);
         bodyData.bodyAimPivotPosition.z = 5f;
         bodyData.bodyAimPivot.localPosition = bodyData.bodyAimPivotPosition;
-    }
-
-    private void JumpWithGun()
-    {
-        ActualJump();
-    }
-
-    private void JumpWithSword()
-    {
-        animator.applyRootMotion = false;
-        DoActionOnLanding(delegate { animator.applyRootMotion = true; });
-        
-        ResetMovementVelocity();
-        ActualJump();
     }
 
     private void ActualJump()
@@ -241,109 +165,4 @@ public class PlayerController : MonoBehaviour
             onLanding.Invoke();
         }
     }
-
-
-    // private void Start()
-    // {
-    //     SetUpAnimator();
-    // }
-    //
-    // public void SetUpAnimator()
-    // {
-    //     Animator.SetFloat(AnimatorHashes.CoverSideHash, 1);
-    // }
-
-    // private void OnTriggerStay(Collider other)
-    // {
-    //     if (other.CompareTag(Constants.Cover))
-    //     {
-    //         coverSens.currentCover = other.transform;
-    //         Animator.SetBool(AnimatorHashes.CoverHash, true);
-    //         if (PlayerInput.Horizontal == 0)
-    //         {
-    //             return;
-    //         }
-    //         Animator.SetFloat(AnimatorHashes.CoverSideHash, PlayerInput.Horizontal > 0 ? 1 : -1);
-    //     }
-    // }
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     if (other.CompareTag(Constants.Cover))
-    //     {
-    //         Animator.SetBool(AnimatorHashes.CoverHash, false);
-    //     }
-    // }
-
-    // private void OnAnimatorIK(int layerIndex)
-    // {
-    //     if(!PlayerInput.Melee /*&& PlayerInput.Aiming*/)
-    //     {
-    //         AimingTransforms();
-    //     }
-    //     // else
-    //     // {
-    //     //     SimpleWalkingTransforms();
-    //     // }
-    // }
-
-    // public void CoverTransforms()
-    // {
-    //     if(Animator.GetFloat(AnimatorHashes.VerticalHash) < -0.7f)
-    //     {
-    //         return;
-    //     }
-    //     if (!Animator.GetBool(AnimatorHashes.AimingHash) && Animator.GetBool(AnimatorHashes.CrouchingHash))
-    //     {
-    //         RaycastHit hitCover;
-    //         Debug.DrawRay(coverSens.rightSensor.position, coverSens.rightSensor.forward, Color.blue);
-    //         Debug.DrawRay(coverSens.leftSensor.position, coverSens.leftSensor.forward, Color.blue);
-    //
-    //         if (Animator.GetFloat(AnimatorHashes.CoverSideHash) > 0)
-    //         {
-    //             if (Physics.Raycast(coverSens.rightSensor.position, coverSens.rightSensor.forward, out hitCover, 2f, 1<<10))
-    //             {
-    //                 coverSens.coverHelper.position = hitCover.point - coverSens.coverHelper.forward;
-    //                 coverSens.currentCover = hitCover.transform;
-    //                 coverSens.coverHelper.rotation = Quaternion.Lerp(coverSens.coverHelper.rotation, Quaternion.LookRotation(-hitCover.normal), Time.deltaTime * 10f);
-    //             }
-    //             else
-    //             {
-    //                 Animator.SetFloat(AnimatorHashes.CoverSideHash, 2f);
-    //             }
-    //         }
-    //         if (Animator.GetFloat(AnimatorHashes.CoverSideHash) < 0)
-    //         {
-    //             if (Physics.Raycast(coverSens.leftSensor.position, coverSens.leftSensor.forward, out hitCover, 2f, 1 << 10))
-    //             {
-    //                 coverSens.coverHelper.position = hitCover.point - coverSens.coverHelper.forward;
-    //                 coverSens.currentCover = hitCover.transform;
-    //                 coverSens.coverHelper.rotation = Quaternion.Lerp(coverSens.coverHelper.rotation, Quaternion.LookRotation(-hitCover.normal), Time.deltaTime * 10f);
-    //             }
-    //             else
-    //             {
-    //                 Animator.SetFloat(AnimatorHashes.CoverSideHash, -2f);
-    //             }
-    //         }
-    //
-    //         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(-coverSens.currentCover.forward), Time.deltaTime * 2f);
-    //     }
-    // }
-
-    // public void AimingTransforms()
-    // {
-    //     //PlayerCameraBehaviour.FieldOfView(35f);
-    //
-    //     if ((bodyData.mainCrossHair.position - weaponHolder.gun.transform.position).magnitude > 2f)
-    //     {
-    //         Animator.SetLookAtWeight(0.5f, 1f, 1f);
-    //         Animator.SetLookAtPosition(bodyData.mainCrossHair.position);
-    //     }
-    // }
-
-    // public void SimpleWalkingTransforms()
-    // {
-    //     //PlayerCameraBehaviour.FieldOfView(60);
-    //     Animator.SetLookAtWeight(1, 0.4f, 0.4f);
-    //     Animator.SetLookAtPosition(bodyData.bodyAimPivot.position);
-    // }
 }

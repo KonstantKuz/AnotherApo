@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class Gun : MonoCached
 {
-    [SerializeField] protected bool trail;
     [SerializeField] protected LayerMask mask;
-    [SerializeField] protected Transform barrel;
-    [SerializeField] protected float rateoffire;
-    protected float nextShotTime;
-    protected RaycastHit hit;
+    [SerializeField] protected bool trail;
+    [SerializeField] protected CrossHairCaster actualCaster;
+    // [SerializeField] protected float rateoffire;
+    // protected float nextShotTime;
     protected int damage;
 
     public void SetDamageValue(int value)
@@ -20,44 +19,63 @@ public class Gun : MonoCached
     
     public virtual void Fire()
     {
-        if (Time.time < nextShotTime)
-        {
-            return;
-        }
+        // if (Time.time < nextShotTime)
+        // {
+        //     return;
+        // }
+        // nextShotTime = Time.time + rateoffire;
 
-        nextShotTime = Time.time + rateoffire;
+        SpawnFlash(actualCaster.transform);
+        TrySpawnTrail(actualCaster.transform);
+        HandleHit();
+    }
+
+    protected void SpawnFlash(Transform barrel)
+    {
         ObjectPooler.Instance.SpawnObject(Constants.PoolFlashSmall, barrel.position, barrel.rotation);
-        
+    }
+
+    protected void TrySpawnTrail(Transform barrel)
+    {
         if (trail)
         {
             ObjectPooler.Instance.SpawnObject(Constants.PoolBulletTrail, barrel.position, barrel.rotation);
         }
+    }
 
-        if (Physics.Raycast(barrel.position, barrel.forward, out hit, mask))
+    protected void HandleHit()
+    {
+        if (actualCaster.Hit.transform == null)
+            return;
+
+        CheckForHitReaction();
+
+        CheckForDamageable();
+    }
+
+    private void CheckForHitReaction()
+    {
+        if (actualCaster.Hit.transform.TryGetComponent(out IHitMaterial material))
         {
-            IDamageable target;
-            if (hit.transform.TryGetComponent(out target))
-            {
-                target.TakeDamage(damage);
-            }
-
-            IHitMaterial material;
-            if (hit.transform.TryGetComponent(out material))
-            {
-                material.SpawnHitReaction(hit.point, hit.normal);
-            }
-            
-            CheckForGround();
+            material.SpawnHitReaction(actualCaster.Hit.point, actualCaster.Hit.normal);
+        }
+        
+        if (actualCaster.Hit.collider.gameObject.layer == LayerMasks.Ground)
+        {
+            Transform groundHit = ObjectPooler.Instance.SpawnObject(Constants.PoolHitGroundSmall).transform;
+            groundHit.transform.position = actualCaster.Hit.point;
+            groundHit.forward = actualCaster.Hit.normal;
         }
     }
 
-    public void CheckForGround()
+    private void CheckForDamageable()
     {
-        if (hit.collider.gameObject.layer == LayerMasks.Ground)
+        if (mask.Contains(actualCaster.Hit.transform.gameObject.layer))
         {
-            Transform groundHit = ObjectPooler.Instance.SpawnObject(Constants.PoolHitGroundSmall).transform;
-            groundHit.transform.position = hit.point;
-            groundHit.forward = hit.normal;
-        } 
+            if (actualCaster.Hit.transform.TryGetComponent(out IDamageable target))
+            {
+                target.TakeDamage(damage);
+            }
+        }
     }
 }

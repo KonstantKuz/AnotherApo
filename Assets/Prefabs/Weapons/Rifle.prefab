@@ -349,7 +349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: 1
-  barrel: {fileID: 6019359124376139860}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  actualCaster: {fileID: 6019359124376139862}
   rateoffire: 0.1
 --- !u!65 &3584214500817115894
 BoxCollider:
@@ -571,6 +574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441492417239129903, guid: 8a5947510d835bb4e8d2833ac7f5ba59,
+        type: 3}
+      propertyPath: maxDistance
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a5947510d835bb4e8d2833ac7f5ba59, type: 3}

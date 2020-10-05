@@ -11,10 +11,8 @@ public class BodyData
     public float jumpSpeed;
     public float dashSpeed;
     public float dashDuration;
-
-    //public float gravityMultiplier;
-    //public float distanceToGround;
+    
     public Vector2 bodyAimPivotVerticalClamp;
-    [HideInInspector]
-    public Vector3 bodyAimPivotPosition;
+    
+    [HideInInspector] public Vector3 bodyAimPivotPosition;
 }
