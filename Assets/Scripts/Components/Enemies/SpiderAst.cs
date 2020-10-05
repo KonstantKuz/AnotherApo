@@ -83,7 +83,7 @@ public class SpiderAst : Enemy, IDamageable
 
     private void JumpThenAttack()
     {
-        animator.SetTrigger(AnimatorHashes.SpiderHashes.Jump);
+        animator.SetTrigger(AnimatorHashes.JumpHash);
         verticalVelocity.y = jumpSpeed;
         
         StartCoroutine(DelayedAttack());

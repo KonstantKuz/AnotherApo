@@ -56,6 +56,14 @@ public class UMUBot : Enemy
         StartAiming();
         LookAt(currentAttackTarget);
         UpdatePathPeriodically();
+        
+        GameBeatSequencer.OnBPM += delegate
+        {
+            if (GameBeatSequencer.CurrentBeat % 4 == 0)
+            {
+                animator.SetTrigger(AnimatorHashes.JumpHash);
+            }
+        };
     }
 
     private void SubscribeToCheckDeath()

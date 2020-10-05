@@ -19,7 +19,12 @@ public class GameBeatSequencer : MonoBehaviour
     public static Action OnGeneratedBeat_UMUGun = delegate {  };
     
     private int currentTrackBPM;
-    
+    private static int currentBeat;
+    public static int CurrentBeat
+    {
+        get { return currentBeat; }
+    }
+
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(2);
@@ -69,6 +74,7 @@ public class GameBeatSequencer : MonoBehaviour
     {
         generalBeat.onBeat += delegate { OnGeneratedBeat(); };
         generalBeat.onAnyStep += delegate { OnBPM(); };
+        generalBeat.onAnyStep += delegate { currentBeat++; };
         
         durashkaBeat.onBeat += delegate { OnGeneratedBeat_Durashka(); };
         umuBeat.onBeat += delegate { OnGeneratedBeat_UMUGun(); };
