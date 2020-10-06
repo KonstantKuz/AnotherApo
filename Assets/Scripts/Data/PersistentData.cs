@@ -85,4 +85,7 @@ public class Constants
         public const int SpiderAst = 500;
         public const int UMUGun = 300;
     }
+
+    public const string EmissionProperty = "_EmissionColor";
+    public const string EmissionKeyword = "_EMISSION";
 }
