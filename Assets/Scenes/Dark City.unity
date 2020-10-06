@@ -19374,6 +19374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Durashka
       objectReference: {fileID: 0}
+    - target: {fileID: 3966525467938663891, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3966525467938663897, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43802,6 +43807,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Durashka
       objectReference: {fileID: 0}
+    - target: {fileID: 3966525467938663891, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3966525467938663897, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44060,6 +44070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Durashka
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966525467938663891, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3966525467938663897, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
         type: 3}
@@ -52246,6 +52261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Durashka
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966525467938663891, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3966525467938663897, guid: 4ee9cb8239a74c54cb74c4e91f849e21,
         type: 3}

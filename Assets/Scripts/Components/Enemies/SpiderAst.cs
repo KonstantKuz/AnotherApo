@@ -6,7 +6,6 @@ public class SpiderAst : Enemy, IDamageable
 {
     [Header("Attack")] 
     [SerializeField] private float attackRadius;
-    [SerializeField] private LayerMask mask;
     
     [Header("Movement")]
     [SerializeField] private float movementSpeed;
@@ -102,27 +101,16 @@ public class SpiderAst : Enemy, IDamageable
     private void Attack()
     {
         SetAttackPossibility(false);
-        ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, explosionRoot.position);
-        SetActualDamage();
+        SpawnDamagingExplosion();
         UnsubscribeFromBeat();
         ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
     }
 
-    private void SetActualDamage()
+    private void SpawnDamagingExplosion()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRadius, mask);
-        for (int i = 0; i < hitColliders.Length; i++)
-        {
-            IDamageable damageable;
-            if (hitColliders[i].TryGetComponent(out damageable))
-            {
-                float minDamage = Constants.DamagePerHit.SpiderAst;
-                float damageMultiplierByDistance =
-                    attackRadius / (transform.position - hitColliders[i].transform.position).magnitude;
-                float resultDamage = minDamage * damageMultiplierByDistance;
-                damageable.TakeDamage((int)resultDamage);
-            }
-        }
+        Explosion explosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
+        explosion.transform.position = explosionRoot.position;
+        explosion.Explode(1 << LayerMasks.Player, Constants.DamagePerHit.SpiderAst, attackRadius);
     }
     
     private void ApplyGravity()
@@ -154,8 +142,10 @@ public class SpiderAst : Enemy, IDamageable
         Attack();
     }
 
-    private void OnDrawGizmos()
+    public override void OnDrawGizmos()
     {
+        base.OnDrawGizmos();
+        
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }

@@ -48,13 +48,16 @@ public class AnimatorHashes
 
 public class LayerMasks
 {
-    public static LayerMask interactionLayer;
     public static LayerMask Ground;
+    public static LayerMask Player;
     public static void CacheLayers()
     {
-        interactionLayer = LayerMask.NameToLayer("InteractionLayer");
         Ground = LayerMask.NameToLayer("Ground");
+        Player = LayerMask.NameToLayer("Player");
     }
+    // yourLayerMask |= (1 << LayerMask.NameToLayer("Default"));
+    // yourLayerMask |= (1 << LayerMask.NameToLayer("AnotherLayer"));
+    // yourLayerMask |= (1 << LayerMask.NameToLayer("Water"));
 }
 
 public class Constants
@@ -85,6 +88,16 @@ public class Constants
         public const int SpiderAst = 500;
         public const int UMUGun = 300;
     }
+
+    public class HealPerExplosion
+    {
+        public const int Durashka = -500;
+        public const int UMUGun = -250;
+        public const int UMUSmall = -500;
+        public const int UMUBig = -1000;
+    }
+
+    public const float ExplosionRadius = 3f;
 
     public const string EmissionProperty = "_EmissionColor";
     public const string EmissionKeyword = "_EMISSION";

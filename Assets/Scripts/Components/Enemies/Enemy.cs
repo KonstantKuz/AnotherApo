@@ -124,10 +124,10 @@ public abstract class Enemy : MonoCached
         
     }
     
-    private void OnDrawGizmos()
+    public virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 1f);
+        Gizmos.DrawWireSphere(transform.position + transform.up/2, 1f);
         
         if (currentPath != null && currentPath.vectorPath.Count>0)
         {

@@ -9,9 +9,9 @@ public static class EnumExtensions
     private static void CheckEnumWithFlags<T>()
     {
         if (!typeof (T).IsEnum)
-            throw new ArgumentException(string.Format("Type '{0}' is not an enum", typeof (T).FullName));
+            throw new ArgumentException(string.Format("ExplosionType '{0}' is not an enum", typeof (T).FullName));
         if (!Attribute.IsDefined(typeof (T), typeof (FlagsAttribute)))
-            throw new ArgumentException(string.Format("Type '{0}' doesn't have the 'Flags' attribute",
+            throw new ArgumentException(string.Format("ExplosionType '{0}' doesn't have the 'Flags' attribute",
                 typeof (T).FullName));
     }
 

@@ -94,24 +94,27 @@ public class UMUBot : Enemy
             
             for (int i = 0; i < 3; i++)
             {
-                SpawnExplosionsOnRandomPosition(Constants.PoolExplosionMid);
+                SpawnHealExplosionsOnRndPos(
+                    Constants.PoolExplosionMid, Constants.HealPerExplosion.UMUSmall, 3);
                 yield return null;
             }
             for (int i = 0; i < 2; i++)
             {
-                SpawnExplosionsOnRandomPosition(Constants.PoolExplosionBig);
+                SpawnHealExplosionsOnRndPos(
+                    Constants.PoolExplosionBig, Constants.HealPerExplosion.UMUBig, 5);
             }
             
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }
 
-        void SpawnExplosionsOnRandomPosition(string explosion)
+        void SpawnHealExplosionsOnRndPos(string explosionName, int heal, int radius)
         {
             Vector3 rndExplosionPosition = fireShowStartPoint.position +
                                            fireShowStartPoint.up * Random.Range(-1f, 1f) +
                                            fireShowStartPoint.right * Random.Range(-1f, 1f);
             
-            ObjectPooler.Instance.SpawnObject(explosion, rndExplosionPosition);
+            Explosion explosion = ObjectPooler.Instance.SpawnObject(explosionName, rndExplosionPosition).GetComponent<Explosion>();
+            explosion.Explode(1 << LayerMasks.Player, heal, radius);
         }
     }
 

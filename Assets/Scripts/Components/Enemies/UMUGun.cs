@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class UMUGun : Gun, IDamageable
 {
@@ -77,9 +78,19 @@ public class UMUGun : Gun, IDamageable
         
         UnsubscribeFromBeat();
         OnFullDamaged();
+        SpawnHealExplosions();
         
-        ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position + transform.forward/2);
-        ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position - transform.forward/2);
         gameObject.SetActive(false);
+    }
+
+    private void SpawnHealExplosions()
+    {
+        Explosion fwdExplosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
+        fwdExplosion.transform.position = transform.position + transform.forward / 2;
+        Explosion bwdExplosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
+        bwdExplosion.transform.position = transform.position - transform.forward / 2;
+        
+        fwdExplosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
+        bwdExplosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
     }
 }

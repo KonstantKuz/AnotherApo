@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEditor;
-// Change 'Type' to base class name
+// Change 'ExplosionType' to base class name
 // in which array is needs to be drawn as reorderable
 [CustomEditor(typeof(MusicMixer))]
 public class MusicMixerEditor : Editor

@@ -180,16 +180,18 @@ public class Durashka : Enemy, IDamageable
         UnsubscribeFromBeat();
         DisableGun();
         DisableActivities();
-        DelayedSpawnExplosion();
+        DelayedSpawnHealingExplosion();
     }
 
-    private void DelayedSpawnExplosion()
+    private void DelayedSpawnHealingExplosion()
     {
         StartCoroutine(DelayedSpawnExplosion());
         IEnumerator DelayedSpawnExplosion()
         {
             yield return new WaitForSeconds(2f);
-            ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid, transform.position);
+            Explosion explosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
+            explosion.transform.position = transform.position;
+            explosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.Durashka);
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }
     }
