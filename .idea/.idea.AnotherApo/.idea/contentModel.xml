@@ -468,7 +468,7 @@
             <e p="FootIKOverride.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="HitMat" t="Include">
-              <e p="DamageablePart.cs" t="Include" />
+              <e p="DamageableHighLighter.cs" t="Include" />
               <e p="IHitMaterial.cs" t="Include" />
               <e p="Metal.cs" t="Include" />
             </e>

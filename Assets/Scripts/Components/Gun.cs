@@ -47,25 +47,9 @@ public class Gun : MonoCached
     {
         if (actualCaster.Hit.transform == null)
             return;
-
-        CheckForHitReaction();
-
-        CheckForDamageable();
-    }
-
-    private void CheckForHitReaction()
-    {
-        if (actualCaster.Hit.transform.TryGetComponent(out IHitMaterial material))
-        {
-            material.SpawnHitReaction(actualCaster.Hit.point, actualCaster.Hit.normal);
-        }
         
-        if (actualCaster.Hit.collider.gameObject.layer == LayerMasks.Ground)
-        {
-            Transform groundHit = ObjectPooler.Instance.SpawnObject(Constants.PoolHitGroundSmall).transform;
-            groundHit.transform.position = actualCaster.Hit.point;
-            groundHit.forward = actualCaster.Hit.normal;
-        }
+        CheckForDamageable();
+        CheckForHitReaction();
     }
 
     private void CheckForDamageable()
@@ -76,6 +60,30 @@ public class Gun : MonoCached
             {
                 target.TakeDamage(damage);
             }
+        }
+    }
+
+    private void CheckForHitReaction()
+    {
+        IHitMaterial[] materials = actualCaster.Hit.transform.GetComponents<IHitMaterial>();
+        if (materials != null)
+        {
+            for (int i = 0; i < materials.Length; i++)
+            {
+                materials[i].SpawnHitReaction(actualCaster.Hit.point, actualCaster.Hit.normal);
+            }
+        }
+        
+        // if (actualCaster.Hit.transform.TryGetComponent(out IHitMaterial material))
+        // {
+        //     material.SpawnHitReaction(actualCaster.Hit.point, actualCaster.Hit.normal);
+        // }
+        
+        if (actualCaster.Hit.collider.gameObject.layer == LayerMasks.Ground)
+        {
+            Transform groundHit = ObjectPooler.Instance.SpawnObject(Constants.PoolHitGroundSmall).transform;
+            groundHit.transform.position = actualCaster.Hit.point;
+            groundHit.forward = actualCaster.Hit.normal;
         }
     }
 }

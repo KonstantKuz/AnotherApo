@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.Animations.Rigging;
 using Random = UnityEngine.Random;
 
 [System.Serializable]
@@ -9,7 +10,6 @@ public class LookAtSection
 {
     public TargetInterpolator lookAtInterpolator;
     public Vector3 lookAtOffset;
-    public LookAtConstraint lookAtConstraint;
 }
 
 [System.Serializable]
@@ -17,7 +17,6 @@ public class TargetingSection
 {
     public TargetInterpolator targetInterpolator;
     public Vector3 targetOffset;
-    public LookAtConstraint[] targetingConstraints;
 }
 
 public class UMUBot : Enemy
@@ -80,8 +79,8 @@ public class UMUBot : Enemy
         if (damagedGunsCount == guns.Length)
         {
             animator.SetTrigger(AnimatorHashes.DeathHash);
-            DeathFireShow();
             LookAt(fireShowStartPoint);
+            DeathFireShow();
             enabled = false;
         }
     }
@@ -120,32 +119,11 @@ public class UMUBot : Enemy
     {
         currentAttackTarget = player.Animator.GetBoneTransform(HumanBodyBones.Spine);
         targetingSection.targetInterpolator.SetConstraint(currentAttackTarget, targetingSection.targetOffset, targetingSpeed);
-        for (int i = 0; i < targetingSection.targetingConstraints.Length; i++)
-        {
-            targetingSection.targetingConstraints[i].AddSource(TargetInterpolator());
-        }
-    }
-
-    private ConstraintSource TargetInterpolator()
-    {
-        ConstraintSource interpolatorSource = new ConstraintSource();
-        interpolatorSource.weight = 1;
-        interpolatorSource.sourceTransform = targetingSection.targetInterpolator.transform;
-        return interpolatorSource;
     }
 
     private void LookAt(Transform target)
     {
         lookAtSection.lookAtInterpolator.SetConstraint(target, lookAtSection.lookAtOffset, targetingSpeed);
-        lookAtSection.lookAtConstraint.AddSource(LookAtInterpolator());
-    }
-
-    private ConstraintSource LookAtInterpolator()
-    {
-        ConstraintSource interpolatorSource = new ConstraintSource();
-        interpolatorSource.weight = 1;
-        interpolatorSource.sourceTransform = lookAtSection.lookAtInterpolator.transform;
-        return interpolatorSource;
     }
 
     private void UpdatePathPeriodically()
