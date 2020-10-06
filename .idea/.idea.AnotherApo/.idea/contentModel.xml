@@ -452,21 +452,26 @@
               <e p="UMUGun.cs" t="Include" />
             </e>
             <e p="FootIKOverride.cs" t="Include" />
-            <e p="GameBeatSequencer.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
+            <e p="HitMat" t="Include">
+              <e p="IHitMaterial.cs" t="Include" />
+              <e p="Metal.cs" t="Include" />
+            </e>
             <e p="IDamageable.cs" t="Include" />
-            <e p="IHitMaterial.cs" t="Include" />
             <e p="Lazer.cs" t="Include" />
-            <e p="legotest.cs" t="Include" />
-            <e p="Metal.cs" t="Include" />
-            <e p="MusicMixer.cs" t="Include" />
-            <e p="MusicPart.cs" t="Include" />
-            <e p="MusicRandomizer.cs" t="Include" />
+            <e p="Music" t="Include">
+              <e p="GameBeatSequencer.cs" t="Include" />
+              <e p="legotest.cs" t="Include" />
+              <e p="MusicMixer.cs" t="Include" />
+              <e p="MusicPart.cs" t="Include" />
+              <e p="MusicRandomizer.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
-              <e p="BodyData.cs" t="Include" />
               <e p="CameraCrossHairCaster.cs" t="Include" />
+              <e p="CharacterControllerData.cs" t="Include" />
+              <e p="PlayerAttackController.cs" t="Include" />
               <e p="PlayerCameraBehaviour.cs" t="Include" />
-              <e p="PlayerController.cs" t="Include" />
+              <e p="PlayerCharacterController.cs" t="Include" />
               <e p="PlayerHealth.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="PlayerWeaponHolder.cs" t="Include" />
