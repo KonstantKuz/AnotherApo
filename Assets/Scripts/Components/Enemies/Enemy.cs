@@ -10,7 +10,7 @@ public abstract class Enemy : MonoCached
 
     [HideInInspector] public float verticalMoveValue, horizontalMoveValue;
 
-    protected PlayerController player;
+    protected PlayerCharacterController player;
     
     [Header("Pathfinding")]
     [SerializeField] protected string patgGraphName;
@@ -24,7 +24,7 @@ public abstract class Enemy : MonoCached
     
     public virtual void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerCharacterController>();
     }
 
     protected void UpdatePath(Vector3 currentPathTarget)

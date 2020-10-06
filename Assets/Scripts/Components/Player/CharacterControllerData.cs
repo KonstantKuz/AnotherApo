@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class BodyData
+public class PlayerCharacterControllerCData : CharacterControllerData
 {
-    public Transform bodyAimPivot, mainCrossHair;
     public float movingDamp, movingDeltaTime;
+    public Vector2 bodyAimPivotVerticalClamp;
+}
 
+[System.Serializable]
+public class CharacterControllerData
+{
     public float gravityMultiplier;
     public float movementSpeed;
     public float jumpSpeed;
     public float dashSpeed;
     public float dashDuration;
-    
-    public Vector2 bodyAimPivotVerticalClamp;
-    
-    [HideInInspector] public Vector3 bodyAimPivotPosition;
 }

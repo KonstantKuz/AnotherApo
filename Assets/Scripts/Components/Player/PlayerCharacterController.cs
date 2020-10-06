@@ -3,13 +3,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
-public class PlayerController : MonoBehaviour
+public class PlayerCharacterController : MonoBehaviour
 {
-    [SerializeField] private BodyData bodyData;
-    [SerializeField] private PlayerWeaponHolder weaponHolder;
+    [SerializeField] private Transform aimPivot;
+    [SerializeField] private PlayerCharacterControllerCData controllerData;
     [SerializeField] private Animator animator;
     [SerializeField] private RigBuilder rigBuilder;
-    private CharacterController controller;
+    [SerializeField] private CharacterController controller;
     public Animator Animator
     {
         get => animator;
@@ -18,24 +18,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 movementVelocity;
     private Vector3 dashVelocity;
     private Vector3 verticalVelocity;
-    
-    private Vector3 originalAnimatorLocalPosition;
-    private Quaternion originalAnimatorLocalRotation;
-
-    private void Awake()
-    {
-        controller = GetComponent<CharacterController>();
-
-        originalAnimatorLocalPosition = animator.transform.localPosition;
-        originalAnimatorLocalRotation = animator.transform.localRotation;
-        
-        weaponHolder.gun.SetDamageValue(Constants.DamagePerHit.Player);
-    }
+    private Vector3 bodyAimPivotPosition;
     
     public void OnEnable()
     {
-        // PlayerInput.OnWeaponSwitched += SwitchWeapon;
-        // PlayerInput.OnSwordAttacked += SwordAttack;
         PlayerInput.OnJumped += TryJump;
         PlayerInput.OnDashed += Dash;
         
@@ -43,8 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             if (PlayerInput.Firing)
             {
-                weaponHolder.gun.Fire();
-                UpdateBodyAimPivot(0.05f);
+                AppendAimPivotHeight(0.05f);
             }
         };
     }
@@ -53,25 +38,15 @@ public class PlayerController : MonoBehaviour
     {
         dashVelocity.x = PlayerInput.Horizontal;
         dashVelocity.z = PlayerInput.Vertical;
-        dashVelocity *= bodyData.dashSpeed;
+        dashVelocity *= controllerData.dashSpeed;
 
         StartCoroutine(DelayedResetDashVelocity());
         IEnumerator DelayedResetDashVelocity()
         {
-            yield return new WaitForSeconds(bodyData.dashDuration);
+            yield return new WaitForSeconds(controllerData.dashDuration);
             dashVelocity = Vector3.zero;
         }
     }
-
-    // private void SwitchWeapon(bool Melee)
-    // {
-    //     weaponHolder.SwitchWeapons(Melee);
-    // }
-    //
-    // private void SwordAttack()
-    // {
-    //     animator.SetTrigger(AnimatorHashes.SwordAttackHash);
-    // }
 
     private void TryJump()
     {
@@ -87,7 +62,7 @@ public class PlayerController : MonoBehaviour
         Move();
         ApplyGravity();
         SetInputsToAnimator();
-        UpdateBodyAimPivot(PlayerInput.MouseY);
+        AppendAimPivotHeight(PlayerInput.MouseY);
     }
 
     private void Rotate()
@@ -105,7 +80,7 @@ public class PlayerController : MonoBehaviour
         movementVelocity += dashVelocity;
         
         movementVelocity = transform.TransformDirection(movementVelocity);
-        movementVelocity *= bodyData.movementSpeed;
+        movementVelocity *= controllerData.movementSpeed;
         
         controller.Move(movementVelocity * Time.deltaTime);
     }
@@ -114,14 +89,14 @@ public class PlayerController : MonoBehaviour
     {
         movementVelocity = Vector3.zero;
         movementVelocity = transform.TransformDirection(movementVelocity);
-        movementVelocity *= bodyData.movementSpeed;
+        movementVelocity *= controllerData.movementSpeed;
     }
 
     private void ApplyGravity()
     {
-        verticalVelocity += Physics.gravity * bodyData.gravityMultiplier * Time.deltaTime;
-        verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y * bodyData.gravityMultiplier,
-                                         bodyData.jumpSpeed);
+        verticalVelocity += Physics.gravity * controllerData.gravityMultiplier * Time.deltaTime;
+        verticalVelocity.y = Mathf.Clamp(verticalVelocity.y, Physics.gravity.y * controllerData.gravityMultiplier,
+                                         controllerData.jumpSpeed);
         controller.Move(verticalVelocity * Time.deltaTime);
     }
 
@@ -129,23 +104,25 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool(AnimatorHashes.AimingHash, true);
         
-        animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
-        animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal, bodyData.movingDamp, Time.fixedDeltaTime * bodyData.movingDeltaTime);
+        animator.SetFloat(AnimatorHashes.VerticalHash, PlayerInput.Vertical,
+                          controllerData.movingDamp, Time.fixedDeltaTime * controllerData.movingDeltaTime);
+        animator.SetFloat(AnimatorHashes.HorizontalHash, PlayerInput.Horizontal,
+                          controllerData.movingDamp, Time.fixedDeltaTime * controllerData.movingDeltaTime);
     }
 
-    private void UpdateBodyAimPivot(float appendHeight)
+    private void AppendAimPivotHeight(float appendHeight)
     {
-        bodyData.bodyAimPivotPosition.y += appendHeight;
-        bodyData.bodyAimPivotPosition.y = Mathf.Clamp(bodyData.bodyAimPivotPosition.y,
-                                                      bodyData.bodyAimPivotVerticalClamp.x, 
-                                                      bodyData.bodyAimPivotVerticalClamp.y);
-        bodyData.bodyAimPivotPosition.z = 5f;
-        bodyData.bodyAimPivot.localPosition = bodyData.bodyAimPivotPosition;
+        bodyAimPivotPosition.y += appendHeight;
+        bodyAimPivotPosition.y = Mathf.Clamp(bodyAimPivotPosition.y,
+                                                      controllerData.bodyAimPivotVerticalClamp.x, 
+                                                      controllerData.bodyAimPivotVerticalClamp.y);
+        bodyAimPivotPosition.z = 5f;
+        aimPivot.localPosition = bodyAimPivotPosition;
     }
 
     private void ActualJump()
     {
-        verticalVelocity.y = bodyData.jumpSpeed;
+        verticalVelocity.y = controllerData.jumpSpeed;
         animator.SetTrigger(AnimatorHashes.JumpHash);
         DoActionOnLanding(delegate { animator.SetTrigger(AnimatorHashes.LandingHash); });
     }
