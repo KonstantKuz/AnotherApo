@@ -9,7 +9,7 @@ public class Explosion : MonoBehaviour
     [SerializeField] private CinemachineImpulseSource impulseSource;
     private Collider[] hitColliders;
     
-    public void Explode(LayerMask mask, int damage, float radius = Constants.ExplosionRadius)
+    public void Explode(LayerMask mask, int damage, float radius = Constants.ExplosionRadiusSmall)
     {
         impulseSource.GenerateImpulse(transform.position - Camera.main.transform.position);
         

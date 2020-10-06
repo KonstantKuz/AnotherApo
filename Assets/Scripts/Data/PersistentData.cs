@@ -97,7 +97,8 @@ public class Constants
         public const int UMUBig = -1000;
     }
 
-    public const float ExplosionRadius = 3f;
+    public const float ExplosionRadiusSmall = 4f;
+    public const float ExplosionRadiusBig = 8f;
 
     public const string EmissionProperty = "_EmissionColor";
     public const string EmissionKeyword = "_EMISSION";
