@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 2617122282913621355}
   - component: {fileID: 4685509716385405762}
   m_Layer: 12
-  m_Name: GunPivot_L
+  m_Name: GunPivot_L (GunContainer)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 6284181170804340984}
   - component: {fileID: 4116652008719164581}
   m_Layer: 12
-  m_Name: GunPivot_R
+  m_Name: GunPivot_R (GunContainer)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

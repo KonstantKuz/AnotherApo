@@ -1,45 +1,107 @@
 fileFormatVersion: 2
 guid: 4af1e32194e90bf4a9e95e5a3beb8ea5
-timeCreated: 1519905324
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: Body
-    100002: Body_Mesh
-    100004: //RootNode
-    100006: Gun_Barrel
-    100008: Guns
-    100010: Head
-    100012: P_Body
-    100014: P_Gun_Barrel
-    100016: P_Guns
-    100018: P_Head
-    100020: P_Stand_Guns
-    100022: P_Stand_Head
-    100024: Stand_Guns
-    100026: Stand_Head
-    400000: Body
-    400002: Body_Mesh
-    400004: //RootNode
-    400006: Gun_Barrel
-    400008: Guns
-    400010: Head
-    400012: P_Body
-    400014: P_Gun_Barrel
-    400016: P_Guns
-    400018: P_Head
-    400020: P_Stand_Guns
-    400022: P_Stand_Head
-    400024: Stand_Guns
-    400026: Stand_Head
-    2100000: 02 - Default
-    4300000: Body_Mesh
-    9500000: //RootNode
-    13700000: Body_Mesh
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Body
+  - first:
+      1: 100002
+    second: Body_Mesh
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: Gun_Barrel
+  - first:
+      1: 100008
+    second: Guns
+  - first:
+      1: 100010
+    second: Head
+  - first:
+      1: 100012
+    second: P_Body
+  - first:
+      1: 100014
+    second: P_Gun_Barrel
+  - first:
+      1: 100016
+    second: P_Guns
+  - first:
+      1: 100018
+    second: P_Head
+  - first:
+      1: 100020
+    second: P_Stand_Guns
+  - first:
+      1: 100022
+    second: P_Stand_Head
+  - first:
+      1: 100024
+    second: Stand_Guns
+  - first:
+      1: 100026
+    second: Stand_Head
+  - first:
+      4: 400000
+    second: Body
+  - first:
+      4: 400002
+    second: Body_Mesh
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: Gun_Barrel
+  - first:
+      4: 400008
+    second: Guns
+  - first:
+      4: 400010
+    second: Head
+  - first:
+      4: 400012
+    second: P_Body
+  - first:
+      4: 400014
+    second: P_Gun_Barrel
+  - first:
+      4: 400016
+    second: P_Guns
+  - first:
+      4: 400018
+    second: P_Head
+  - first:
+      4: 400020
+    second: P_Stand_Guns
+  - first:
+      4: 400022
+    second: P_Stand_Head
+  - first:
+      4: 400024
+    second: Stand_Guns
+  - first:
+      4: 400026
+    second: Stand_Head
+  - first:
+      21: 2100000
+    second: 02 - Default
+  - first:
+      43: 4300000
+    second: Body_Mesh
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body_Mesh
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -56,6 +118,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -70,6 +133,8 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -77,10 +142,13 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -92,10 +160,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -105,14 +176,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    globalScale: 1
+    rootMotionBoneName: P_Body
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
