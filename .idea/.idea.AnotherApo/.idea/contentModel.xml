@@ -428,7 +428,6 @@
             </e>
           </e>
         </e>
-        <e p="PeaceDron.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -472,6 +471,7 @@
             <e p="Enemies" t="Include">
               <e p="Durashka.cs" t="Include" />
               <e p="Enemy.cs" t="Include" />
+              <e p="PeaceDron.cs" t="Include" />
               <e p="Spiderast.cs" t="Include" />
               <e p="TargetInterpolator.cs" t="Include" />
               <e p="UMUBot.cs" t="Include" />
@@ -495,6 +495,7 @@
               <e p="MusicPart.cs" t="Include" />
               <e p="MusicRandomizer.cs" t="Include" />
             </e>
+            <e p="PitchRandomizer.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="CameraCrossHairCaster.cs" t="Include" />
               <e p="CharacterControllerData.cs" t="Include" />

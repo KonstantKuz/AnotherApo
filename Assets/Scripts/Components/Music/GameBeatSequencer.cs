@@ -41,8 +41,9 @@ public class GameBeatSequencer : MonoBehaviour
         beatDriver.SetBpm(currentTrackBPM);
     }
 
-    private void GenerateRandomBeats()
+    public void GenerateRandomBeats()
     {
+        Debug.Log("Generate beat");
         GenerateBeatOn(generalBeat, 0.2f, 0.2f);
         GenerateBeatOn(durashkaBeat, 0.4f, 0.2f);
         GenerateBeatOn(umuBeat, 0.2f, 0.4f);

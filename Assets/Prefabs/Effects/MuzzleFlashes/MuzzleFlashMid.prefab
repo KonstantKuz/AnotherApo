@@ -149,6 +149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3029640366102865253}
+  - component: {fileID: -5323959775271422285}
   - component: {fileID: 8485823836927451180}
   m_Layer: 0
   m_Name: MuzzleFlashMid
@@ -174,6 +175,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5323959775271422285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029640366102612357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc8b94e928a34e4c9a031cbec249bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: {x: 0.8, y: 1.2}
+  source: {fileID: 7413639158815608706, guid: 04ebe36532a73354eb52cd92771f060d, type: 3}
 --- !u!82 &8485823836927451180
 AudioSource:
   m_ObjectHideFlags: 0
