@@ -478,6 +478,7 @@
               <e p="UMUBotAnimationEventsHandler.cs" t="Include" />
               <e p="UMUGun.cs" t="Include" />
             </e>
+            <e p="EnemySpawner.cs" t="Include" />
             <e p="Explosion.cs" t="Include" />
             <e p="FootIKOverride.cs" t="Include" />
             <e p="Gun.cs" t="Include" />

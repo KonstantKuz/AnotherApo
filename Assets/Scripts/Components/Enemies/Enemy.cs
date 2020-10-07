@@ -123,6 +123,11 @@ public abstract class Enemy : MonoCached
     {
         
     }
+
+    public virtual void ResetEnemy()
+    {
+        
+    }
     
     public virtual void OnDrawGizmos()
     {

@@ -62,6 +62,8 @@ public class LayerMasks
 
 public class Constants
 {
+    public const string PoolGroupEnemies = "Enemies";
+    
     public const string PoolBulletTrail = "BulletTrail";
     
     public const string PoolFlashSmall = "MuzzleFlashSmall";
