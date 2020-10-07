@@ -340,6 +340,18 @@
               </e>
             </e>
           </e>
+          <e p="PBR_Military_Pack" t="Include">
+            <e p="PBR_Drone" t="Include">
+              <e p="Description_Dron.txt" t="Include" />
+              <e p="Effects" t="Include">
+                <e p="FX" t="Include">
+                  <e p="Script" t="Include">
+                    <e p="LightCurves.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Templates" t="Include">
             <e p="ObjectPooler" t="Include">
               <e p="Core" t="Include">
@@ -416,7 +428,6 @@
             </e>
           </e>
         </e>
-        <e p="Explosion.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -466,6 +477,7 @@
               <e p="UMUBotAnimationEventsHandler.cs" t="Include" />
               <e p="UMUGun.cs" t="Include" />
             </e>
+            <e p="Explosion.cs" t="Include" />
             <e p="FootIKOverride.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="HitMat" t="Include">

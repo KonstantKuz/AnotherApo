@@ -1,581 +1,203 @@
 fileFormatVersion: 2
-guid: 1ee2e74d8bd00af40a8f906311e6ffa3
+guid: 5cf9ec5e9e20ac244a22718760e4c201
+timeCreated: 1519284999
+licenseType: Store
 ModelImporter:
-  serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: Armor_Mesh01
-  - first:
-      1: 100002
-    second: Armor_Mesh02
-  - first:
-      1: 100004
-    second: Bags_Mesh
-  - first:
-      1: 100006
-    second: Bags_Mini_Mesh
-  - first:
-      1: 100008
-    second: Body_Mesh
-  - first:
-      1: 100010
-    second: Calf_L
-  - first:
-      1: 100012
-    second: Calf_R
-  - first:
-      1: 100014
-    second: Clavicle_L
-  - first:
-      1: 100016
-    second: Clavicle_R
-  - first:
-      1: 100018
-    second: Foot_L
-  - first:
-      1: 100020
-    second: Foot_R
-  - first:
-      1: 100022
-    second: Hand_L
-  - first:
-      1: 100024
-    second: Hand_R
-  - first:
-      1: 100026
-    second: Head
-  - first:
-      1: 100028
-    second: Head01_Mesh
-  - first:
-      1: 100030
-    second: Head02_Mesh
-  - first:
-      1: 100032
-    second: Head03_Mesh
-  - first:
-      1: 100034
-    second: Head04_Mesh
-  - first:
-      1: 100036
-    second: Head05_Mesh
-  - first:
-      1: 100038
-    second: Head06_Mesh
-  - first:
-      1: 100040
-    second: Head07_Mesh
-  - first:
-      1: 100042
-    second: Head08_Mesh
-  - first:
-      1: 100044
-    second: Head_End
-  - first:
-      1: 100046
-    second: Index_01_L
-  - first:
-      1: 100048
-    second: Index_01_R
-  - first:
-      1: 100050
-    second: Index_02_L
-  - first:
-      1: 100052
-    second: Index_02_R
-  - first:
-      1: 100054
-    second: Index_03_L
-  - first:
-      1: 100056
-    second: Index_03_R
-  - first:
-      1: 100058
-    second: Index_End_L
-  - first:
-      1: 100060
-    second: Index_End_R
-  - first:
-      1: 100062
-    second: lowerarm_l
-  - first:
-      1: 100064
-    second: lowerarm_R
-  - first:
-      1: 100066
-    second: Middle_01_L
-  - first:
-      1: 100068
-    second: Middle_01_R
-  - first:
-      1: 100070
-    second: Middle_02_L
-  - first:
-      1: 100072
-    second: Middle_02_R
-  - first:
-      1: 100074
-    second: Middle_03_L
-  - first:
-      1: 100076
-    second: Middle_03_R
-  - first:
-      1: 100078
-    second: Middle_End_L
-  - first:
-      1: 100080
-    second: Middle_End_R
-  - first:
-      1: 100082
-    second: Neck_01
-  - first:
-      1: 100084
-    second: Pelvis
-  - first:
-      1: 100086
-    second: Pinky_01_L
-  - first:
-      1: 100088
-    second: Pinky_01_R
-  - first:
-      1: 100090
-    second: Pinky_02_L
-  - first:
-      1: 100092
-    second: Pinky_02_R
-  - first:
-      1: 100094
-    second: Pinky_03_L
-  - first:
-      1: 100096
-    second: Pinky_03_R
-  - first:
-      1: 100098
-    second: Pinky_End_L
-  - first:
-      1: 100100
-    second: Pinky_End_R
-  - first:
-      1: 100102
-    second: Point_Root
-  - first:
-      1: 100104
-    second: Ring_01_L
-  - first:
-      1: 100106
-    second: Ring_01_R
-  - first:
-      1: 100108
-    second: Ring_02_L
-  - first:
-      1: 100110
-    second: Ring_02_R
-  - first:
-      1: 100112
-    second: Ring_03_L
-  - first:
-      1: 100114
-    second: Ring_03_R
-  - first:
-      1: 100116
-    second: Ring_End_L
-  - first:
-      1: 100118
-    second: Ring_End_R
-  - first:
-      1: 100120
-    second: Root
-  - first:
-      1: 100122
-    second: //RootNode
-  - first:
-      1: 100124
-    second: Spine_01
-  - first:
-      1: 100126
-    second: Spine_02
-  - first:
-      1: 100128
-    second: Spine_03
-  - first:
-      1: 100130
-    second: Thigh_L
-  - first:
-      1: 100132
-    second: Thigh_R
-  - first:
-      1: 100134
-    second: Thumb_01_L
-  - first:
-      1: 100136
-    second: Thumb_01_R
-  - first:
-      1: 100138
-    second: Thumb_02_L
-  - first:
-      1: 100140
-    second: Thumb_02_R
-  - first:
-      1: 100142
-    second: Thumb_03_L
-  - first:
-      1: 100144
-    second: Thumb_03_R
-  - first:
-      1: 100146
-    second: Thumb_End_L
-  - first:
-      1: 100148
-    second: Thumb_End_R
-  - first:
-      1: 100150
-    second: Toe_ L
-  - first:
-      1: 100152
-    second: Toe_ R
-  - first:
-      1: 100154
-    second: Toe_End_ L
-  - first:
-      1: 100156
-    second: Toe_End_ R
-  - first:
-      1: 100158
-    second: UpperArm_L
-  - first:
-      1: 100160
-    second: UpperArm_R
-  - first:
-      4: 400000
-    second: Armor_Mesh01
-  - first:
-      4: 400002
-    second: Armor_Mesh02
-  - first:
-      4: 400004
-    second: Bags_Mesh
-  - first:
-      4: 400006
-    second: Bags_Mini_Mesh
-  - first:
-      4: 400008
-    second: Body_Mesh
-  - first:
-      4: 400010
-    second: Calf_L
-  - first:
-      4: 400012
-    second: Calf_R
-  - first:
-      4: 400014
-    second: Clavicle_L
-  - first:
-      4: 400016
-    second: Clavicle_R
-  - first:
-      4: 400018
-    second: Foot_L
-  - first:
-      4: 400020
-    second: Foot_R
-  - first:
-      4: 400022
-    second: Hand_L
-  - first:
-      4: 400024
-    second: Hand_R
-  - first:
-      4: 400026
-    second: Head
-  - first:
-      4: 400028
-    second: Head01_Mesh
-  - first:
-      4: 400030
-    second: Head02_Mesh
-  - first:
-      4: 400032
-    second: Head03_Mesh
-  - first:
-      4: 400034
-    second: Head04_Mesh
-  - first:
-      4: 400036
-    second: Head05_Mesh
-  - first:
-      4: 400038
-    second: Head06_Mesh
-  - first:
-      4: 400040
-    second: Head07_Mesh
-  - first:
-      4: 400042
-    second: Head08_Mesh
-  - first:
-      4: 400044
-    second: Head_End
-  - first:
-      4: 400046
-    second: Index_01_L
-  - first:
-      4: 400048
-    second: Index_01_R
-  - first:
-      4: 400050
-    second: Index_02_L
-  - first:
-      4: 400052
-    second: Index_02_R
-  - first:
-      4: 400054
-    second: Index_03_L
-  - first:
-      4: 400056
-    second: Index_03_R
-  - first:
-      4: 400058
-    second: Index_End_L
-  - first:
-      4: 400060
-    second: Index_End_R
-  - first:
-      4: 400062
-    second: lowerarm_l
-  - first:
-      4: 400064
-    second: lowerarm_R
-  - first:
-      4: 400066
-    second: Middle_01_L
-  - first:
-      4: 400068
-    second: Middle_01_R
-  - first:
-      4: 400070
-    second: Middle_02_L
-  - first:
-      4: 400072
-    second: Middle_02_R
-  - first:
-      4: 400074
-    second: Middle_03_L
-  - first:
-      4: 400076
-    second: Middle_03_R
-  - first:
-      4: 400078
-    second: Middle_End_L
-  - first:
-      4: 400080
-    second: Middle_End_R
-  - first:
-      4: 400082
-    second: Neck_01
-  - first:
-      4: 400084
-    second: Pelvis
-  - first:
-      4: 400086
-    second: Pinky_01_L
-  - first:
-      4: 400088
-    second: Pinky_01_R
-  - first:
-      4: 400090
-    second: Pinky_02_L
-  - first:
-      4: 400092
-    second: Pinky_02_R
-  - first:
-      4: 400094
-    second: Pinky_03_L
-  - first:
-      4: 400096
-    second: Pinky_03_R
-  - first:
-      4: 400098
-    second: Pinky_End_L
-  - first:
-      4: 400100
-    second: Pinky_End_R
-  - first:
-      4: 400102
-    second: Point_Root
-  - first:
-      4: 400104
-    second: Ring_01_L
-  - first:
-      4: 400106
-    second: Ring_01_R
-  - first:
-      4: 400108
-    second: Ring_02_L
-  - first:
-      4: 400110
-    second: Ring_02_R
-  - first:
-      4: 400112
-    second: Ring_03_L
-  - first:
-      4: 400114
-    second: Ring_03_R
-  - first:
-      4: 400116
-    second: Ring_End_L
-  - first:
-      4: 400118
-    second: Ring_End_R
-  - first:
-      4: 400120
-    second: Root
-  - first:
-      4: 400122
-    second: //RootNode
-  - first:
-      4: 400124
-    second: Spine_01
-  - first:
-      4: 400126
-    second: Spine_02
-  - first:
-      4: 400128
-    second: Spine_03
-  - first:
-      4: 400130
-    second: Thigh_L
-  - first:
-      4: 400132
-    second: Thigh_R
-  - first:
-      4: 400134
-    second: Thumb_01_L
-  - first:
-      4: 400136
-    second: Thumb_01_R
-  - first:
-      4: 400138
-    second: Thumb_02_L
-  - first:
-      4: 400140
-    second: Thumb_02_R
-  - first:
-      4: 400142
-    second: Thumb_03_L
-  - first:
-      4: 400144
-    second: Thumb_03_R
-  - first:
-      4: 400146
-    second: Thumb_End_L
-  - first:
-      4: 400148
-    second: Thumb_End_R
-  - first:
-      4: 400150
-    second: Toe_ L
-  - first:
-      4: 400152
-    second: Toe_ R
-  - first:
-      4: 400154
-    second: Toe_End_ L
-  - first:
-      4: 400156
-    second: Toe_End_ R
-  - first:
-      4: 400158
-    second: UpperArm_L
-  - first:
-      4: 400160
-    second: UpperArm_R
-  - first:
-      21: 2100000
-    second: 09 - Default
-  - first:
-      43: 4300000
-    second: Body_Mesh
-  - first:
-      43: 4300002
-    second: Bags_Mesh
-  - first:
-      43: 4300004
-    second: Armor_Mesh01
-  - first:
-      43: 4300006
-    second: Armor_Mesh02
-  - first:
-      43: 4300008
-    second: Head01_Mesh
-  - first:
-      43: 4300010
-    second: Head02_Mesh
-  - first:
-      43: 4300012
-    second: Head03_Mesh
-  - first:
-      43: 4300014
-    second: Head04_Mesh
-  - first:
-      43: 4300016
-    second: Head05_Mesh
-  - first:
-      43: 4300018
-    second: Head07_Mesh
-  - first:
-      43: 4300020
-    second: Head08_Mesh
-  - first:
-      43: 4300022
-    second: Head06_Mesh
-  - first:
-      43: 4300024
-    second: Bags_Mini_Mesh
-  - first:
-      95: 9500000
-    second: //RootNode
-  - first:
-      137: 13700000
-    second: Armor_Mesh01
-  - first:
-      137: 13700002
-    second: Armor_Mesh02
-  - first:
-      137: 13700004
-    second: Bags_Mesh
-  - first:
-      137: 13700006
-    second: Bags_Mini_Mesh
-  - first:
-      137: 13700008
-    second: Body_Mesh
-  - first:
-      137: 13700010
-    second: Head01_Mesh
-  - first:
-      137: 13700012
-    second: Head02_Mesh
-  - first:
-      137: 13700014
-    second: Head03_Mesh
-  - first:
-      137: 13700016
-    second: Head04_Mesh
-  - first:
-      137: 13700018
-    second: Head05_Mesh
-  - first:
-      137: 13700020
-    second: Head06_Mesh
-  - first:
-      137: 13700022
-    second: Head07_Mesh
-  - first:
-      137: 13700024
-    second: Head08_Mesh
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armor_Mesh01
+    100002: Armor_Mesh02
+    100004: Bags_Mesh
+    100006: Bags_Mini_Mesh
+    100008: Body_Mesh
+    100010: Calf_L
+    100012: Calf_R
+    100014: Clavicle_L
+    100016: Clavicle_R
+    100018: Foot_L
+    100020: Foot_R
+    100022: Hand_L
+    100024: Hand_R
+    100026: Head
+    100028: Head01_Mesh
+    100030: Head02_Mesh
+    100032: Head03_Mesh
+    100034: Head04_Mesh
+    100036: Head05_Mesh
+    100038: Head06_Mesh
+    100040: Head07_Mesh
+    100042: Head08_Mesh
+    100044: Head_End
+    100046: Index_01_L
+    100048: Index_01_R
+    100050: Index_02_L
+    100052: Index_02_R
+    100054: Index_03_L
+    100056: Index_03_R
+    100058: Index_End_L
+    100060: Index_End_R
+    100062: lowerarm_l
+    100064: lowerarm_R
+    100066: Middle_01_L
+    100068: Middle_01_R
+    100070: Middle_02_L
+    100072: Middle_02_R
+    100074: Middle_03_L
+    100076: Middle_03_R
+    100078: Middle_End_L
+    100080: Middle_End_R
+    100082: Neck_01
+    100084: Pelvis
+    100086: Pinky_01_L
+    100088: Pinky_01_R
+    100090: Pinky_02_L
+    100092: Pinky_02_R
+    100094: Pinky_03_L
+    100096: Pinky_03_R
+    100098: Pinky_End_L
+    100100: Pinky_End_R
+    100102: Point_Root
+    100104: Ring_01_L
+    100106: Ring_01_R
+    100108: Ring_02_L
+    100110: Ring_02_R
+    100112: Ring_03_L
+    100114: Ring_03_R
+    100116: Ring_End_L
+    100118: Ring_End_R
+    100120: Root
+    100122: //RootNode
+    100124: Spine_01
+    100126: Spine_02
+    100128: Spine_03
+    100130: Thigh_L
+    100132: Thigh_R
+    100134: Thumb_01_L
+    100136: Thumb_01_R
+    100138: Thumb_02_L
+    100140: Thumb_02_R
+    100142: Thumb_03_L
+    100144: Thumb_03_R
+    100146: Thumb_End_L
+    100148: Thumb_End_R
+    100150: Toe_ L
+    100152: Toe_ R
+    100154: Toe_End_ L
+    100156: Toe_End_ R
+    100158: UpperArm_L
+    100160: UpperArm_R
+    400000: Armor_Mesh01
+    400002: Armor_Mesh02
+    400004: Bags_Mesh
+    400006: Bags_Mini_Mesh
+    400008: Body_Mesh
+    400010: Calf_L
+    400012: Calf_R
+    400014: Clavicle_L
+    400016: Clavicle_R
+    400018: Foot_L
+    400020: Foot_R
+    400022: Hand_L
+    400024: Hand_R
+    400026: Head
+    400028: Head01_Mesh
+    400030: Head02_Mesh
+    400032: Head03_Mesh
+    400034: Head04_Mesh
+    400036: Head05_Mesh
+    400038: Head06_Mesh
+    400040: Head07_Mesh
+    400042: Head08_Mesh
+    400044: Head_End
+    400046: Index_01_L
+    400048: Index_01_R
+    400050: Index_02_L
+    400052: Index_02_R
+    400054: Index_03_L
+    400056: Index_03_R
+    400058: Index_End_L
+    400060: Index_End_R
+    400062: lowerarm_l
+    400064: lowerarm_R
+    400066: Middle_01_L
+    400068: Middle_01_R
+    400070: Middle_02_L
+    400072: Middle_02_R
+    400074: Middle_03_L
+    400076: Middle_03_R
+    400078: Middle_End_L
+    400080: Middle_End_R
+    400082: Neck_01
+    400084: Pelvis
+    400086: Pinky_01_L
+    400088: Pinky_01_R
+    400090: Pinky_02_L
+    400092: Pinky_02_R
+    400094: Pinky_03_L
+    400096: Pinky_03_R
+    400098: Pinky_End_L
+    400100: Pinky_End_R
+    400102: Point_Root
+    400104: Ring_01_L
+    400106: Ring_01_R
+    400108: Ring_02_L
+    400110: Ring_02_R
+    400112: Ring_03_L
+    400114: Ring_03_R
+    400116: Ring_End_L
+    400118: Ring_End_R
+    400120: Root
+    400122: //RootNode
+    400124: Spine_01
+    400126: Spine_02
+    400128: Spine_03
+    400130: Thigh_L
+    400132: Thigh_R
+    400134: Thumb_01_L
+    400136: Thumb_01_R
+    400138: Thumb_02_L
+    400140: Thumb_02_R
+    400142: Thumb_03_L
+    400144: Thumb_03_R
+    400146: Thumb_End_L
+    400148: Thumb_End_R
+    400150: Toe_ L
+    400152: Toe_ R
+    400154: Toe_End_ L
+    400156: Toe_End_ R
+    400158: UpperArm_L
+    400160: UpperArm_R
+    2100000: 09 - Default
+    4300000: Body_Mesh
+    4300002: Bags_Mesh
+    4300004: Armor_Mesh01
+    4300006: Armor_Mesh02
+    4300008: Head01_Mesh
+    4300010: Head02_Mesh
+    4300012: Head03_Mesh
+    4300014: Head04_Mesh
+    4300016: Head05_Mesh
+    4300018: Head07_Mesh
+    4300020: Head08_Mesh
+    4300022: Head06_Mesh
+    4300024: Bags_Mini_Mesh
+    9500000: //RootNode
+    13700000: Armor_Mesh01
+    13700002: Armor_Mesh02
+    13700004: Bags_Mesh
+    13700006: Bags_Mini_Mesh
+    13700008: Body_Mesh
+    13700010: Head01_Mesh
+    13700012: Head02_Mesh
+    13700014: Head03_Mesh
+    13700016: Head04_Mesh
+    13700018: Head05_Mesh
+    13700020: Head06_Mesh
+    13700022: Head07_Mesh
+    13700024: Head08_Mesh
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -592,7 +214,6 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -607,8 +228,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -616,14 +235,11 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -634,13 +250,10 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
+  copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human:
     - boneName: Pelvis
       humanName: Hips
@@ -698,7 +311,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Spine_02
+    - boneName: Spine_01
       humanName: Spine
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -706,7 +319,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Spine_03
+    - boneName: Spine_02
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1042,7 +655,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Neck_01
+    - boneName: Spine_03
       humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1050,79 +663,87 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: Neck_01
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
-    - name: Soldier 1(Clone)
+    - name: Soldier(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Armor_Mesh01
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000016023238, y: 0.84597397, z: 0.0454269}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Armor_Mesh02
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000010910297, y: 0.3084089, z: 0.02032031}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Bags_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: 0.000021029035, y: 1.0409166, z: -0.13753945}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Bags_Mini_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: 0.000021029035, y: 1.0409166, z: -0.13753945}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Body_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000008409638, y: 0.8737367, z: 0.007856035}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head01_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000010053872, y: 1.7255762, z: 0.016236238}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head02_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000012335959, y: 1.741503, z: 0.027062759}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head03_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: 0.0065809493, y: 1.720448, z: 0.0010880375}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head04_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000012460551, y: 1.7383056, z: 0.02789502}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head05_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.0000031949626, y: 1.7012765, z: -0.017861446}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head06_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.0000041492376, y: 1.7028689, z: -0.01315238}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head07_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.0000064262003, y: 1.7133672, z: -0.0019162464}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Head08_Mesh
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0.000003836369, y: 1.7182604, z: -0.014696293}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Point_Root
-      parentName: Soldier 1(Clone)
+      parentName: Soldier(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
@@ -1465,16 +1086,14 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

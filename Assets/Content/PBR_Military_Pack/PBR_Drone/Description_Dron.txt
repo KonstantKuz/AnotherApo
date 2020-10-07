@@ -1,0 +1,2 @@
+To use the effects, you need to open the folder with effect and add the prefab to the model of the drones in the hierarchy to the bone of the Guns.
+Other effect I

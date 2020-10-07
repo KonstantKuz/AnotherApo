@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: ef6eeaa4c5ccba44f9cb6c4c72367729
+timeCreated: 1520536222
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Body_mesh
+    100004: Details_mesh
+    100006: Group006
+    100008: Hub_back_L_mesh
+    100010: Hub_back_R_mesh
+    100012: Hub_front_L_mesh
+    100014: Hub_front_R_mesh
+    100016: Object405
+    100018: Object490
+    100020: Object503
+    100022: Weapon_Body_mesh
+    100024: Weapon_Stand_2_mesh
+    100026: Weapon_Stand_mesh
+    100028: Weapon_Trunk_mesh_L
+    100030: Weapon_Trunk_mesh_R
+    100032: Wheel_back_L_mesh
+    100034: Wheel_back_R_mesh
+    100036: Wheel_front_L_mesh
+    100038: Wheel_front_R_mesh
+    400000: //RootNode
+    400002: Body_mesh
+    400004: Details_mesh
+    400006: Group006
+    400008: Hub_back_L_mesh
+    400010: Hub_back_R_mesh
+    400012: Hub_front_L_mesh
+    400014: Hub_front_R_mesh
+    400016: Object405
+    400018: Object490
+    400020: Object503
+    400022: Weapon_Body_mesh
+    400024: Weapon_Stand_2_mesh
+    400026: Weapon_Stand_mesh
+    400028: Weapon_Trunk_mesh_L
+    400030: Weapon_Trunk_mesh_R
+    400032: Wheel_back_L_mesh
+    400034: Wheel_back_R_mesh
+    400036: Wheel_front_L_mesh
+    400038: Wheel_front_R_mesh
+    2100000: 15 - Default
+    2300000: Body_mesh
+    2300002: Details_mesh
+    2300004: Hub_back_L_mesh
+    2300006: Hub_back_R_mesh
+    2300008: Hub_front_L_mesh
+    2300010: Hub_front_R_mesh
+    2300012: Object405
+    2300014: Weapon_Body_mesh
+    2300016: Weapon_Stand_2_mesh
+    2300018: Weapon_Stand_mesh
+    2300020: Weapon_Trunk_mesh_L
+    2300022: Weapon_Trunk_mesh_R
+    2300024: Wheel_back_L_mesh
+    2300026: Wheel_back_R_mesh
+    2300028: Wheel_front_L_mesh
+    2300030: Wheel_front_R_mesh
+    3300000: Body_mesh
+    3300002: Details_mesh
+    3300004: Hub_back_L_mesh
+    3300006: Hub_back_R_mesh
+    3300008: Hub_front_L_mesh
+    3300010: Hub_front_R_mesh
+    3300012: Object405
+    3300014: Weapon_Body_mesh
+    3300016: Weapon_Stand_2_mesh
+    3300018: Weapon_Stand_mesh
+    3300020: Weapon_Trunk_mesh_L
+    3300022: Weapon_Trunk_mesh_R
+    3300024: Wheel_back_L_mesh
+    3300026: Wheel_back_R_mesh
+    3300028: Wheel_front_L_mesh
+    3300030: Wheel_front_R_mesh
+    4300000: Body_mesh
+    4300002: Weapon_Stand_mesh
+    4300004: Object405
+    4300006: Details_mesh
+    4300008: Wheel_back_L_mesh
+    4300010: Wheel_back_R_mesh
+    4300012: Wheel_front_L_mesh
+    4300014: Wheel_front_R_mesh
+    4300016: Hub_back_L_mesh
+    4300018: Hub_back_R_mesh
+    4300020: Hub_front_R_mesh
+    4300022: Hub_front_L_mesh
+    4300024: Weapon_Body_mesh
+    4300026: Weapon_Stand_2_mesh
+    4300028: Weapon_Trunk_mesh_L
+    4300030: Weapon_Trunk_mesh_R
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
