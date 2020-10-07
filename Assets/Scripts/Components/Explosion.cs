@@ -11,7 +11,7 @@ public class Explosion : MonoBehaviour
     
     public void Explode(LayerMask mask, int damage, float radius = Constants.ExplosionRadiusSmall)
     {
-        impulseSource.GenerateImpulse(transform.position - Camera.main.transform.position);
+        impulseSource.GenerateImpulse();
         
         hitColliders = Physics.OverlapSphere(transform.position, radius, mask);
         for (int i = 0; i < hitColliders.Length; i++)
@@ -20,6 +20,7 @@ public class Explosion : MonoBehaviour
             {
                 float minDamage = damage;
                 float damageMultiplierByDistance =
+                    //(radius * radius) / (transform.position - hitColliders[i].transform.position).sqrMagnitude;
                     radius / (transform.position - hitColliders[i].transform.position).magnitude;
                 float resultDamage = minDamage * damageMultiplierByDistance;
                 damageable.TakeDamage((int)resultDamage);
