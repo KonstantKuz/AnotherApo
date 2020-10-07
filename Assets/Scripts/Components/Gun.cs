@@ -65,14 +65,26 @@ public class Gun : MonoCached
 
     private void CheckForHitReaction()
     {
-        IHitMaterial[] materials = actualCaster.Hit.transform.GetComponents<IHitMaterial>();
-        if (materials != null)
+        for (int i = 0; i < actualCaster.AllHits.Length; i++)
         {
-            for (int i = 0; i < materials.Length; i++)
+            IHitMaterial[] materials = actualCaster.AllHits[i].transform.GetComponents<IHitMaterial>();
+            if (materials != null)
             {
-                materials[i].SpawnHitReaction(actualCaster.Hit.point, actualCaster.Hit.normal);
+                for (int j = 0; j < materials.Length; j++)
+                {
+                    materials[j].SpawnHitReaction(actualCaster.AllHits[i].point, actualCaster.AllHits[i].normal);
+                }
             }
         }
+        
+        // IHitMaterial[] materials = actualCaster.Hit.transform.GetComponents<IHitMaterial>();
+        // if (materials != null)
+        // {
+        //     for (int i = 0; i < materials.Length; i++)
+        //     {
+        //         materials[i].SpawnHitReaction(actualCaster.Hit.point, actualCaster.Hit.normal);
+        //     }
+        // }
         
         // if (actualCaster.Hit.transform.TryGetComponent(out IHitMaterial material))
         // {

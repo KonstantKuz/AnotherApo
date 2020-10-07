@@ -309,7 +309,6 @@ GameObject:
   - component: {fileID: 6020565246720113432}
   - component: {fileID: 3584214500817115894}
   - component: {fileID: 7131630240983435108}
-  - component: {fileID: 6019359124124368378}
   m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
@@ -348,12 +347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71bbdcf9608c5d6478632c6b1d9f7200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trail: 1
   mask:
     serializedVersion: 2
     m_Bits: 0
+  trail: 1
   actualCaster: {fileID: 6019359124376139862}
-  rateoffire: 0.1
 --- !u!65 &3584214500817115894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -383,18 +381,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6019359124124368378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6020565246720113433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48948dfe9d76b07488dacd46a7955fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6020705012302695223
 GameObject:
   m_ObjectHideFlags: 0

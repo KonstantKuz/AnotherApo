@@ -73,6 +73,8 @@ public class Constants
     public const string PoolHitGroundSmall = "HitGroundSmall";
     public const string PoolHitMetal = "HitMetal";
 
+    public const string PoolSmokeStream = "SmokeStream";
+
     public class TotalHealth
     {
         public const int Player = 50000;

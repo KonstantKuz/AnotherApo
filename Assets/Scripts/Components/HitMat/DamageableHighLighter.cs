@@ -7,7 +7,7 @@ public class DamageableHighLighter : MonoCached, IHitMaterial
 {
     [SerializeField] private Renderer[] highLightableRenderers;
 
-    private int highLightCount;
+    private bool highLighted;
     private List<Color> startColors;
 
     private void Start()
@@ -22,7 +22,7 @@ public class DamageableHighLighter : MonoCached, IHitMaterial
     
     public void SpawnHitReaction(Vector3 position, Vector3 normal)
     {
-        if (highLightCount > 3)
+        if (highLighted)
             return;
         
         StartCoroutine(HighLight());
@@ -38,7 +38,7 @@ public class DamageableHighLighter : MonoCached, IHitMaterial
                 highLightableRenderers[i].material.DOColor(startColors[i], Constants.EmissionProperty, 0.5f);
             }
             yield return new WaitForSeconds(0.5f);
-            highLightCount++;
+            highLighted = true;
         }
     }
 }

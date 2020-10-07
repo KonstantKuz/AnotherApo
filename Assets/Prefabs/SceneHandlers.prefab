@@ -764,6 +764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
+  - {fileID: 11400000, guid: 70eed30c0906f3440b842c992b2015ff, type: 2}
   - {fileID: 11400000, guid: 12eac12c66e453f438d2915299103371, type: 2}
   - {fileID: 11400000, guid: ddb1096b0eb269b4b9fbbbaa6dce476e, type: 2}
   - {fileID: 11400000, guid: 601504e8bf7fe264787936dc008852a4, type: 2}

@@ -9,10 +9,14 @@ public class CrossHairCaster : MonoCached
     [SerializeField] private Transform crossHair;
     protected Ray ray;
     private RaycastHit hit;
-
+    private RaycastHit[] allHits;
     public RaycastHit Hit
     {
         get { return hit; }
+    }
+    public RaycastHit[] AllHits
+    {
+        get { return allHits; }
     }
 
     public Action<Vector3> OnCrossHairUpdated;
@@ -37,6 +41,8 @@ public class CrossHairCaster : MonoCached
 
     public virtual void CastCrossHair()
     {
+        allHits = Physics.RaycastAll(ray, maxDistance);
+        
         if(Physics.Raycast(ray, out hit, maxDistance))
         {
             crossHair.position = hit.point;

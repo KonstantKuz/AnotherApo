@@ -13,6 +13,7 @@ public class UMUGun : Gun, IDamageable
     public int TotalHealth { get; private set; }
 
     private int currentBarrel;
+    private GameObject smokeStream;
     
     public void Start()
     {
@@ -71,6 +72,8 @@ public class UMUGun : Gun, IDamageable
     public void TakeDamage(int value)
     {
         TotalHealth -= value;
+        TrySpawnDamagedSignalEffect();
+        
         if (TotalHealth > 0)
         {
             return;
@@ -79,8 +82,18 @@ public class UMUGun : Gun, IDamageable
         UnsubscribeFromBeat();
         OnFullDamaged();
         SpawnHealExplosions();
-        
+        ReturnDamagedSignalToPool();
         gameObject.SetActive(false);
+    }
+
+    private void TrySpawnDamagedSignalEffect()
+    {
+        if (TotalHealth < Constants.TotalHealth.UMUGun * 0.3f && smokeStream == null)
+        {
+            smokeStream =
+                ObjectPooler.Instance.SpawnObject(Constants.PoolSmokeStream, transform.position, Quaternion.identity);
+            smokeStream.transform.SetParent(transform);
+        }
     }
 
     private void SpawnHealExplosions()
@@ -92,5 +105,11 @@ public class UMUGun : Gun, IDamageable
         
         fwdExplosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
         bwdExplosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
+    }
+
+    private void ReturnDamagedSignalToPool()
+    {
+        smokeStream.transform.SetParent(null);
+        ObjectPooler.Instance.ReturnObject(smokeStream.gameObject, smokeStream.gameObject.name);
     }
 }
