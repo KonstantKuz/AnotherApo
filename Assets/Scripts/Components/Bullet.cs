@@ -8,7 +8,8 @@ public class Bullet : MonoCached
 
     public override void CustomFixedUpdate()
     {
-        if (Physics.Raycast(transform.position, transform.forward, 2f))
+        if (Physics.Raycast(transform.position+transform.forward*5, transform.forward, 4)
+        || Physics.Raycast(transform.position+transform.forward*5, -transform.forward, 4))
         {
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }

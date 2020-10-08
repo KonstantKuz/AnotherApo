@@ -19,6 +19,7 @@ public class Durashka : Enemy, IDamageable
     
     [Header("Targeting")]
     [SerializeField] private Gun gun;
+    [SerializeField] private Transform gunPlace;
     [SerializeField] private float targetingSpeed;
     [SerializeField] private TargetInterpolator targetInterpolator;
     [SerializeField] private LookAtConstraint[] targetingConstraints;
@@ -28,35 +29,50 @@ public class Durashka : Enemy, IDamageable
     private Vector3 movementVelocity;
     private Vector3 verticalVelocity;
     private Vector3 dashVelocity;
-    
-    public int TotalHealth { get; private set; }
 
-    public override void Start()
+    public int TotalHealth { get; private set; }
+    
+    public override void ResetEnemy()
     {
-        base.Start();
         TotalHealth = Constants.TotalHealth.Durashka;
-        gun.SetDamageValue(Constants.DamagePerHit.Durashka);
+        SetUpGun();
+        EnableActivities();
         StartAiming();
         GoToRandomPlayerSidePeriodically();
         SubscribeToBeat();
     }
 
-    private void SubscribeToBeat()
+    private void SetUpGun()
     {
-        GameBeatSequencer.OnGeneratedBeat_Durashka += TryFire;
-    }
-    
-    private void UnsubscribeFromBeat()
-    {
-        GameBeatSequencer.OnGeneratedBeat_Durashka -= TryFire;
+        gun.SetDamageValue(Constants.DamagePerHit.Durashka);
+        gun.GetComponent<Rigidbody>().isKinematic = true;
+        gun.transform.localPosition = gunPlace.localPosition;
+        gun.transform.localRotation = gunPlace.localRotation;
     }
 
-    private void TryFire()
+    private void EnableActivities()
     {
-        if (Random.value > 0.1f)
+        rig.enabled = true;
+        controller.enabled = true;
+    }
+
+    private void StartAiming()
+    {
+        animator.SetBool(AnimatorHashes.AimingHash, true);
+        currentAttackTarget = player.Animator.GetBoneTransform(HumanBodyBones.Spine);
+        targetInterpolator.SetConstraint(currentAttackTarget, targetingSpeed);
+        for (int i = 0; i < targetingConstraints.Length; i++)
         {
-            gun.Fire();
+            targetingConstraints[i].AddSource(Interpolator());
         }
+    }
+
+    private ConstraintSource Interpolator()
+    {
+        ConstraintSource interpolatorSource = new ConstraintSource();
+        interpolatorSource.weight = 1;
+        interpolatorSource.sourceTransform = targetInterpolator.transform;
+        return interpolatorSource;
     }
 
     private void GoToRandomPlayerSidePeriodically()
@@ -89,24 +105,23 @@ public class Durashka : Enemy, IDamageable
     {
         return Random.value > 0.5f ? 1 : -1;
     }
-
-    private void StartAiming()
+    
+    private void SubscribeToBeat()
     {
-        animator.SetBool(AnimatorHashes.AimingHash, true);
-        currentAttackTarget = player.Animator.GetBoneTransform(HumanBodyBones.Spine);
-        targetInterpolator.SetConstraint(currentAttackTarget, targetingSpeed);
-        for (int i = 0; i < targetingConstraints.Length; i++)
-        {
-            targetingConstraints[i].AddSource(Interpolator());
-        }
+        GameBeatSequencer.OnGeneratedBeat_Durashka += TryFire;
+    }
+    
+    private void UnsubscribeFromBeat()
+    {
+        GameBeatSequencer.OnGeneratedBeat_Durashka -= TryFire;
     }
 
-    private ConstraintSource Interpolator()
+    private void TryFire()
     {
-        ConstraintSource interpolatorSource = new ConstraintSource();
-        interpolatorSource.weight = 1;
-        interpolatorSource.sourceTransform = targetInterpolator.transform;
-        return interpolatorSource;
+        if (Random.value > 0.1f)
+        {
+            gun.Fire();
+        }
     }
     
     public override void CustomUpdate()
@@ -172,10 +187,12 @@ public class Durashka : Enemy, IDamageable
             return;
         }
         
-        animator.SetTrigger(AnimatorHashes.DeathHash);
-        animator.SetFloat(AnimatorHashes.DeathTypeHash, Random.Range(0, 4));
         
         StopAllCoroutines();
+        ClearPlayer();
+
+        animator.SetTrigger(AnimatorHashes.DeathHash);
+        animator.SetFloat(AnimatorHashes.DeathTypeHash, Random.Range(0, 4));
         
         UnsubscribeFromBeat();
         DisableGun();
@@ -198,7 +215,6 @@ public class Durashka : Enemy, IDamageable
 
     private void DisableGun()
     {
-        UnsubscribeFromBeat();
         gun.GetComponent<Rigidbody>().isKinematic = false;
     }
 
@@ -206,6 +222,6 @@ public class Durashka : Enemy, IDamageable
     {
         rig.enabled = false;
         controller.enabled = false;
-        enabled = false;
+        //enabled = false;
     }
 }

@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 4456835378029832236}
   - component: {fileID: 8648022587436912055}
   - component: {fileID: 7916898498575547376}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_abdomen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 4456835378029832238}
   - component: {fileID: 2582443598984492483}
   - component: {fileID: 4280281578342622297}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,9 +407,6 @@ MonoBehaviour:
   patgGraphName: General
   pathUpdPeriod: 0.5
   attackRadius: 4
-  mask:
-    serializedVersion: 2
-    m_Bits: 8192
   movementSpeed: 2.2
   jumpSpeed: 1.5
   explosionRoot: {fileID: 4456835378029832238}
@@ -1072,21 +1069,22 @@ AudioSource:
   m_GameObject: {fileID: 5792813071169908766}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7089419666152708870, guid: eebff83a9daeabe4eac250da82993f79,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 3842ff715c7796d4cbfcf008c7b176c5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 300
+  DopplerLevel: 0
+  MinDistance: 10
+  MaxDistance: 1000
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1094,23 +1092,41 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.01
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -8.419415
+      outSlope: -8.419415
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.5940995
+    - serializedVersion: 3
+      time: 0.059276123
+      value: 0.5
+      inSlope: -4.236226
+      outSlope: -4.236226
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.4215068
+    - serializedVersion: 3
+      time: 0.2746814
+      value: 0.08023071
+      inSlope: -0.30069304
+      outSlope: -0.30069304
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.57845
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.01
+      inSlope: -0.010003988
+      outSlope: -0.010003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1119,7 +1135,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.9
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

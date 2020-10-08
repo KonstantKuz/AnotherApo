@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -19,8 +20,19 @@ public class TargetingSection
     public Vector3 targetOffset;
 }
 
+[System.Serializable]
+public class SoundSection
+{
+    public AudioSource source;
+    public AudioClip jumpClip;
+    public float jumpClipVolume;
+    public AudioClip landingClip;
+    public float landingClipVolume;
+}
+
 public class UMUBot : Enemy
 {
+    [SerializeField] private SoundSection soundSection;
     [Header("Movement")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
@@ -30,6 +42,10 @@ public class UMUBot : Enemy
 
     [Header("Targeting")]
     [SerializeField] private UMUGun[] guns;
+    public UMUGun[] Guns
+    {
+        get { return guns; }
+    }
     [SerializeField] private float targetingSpeed;
     [SerializeField] private LookAtSection lookAtSection;
     [SerializeField] private TargetingSection targetingSection;
@@ -41,28 +57,38 @@ public class UMUBot : Enemy
 
     private int damagedGunsCount;
     private bool alreadyJumped;
-
-    public override void Start()
+    private bool alreadyLanded;
+    
+    public override void ResetEnemy()
     {
-        base.Start();
-        
         for (int i = 0; i < guns.Length; i++)
         {
-            guns[i].SubscribeToBeat();
+            guns[i].ResetGun();
         }
         
+        SubscribeToJumpBeat();
         SubscribeToCheckDeath();
         StartAiming();
         LookAt(currentAttackTarget);
         UpdatePathPeriodically();
-        
-        GameBeatSequencer.OnBPM += delegate
+    }
+
+    private void SubscribeToJumpBeat()
+    {
+        GameBeatSequencer.OnBPM += TryJump;
+    }
+
+    private void UnsubscribeFromJumpBeat()
+    {
+        GameBeatSequencer.OnBPM -= TryJump;
+    }
+
+    private void TryJump()
+    {
+        if (GameBeatSequencer.CurrentBeat % 4 == 0)
         {
-            if (GameBeatSequencer.CurrentBeat % 4 == 0)
-            {
-                animator.SetTrigger(AnimatorHashes.JumpHash);
-            }
-        };
+            animator.SetTrigger(AnimatorHashes.JumpHash);
+        }
     }
 
     private void SubscribeToCheckDeath()
@@ -78,10 +104,13 @@ public class UMUBot : Enemy
         damagedGunsCount++;
         if (damagedGunsCount == guns.Length)
         {
+            StopAllCoroutines();
+            ClearPlayer();
+
             animator.SetTrigger(AnimatorHashes.DeathHash);
+            UnsubscribeFromJumpBeat();
             LookAt(fireShowStartPoint);
             DeathFireShow();
-            enabled = false;
         }
     }
 
@@ -103,7 +132,8 @@ public class UMUBot : Enemy
                 SpawnHealExplosionsOnRndPos(
                     Constants.PoolExplosionBig, Constants.HealPerExplosion.UMUBig, Constants.ExplosionRadiusBig);
             }
-            
+
+            OnDeath?.Invoke();
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }
 
@@ -200,6 +230,9 @@ public class UMUBot : Enemy
     {
         if (alreadyJumped)
             return;
+
+        soundSection.source.volume = soundSection.jumpClipVolume;
+        soundSection.source.PlayOneShot(soundSection.jumpClip);
         
         alreadyJumped = true;
         verticalVelocity.y = jumpSpeed;
@@ -208,6 +241,23 @@ public class UMUBot : Enemy
         {
             yield return new WaitForSeconds(0.5f);
             alreadyJumped = false;
+        }
+    }
+
+    public void Landing()
+    {
+        if (alreadyLanded)
+            return;
+        
+        soundSection.source.volume = soundSection.landingClipVolume;
+        soundSection.source.PlayOneShot(soundSection.landingClip);
+        
+        alreadyLanded = true;
+        StartCoroutine(DelayedAllowLanding());
+        IEnumerator DelayedAllowLanding()
+        {
+            yield return new WaitForSeconds(0.5f);
+            alreadyLanded = false;
         }
     }
 }

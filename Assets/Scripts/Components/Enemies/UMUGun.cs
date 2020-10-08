@@ -15,13 +15,15 @@ public class UMUGun : Gun, IDamageable
     private int currentBarrel;
     private GameObject smokeStream;
     
-    public void Start()
+    public void ResetGun()
     {
+        gameObject.SetActive(true);
         SetDamageValue(Constants.DamagePerHit.UMUGun);
         TotalHealth = Constants.TotalHealth.UMUGun;
+        SubscribeToBeat();
     }
 
-    public void SubscribeToBeat()
+    private void SubscribeToBeat()
     {
         GameBeatSequencer.OnGeneratedBeat_UMUGun += Fire;
     }
@@ -48,14 +50,14 @@ public class UMUGun : Gun, IDamageable
     {
         if (currentBarrel == 0)
         {
-            SpawnFlash(actualCaster.transform);
-            TrySpawnTrail(actualCaster.transform);
+            SpawnFlash(actualCaster.transform, Constants.PoolFlashMid);
+            TrySpawnTrail(actualCaster.transform, Constants.PoolBulletTrailBig);
         }
 
         if (currentBarrel >= 1)
         {
-            SpawnFlash(additiveBarrels[currentBarrel - 1]);
-            TrySpawnTrail(additiveBarrels[currentBarrel - 1]);
+            SpawnFlash(additiveBarrels[currentBarrel - 1], Constants.PoolFlashMid);
+            TrySpawnTrail(additiveBarrels[currentBarrel - 1], Constants.PoolBulletTrailBig);
         }
     }
     

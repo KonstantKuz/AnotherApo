@@ -4,8 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+[Serializable]
+public struct BPMRange
+{
+    public int minBPM;
+    public int maxBPM;
+}
+
 public class GameBeatSequencer : MonoBehaviour
 {
+    [SerializeField] private BPMRange bpmRange;
+    
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private SequencerDriver beatDriver;
 
@@ -27,7 +36,14 @@ public class GameBeatSequencer : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(2);
+        while (!GameStarter.IsGameStarted)
+        {
+            yield return null;
+        }
+
+        PlayerInput.OnBeatRegenerate += GenerateRandomBeats;
+        
+        yield return new WaitForSeconds(1);
         CacheAndSetBPM();
         GenerateRandomBeats();
         HandleEvents();
@@ -38,7 +54,37 @@ public class GameBeatSequencer : MonoBehaviour
     private void CacheAndSetBPM()
     {
         currentTrackBPM = UniBpmAnalyzer.AnalyzeBpm(musicSource.clip);
+        
+        ClampBeat();
+
         beatDriver.SetBpm(currentTrackBPM);
+    }
+
+    private void ClampBeat()
+    {
+        if (currentTrackBPM > bpmRange.maxBPM)
+        {
+            if (currentTrackBPM % 2 == 0)
+            {
+                currentTrackBPM = bpmRange.maxBPM;
+            }
+            else
+            {
+                currentTrackBPM = bpmRange.maxBPM - 5;
+            }
+        }
+
+        if (currentTrackBPM < bpmRange.minBPM)
+        {
+            if (currentTrackBPM % 2 == 0)
+            {
+                currentTrackBPM = bpmRange.minBPM;
+            }
+            else
+            {
+                currentTrackBPM = bpmRange.minBPM + 5;
+            }
+        }
     }
 
     public void GenerateRandomBeats()

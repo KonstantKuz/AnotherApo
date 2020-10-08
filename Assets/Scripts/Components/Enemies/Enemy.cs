@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
@@ -20,11 +21,23 @@ public abstract class Enemy : MonoCached
     protected Path currentPath;
     protected int currentPathNodeIndex;
     protected Vector3 currentPathTarget;
-    
-    
-    public virtual void Start()
+
+    public Action OnDeath;
+    public override void OnEnable()
     {
+        base.OnEnable();
         player = FindObjectOfType<PlayerCharacterController>();
+        ResetEnemy();
+    }
+
+    public virtual void ResetEnemy()
+    {
+        
+    }
+
+    public void ClearPlayer()
+    {
+        player = null;
     }
 
     protected void UpdatePath(Vector3 currentPathTarget)
@@ -120,11 +133,6 @@ public abstract class Enemy : MonoCached
     }
 
     public virtual void MoveToNextNode()
-    {
-        
-    }
-
-    public virtual void ResetEnemy()
     {
         
     }

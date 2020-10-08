@@ -4765,9 +4765,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7111021162973173837}
-  - {fileID: 7111156161776890413}
   - {fileID: 7111687367554667821}
   - {fileID: 5107188827980502971}
+  - {fileID: 7111156161776890413}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4784,6 +4784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulseSource: {fileID: -72322349209388966}
+  light: {fileID: 8150982897827639607}
+  smoke: {fileID: 6944846420879641537}
 --- !u!114 &-72322349209388966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4838,6 +4840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc8b94e928a34e4c9a031cbec249bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: {x: 0.9, y: 1.1}
   source: {fileID: 4131554656664654406}
 --- !u!82 &4131554656664654406
 AudioSource:
@@ -4848,7 +4851,8 @@ AudioSource:
   m_GameObject: {fileID: 7108699193672254333}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3098209614916918667, guid: eebff83a9daeabe4eac250da82993f79,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: adf7cfa39c63c2c45ad13ea20f6dd7e0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4857,12 +4861,12 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 150
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 300
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 10
+  MaxDistance: 1000
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -4870,23 +4874,41 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.01
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -8.419415
+      outSlope: -8.419415
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.5940995
+    - serializedVersion: 3
+      time: 0.059276123
+      value: 0.5
+      inSlope: -4.236226
+      outSlope: -4.236226
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.4215068
+    - serializedVersion: 3
+      time: 0.2746814
+      value: 0.08023071
+      inSlope: -0.30069304
+      outSlope: -0.30069304
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.57845
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.01
+      inSlope: -0.010003988
+      outSlope: -0.010003988
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -4895,7 +4917,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.8
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9772,7 +9794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7110671437794380599}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &6944753029011494187
 ParticleSystem:
@@ -14584,7 +14606,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7110671437794380599}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &6944846420879641537
 ParticleSystem:
@@ -19401,11 +19423,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7363502490685326338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7110671437794380599}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &8150982897827639607
 ParticleSystem:
@@ -23205,7 +23227,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -23258,7 +23280,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 50
       minScalar: 1
       maxCurve:
         serializedVersion: 2

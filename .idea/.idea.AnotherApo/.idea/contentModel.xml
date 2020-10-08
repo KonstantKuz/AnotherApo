@@ -368,6 +368,35 @@
                 <e p="Spawner.cs" t="Include" />
               </e>
             </e>
+            <e p="ProgressBars Templates" t="Include">
+              <e p="Core" t="Include">
+                <e p="IGameObjectProgressBar.cs" t="Include" />
+                <e p="IProgressBar.cs" t="Include" />
+                <e p="ISceneProgressBar.cs" t="Include" />
+              </e>
+              <e p="LineProgressBar" t="Include">
+                <e p="ExampleScripts" t="Include">
+                  <e p="ExampleController.cs" t="Include" />
+                  <e p="ExampleGOController.cs" t="Include" />
+                  <e p="ExampleGOProgressBar.cs" t="Include" />
+                  <e p="FirstExampleProgressBar.cs" t="Include" />
+                  <e p="NextExample.cs" t="Include" />
+                  <e p="SecondExampleProgressBar.cs" t="Include" />
+                  <e p="SimpleRot.cs" t="Include" />
+                </e>
+                <e p="GOLineProgressBar.cs" t="Include" />
+                <e p="SceneLineProgressBar.cs" t="Include" />
+              </e>
+              <e p="StageProgressBar" t="Include">
+                <e p="ExampleScripts" t="Include">
+                  <e p="ExampleStageBar.cs" t="Include" />
+                  <e p="StageController.cs" t="Include" />
+                  <e p="TextControl.cs" t="Include" />
+                </e>
+                <e p="SceneStageProgressBar.cs" t="Include" />
+              </e>
+              <e p="UsageExamples.cs" t="Include" />
+            </e>
             <e p="ReorderableListExtensions" t="Include">
               <e p="Editor" t="Include">
                 <e p="ReorderableDrawer.cs" t="Include" />
@@ -481,6 +510,7 @@
             <e p="EnemySpawner.cs" t="Include" />
             <e p="Explosion.cs" t="Include" />
             <e p="FootIKOverride.cs" t="Include" />
+            <e p="GameStarter.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="HitMat" t="Include">
               <e p="DamageableHighLighter.cs" t="Include" />
@@ -504,6 +534,7 @@
               <e p="PlayerCameraBehaviour.cs" t="Include" />
               <e p="PlayerCharacterController.cs" t="Include" />
               <e p="PlayerHealth.cs" t="Include" />
+              <e p="PlayerHealthBar.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="PlayerWeaponHolder.cs" t="Include" />
             </e>

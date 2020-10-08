@@ -52,7 +52,8 @@ public class PlayerInput : MonoCached
     public static Action<bool> OnWeaponSwitched;
     public static Action OnJumped;
     public static Action OnDashed;
-
+    public static Action OnBeatRegenerate;
+    
     private string VerticalName = "Vertical";
     private string HorizontalName = "Horizontal";
     private string MouseXName = "Mouse X";
@@ -60,12 +61,20 @@ public class PlayerInput : MonoCached
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        GameStarter.OnGameStarted += delegate
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        };
     }
     
     public override void CustomUpdate()
     {
+        if (!GameStarter.IsGameStarted)
+        {
+            return;
+        }
+        
         vertical = Input.GetAxis(VerticalName);
         horizontal = Input.GetAxis(HorizontalName);
         mouseX = Mathf.Lerp(mouseX, Input.GetAxis(MouseXName) * MouseXSensiv, Time.deltaTime * MouseXSmooth);
@@ -111,6 +120,11 @@ public class PlayerInput : MonoCached
         {
             Cursor.visible = !Cursor.visible;
             Cursor.lockState = Cursor.visible ? CursorLockMode.None : CursorLockMode.Locked;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            OnBeatRegenerate();
         }
     }
 

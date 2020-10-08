@@ -20,9 +20,8 @@ public class SpiderAst : Enemy, IDamageable
     
     public int TotalHealth { get; private set; }
 
-    public override void Start()
+    public override void ResetEnemy()
     {
-        base.Start();
         TotalHealth = Constants.TotalHealth.SpiderAst;
         SetMoveAnimationSpeed();
         UpdatePathPeriodically();
@@ -89,7 +88,7 @@ public class SpiderAst : Enemy, IDamageable
         IEnumerator DelayedAttack()
         {
             SetAttackPossibility(false);
-            yield return new WaitForSeconds(0.3f);
+            //yield return new WaitForSeconds(0.3f);
             while (!canAttack)
             {
                 yield return null;
@@ -100,6 +99,9 @@ public class SpiderAst : Enemy, IDamageable
 
     private void Attack()
     {
+        ClearPlayer();
+        StopAllCoroutines();
+
         SetAttackPossibility(false);
         SpawnDamagingExplosion();
         UnsubscribeFromBeat();

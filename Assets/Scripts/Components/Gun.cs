@@ -8,6 +8,7 @@ public class Gun : MonoCached
     [SerializeField] protected LayerMask mask;
     [SerializeField] protected bool trail;
     [SerializeField] protected CrossHairCaster actualCaster;
+    [SerializeField] protected AudioSource muzzleSource;
     // [SerializeField] protected float rateoffire;
     // protected float nextShotTime;
     protected int damage;
@@ -25,21 +26,22 @@ public class Gun : MonoCached
         // }
         // nextShotTime = Time.time + rateoffire;
 
-        SpawnFlash(actualCaster.transform);
-        TrySpawnTrail(actualCaster.transform);
+        SpawnFlash(actualCaster.transform, Constants.PoolFlashSmall);
+        TrySpawnTrail(actualCaster.transform, Constants.PoolBulletTrailSmall);
         HandleHit();
     }
 
-    protected void SpawnFlash(Transform barrel)
+    protected void SpawnFlash(Transform barrel, string poolTag)
     {
-        ObjectPooler.Instance.SpawnObject(Constants.PoolFlashSmall, barrel.position, barrel.rotation);
+        ObjectPooler.Instance.SpawnObject(poolTag, barrel.position, barrel.rotation);
+        muzzleSource.PlayOneShot(muzzleSource.clip);
     }
 
-    protected void TrySpawnTrail(Transform barrel)
+    protected void TrySpawnTrail(Transform barrel, string poolTag)
     {
         if (trail)
         {
-            ObjectPooler.Instance.SpawnObject(Constants.PoolBulletTrail, barrel.position, barrel.rotation);
+            ObjectPooler.Instance.SpawnObject(poolTag, barrel.position, barrel.rotation);
         }
     }
 

@@ -20,6 +20,7 @@ public class UMUBotAnimationEventsHandler : MonoBehaviour
     {
         commandsDictionary = new Dictionary<string, Action>();
         commandsDictionary.Add("Jump", owner.Jump);
+        commandsDictionary.Add("Landing", owner.Landing);
     }
     
     private void ExecuteCommand(string obj)

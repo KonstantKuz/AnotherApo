@@ -64,7 +64,8 @@ public class Constants
 {
     public const string PoolGroupEnemies = "Enemies";
     
-    public const string PoolBulletTrail = "BulletTrail";
+    public const string PoolBulletTrailBig = "BulletTrailBig";
+    public const string PoolBulletTrailSmall = "BulletTrailSmall";
     
     public const string PoolFlashSmall = "MuzzleFlashSmall";
     public const string PoolFlashMid = "MuzzleFlashMid";

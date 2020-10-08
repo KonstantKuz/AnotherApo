@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groupTag: Enemies
   poolsInGroup:
+  - weight: 10
+    pool: {fileID: 11400000, guid: c2251b7b630222f409d48a3afb873655, type: 2}
   - weight: 70
     pool: {fileID: 11400000, guid: b7bfbe99e9be5d049a6cea0a63967685, type: 2}
   - weight: 100
     pool: {fileID: 11400000, guid: 441ea6200b2dfa544a73b8dcd1cc460c, type: 2}
-  - weight: 10
-    pool: {fileID: 11400000, guid: c2251b7b630222f409d48a3afb873655, type: 2}
-  totalWeight: 180
+  totalWeight: 10
