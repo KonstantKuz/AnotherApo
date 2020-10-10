@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private int enemiesCount;
+    [SerializeField] private float UMUSpawnDelay = 10f;
+    [SerializeField] private int durashkaCount = 10;
+    [SerializeField] private int spiderAstCount = 10;
     [SerializeField] private Transform[] spawnPoints;
     private UMUBot currentUmu;
 
@@ -14,50 +16,65 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return null;
         }
+
+        SpawnAllDurashkas();
+        SpawnAllSpiderAsts();
         
-        FirstSpawn();
+        yield return new WaitForSeconds(UMUSpawnDelay);
+
+        SpawnUMU();
     }
 
-    private void FirstSpawn()
+    private void SpawnUMU()
     {
-        for (int i = 0; i < enemiesCount; i++)
+        UMUBot umu = ObjectPooler.Instance.SpawnObject(Constants.PoolUMUBot).GetComponent<UMUBot>();
+        umu.transform.position = RandomPosition();
+
+        if (umu.OnDeath == null)
         {
-            SpawnEnemy();
+            umu.OnDeath += SpawnUMU;
         }
-    }
-    
-    private void SpawnEnemy()
-    {
-        Enemy spawnedEnemy = ObjectPooler.Instance.SpawnWeightedRandomObject(Constants.PoolGroupEnemies)
-                                         .GetComponent<Enemy>();
-        spawnedEnemy.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-        
-        SubscribeToEnemyDeath(spawnedEnemy);
-        Clamp1_UMUsCount(spawnedEnemy);
     }
 
-    private void SubscribeToEnemyDeath(Enemy enemy)
+    private void SpawnAllSpiderAsts()
     {
-        if(enemy.OnDeath != null)
-            return;
-        
-        enemy.OnDeath += SpawnEnemy;
+        for (int i = 0; i < spiderAstCount; i++)
+        {
+            SpawnSpiderAst();
+        }
     }
 
-    private void Clamp1_UMUsCount(Enemy spawnedEnemy)
+    private void SpawnSpiderAst()
     {
-        UMUBot umuBot = spawnedEnemy as UMUBot;
-        if (umuBot == null)
+        SpiderAst spiderAst = ObjectPooler.Instance.SpawnObject(Constants.PoolSpiderAst).GetComponent<SpiderAst>();
+        spiderAst.transform.position = RandomPosition();
+
+        if (spiderAst.OnDeath == null)
         {
-            return;
+            spiderAst.OnDeath += SpawnSpiderAst;
         }
-        
-        if (currentUmu != null && currentUmu.gameObject.activeInHierarchy)
+    }
+
+    private void SpawnAllDurashkas()
+    {
+        for (int i = 0; i < durashkaCount; i++)
         {
-            ObjectPooler.Instance.ReturnObject(umuBot.gameObject, umuBot.gameObject.name);
-            return;
+            SpawnDurashka();
         }
-        
-        currentUmu = umuBot;
+    }
+
+    private void SpawnDurashka()
+    {
+        Durashka durashka = ObjectPooler.Instance.SpawnObject(Constants.PoolDurashka).GetComponent<Durashka>();
+        durashka.transform.position = RandomPosition();
+
+        if (durashka.OnDeath == null)
+        {
+            durashka.OnDeath += SpawnDurashka;
+        }
+    }
+    private Vector3 RandomPosition()
+    {
+        return spawnPoints[Random.Range(0, spawnPoints.Length)].position;
     }
 }

@@ -50,12 +50,22 @@ public class GameBeatSequencer : MonoBehaviour
 
         PlayerInput.OnBeatRegenerate += GenerateRandomBeats;
         
-        yield return new WaitForSeconds(1);
-        CacheAndSetBPM();
-        GenerateRandomBeats();
+        PlayerInput.OnMusicChange += delegate
+        {
+            StartCoroutine(DelayedStart());
+            IEnumerator DelayedStart()
+            {
+                yield return new WaitForEndOfFrame();
+                yield return new WaitForEndOfFrame();
+                yield return new WaitForEndOfFrame();
+                
+                CacheAndSetBPM();
+                GenerateRandomBeats();
+                beatDriver.Play();
+            }
+        };
+        
         HandleEvents();
-        yield return new WaitForSeconds(3);
-        beatDriver.Play();
     }
 
     private void CacheAndSetBPM()

@@ -601,9 +601,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3821440521223340804, guid: eebff83a9daeabe4eac250da82993f79,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a01eedf4a62adac4882f81b3e40264a5, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.8
-  m_Pitch: 1.6
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 2.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -968,7 +968,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 57478c4a3359f434887484187c77e28b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1157,9 +1157,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -3821440521223340804, guid: eebff83a9daeabe4eac250da82993f79,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a01eedf4a62adac4882f81b3e40264a5, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.8
-  m_Pitch: 1.6
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 2.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1411,9 +1411,9 @@ MonoBehaviour:
   soundSection:
     source: {fileID: 1972717964429218611}
     jumpClip: {fileID: 8300000, guid: a85bb166e77ad9749b14b05247ac935d, type: 3}
-    jumpClipVolume: 0.5
+    jumpClipVolume: 0.1
     landingClip: {fileID: 8300000, guid: a85bb166e77ad9749b14b05247ac935d, type: 3}
-    landingClipVolume: 1
+    landingClipVolume: 0.1
   movementSpeed: 5
   jumpSpeed: 15
   gravityMultiplier: 10
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   guns:
   - {fileID: 1545539959934226549}
   - {fileID: 6935193971224005857}
-  targetingSpeed: 1.5
+  targetingSpeed: 2
   lookAtSection:
     lookAtInterpolator: {fileID: 904022308613771567}
     lookAtOffset: {x: 0, y: -2, z: 0}

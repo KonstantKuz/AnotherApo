@@ -983,7 +983,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520d46c0d62aaac4bb5523f55cd35ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesCount: 10
+  UMUSpawnDelay: 10
+  durashkaCount: 8
+  spiderAstCount: 6
   spawnPoints:
   - {fileID: 2512529401019998991}
   - {fileID: 3216428841745481138}

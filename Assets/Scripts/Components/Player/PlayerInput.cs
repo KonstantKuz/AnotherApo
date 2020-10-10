@@ -52,7 +52,9 @@ public class PlayerInput : MonoCached
     public static Action<bool> OnWeaponSwitched;
     public static Action OnJumped;
     public static Action OnDashed;
+    
     public static Action OnBeatRegenerate;
+    public static Action OnMusicChange;
     
     private string VerticalName = "Vertical";
     private string HorizontalName = "Horizontal";
@@ -125,6 +127,11 @@ public class PlayerInput : MonoCached
         if (Input.GetKeyDown(KeyCode.R))
         {
             OnBeatRegenerate();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            OnMusicChange();
         }
     }
 

@@ -63,6 +63,9 @@ public class LayerMasks
 public class Constants
 {
     public const string PoolGroupEnemies = "Enemies";
+    public const string PoolDurashka = "Durashka";
+    public const string PoolSpiderAst = "SpiderAst";
+    public const string PoolUMUBot = "UltraMegaUberBot";
     
     public const string PoolBulletTrailBig = "BulletTrailBig";
     public const string PoolBulletTrailSmall = "BulletTrailSmall";
@@ -107,4 +110,7 @@ public class Constants
 
     public const string EmissionProperty = "_EmissionColor";
     public const string EmissionKeyword = "_EMISSION";
+
+    public const string MusicVolParam = "MusicVolume";
+    public const string MasterVolume = "MasterVolume";
 }
