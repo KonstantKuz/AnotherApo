@@ -16,7 +16,6 @@ public class SpiderAst : Enemy, IDamageable
 
     private Vector3 movementVelocity;
     private Vector3 verticalVelocity;
-    private bool canAttack;
     
     public int TotalHealth { get; private set; }
 
@@ -25,22 +24,6 @@ public class SpiderAst : Enemy, IDamageable
         TotalHealth = Constants.TotalHealth.SpiderAst;
         SetMoveAnimationSpeed();
         UpdatePathPeriodically();
-        SubscribeToBeat();
-    }
-
-    private void SubscribeToBeat()
-    {
-        GameBeatSequencer.OnGeneratedBeat += delegate { SetAttackPossibility(true); };
-    }
-
-    private void UnsubscribeFromBeat()
-    {
-        GameBeatSequencer.OnGeneratedBeat -= delegate { SetAttackPossibility(true); };
-    }
-    
-    public void SetAttackPossibility(bool value)
-    {
-        canAttack = value;
     }
 
     private void UpdatePathPeriodically()
@@ -83,30 +66,31 @@ public class SpiderAst : Enemy, IDamageable
     {
         animator.SetTrigger(AnimatorHashes.JumpHash);
         verticalVelocity.y = jumpSpeed;
-        
-        StartCoroutine(DelayedAttack());
-        IEnumerator DelayedAttack()
+        StartCoroutine(AttackAfterJump());
+        IEnumerator AttackAfterJump()
         {
-            SetAttackPossibility(false);
-            //yield return new WaitForSeconds(0.3f);
-            while (!canAttack)
-            {
-                yield return null;
-            }
+            yield return new WaitForSeconds(0.35f);
             Attack();
         }
     }
 
     private void Attack()
     {
-        OnDeath?.Invoke();
-        ClearPlayer();
-        StopAllCoroutines();
-
-        SetAttackPossibility(false);
-        SpawnDamagingExplosion();
-        UnsubscribeFromBeat();
-        ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
+        StartCoroutine(AttackOnBeat());
+        IEnumerator AttackOnBeat()
+        {
+            while (!GameBeatSequencer.IsBeatedNow)
+            {
+                yield return null;
+            }
+            
+            OnDeath?.Invoke();
+            ClearPlayer();
+            SpawnDamagingExplosion();
+            ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
+            
+            StopAllCoroutines();
+        }
     }
 
     private void SpawnDamagingExplosion()

@@ -80,12 +80,21 @@ public class UMUGun : Gun, IDamageable
         {
             return;
         }
-        
-        UnsubscribeFromBeat();
-        OnFullDamaged();
-        SpawnHealExplosions();
-        ReturnDamagedSignalToPool();
-        gameObject.SetActive(false);
+
+        StartCoroutine(ExplodeOnBeat());
+        IEnumerator ExplodeOnBeat()
+        {
+            while (!GameBeatSequencer.IsBeatedNow)
+            {
+                yield return null;
+            }
+            
+            UnsubscribeFromBeat();
+            OnFullDamaged();
+            SpawnHealExplosions();
+            ReturnDamagedSignalToPool();
+            gameObject.SetActive(false);
+        }
     }
 
     private void TrySpawnDamagedSignalEffect()

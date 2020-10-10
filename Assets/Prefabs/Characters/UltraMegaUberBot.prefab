@@ -602,8 +602,8 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a01eedf4a62adac4882f81b3e40264a5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.8
+  m_Pitch: 1.6
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1158,8 +1158,8 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a01eedf4a62adac4882f81b3e40264a5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.8
+  m_Pitch: 1.6
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1413,7 +1413,7 @@ MonoBehaviour:
     jumpClip: {fileID: 8300000, guid: a85bb166e77ad9749b14b05247ac935d, type: 3}
     jumpClipVolume: 0.5
     landingClip: {fileID: 8300000, guid: a85bb166e77ad9749b14b05247ac935d, type: 3}
-    landingClipVolume: 0.5
+    landingClipVolume: 1
   movementSpeed: 5
   jumpSpeed: 15
   gravityMultiplier: 10

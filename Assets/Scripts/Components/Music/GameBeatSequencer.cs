@@ -29,6 +29,13 @@ public class GameBeatSequencer : MonoBehaviour
     
     private int currentTrackBPM;
     private static int currentBeat;
+
+    private static bool isBeatedNow;
+    public static bool IsBeatedNow
+    {
+        get { return isBeatedNow; }
+    }
+
     public static int CurrentBeat
     {
         get { return currentBeat; }
@@ -120,7 +127,17 @@ public class GameBeatSequencer : MonoBehaviour
     private void HandleEvents()
     {
         generalBeat.onBeat += delegate { OnGeneratedBeat(); };
-        generalBeat.onAnyStep += delegate { OnBPM(); };
+        generalBeat.onAnyStep += delegate
+        {
+            OnBPM();
+            isBeatedNow = true;
+            StartCoroutine(Reset());
+            IEnumerator Reset()
+            {
+                yield return new WaitForEndOfFrame();
+                isBeatedNow = false;
+            }
+        };
         generalBeat.onAnyStep += delegate { currentBeat++; };
         
         durashkaBeat.onBeat += delegate { OnGeneratedBeat_Durashka(); };

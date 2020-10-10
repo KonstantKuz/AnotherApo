@@ -17,13 +17,13 @@ public class MusicRandomizer : MonoBehaviour
         System.Random generator = new System.Random();
         int rndIndex = generator.Next(0, music.Length);
         source.clip = music[rndIndex];
-        source.time = Random.Range(source.clip.length / 8, source.clip.length / 4);
+        source.time = Random.Range(source.clip.length / 10, source.clip.length / 6);
         source.volume = 0;
         source.Play();
         while (source.volume < 0.5f)
         {
-            source.volume += Time.deltaTime*0.5f;
-            yield return null;
+            source.volume += Time.deltaTime*0.01f;
+            yield return new WaitForEndOfFrame();
         }
     }
 }

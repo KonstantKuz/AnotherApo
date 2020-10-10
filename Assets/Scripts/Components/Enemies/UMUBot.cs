@@ -120,6 +120,11 @@ public class UMUBot : Enemy
         IEnumerator DelayedFireShow()
         {
             yield return new WaitForSeconds(1f);
+
+            while (!GameBeatSequencer.IsBeatedNow)
+            {
+                yield return null;
+            }
             
             for (int i = 0; i < 3; i++)
             {

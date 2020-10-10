@@ -197,15 +197,20 @@ public class Durashka : Enemy, IDamageable
         UnsubscribeFromBeat();
         DisableGun();
         DisableActivities();
-        DelayedSpawnHealingExplosion();
+        HealingExplosionOnBeat();
     }
 
-    private void DelayedSpawnHealingExplosion()
+    private void HealingExplosionOnBeat()
     {
         StartCoroutine(DelayedSpawnExplosion());
         IEnumerator DelayedSpawnExplosion()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.5f);
+            while (!GameBeatSequencer.IsBeatedNow)
+            {
+                yield return null;
+            }
+            
             Explosion explosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
             explosion.transform.position = transform.position;
             explosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.Durashka);
