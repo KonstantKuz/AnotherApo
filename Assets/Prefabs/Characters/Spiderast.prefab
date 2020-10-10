@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899409727951959635}
   - component: {fileID: 9175226167313878281}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpiderBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832224}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_L_R_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832226}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_L_R_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832228}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_L_F_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832230}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_L_R_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832232}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_L_F_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832234}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_L_F_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ MonoBehaviour:
   patgGraphName: General
   pathUpdPeriod: 0.5
   attackRadius: 4
-  movementSpeed: 2.2
+  movementSpeed: 3
   jumpSpeed: 1.5
   explosionRoot: {fileID: 4456835378029832238}
   animator: {fileID: 9175226167313878281}
@@ -440,7 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4456835378029832242}
   - component: {fileID: 4456835378016139548}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SPIDER_BOT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832244}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Factice047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Factice050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832248}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Factice043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832250}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Factice044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832252}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Factice006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832254}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Factice010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832204}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_shoulder_R_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832206}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_shoulder_R_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832208}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_shoulder_L_F
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832210}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_shoulder_L_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -854,7 +854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832212}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_R_R_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832214}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_R_R_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832216}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_R_F_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832218}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_R_R_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832220}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_R_F_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456835378029832222}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spider_robot_leg_R_F_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1038,8 +1038,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609008210032628627}
+  - component: {fileID: 5165379575135002943}
   - component: {fileID: 5396319600147741241}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SoundSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,6 +1061,20 @@ Transform:
   m_Father: {fileID: 4456835378029832240}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5165379575135002943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5792813071169908766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc8b94e928a34e4c9a031cbec249bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: {x: 0.8, y: 1.2}
+  source: {fileID: 5396319600147741241}
 --- !u!82 &5396319600147741241
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1072,57 +1087,102 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -7089419666152708870, guid: eebff83a9daeabe4eac250da82993f79,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 3842ff715c7796d4cbfcf008c7b176c5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 0
-  MinDistance: 10
-  MaxDistance: 1000
+  MinDistance: 20
+  MaxDistance: 300
   Pan2D: 0
-  rolloffMode: 2
-  BypassEffects: 1
+  rolloffMode: 0
+  BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.01
+      time: 0.005
       value: 1
-      inSlope: -8.419415
-      outSlope: -8.419415
+      inSlope: -200.07968
+      outSlope: -200.07968
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.5940995
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.059276123
+      time: 0.01
       value: 0.5
-      inSlope: -4.236226
-      outSlope: -4.236226
+      inSlope: -50.01992
+      outSlope: -50.01992
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.4215068
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.2746814
-      value: 0.08023071
-      inSlope: -0.30069304
-      outSlope: -0.30069304
+      time: 0.02
+      value: 0.25
+      inSlope: -12.50498
+      outSlope: -12.50498
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.57845
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.04
+      value: 0.125
+      inSlope: -3.126245
+      outSlope: -3.126245
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.08
+      value: 0.0625
+      inSlope: -0.78156126
+      outSlope: -0.78156126
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.16
+      value: 0.03125
+      inSlope: -0.19539031
+      outSlope: -0.19539031
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.32
+      value: 0.015625
+      inSlope: -0.04884758
+      outSlope: -0.04884758
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.64
+      value: 0.0078125
+      inSlope: -0.012211895
+      outSlope: -0.012211895
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0.01
-      inSlope: -0.010003988
-      outSlope: -0.010003988
+      value: 0
+      inSlope: -0.005001994
+      outSlope: -0.005001994
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -1165,7 +1225,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0

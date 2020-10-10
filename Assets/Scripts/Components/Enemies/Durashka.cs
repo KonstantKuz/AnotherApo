@@ -187,9 +187,9 @@ public class Durashka : Enemy, IDamageable
             return;
         }
         
-        
-        StopAllCoroutines();
+        OnDeath?.Invoke();
         ClearPlayer();
+        StopAllCoroutines();
 
         animator.SetTrigger(AnimatorHashes.DeathHash);
         animator.SetFloat(AnimatorHashes.DeathTypeHash, Random.Range(0, 4));

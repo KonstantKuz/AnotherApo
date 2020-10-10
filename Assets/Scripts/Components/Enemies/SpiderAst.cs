@@ -99,6 +99,7 @@ public class SpiderAst : Enemy, IDamageable
 
     private void Attack()
     {
+        OnDeath?.Invoke();
         ClearPlayer();
         StopAllCoroutines();
 

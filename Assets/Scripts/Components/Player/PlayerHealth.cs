@@ -17,5 +17,15 @@ public class PlayerHealth : MonoCached, IDamageable
     {
         TotalHealth -= value;
         OnPlayerDamaged?.Invoke(TotalHealth);
+        
+        if (TotalHealth <= 0)
+        {
+            TotalHealth = 0;
+        }
+
+        if (TotalHealth >= Constants.TotalHealth.Player)
+        {
+            TotalHealth = Constants.TotalHealth.Player;
+        }
     }
 }

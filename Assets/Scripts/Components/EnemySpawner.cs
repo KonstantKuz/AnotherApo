@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private Vector2 spawnPeriodRange;
+    [SerializeField] private int enemiesCount;
     [SerializeField] private Transform[] spawnPoints;
     private UMUBot currentUmu;
 
-    private int currentEnemyCount;
-    private int maxEnemyCount = 30;
-    public IEnumerator Start()
+    private IEnumerator Start()
     {
         while (!GameStarter.IsGameStarted)
         {
@@ -18,53 +16,35 @@ public class EnemySpawner : MonoBehaviour
         }
         
         FirstSpawn();
-        while (true)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(Random.Range(spawnPeriodRange.x, spawnPeriodRange.y));
-        }
-    }
-
-    private void SpawnEnemy()
-    {
-        if (currentEnemyCount > maxEnemyCount)
-            return;
-        
-        Enemy spawnedEnemy = ObjectPooler.Instance.SpawnWeightedRandomObject(Constants.PoolGroupEnemies)
-                                         .GetComponent<Enemy>();
-        spawnedEnemy.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
-        TryGetUMU(spawnedEnemy);
-
-        currentEnemyCount++;
-        
-        SubScribeToEnemyDeath(spawnedEnemy);
-    }
-
-    private void SubScribeToEnemyDeath(Enemy enemy)
-    {
-        enemy.OnDeath += delegate { DecreaseCurrentEnemyCount(enemy); };
-    }
-
-    private void UnsubscribeFromEnemyDeath(Enemy enemy)
-    {
-        enemy.OnDeath -= delegate { DecreaseCurrentEnemyCount(enemy); };
-    }
-
-    private void DecreaseCurrentEnemyCount(Enemy enemy)
-    {
-        currentEnemyCount--;
-        UnsubscribeFromEnemyDeath(enemy);
     }
 
     private void FirstSpawn()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < enemiesCount; i++)
         {
             SpawnEnemy();
         }
     }
+    
+    private void SpawnEnemy()
+    {
+        Enemy spawnedEnemy = ObjectPooler.Instance.SpawnWeightedRandomObject(Constants.PoolGroupEnemies)
+                                         .GetComponent<Enemy>();
+        spawnedEnemy.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+        
+        SubscribeToEnemyDeath(spawnedEnemy);
+        Clamp1_UMUsCount(spawnedEnemy);
+    }
 
-    private void TryGetUMU(Enemy spawnedEnemy)
+    private void SubscribeToEnemyDeath(Enemy enemy)
+    {
+        if(enemy.OnDeath != null)
+            return;
+        
+        enemy.OnDeath += SpawnEnemy;
+    }
+
+    private void Clamp1_UMUsCount(Enemy spawnedEnemy)
     {
         UMUBot umuBot = spawnedEnemy as UMUBot;
         if (umuBot == null)
@@ -72,30 +52,12 @@ public class EnemySpawner : MonoBehaviour
             return;
         }
         
-        if (currentUmu != null)
+        if (currentUmu != null && currentUmu.gameObject.activeInHierarchy)
         {
             ObjectPooler.Instance.ReturnObject(umuBot.gameObject, umuBot.gameObject.name);
             return;
         }
         
         currentUmu = umuBot;
-        
-        SubscribeToUMUDeath();
-    }
-
-    private void SubscribeToUMUDeath()
-    {
-        currentUmu.OnDeath += ResetCurrentUMU;
-    }
-
-    private void UnsubscribeFromUMUDeath()
-    {
-        currentUmu.OnDeath -= ResetCurrentUMU;
-    }
-
-    private void ResetCurrentUMU()
-    {
-        UnsubscribeFromUMUDeath();
-        currentUmu = null;
     }
 }

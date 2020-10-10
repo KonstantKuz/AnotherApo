@@ -34,6 +34,7 @@ public class Gun : MonoCached
     protected void SpawnFlash(Transform barrel, string poolTag)
     {
         ObjectPooler.Instance.SpawnObject(poolTag, barrel.position, barrel.rotation);
+        muzzleSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
         muzzleSource.PlayOneShot(muzzleSource.clip);
     }
 

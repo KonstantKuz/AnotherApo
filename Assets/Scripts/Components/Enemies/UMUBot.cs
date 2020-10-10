@@ -127,12 +127,10 @@ public class UMUBot : Enemy
                     Constants.PoolExplosionMid, Constants.HealPerExplosion.UMUSmall, Constants.ExplosionRadiusSmall);
                 yield return null;
             }
-            for (int i = 0; i < 2; i++)
-            {
-                SpawnHealExplosionsOnRndPos(
-                    Constants.PoolExplosionBig, Constants.HealPerExplosion.UMUBig, Constants.ExplosionRadiusBig);
-            }
-
+            yield return null;
+            SpawnHealExplosionsOnRndPos(
+                Constants.PoolExplosionBig, Constants.HealPerExplosion.UMUBig, Constants.ExplosionRadiusBig);
+            
             OnDeath?.Invoke();
             ObjectPooler.Instance.ReturnObject(gameObject, gameObject.name);
         }

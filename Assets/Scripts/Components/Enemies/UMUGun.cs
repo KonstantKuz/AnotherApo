@@ -100,13 +100,9 @@ public class UMUGun : Gun, IDamageable
 
     private void SpawnHealExplosions()
     {
-        Explosion fwdExplosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
-        fwdExplosion.transform.position = transform.position + transform.forward / 2;
-        Explosion bwdExplosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
-        bwdExplosion.transform.position = transform.position - transform.forward / 2;
-        
-        fwdExplosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
-        bwdExplosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
+        Explosion explosion = ObjectPooler.Instance.SpawnObject(Constants.PoolExplosionMid).GetComponent<Explosion>();
+        explosion.transform.position = transform.position + transform.forward / 2;
+        explosion.Explode(1 << LayerMasks.Player, Constants.HealPerExplosion.UMUGun);
     }
 
     private void ReturnDamagedSignalToPool()
