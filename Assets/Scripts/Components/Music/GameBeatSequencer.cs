@@ -66,6 +66,9 @@ public class GameBeatSequencer : MonoBehaviour
         };
         
         HandleEvents();
+        CacheAndSetBPM();
+        GenerateRandomBeats();
+        beatDriver.Play();
     }
 
     private void CacheAndSetBPM()
